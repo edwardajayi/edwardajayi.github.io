@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edward's Publications</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="assets/css/modern.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <style>
+      /* Accordion-style abstracts */
+      .pub-toggle {
+        display: block;
+        width: 100%;
+        text-align: left;
+        background: none;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        color: var(--secondary-color);
+        font-weight: 700;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 2px;
+        text-decoration-color: rgba(37,99,235,0.9);
+      }
+      .pub-toggle:hover { color: var(--hover-color); text-decoration-color: var(--hover-color); transform: translateY(-1px); }
+      .abstract-panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 320ms ease, padding 320ms ease;
+        background: var(--card-bg);
+        border-left: 4px solid rgba(37,99,235,0.08);
+        margin-top: 0.75rem;
+        padding: 0 1rem;
+      }
+      .abstract-panel.open { padding: 1rem; max-height: 1000px; }
+      .abstract-panel p { color: var(--text-color); margin-bottom: 0.75rem; }
+    </style>
+  </head>
+
+  <body class="fade-in">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="header-inner">
+          <h1 class="logo">
+            <a href="https://edwardajayi.github.io/">Edward Ajayi</a>
+          </h1>
+          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="navbar" id="navbar">
+            <li><a href="index.html">About</a></li>
+            <li><a href="publications.html" class="active">Research</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="https://drive.google.com/file/d/1DE89BqW7y3wC5QXw8SkytqyreL7maOWf/view?usp=sharing" target="_blank">CV</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Publications</h1>
+            <!-- <div class="hero-subtitle">Research Projects</div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+      
+      <div class="publications-intro" style="text-align: justify; background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 30px; border-left: 4px solid #007acc;">
+        <p><strong>Research Interests:</strong> <strong>Multilingual & Multimodal NLP</strong>, <strong>AI Alignment</strong></p>
+        <p style="margin-top: 10px; font-style: italic;">I am interested in designing Language Technology for low resource languages and developing AI systems that promote digital inclusion and cultural preservation.</p>
+      </div>
+
+      <!-- EDWARD'S RESEARCH & PUBLICATIONS -->
+      <div class="publication-category">
+        <h2 class="category-title">Research & Publications</h2>
+        <p>Here you can find a selection of my research papers and publications.</p>
+
+        <div class="publication-item">
+          <div class="pub-title">
+            <button class="pub-toggle" aria-expanded="false" aria-controls="panel1">A Machine Learning Approach for Joint Detection of Mental Health Conditions and Cyberbullying from Social Media</button>
+          </div>
+          <div class="pub-authors"><span class="author-highlight">Edward Ajayi</span>, Martha Kachewka, Mawuil Deku, Emily Aiken</div>
+          <div class="pub-venue">Under Review</div>
+          <div id="panel1" class="abstract-panel" role="region" aria-hidden="true">
+            <p>Mental health challenges and cyberbullying have become increasingly prevalent in digital spaces, necessitating scalable and interpretable detection systems. This paper presents a multiclass classification framework for joint detection of mental health conditions (e.g., anxiety, stress, suicidal ideation) and cyberbullying categories (e.g., religion-based, gender-based abuse) using social media data.</p>
+            <p>We curate and preprocess datasets from Twitter and Reddit, standardizing and balancing them across ten categories using a dual approach of down-sampling and EDA-based oversampling. We compare lexical (term frequency-inverse document frequency, TF-IDF) and contextual (BERT embeddings) approaches to featurizing text data. Our fine-tuned BERT model achieves state-of-the-art performance, with a macro F1 score of 0.92 across all classes. Grounded in a comprehensive ethical analysis, our framework provides a robust baseline for future research in online safety.</p>
+          </div>
+        </div>
+
+        <div class="publication-item">
+          <div class="pub-title">
+            <button class="pub-toggle" aria-expanded="false" aria-controls="panel2">Language Diversity: Evaluating AI Performance on African Languages</button>
+          </div>
+          <div class="pub-authors"><span class="author-highlight">Edward Ajayi</span></div>
+          <div class="pub-venue">Under Review</div>
+          <div id="panel2" class="abstract-panel" role="region" aria-hidden="true">
+            <p>This study examines the digital representation of African languages and the challenges this presents for current language detection tools. We evaluate their performance on Yoruba, Kinyarwanda, and Amharic. While these languages are spoken by millions, their online usage on conversational platforms is often sparse, heavily influenced by English, and not representative of the authentic, monolingual conversations prevalent among native speakers. This lack of readily available authentic data online creates a challenge of scarcity of conversational data for training language models.</p>
+            <p>To investigate this, data was collected from subreddits and local news sources for each language. The analysis showed a stark contrast between the two sources. Reddit data was minimal and characterized by heavy code-switching. Conversely, local news media offered a robust source of clean, monolingual language data, which also prompted more user engagement in the local language on the news publishers’ social media pages. Language detection models, including the specialized AfroLID and a general LLM, performed with near-perfect accuracy on the clean news data but struggled with the code-switched Reddit posts.</p>
+            <p>The study concludes that professionally curated news content is a more reliable and effective source for training context-rich AI models for African languages than data from conversational platforms. It also highlights the need for future models that can process clean and code-switched text to improve the detection accuracy for African languages.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- WORK IN PROGRESS SECTION -->
+      <!-- <div class="publication-category">
+        <h2 class="category-title">Current Research</h2>
+        
+        <div class="publication-item">
+          <div class="pub-title">
+            Additional Research Projects
+          </div>
+          <div class="pub-authors"><span class="author-highlight">Edward Ajayi</span></div>
+          <div class="pub-venue">Carnegie Mellon University Africa, 2024-2025</div>
+          <div class="pub-description">
+            Ongoing research in agentic AI systems and LLM evaluation methodologies as part of Engineering Artificial Intelligence program. 
+            Work conducted at EdGE AI Labs on business automation through agentic AI. Additional publications forthcoming.
+          </div>
+        </div>
+      </div> -->
+
+      <!-- STEVEN'S ORIGINAL PUBLICATIONS - COMMENTED OUT FOR REFERENCE -->
+      <!--
+      <div class="publication-category">
+        <h2 class="category-title">ML Efficiency & Systems</h2>
+        
+        <div class="publication-item">
+          <div class="pub-title">
+            <a href="#" target="_blank">Training-Free Semantic Deferrals for Open-Ended LLM Cascades</a>
+          </div>
+          <div class="pub-authors">Duncan Soiffer, <span class="author-highlight">Steven Kolawole</span>, Virginia Smith</div>
+          <div class="pub-venue">ICML 2025 (ES-FOMO)</div>
+          <div class="pub-description">
+            Extends agreement-based cascading to open-ended generation tasks, enabling efficient routing 
+            for language model queries without requiring additional training data or model modifications.
+          </div>
+        </div>
+
+        <div class="publication-item">
+          <div class="pub-title">
+            <a href="#" target="_blank">Privacy Isn't Free: Benchmarking the Systems Cost of Privacy-Preserving ML</a>
+          </div>
+          <div class="pub-authors">Nnaemeka Obiefuna, Samuel Oyeneye, Similoluwa Odunaiya, Iremide Oyelaja, <span class="author-highlight">Steven Kolawole</span></div>
+          <div class="pub-venue">ICML 2025 (ES-FOMO)</div>
+          <div class="pub-description">
+            Comprehensive benchmarking study examining the computational/energy overhead of privacy-preserving techniques 
+            in ML; conducted with independent student researchers at ML Collective.
+          </div>
+        </div>
+
+        <div class="publication-item">
+          <div class="pub-title">
+            <a href="https://arxiv.org/abs/2506.18728" target="_blank">PARALLELPROMPT: Extracting Parallelism from Large Language Model Queries</a>
+          </div>
+          <div class="pub-authors"><span class="author-highlight">Steven Kolawole</span>, Keshav Santhanam, Virginia Smith, Pratiksha Thaker</div>
+          <div class="pub-venue">NeurIPS 2024 (AFM)</div>
+          <div class="pub-description">
+            Introduces PARALLELPROMPT, a benchmark revealing that 10% of natural user queries contain latent parallelism. 
+            Demonstrates semantic decomposition methods achieving up to 5× speedups without hardware modifications.
+          </div>
+        </div>
+
+        <div class="publication-item">
+          <div class="pub-title">
+            <a href="https://arxiv.org/abs/2407.02348" target="_blank">Agreement-Based Cascading for Efficient Inference</a>
+          </div>
+          <div class="pub-authors"><span class="author-highlight">Steven Kolawole</span>*, Don Dennis*, Ameet Talwalkar, Virginia Smith</div>
+          <div class="pub-venue">Under Review, 2025</div>
+          <div class="pub-description">
+            Develops a training-free cascading framework using ensemble agreement as a confidence signal for routing. 
+            Achieves 2-25× cost reductions while maintaining/improving accuracy over diverse tasks.
+          </div>
+        </div>
+
+        <div class="publication-item">
+          <div class="pub-title">
+            <a href="https://arxiv.org/abs/2402.05406" target="_blank">Everybody Prune Now: Structured Pruning of LLMs with only Forward Passes</a>
+          </div>
+          <div class="pub-authors"><span class="author-highlight">Steven Kolawole</span>*, Lucio Dery*, Jean-François Kagy, Virginia Smith, Graham Neubig, Ameet Talwalkar</div>
+          <div class="pub-venue">Under Review, 2025</div>
+          <div class="pub-description">
+            Presents Bonsai, a forward-pass-only structured pruning method that outperforms gradient-based approaches 
+            while using 3× less memory, making model compression accessible on everyday hardware.
+          </div>
+        </div>
+      </div>
+
+      <div class="publication-category">
+        <h2 class="category-title">Resource-Constrained NLP</h2>
+
+        <div class="publication-item">
+          <div class="pub-title">
+            <a href="https://arxiv.org/abs/2404.04759" target="_blank">What Happens When Small Is Made Smaller? Exploring the Impact of Compression on Small Data Pretrained Language Models</a>
+          </div>
+          <div class="pub-authors">Busayo Awobade*, Mardiyyah Oduwole*, <span class="author-highlight">Steven Kolawole</span>*</div>
+          <div class="pub-venue">ICLR 2024 (AfricaNLP)</div>
+          <div class="pub-description">
+            Investigates compression techniques on AfriBERTa, demonstrating that pruning, knowledge distillation, 
+            and quantization remain effective in the "low-resource double-bind" of small-data language models.
+          </div>
+        </div>
+
+        <div class="publication-item">
+          <div class="pub-title">
+            <a href="https://arxiv.org/abs/2303.16985" target="_blank">Adapting to the Low-Resource Double-Bind: Investigating Low-Compute Methods on Low-Resource African Languages</a>
+          </div>
+          <div class="pub-authors">Colin Leong, ..., <span class="author-highlight">Steven Kolawole</span>, et al.</div>
+          <div class="pub-venue">ICLR 2023 (AfricaNLP)</div>
+          <div class="pub-description">
+            Explores efficient training methods for African language processing under computational constraints, 
+            addressing the challenge of limited data and limited compute resources simultaneously.
+          </div>
+        </div>
+      </div>
+
+      <div class="publication-category">
+        <h2 class="category-title">Applied ML & Social Good</h2>
+
+        <div class="publication-item">
+          <div class="pub-title">
+            <a href="https://arxiv.org/abs/2305.19365" target="_blank">Vision Transformers for Mobile Applications: A Short Survey</a>
+          </div>
+          <div class="pub-authors">Nahid Alam*, <span class="author-highlight">Steven Kolawole</span>*, Simardeep Sethi*, Nishant Bansali, Karina Nguyen</div>
+          <div class="pub-venue">arXiv preprint, 2023</div>
+          <div class="pub-description">
+            Comprehensive survey examining how Vision Transformers can be optimized for mobile deployment, 
+            analyzing architecture modifications and efficiency techniques for resource-constrained environments.
+          </div>
+        </div>
+
+        <div class="publication-item">
+          <div class="pub-title">
+            <a href="https://www.ijcai.org/proceedings/2022/0855.pdf" target="_blank">Sign-to-Speech Model for Sign Language Understanding: A Case Study of Nigerian Sign Language</a>
+          </div>
+          <div class="pub-authors"><span class="author-highlight">Steven Kolawole</span>, Opeyemi Osakuade, Nayan Saxena, Babatunde Kazeem Olorisade</div>
+          <div class="pub-venue">IJCAI 2022 (AI for Social Good Track)</div>
+          <div class="pub-description">
+            Develops a sign-to-speech system for Nigerian Sign Language to bridge communication gaps. 
+            This work earned the national AI Champion award from the Nigeria Computer Society, demonstrating practical AI for social impact.
+          </div>
+        </div>
+      </div>
+      -->
+
+      <!-- External Links -->
+      <div class="external-links">
+        <h2 class="category-title">External Profiles</h2>
+        <div class="external-link-list">
+          <!-- <a href="#" target="_blank" class="external-link">
+            <i class="ai ai-google-scholar"></i> Google Scholar Profile
+          </a> -->
+          <!-- <a href="#" target="_blank" class="external-link">
+            <i class="fas fa-file-alt"></i> OpenReview Profile
+          </a> -->
+          <!-- <a href="#" target="_blank" class="external-link">
+            <i class="fas fa-archive"></i> arXiv Papers
+          </a> -->
+          <a href="https://github.com/edwardajayi" target="_blank" class="external-link">
+            <i class="fab fa-github"></i> GitHub Profile
+          </a>
+          <a href="https://www.linkedin.com/in/edward-ajayi-a652b6203/" target="_blank" class="external-link">
+            <i class="fab fa-linkedin"></i> LinkedIn Profile
+          </a>
+          <a href="https://drive.google.com/file/d/1DE89BqW7y3wC5QXw8SkytqyreL7maOWf/view?usp=sharing" target="_blank" class="external-link">
+            <i class="fas fa-file-pdf"></i> Download CV
+          </a>
+        </div>
+      </div>
+
+      <div class="publications-note">
+        <p><small>* denotes equal contribution</small></p>
+        <p><small>This page will be updated as new publications and research outputs become available. 
+        For the most current information about ongoing research projects, please refer to my CV or contact me directly.</small></p>
+      </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-text">
+            <p><strong>Last Updated:</strong> August, 2025</p>
+            <p>
+              © Edward Ajayi. Portfolio design adapted from
+              <a href="https://orevaahia.github.io/" target="_blank">Oreva Ahia's page</a>
+              · &lt;/&gt; Powered by
+              <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and
+              <a href="https://github.com/heiswayi/thinkspace" target="_blank">Thinkspace</a>
+              · Hosted on
+              <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+      // Publication abstracts accordion
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggles = document.querySelectorAll('.pub-toggle');
+        toggles.forEach(btn => {
+          btn.addEventListener('click', function() {
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            const panel = document.getElementById(this.getAttribute('aria-controls'));
+            this.setAttribute('aria-expanded', String(!expanded));
+            if (!expanded) {
+              panel.classList.add('open');
+              panel.setAttribute('aria-hidden', 'false');
+            } else {
+              panel.classList.remove('open');
+              panel.setAttribute('aria-hidden', 'true');
+            }
+          });
+        });
+      });
+      // On page load
+      document.addEventListener('DOMContentLoaded', function() {
+        // Back to top button visibility
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+          } else {
+            backToTopButton.classList.remove('visible');
+          }
+        });
+        
+        // Smooth header shadow on scroll
+        const header = document.querySelector('.site-header');
+        
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 50) {
+            header.style.boxShadow = 'var(--shadow-lg)';
+          } else {
+            header.style.boxShadow = 'var(--shadow-md)';
+          }
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navbar = document.getElementById('navbar');
+        
+        if (mobileMenuBtn) {
+          mobileMenuBtn.addEventListener('click', function() {
+            navbar.classList.toggle('show');
+            const isExpanded = navbar.classList.contains('show');
+            mobileMenuBtn.setAttribute('aria-expanded', isExpanded.toString());
+            
+            // Change icon based on menu state
+            const icon = mobileMenuBtn.querySelector('i');
+            if (isExpanded) {
+              icon.classList.remove('fa-bars');
+              icon.classList.add('fa-times');
+            } else {
+              icon.classList.remove('fa-times');
+              icon.classList.add('fa-bars');
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

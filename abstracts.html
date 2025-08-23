@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Abstracts - Edward Ajayi</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="assets/css/modern.css" />
+  </head>
+
+  <body class="fade-in">
+    <header class="site-header">
+      <div class="container">
+        <div class="header-inner">
+          <h1 class="logo"><a href="index.html">Edward Ajayi</a></h1>
+          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+          <ul class="navbar" id="navbar">
+            <li><a href="index.html">About</a></li>
+            <li><a href="publications.html">Research</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="https://drive.google.com/file/d/1DE89BqW7y3wC5QXw8SkytqyreL7maOWf/view?usp=sharing" target="_blank">CV</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Paper Abstracts</h1>
+            <div class="hero-subtitle">Under Review / Preprint</div>
+            <p>Below are short abstracts for works currently under review. These are draft abstracts and will be updated when full preprints are ready.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="publication-category">
+          <h2 id="abstract1" class="category-title">Abstract 1: Mental health challenges and cyberbullying</h2>
+          <div class="pub-authors"><span class="author-highlight">Edward Ajayi</span>, Martha Kachewka, Mawuil Deku, Emily Aiken</div>
+          <div class="pub-venue">[Under Review]</div>
+          <div class="pub-description">
+            <p>Mental health challenges and cyberbullying have become increasingly prevalent in digital spaces, necessitating scalable and interpretable detection systems. This paper presents a multiclass classification framework for joint detection of mental health conditions (e.g., anxiety, stress, suicidal ideation) and cyberbullying categories (e.g., religion-based, gender-based abuse) using social media data.</p>
+            <p>We curate and preprocess datasets from Twitter and Reddit, standardizing and balancing them across ten categories using a dual approach of down-sampling and EDA-based oversampling. We compare lexical (term frequency-inverse document frequency, TF-IDF) and contextual (BERT embeddings) approaches to featurizing text data. Our fine-tuned BERT model achieves state-of-the-art performance, with a macro F1 score of 0.92 across all classes. Grounded in a comprehensive ethical analysis, our framework provides a robust baseline for future research in online safety.</p>
+          </div>
+
+          <hr/>
+
+          <h2 id="abstract2" class="category-title">Abstract 2: Language representation and detection for African languages</h2>
+          <div class="pub-authors"><span class="author-highlight">Edward Ajayi</span></div>
+          <div class="pub-venue">[Under Review]</div>
+          <div class="pub-description">
+            <p>This study examines the digital representation of African languages and the challenges this presents for current language detection tools. We evaluate their performance on Yoruba, Kinyarwanda, and Amharic. While these languages are spoken by millions, their online usage on conversational platforms is often sparse, heavily influenced by English, and not representative of the authentic, monolingual conversations prevalent among native speakers. This lack of readily available authentic data online creates a challenge of scarcity of conversational data for training language models.</p>
+            <p>To investigate this, data was collected from subreddits and local news sources for each language. The analysis showed a stark contrast between the two sources. Reddit data was minimal and characterized by heavy code-switching. Conversely, local news media offered a robust source of clean, monolingual language data, which also prompted more user engagement in the local language on the news publishers’ social media pages. Language detection models, including the specialized AfroLID and a general LLM, performed with near-perfect accuracy on the clean news data but struggled with the code-switched Reddit posts.</p>
+            <p>The study concludes that professionally curated news content is a more reliable and effective source for training context-rich AI models for African languages than data from conversational platforms. It also highlights the need for future models that can process clean and code-switched text to improve the detection accuracy for African languages.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:1.5rem">
+          <p><strong>Note:</strong> If you want these abstracts linked from your `publications.html` entries, or styled differently, I can add anchors or individual abstract pages per paper.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-left"><p>&copy; 2025 Edward Ajayi</p></div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // basic mobile menu toggle reused from other pages
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navbar = document.getElementById('navbar');
+        if (mobileMenuBtn) {
+          mobileMenuBtn.addEventListener('click', function() {
+            navbar.classList.toggle('show');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navbar.classList.contains('show')) { icon.classList.remove('fa-bars'); icon.classList.add('fa-times'); } else { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

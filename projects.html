@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Projects - Edward Ajayi</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Projects by Edward Ajayi - AI Research Projects in Multilingual NLP, AI Safety, and Agentic AI Systems"
+  />
+  <meta
+    name="keywords"
+    content="Edward Ajayi, AI Projects, Machine Learning, NLP, AI Safety, Agentic AI"
+  />
+  <link rel="stylesheet" type="text/css" href="assets/css/modern.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+  />
+  <link rel="author" href="https://medium.com/@ojayedwards01" />
+  <link rel="author" href="https://www.linkedin.com/in/edward-ajayi-a652b6203/" />
+  <style>
+  /* Projects card grid - modern style */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.25rem;
+    }
+    .project-card {
+      background: linear-gradient(180deg, #ffffff, #fbfdff);
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+      border-left: 4px solid rgba(59,130,246,0.12);
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: transform 220ms ease, box-shadow 220ms ease;
+    }
+    .project-card:hover{ transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,0.12); }
+    .project-card .title {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: #0b1220;
+      letter-spacing: -0.2px;
+    }
+    .project-meta {
+      font-size: 0.88rem;
+      color: #475569;
+    }
+    .card-tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.4rem; }
+    .card-tag{ background:linear-gradient(90deg,#eef2ff,#e6f0ff); color:#0f172a; padding:0.28rem 0.6rem; border-radius:8px; font-size:0.75rem; font-weight:600; }
+    .project-card ul{ margin:0.25rem 0 0 1.1rem; padding:0; color:#334155; line-height:1.45 }
+    .section-intro p{ color:#475569; max-width:64rem }
+    @media (max-width:480px){ .projects-grid{ grid-template-columns:1fr } .project-card{padding:1rem} }
+  /* External links (Project Resources) */
+  .external-links .social-links{ display:flex; gap:0.75rem; align-items:center; flex-wrap:wrap; margin:0.6rem 0 1rem 0 }
+  .external-links .social-link{ display:inline-flex; align-items:center; gap:0.6rem; padding:0.45rem 0.7rem; border-radius:10px; color:var(--primary, #0b5fff); background:rgba(59,130,246,0.04); text-decoration:none; transition:transform .12s ease, box-shadow .12s ease, background .12s ease }
+  .external-links .social-link i{ font-size:1.12rem; display:block }
+  .external-links .social-link span{ font-size:0.95rem }
+  .external-links .social-link:hover{ transform:translateY(-3px); box-shadow:0 10px 24px rgba(2,6,23,0.06); background: linear-gradient(90deg, rgba(59,130,246,0.08), rgba(6,182,212,0.04)) }
+  @media (max-width:480px){ .external-links .social-link{ padding:0.35rem 0.5rem } }
+  </style>
+</head>
+
+<body class="fade-in">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <h1 class="logo">
+          <a href="https://edwardajayi.github.io">Edward Ajayi</a>
+        </h1>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="navbar" id="navbar">
+          <li><a href="index.html">About</a></li>
+          <li><a href="publications.html">Research</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="https://drive.google.com/file/d/1DE89BqW7y3wC5QXw8SkytqyreL7maOWf/view?usp=sharing" target="_blank">CV</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Projects Portfolio</h1>
+          <div class="hero-subtitle">Technical Work & Development</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-intro">
+        <p>This portfolio showcases my technical projects spanning AI research, software development, and practical applications. 
+        Each project demonstrates different aspects of my expertise in machine learning, natural language processing, 
+        and responsible AI development. From research prototypes to production systems, these projects reflect my commitment 
+        to building AI solutions that create positive societal impact while maintaining high technical standards.</p>
+      </div>
+
+      <!-- Research Projects -->
+      <div class="publication-category">
+        <h2 class="section-title">Research & Development Projects</h2>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="title">AI Workflow Automation Agent</div>
+            <div class="project-meta">Python · LangChain · FastAPI · Google Sheets API · SMTP · Jul 2025</div>
+            <div class="card-tags">
+              <span class="card-tag">Autonomous Agent</span>
+              <span class="card-tag">Automation</span>
+            </div>
+            <ul>
+              <li>Built an autonomous agent that interacts with a Google Form–linked Sheet to process business requests.</li>
+              <li>Sends email notifications to approvers, who review AI-generated content via a custom dashboard.</li>
+              <li>Integrated a QA bot to monitor and update sheets based on approvals and feedback.</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="title">Multichannel HR Assistant Bot (In Progress)</div>
+            <div class="project-meta">RAG · Python · Slack API · FastAPI · LangChain · Aug 2025</div>
+            <div class="card-tags">
+              <span class="card-tag">RAG</span>
+              <span class="card-tag">Conversational AI</span>
+            </div>
+            <ul>
+              <li>Developing a Retrieval-Augmented Generation HR assistant accessible via Slack, email, and web.</li>
+              <li>Supports employee queries using secure internal document retrieval and conversational response generation.</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="title">Kigali Smart City Guide</div>
+            <div class="project-meta">Python · NLP · Neo4j · LangChain · Llama · Nov 2024</div>
+            <div class="card-tags">
+              <span class="card-tag">RAG Chatbot</span>
+              <span class="card-tag">Urban Tech</span>
+            </div>
+            <ul>
+              <li>Built a Retrieval-Augmented Generation chatbot, ensuring safe and context-aware responses for urban use cases.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <!-- Skills & Technologies -->
+      <div class="publication-category">
+        <h2 class="section-title">Skills & Technologies</h2>
+        
+        <div class="skills-container">
+          <div class="skill-group">
+            <h3 class="skill-group-title">Programming & Development</h3>
+            <div class="skills-tags">
+              <span class="card-tag">Python</span>
+              <span class="card-tag">JavaScript</span>
+              <span class="card-tag">HTML/CSS</span>
+              <span class="card-tag">SQL</span>
+              <span class="card-tag">Git</span>
+              <span class="card-tag">Docker</span>
+            </div>
+          </div>
+          
+          <div class="skill-group">
+            <h3 class="skill-group-title">Machine Learning & AI</h3>
+            <div class="skills-tags">
+              <span class="card-tag">PyTorch</span>
+              <span class="card-tag">TensorFlow</span>
+              <span class="card-tag">Scikit-learn</span>
+              <span class="card-tag">HuggingFace</span>
+              <span class="card-tag">LangChain</span>
+              <span class="card-tag">LLMs</span>
+              <span class="card-tag">NLP</span>
+              <span class="card-tag">Computer Vision</span>
+            </div>
+          </div>
+          
+          <div class="skill-group">
+            <h3 class="skill-group-title">Tools & Platforms</h3>
+            <div class="skills-tags">
+              <span class="card-tag">AWS</span>
+              <span class="card-tag">Google Cloud</span>
+              <span class="card-tag">FastAPI</span>
+              <span class="card-tag">Streamlit</span>
+              <span class="card-tag">Jupyter</span>
+              <span class="card-tag">MongoDB</span>
+              <span class="card-tag">PostgreSQL</span>
+              <span class="card-tag">Neo4j</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Education & Certifications -->
+      <div class="publication-category">
+        <h2 class="section-title">Education & Certifications</h2>
+        
+        <div class="publication-item">
+          <div class="pub-title">
+            <a href="#" target="_blank">
+              Cohere ML Summer School
+            </a>
+          </div>
+          <div class="pub-venue">July 2025</div>
+          <div class="pub-desc">
+            Participated in an intensive program focused on advanced machine learning techniques for NLP and LLMs, led by industry experts at Cohere AI.
+          </div>
+        </div>
+        
+        <div class="publication-item">
+          <div class="pub-title">
+            <a href="#" target="_blank">
+              AIMS RIC: Workshop on Optimization, Optimal and Predictive Control - Foundations and Applications
+            </a>
+          </div>
+          <div class="pub-venue">May 2025</div>
+          <div class="pub-desc">
+            Workshop covering foundations and applications of optimization, optimal and predictive control, with emphasis on practical ML and control-system use cases.
+          </div>
+        </div>
+      </div>
+
+      <!-- External Links -->
+      <div class="external-links">
+        <h2 class="section-title">Project Resources & Links</h2>
+        <div class="social-links">
+          <a href="https://github.com/edwardajayi" class="social-link" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+            <span>GitHub Profile</span>
+          </a>
+          <a href="https://drive.google.com/file/d/1DE89BqW7y3wC5QXw8SkytqyreL7maOWf/view?usp=sharing" class="social-link" target="_blank" aria-label="Download CV">
+            <i class="fas fa-file-pdf"></i>
+            <span>Download CV</span>
+          </a>
+          <a href="https://www.linkedin.com/in/edward-ajayi-a652b6203/" class="social-link" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn Profile</span>
+          </a>
+          <a href="mailto:ojayedwards01@gmail.com" class="social-link" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+            <span>Contact for Collaboration</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="note-box">
+        <p><strong>Note:</strong> Some project repositories are private due to ongoing research. 
+        Please contact me for demos, additional technical details, or collaboration opportunities.</p>
+        <p>All projects follow best practices for reproducible research and responsible AI development.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content" style="display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;">
+        <div class="footer-left">
+          <p style="color:var(--text-color);font-weight:600;margin:0">© 2025 Edward Ajayi</p>
+        </div>
+        <div class="footer-right" style="text-align:right;color:var(--text-color);">
+          <p style="margin:0"><strong>Last Updated:</strong> August, 2025</p>
+          <p style="margin:0">
+            <a href="https://github.com/edwardajayi/edwardajayi.github.io" target="_blank">Source Code</a> | 
+            <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <script>
+    // On page load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Back to top button visibility
+      const backToTopButton = document.getElementById('backToTop');
+      
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add('visible');
+        } else {
+          backToTopButton.classList.remove('visible');
+        }
+      });
+      
+      // Smooth header shadow on scroll
+      const header = document.querySelector('.site-header');
+      
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 50) {
+          header.style.boxShadow = 'var(--shadow-lg)';
+        } else {
+          header.style.boxShadow = 'var(--shadow-md)';
+        }
+      });
+      
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const navbar = document.getElementById('navbar');
+      
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function() {
+          navbar.classList.toggle('show');
+          const isExpanded = navbar.classList.contains('show');
+          mobileMenuBtn.setAttribute('aria-expanded', isExpanded.toString());
+          
+          // Change icon based on menu state
+          const icon = mobileMenuBtn.querySelector('i');
+          if (isExpanded) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+          } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html> 
