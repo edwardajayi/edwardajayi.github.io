@@ -2,12 +2,12 @@
 <html>
     <head>
         <title>Edward's Blog</title>
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;600;700&display=swap"
-          rel="stylesheet"
-        />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="assets/css/phd-compact.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
         <link
           rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
@@ -18,35 +18,96 @@
         />
       </head>
 
-    <body>
+    <body class="fade-in">
         <header class="site-header">
-          <nav class="nav">
-            <div class="container flex-wrap">
+          <div class="container">
+            <div class="header-inner">
               <h1 class="logo">
                 <a href="https://edwardajayi.github.io/">Edward Ajayi</a>
               </h1>
-              <ul class="navbar">
+              <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+              </button>
+              <ul class="navbar" id="navbar">
                 <li><a href="index.html">About</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="news.html">Recent Highlights</a></li>
-                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="publications.html">Research</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="https://drive.google.com/file/d/1DE89BqW7y3wC5QXw8SkytqyreL7maOWf/view?usp=sharing" target="_blank">CV</a></li>
               </ul>
             </div>
-          </nav>
+          </div>
         </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+          <div class="container">
+            <div class="hero-content">
+              <div class="hero-text">
+                <h1>Blog & Writing</h1>
+              </div>
+            </div>
+          </div>
+        </section>
     
-        <div class="page container">
-            <h1 class="header-name">Blog</h1>
-            <div class="blog-container">
-                
-                <img src="assets/img/undraw_under_construction_46pa.png" alt="Under Construction">
-                <h1>This page is under construction. I occasionally write about my research journey, AI for social good, and academic experiences on Medium.</h1>
+        <section class="section">
+          <div class="container">
+            <div class="blog-container" style="text-align: center; padding: 3rem 0;">
+                <img src="assets/img/undraw_under_construction_46pa.png" alt="Under Construction" style="max-width: 400px; margin: 0 auto 2rem;">
+                <h2>This page is under construction</h2>
+                <p style="max-width: 600px; margin: 1.5rem auto; color: var(--text-color);">
+                  I occasionally write about my research journey, AI for social good, and academic experiences on Medium.
+                </p>
                 <div class="read-more-button">
-                    <a target="_blank" href="https://medium.com/@ojayedwards01" >Go to Medium</a>
+                    <a target="_blank" href="https://medium.com/@ojayedwards01" class="btn-primary">Go to Medium</a>
                 </div>
             </div>
-           
-        </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+          <div class="container">
+            <div class="footer-content">
+              <p><strong>Last Updated:</strong> August, 2025</p>
+              <p>© Edward Ajayi</p>
+            </div>
+          </div>
+        </footer>
+
+        <!-- Back to top button -->
+        <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('backToTop');
+            window.addEventListener('scroll', function() {
+              if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+              } else {
+                backToTopButton.classList.remove('visible');
+              }
+            });
+            
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navbar = document.getElementById('navbar');
+            if (mobileMenuBtn) {
+              mobileMenuBtn.addEventListener('click', function() {
+                navbar.classList.toggle('show');
+                const isExpanded = navbar.classList.contains('show');
+                mobileMenuBtn.setAttribute('aria-expanded', isExpanded.toString());
+                const icon = mobileMenuBtn.querySelector('i');
+                if (isExpanded) {
+                  icon.classList.remove('fa-bars');
+                  icon.classList.add('fa-times');
+                } else {
+                  icon.classList.remove('fa-times');
+                  icon.classList.add('fa-bars');
+                }
+              });
+            }
+          });
+        </script>
       </body>
 </html>

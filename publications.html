@@ -4,7 +4,7 @@
     <title>Edward's Publications</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="assets/css/modern.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/phd-compact.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -17,35 +17,164 @@
       href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
     />
     <style>
-      /* Accordion-style abstracts */
-      .pub-toggle {
-        display: block;
-        width: 100%;
-        text-align: left;
+      /* Enhanced Publications Page Styling */
+      .pub-item-expandable {
+        background: #ffffff;
+        border-left: 3px solid rgba(37, 99, 235, 0.3);
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1.25rem;
+        border-radius: 10px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        transition: all 0.25s ease;
+      }
+      .pub-item-expandable:hover {
+        border-left-color: rgba(37, 99, 235, 0.8);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transform: translateY(-2px);
+      }
+      .pub-title-btn {
         background: none;
         border: none;
         padding: 0;
-        font: inherit;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #1a202c;
         cursor: pointer;
-        color: var(--secondary-color);
-        font-weight: 700;
-        text-decoration: underline;
-        text-underline-offset: 4px;
-        text-decoration-thickness: 2px;
-        text-decoration-color: rgba(37,99,235,0.9);
+        text-align: left;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        transition: color 0.2s ease;
+        line-height: 1.4;
       }
-      .pub-toggle:hover { color: var(--hover-color); text-decoration-color: var(--hover-color); transform: translateY(-1px); }
-      .abstract-panel {
+      .pub-title-btn:hover {
+        color: #2563eb;
+      }
+      .pub-title-btn .toggle-icon {
+        font-size: 0.9rem;
+        color: #2563eb;
+        font-weight: bold;
+        transition: transform 0.25s ease;
+        margin-top: 0.15rem;
+        flex-shrink: 0;
+      }
+      .pub-title-btn[aria-expanded="true"] .toggle-icon {
+        transform: rotate(90deg);
+      }
+      .pub-authors {
+        font-size: 0.95rem;
+        color: #4b5563;
+        margin-top: 0.5rem;
+        padding-left: 1.5rem;
+        line-height: 1.5;
+      }
+      .author-highlight {
+        font-weight: 600;
+        color: #2563eb;
+      }
+      .pub-venue {
+        font-size: 0.9rem;
+        color: #6b7280;
+        font-style: italic;
+        margin-top: 0.35rem;
+        padding-left: 1.5rem;
+      }
+      .abstract-content {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 320ms ease, padding 320ms ease;
-        background: var(--card-bg);
-        border-left: 4px solid rgba(37,99,235,0.08);
-        margin-top: 0.75rem;
-        padding: 0 1rem;
+        transition: max-height 0.35s ease-in-out;
+        margin-top: 0;
       }
-      .abstract-panel.open { padding: 1rem; max-height: 1000px; }
-      .abstract-panel p { color: var(--text-color); margin-bottom: 0.75rem; }
+      .abstract-content.open {
+        max-height: 1000px;
+        margin-top: 0.75rem;
+      }
+      .abstract-text {
+        padding: 1rem 1.5rem;
+        background: #f9fafb;
+        border-radius: 6px;
+        margin-top: 0.75rem;
+        border-left: 2px solid rgba(37, 99, 235, 0.2);
+      }
+      .abstract-text p {
+        color: #374151;
+        font-size: 0.94rem;
+        line-height: 1.7;
+        margin-bottom: 0.85rem;
+        text-align: justify;
+      }
+      .abstract-text p:last-child {
+        margin-bottom: 0;
+      }
+      
+      /* Publications intro styling */
+      .publications-intro {
+        background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%);
+        border-left: 4px solid #2563eb;
+        padding: 1.5rem;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      }
+      .publications-intro p {
+        margin: 0;
+        color: #1f2937;
+        line-height: 1.7;
+      }
+      .publications-intro p:first-child {
+        margin-bottom: 0.75rem;
+      }
+      
+      /* External links styling */
+      .external-link-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      .external-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.6rem 1.25rem;
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        color: #2563eb;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        border: 1px solid rgba(37, 99, 235, 0.1);
+      }
+      .external-link:hover {
+        background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+        color: #1d4ed8;
+      }
+      .external-link i {
+        font-size: 1.1rem;
+      }
+      
+      /* Publications note */
+      .publications-note {
+        margin-top: 2.5rem;
+        padding: 1.25rem;
+        background: #f9fafb;
+        border-radius: 8px;
+        border: 1px solid #e5e7eb;
+      }
+      .publications-note p {
+        font-size: 0.9rem;
+        color: #6b7280;
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+      }
+      .publications-note p:last-child {
+        margin-bottom: 0;
+      }
     </style>
   </head>
 
@@ -85,38 +214,57 @@
     <section class="section">
       <div class="container">
       
-      <div class="publications-intro" style="text-align: justify; background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 30px; border-left: 4px solid #007acc;">
+      <div class="publications-intro">
         <p><strong>Research Interests:</strong> <strong>Multilingual & Multimodal NLP</strong>, <strong>AI Alignment</strong></p>
         <p style="margin-top: 10px; font-style: italic;">I am interested in designing Language Technology for low resource languages and developing AI systems that promote digital inclusion and cultural preservation.</p>
       </div>
 
-      <!-- EDWARD'S RESEARCH & PUBLICATIONS -->
+      <!-- PUBLICATIONS WITH CLICKABLE ABSTRACTS -->
       <div class="publication-category">
-        <h2 class="category-title">Research & Publications</h2>
-        <p>Here you can find a selection of my research papers and publications.</p>
+        <h2 class="category-title">Publications</h2>
 
-        <div class="publication-item">
-          <div class="pub-title">
-            <button class="pub-toggle" aria-expanded="false" aria-controls="panel1">A Machine Learning Approach for Joint Detection of Mental Health Conditions and Cyberbullying from Social Media</button>
-          </div>
-          <div class="pub-authors"><span class="author-highlight">Edward Ajayi</span>, Martha Kachewka, Mawuil Deku, Emily Aiken</div>
-          <div class="pub-venue">Under Review</div>
-          <div id="panel1" class="abstract-panel" role="region" aria-hidden="true">
-            <p>Mental health challenges and cyberbullying have become increasingly prevalent in digital spaces, necessitating scalable and interpretable detection systems. This paper presents a multiclass classification framework for joint detection of mental health conditions (e.g., anxiety, stress, suicidal ideation) and cyberbullying categories (e.g., religion-based, gender-based abuse) using social media data.</p>
-            <p>We curate and preprocess datasets from Twitter and Reddit, standardizing and balancing them across ten categories using a dual approach of down-sampling and EDA-based oversampling. We compare lexical (term frequency-inverse document frequency, TF-IDF) and contextual (BERT embeddings) approaches to featurizing text data. Our fine-tuned BERT model achieves state-of-the-art performance, with a macro F1 score of 0.92 across all classes. Grounded in a comprehensive ethical analysis, our framework provides a robust baseline for future research in online safety.</p>
+        <div class="pub-item-expandable">
+          <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract1">
+            <span class="toggle-icon">▶</span>
+            <span>Multilabel ML Approach for Mental Health and Cyberbullying Detection</span>
+          </button>
+          <div class="pub-authors"><span class="author-highlight">E. Ajayi</span>, M. Kachweka, M. Deku, and E. Aiken</div>
+          <div class="pub-venue">Submitted to AAAI 2026</div>
+          <div id="abstract1" class="abstract-content">
+            <div class="abstract-text">
+              <p>Mental health challenges and cyberbullying have become increasingly prevalent in digital spaces, necessitating scalable and interpretable detection systems. This paper presents a multiclass classification framework for joint detection of mental health conditions (e.g., anxiety, stress, suicidal ideation) and cyberbullying categories (e.g., religion-based, gender-based abuse) using social media data.</p>
+              <p>We curate and preprocess datasets from Twitter and Reddit, standardizing and balancing them across ten categories using a dual approach of down-sampling and EDA-based oversampling. We compare lexical (term frequency-inverse document frequency, TF-IDF) and contextual (BERT embeddings) approaches to featurizing text data. Our fine-tuned BERT model achieves state-of-the-art performance, with a macro F1 score of 0.92 across all classes. Grounded in a comprehensive ethical analysis, our framework provides a robust baseline for future research in online safety.</p>
+            </div>
           </div>
         </div>
 
-        <div class="publication-item">
-          <div class="pub-title">
-            <button class="pub-toggle" aria-expanded="false" aria-controls="panel2">Language Diversity: Evaluating AI Performance on African Languages</button>
+        <div class="pub-item-expandable">
+          <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract2">
+            <span class="toggle-icon">▶</span>
+            <span>Automatic Humor Detection: From Theoretical Foundations to LLMs</span>
+          </button>
+          <div class="pub-authors"><span class="author-highlight">E. Ajayi</span> and P. Mitra</div>
+          <div class="pub-venue">Submitted to ACM</div>
+          <div id="abstract2" class="abstract-content">
+            <div class="abstract-text">
+              <p>This work explores automatic humor detection across different approaches, from traditional theoretical foundations to modern large language models. We present a comprehensive analysis of computational humor understanding and its practical applications.</p>
+            </div>
           </div>
-          <div class="pub-authors"><span class="author-highlight">Edward Ajayi</span></div>
-          <div class="pub-venue">Under Review</div>
-          <div id="panel2" class="abstract-panel" role="region" aria-hidden="true">
-            <p>This study examines the digital representation of African languages and the challenges this presents for current language detection tools. We evaluate their performance on Yoruba, Kinyarwanda, and Amharic. While these languages are spoken by millions, their online usage on conversational platforms is often sparse, heavily influenced by English, and not representative of the authentic, monolingual conversations prevalent among native speakers. This lack of readily available authentic data online creates a challenge of scarcity of conversational data for training language models.</p>
-            <p>To investigate this, data was collected from subreddits and local news sources for each language. The analysis showed a stark contrast between the two sources. Reddit data was minimal and characterized by heavy code-switching. Conversely, local news media offered a robust source of clean, monolingual language data, which also prompted more user engagement in the local language on the news publishers’ social media pages. Language detection models, including the specialized AfroLID and a general LLM, performed with near-perfect accuracy on the clean news data but struggled with the code-switched Reddit posts.</p>
-            <p>The study concludes that professionally curated news content is a more reliable and effective source for training context-rich AI models for African languages than data from conversational platforms. It also highlights the need for future models that can process clean and code-switched text to improve the detection accuracy for African languages.</p>
+        </div>
+
+        <div class="pub-item-expandable">
+          <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract3">
+            <span class="toggle-icon">▶</span>
+            <span>Language Diversity: Evaluating AI Performance on African Languages</span>
+          </button>
+          <div class="pub-authors"><span class="author-highlight">E. Ajayi</span>, B. Tadele, E. Umwari, M. Deku, P. Singadi, C. Edeh, and J. Udahemuka</div>
+          <div class="pub-venue">Preprint, 2025</div>
+          <div id="abstract3" class="abstract-content">
+            <div class="abstract-text">
+              <p>This study examines the digital representation of African languages and the challenges this presents for current language detection tools. We evaluate their performance on Yoruba, Kinyarwanda, and Amharic. While these languages are spoken by millions, their online usage on conversational platforms is often sparse, heavily influenced by English, and not representative of the authentic, monolingual conversations prevalent among native speakers. This lack of readily available authentic data online creates a challenge of scarcity of conversational data for training language models.</p>
+              <p>To investigate this, data was collected from subreddits and local news sources for each language. The analysis showed a stark contrast between the two sources. Reddit data was minimal and characterized by heavy code-switching. Conversely, local news media offered a robust source of clean, monolingual language data, which also prompted more user engagement in the local language on the news publishers' social media pages. Language detection models, including the specialized AfroLID and a general LLM, performed with near-perfect accuracy on the clean news data but struggled with the code-switched Reddit posts.</p>
+              <p>The study concludes that professionally curated news content is a more reliable and effective source for training context-rich AI models for African languages than data from conversational platforms. It also highlights the need for future models that can process clean and code-switched text to improve the detection accuracy for African languages.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -320,26 +468,23 @@
     </a>
 
     <script>
-      // Publication abstracts accordion
-      document.addEventListener('DOMContentLoaded', function() {
-        const toggles = document.querySelectorAll('.pub-toggle');
-        toggles.forEach(btn => {
-          btn.addEventListener('click', function() {
-            const expanded = this.getAttribute('aria-expanded') === 'true';
-            const panel = document.getElementById(this.getAttribute('aria-controls'));
-            this.setAttribute('aria-expanded', String(!expanded));
-            if (!expanded) {
-              panel.classList.add('open');
-              panel.setAttribute('aria-hidden', 'false');
-            } else {
-              panel.classList.remove('open');
-              panel.setAttribute('aria-hidden', 'true');
-            }
-          });
-        });
-      });
       // On page load
       document.addEventListener('DOMContentLoaded', function() {
+        // Toggle abstract expansion
+        const toggleButtons = document.querySelectorAll('.pub-title-btn');
+        
+        toggleButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            const targetId = this.getAttribute('aria-controls');
+            const targetContent = document.getElementById(targetId);
+            
+            // Toggle state
+            this.setAttribute('aria-expanded', !expanded);
+            targetContent.classList.toggle('open');
+          });
+        });
+        
         // Back to top button visibility
         const backToTopButton = document.getElementById('backToTop');
         
