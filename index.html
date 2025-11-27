@@ -143,7 +143,7 @@
       <h2 class="section-title">Selected Projects</h2>
       
       <div class="projects-compact">
-        <div class="project-item">
+        <a href="assets/projects/bus-management-system.html" class="project-item" style="display: block; text-decoration: none; color: inherit;">
           <h3 class="project-title">AI Workflow Automation Agent</h3>
           <p class="project-meta">EdGE AI Labs • Jul 2025</p>
           <p class="project-desc">Autonomous agent for business process automation using Google Forms/Sheets, LangChain, and FastAPI. Integrated email notifications and QA monitoring dashboard.</p>
@@ -153,9 +153,9 @@
             <span class="tag">FastAPI</span>
             <span class="tag">RAG</span>
           </div>
-        </div>
+        </a>
 
-        <div class="project-item">
+        <a href="projects.html" class="project-item" style="display: block; text-decoration: none; color: inherit;">
           <h3 class="project-title">Multichannel HR Assistant Bot</h3>
           <p class="project-meta">Ongoing</p>
           <p class="project-desc">RAG-based conversational assistant accessible via Slack, email, and web. Supports secure internal document retrieval for employee queries.</p>
@@ -165,9 +165,9 @@
             <span class="tag">LangChain</span>
             <span class="tag">FastAPI</span>
           </div>
-        </div>
+        </a>
 
-        <div class="project-item">
+        <a href="projects.html" class="project-item" style="display: block; text-decoration: none; color: inherit;">
           <h3 class="project-title">Kigali Smart City Guide (RAG Chatbot)</h3>
           <p class="project-meta">Nov 2024</p>
           <p class="project-desc">Context-aware RAG chatbot for urban navigation using Neo4j graph database and Llama. Ensures safe, hallucination-free responses for smart city services.</p>
@@ -177,7 +177,7 @@
             <span class="tag">Llama</span>
             <span class="tag">LangChain</span>
           </div>
-        </div>
+        </a>
       </div>
       
       <div class="text-center mt-3">
@@ -360,6 +360,7 @@
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
+      cursor: pointer;
     }
 
     .project-item::before {
@@ -380,6 +381,14 @@
     .project-item:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-item .project-title {
+      transition: color 0.3s ease;
+    }
+
+    .project-item:hover .project-title {
+      color: var(--secondary-color);
     }
 
     .highlight-card {
