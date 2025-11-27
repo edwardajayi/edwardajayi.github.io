@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AI Workflow & Bus Management System - Edward Ajayi</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="../css/phd-compact.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" />
+  <style>
+    * { box-sizing: border-box; }
+    
+    body {
+      background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .back-nav {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      margin-bottom: 2rem;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: gap 0.2s ease, opacity 0.2s ease;
+    }
+    .back-link:hover {
+      gap: 0.75rem;
+      opacity: 0.9;
+    }
+    
+    .project-header {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(20px);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .project-title {
+      font-size: 2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0 1rem 0;
+      line-height: 1.2;
+    }
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+    .tech-badge {
+      background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+      color: white;
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .demo-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 15px rgba(37,99,235,0.4);
+    }
+    .demo-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(37,99,235,0.5);
+    }
+    
+    /* Carousel - Compact & Modern */
+    .carousel-container {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      background: #1e293b;
+      max-height: 450px;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .carousel-slide {
+      min-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8fafc;
+    }
+    .carousel-slide img {
+      width: 100%;
+      height: auto;
+      max-height: 450px;
+      object-fit: contain;
+      display: block;
+    }
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      color: #2563eb;
+      border: none;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      font-size: 1.1rem;
+      z-index: 10;
+    }
+    .carousel-nav:hover {
+      background: white;
+      transform: translateY(-50%) scale(1.15);
+      color: #0ea5e9;
+    }
+    .carousel-nav.prev { left: 1rem; }
+    .carousel-nav.next { right: 1rem; }
+    .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+    .indicator {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #cbd5e1;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .indicator.active {
+      background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+      transform: scale(1.4);
+      box-shadow: 0 2px 8px rgba(37,99,235,0.4);
+    }
+    
+    /* Content sections - Modern Cards */
+    .content-section {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 2rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .section-heading {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0 1.25rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid rgba(37,99,235,0.2);
+      display: inline-block;
+    }
+    .content-section p {
+      color: #475569;
+      line-height: 1.7;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .features-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.25rem 0;
+    }
+    .features-list li {
+      padding: 1rem 1rem 1rem 2.75rem;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, rgba(37,99,235,0.05) 0%, rgba(14,165,233,0.05) 100%);
+      border-radius: 12px;
+      color: #334155;
+      position: relative;
+      line-height: 1.6;
+      font-size: 0.95rem;
+      border-left: 3px solid #2563eb;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .features-list li:hover {
+      transform: translateX(5px);
+      box-shadow: 0 4px 12px rgba(37,99,235,0.15);
+    }
+    .features-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 1rem;
+      color: #2563eb;
+      font-weight: 700;
+      font-size: 1.15rem;
+    }
+    
+    @media (max-width: 768px) {
+      .project-title { font-size: 1.5rem; }
+      .carousel-wrapper { max-height: 300px; }
+      .carousel-slide img { max-height: 300px; }
+      .carousel-nav { width: 38px; height: 38px; font-size: 0.95rem; }
+      .carousel-nav.prev { left: 0.5rem; }
+      .carousel-nav.next { right: 0.5rem; }
+      .content-section { padding: 1.5rem; }
+      .project-header { padding: 1.5rem; }
+      .tech-stack { gap: 0.5rem; }
+      .features-list li { padding: 0.9rem 0.9rem 0.9rem 2.5rem; }
+    }
+  </style>
+</head>
+
+<body class="fade-in">
+  <div class="back-nav">
+    <div class="container">
+      <a href="../../projects.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Projects
+      </a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="project-header">
+      <h1 class="project-title">AI Workflow & Bus Management System</h1>
+      <div class="tech-stack">
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">FastAPI</span>
+        <span class="tech-badge">JavaScript</span>
+        <span class="tech-badge">LangChain</span>
+        <span class="tech-badge">Google Sheets API</span>
+        <span class="tech-badge">SMTP</span>
+      </div>
+      <a href="https://bus-tracker-web.onrender.com/login" target="_blank" class="demo-link">
+        <i class="fas fa-external-link-alt"></i> View Live Demo
+      </a>
+    </div>
+
+    <!-- Carousel -->
+    <div class="carousel-container">
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide">
+            <img src="bus management/login-page.png" alt="Login Page">
+          </div>
+          <div class="carousel-slide">
+            <img src="bus management/dashboard-approvals.png" alt="Dashboard with Approvals">
+          </div>
+          <div class="carousel-slide">
+            <img src="bus management/dashbord-clicked.png" alt="Dashboard Clicked View">
+          </div>
+          <div class="carousel-slide">
+            <img src="bus management/chatbot-with-analysis.png" alt="AI Chatbot with Analysis">
+          </div>
+          <div class="carousel-slide">
+            <img src="bus management/AI Suggestion.png" alt="AI Suggestions">
+          </div>
+          <div class="carousel-slide">
+            <img src="bus management/editable-email-drafter-sender.png" alt="Email Drafter Interface">
+          </div>
+          <div class="carousel-slide">
+            <img src="bus management/view-edit-record.png" alt="View and Edit Records">
+          </div>
+        </div>
+        <button class="carousel-nav prev" onclick="moveSlide(-1)">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-nav next" onclick="moveSlide(1)">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+      <div class="carousel-indicators" id="indicators"></div>
+    </div>
+
+    <!-- The Challenge -->
+    <div class="content-section">
+      <h2 class="section-heading">The Challenge</h2>
+      <p>
+        Managing bus logistics manually was slow and error-prone. Coordinating approvals, drafting professional emails, 
+        and maintaining accurate records across spreadsheets consumed valuable time and introduced inconsistencies.
+      </p>
+      <p>
+        I built an intelligent system that automates 90% of the workflow—from processing requests to generating 
+        context-aware responses. The AI chatbot understands policy documents and queries the system's spreadsheet 
+        in real-time, providing instant answers to logistics questions.
+      </p>
+    </div>
+
+    <!-- Key Features -->
+    <div class="content-section">
+      <h2 class="section-heading">Key Features</h2>
+      <ul class="features-list">
+        <li><strong>AI Assistant for Policy Queries:</strong> The chatbot works directly with a Google Spreadsheet, 
+        querying real-time data using Python and LangChain to answer questions about routes, schedules, and policies.</li>
+        
+        <li><strong>Automated Email Draft Generation:</strong> The system generates professional, context-aware email 
+        drafts based on request details, saving hours of manual writing and ensuring consistency.</li>
+        
+        <li><strong>Two-way Sync with Google Sheets:</strong> Seamless integration allows the system to read requests 
+        from Google Forms, process them through the AI pipeline, and update approvals back to the spreadsheet automatically.</li>
+        
+        <li><strong>Custom Dashboard for Approvals:</strong> Built with JavaScript and FastAPI, the dashboard provides 
+        approvers with a clean interface to review AI-generated content and make decisions efficiently.</li>
+        
+        <li><strong>Real-time Monitoring:</strong> A QA bot continuously monitors the sheet for changes, updating 
+        the system state and triggering notifications based on approval status.</li>
+      </ul>
+    </div>
+
+    <!-- Technical Implementation -->
+    <div class="content-section">
+      <h2 class="section-heading">Technical Implementation</h2>
+      <p>
+        The system architecture combines several modern technologies: FastAPI serves as the backend API, handling 
+        authentication and business logic. LangChain orchestrates the AI pipeline, connecting the chatbot to the 
+        Google Sheets data source for retrieval-augmented generation.
+      </p>
+      <p>
+        The frontend dashboard uses JavaScript for a responsive user experience, while Python scripts handle the heavy 
+        lifting of spreadsheet synchronization and email automation via SMTP. The entire system is deployed on Render, 
+        ensuring reliable uptime and scalability.
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const totalSlides = slides.length;
+    const track = document.getElementById('carouselTrack');
+    const indicatorsContainer = document.getElementById('indicators');
+    
+    // Create indicators
+    for (let i = 0; i < totalSlides; i++) {
+      const indicator = document.createElement('div');
+      indicator.className = 'indicator';
+      if (i === 0) indicator.classList.add('active');
+      indicator.onclick = () => goToSlide(i);
+      indicatorsContainer.appendChild(indicator);
+    }
+    
+    const indicators = document.querySelectorAll('.indicator');
+    
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentSlide);
+      });
+    }
+    
+    function moveSlide(direction) {
+      currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+      updateCarousel();
+    }
+    
+    function goToSlide(index) {
+      currentSlide = index;
+      updateCarousel();
+    }
+    
+    // Auto-scroll every 4 seconds
+    let autoScroll = setInterval(() => {
+      moveSlide(1);
+    }, 4000);
+    
+    // Pause auto-scroll on hover
+    const carouselWrapper = document.querySelector('.carousel-wrapper');
+    carouselWrapper.addEventListener('mouseenter', () => {
+      clearInterval(autoScroll);
+    });
+    
+    carouselWrapper.addEventListener('mouseleave', () => {
+      autoScroll = setInterval(() => {
+        moveSlide(1);
+      }, 4000);
+    });
+  </script>
+</body>
+</html>

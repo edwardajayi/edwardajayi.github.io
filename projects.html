@@ -49,36 +49,102 @@
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1rem;
-      margin-top: 0.6rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
     }
     .project-card {
-      background: linear-gradient(180deg, #ffffff, #fbfdff);
+      background: #ffffff;
       border-radius: 12px;
-      padding: 1.1rem;
-      box-shadow: 0 10px 30px rgba(2,6,23,0.08);
-      border-left: 4px solid rgba(59,130,246,0.12);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
-      transition: transform 220ms ease, box-shadow 220ms ease;
+      border: 1px solid rgba(0,0,0,0.06);
+      overflow: hidden;
     }
-    .project-card:hover{ transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,0.12); }
+    .project-card:hover{ 
+      transform: translateY(-6px); 
+      box-shadow: 0 8px 30px rgba(37,99,235,0.15); 
+    }
+    
+    .project-content {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      flex: 1;
+    }
     .project-card .title {
-      font-size: 1.06rem;
+      font-size: 1.25rem;
       font-weight: 700;
-      color: #0b1220;
-      letter-spacing: -0.2px;
+      color: #0f172a;
+      letter-spacing: -0.3px;
+      line-height: 1.3;
     }
     .project-meta {
-      font-size: 0.86rem;
-      color: #475569;
+      font-size: 0.85rem;
+      color: #64748b;
+      line-height: 1.5;
     }
-    .card-tags { display:flex; flex-wrap:wrap; gap:0.45rem; margin-top:0.35rem; }
-    .card-tag{ background:linear-gradient(90deg,#eef2ff,#e6f0ff); color:#0f172a; padding:0.24rem 0.55rem; border-radius:8px; font-size:0.74rem; font-weight:600; }
-    .project-card ul{ margin:0.2rem 0 0 1rem; padding:0; color:#334155; line-height:1.45 }
-    @media (max-width:480px){ .projects-grid{ grid-template-columns:1fr } .project-card{padding:0.9rem} }
+    .card-tags { 
+      display:flex; 
+      flex-wrap:wrap; 
+      gap:0.5rem; 
+    }
+    .card-tag{ 
+      background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%); 
+      color: #0c4a6e; 
+      padding: 0.35rem 0.75rem; 
+      border-radius: 6px; 
+      font-size: 0.75rem; 
+      font-weight: 600;
+      border: 1px solid rgba(37,99,235,0.1);
+    }
+    .project-description {
+      color: #475569;
+      line-height: 1.7;
+      font-size: 0.95rem;
+      margin: 0;
+      flex: 1;
+    }
+    .project-links {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .project-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+      color: white;
+      border: none;
+    }
+    .project-link-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+    }
+    .project-link-btn.secondary {
+      background: white;
+      color: #2563eb;
+      border: 2px solid #2563eb;
+    }
+    .project-link-btn.secondary:hover {
+      background: #f8fafc;
+    }
+    
+    @media (max-width:768px){ 
+      .projects-grid{ grid-template-columns:1fr } 
+      .project-image { height: 200px; }
+    }
   /* External links (Project Resources) */
   .external-links .social-links{ display:flex; gap:0.75rem; align-items:center; flex-wrap:wrap; margin:0.6rem 0 1rem 0 }
   .external-links .social-link{ display:inline-flex; align-items:center; gap:0.6rem; padding:0.45rem 0.7rem; border-radius:10px; color:var(--primary, #0b5fff); background:rgba(59,130,246,0.04); text-decoration:none; transition:transform .12s ease, box-shadow .12s ease, background .12s ease }
@@ -130,46 +196,53 @@
 
       <!-- Research Projects -->
       <div class="publication-category">
-        <h2 class="section-title">Research & Development Projects</h2>
+        <h2 class="section-title">Featured Projects</h2>
 
         <div class="projects-grid">
           <article class="project-card">
-            <div class="title">AI Workflow Automation Agent</div>
-            <div class="project-meta">Python · LangChain · FastAPI · Google Sheets API · SMTP · Jul 2025</div>
-            <div class="card-tags">
-              <span class="card-tag">Autonomous Agent</span>
-              <span class="card-tag">Automation</span>
+            <div class="project-content">
+              <div class="title">AI Workflow & Bus Management System</div>
+              <div class="project-meta">Python · FastAPI · JavaScript · LangChain · Google Sheets</div>
+              <div class="card-tags">
+                <span class="card-tag">Full-Stack</span>
+                <span class="card-tag">AI Agent</span>
+                <span class="card-tag">Production</span>
+              </div>
+              <p class="project-description">Intelligent bus management system with AI chatbot that automates logistics workflows, email drafting, and real-time spreadsheet sync.</p>
+              <div class="project-links">
+                <a href="https://bus-tracker-web.onrender.com/login" target="_blank" class="project-link-btn">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+                <a href="assets/projects/bus-management-system.html" class="project-link-btn secondary">
+                  <i class="fas fa-info-circle"></i> View Details
+                </a>
+              </div>
             </div>
-            <ul>
-              <li>Built an autonomous agent that interacts with a Google Form–linked Sheet to process business requests.</li>
-              <li>Sends email notifications to approvers, who review AI-generated content via a custom dashboard.</li>
-              <li>Integrated a QA bot to monitor and update sheets based on approvals and feedback.</li>
-            </ul>
           </article>
 
           <article class="project-card">
-            <div class="title">Multichannel HR Assistant Bot (In Progress)</div>
-            <div class="project-meta">RAG · Python · Slack API · FastAPI · LangChain · Aug 2025</div>
-            <div class="card-tags">
-              <span class="card-tag">RAG</span>
-              <span class="card-tag">Conversational AI</span>
+            <div class="project-content">
+              <div class="title">Multichannel HR Assistant Bot</div>
+              <div class="project-meta">RAG · Python · Slack API · FastAPI · LangChain</div>
+              <div class="card-tags">
+                <span class="card-tag">RAG</span>
+                <span class="card-tag">Conversational AI</span>
+                <span class="card-tag">In Progress</span>
+              </div>
+              <p class="project-description">RAG-powered HR assistant accessible via Slack, email, and web with secure document retrieval.</p>
             </div>
-            <ul>
-              <li>Developing a Retrieval-Augmented Generation HR assistant accessible via Slack, email, and web.</li>
-              <li>Supports employee queries using secure internal document retrieval and conversational response generation.</li>
-            </ul>
           </article>
 
           <article class="project-card">
-            <div class="title">Kigali Smart City Guide</div>
-            <div class="project-meta">Python · NLP · Neo4j · LangChain · Llama · Nov 2024</div>
-            <div class="card-tags">
-              <span class="card-tag">RAG Chatbot</span>
-              <span class="card-tag">Urban Tech</span>
+            <div class="project-content">
+              <div class="title">Kigali Smart City Guide</div>
+              <div class="project-meta">Python · NLP · Neo4j · LangChain · Llama</div>
+              <div class="card-tags">
+                <span class="card-tag">RAG Chatbot</span>
+                <span class="card-tag">Urban Tech</span>
+              </div>
+              <p class="project-description">RAG chatbot with graph database integration for urban navigation and city information queries.</p>
             </div>
-            <ul>
-              <li>Built a Retrieval-Augmented Generation chatbot, ensuring safe and context-aware responses for urban use cases.</li>
-            </ul>
           </article>
         </div>
       </div>
