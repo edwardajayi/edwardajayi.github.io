@@ -145,6 +145,93 @@
       .projects-grid{ grid-template-columns:1fr } 
       .project-image { height: 200px; }
     }
+  
+  /* Skills Section - Modern Icon Grid */
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  .skill-category {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .skill-category:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(37,99,235,0.12);
+  }
+  .skill-category-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  .skill-category-title i {
+    color: #2563eb;
+    font-size: 1.3rem;
+  }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+  .skill-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1.1rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+    cursor: default;
+  }
+  .skill-item:hover {
+    background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%);
+    border-color: #93c5fd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37,99,235,0.15);
+  }
+  .skill-item i {
+    font-size: 1.5rem;
+    color: #2563eb;
+    min-width: 24px;
+  }
+  .skill-item span {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #334155;
+  }
+  @media (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 0.75rem;
+    }
+    .skill-item {
+      padding: 0.7rem 0.9rem;
+      gap: 0.6rem;
+    }
+    .skill-item i {
+      font-size: 1.3rem;
+    }
+    .skill-item span {
+      font-size: 0.85rem;
+    }
+    .skill-category {
+      padding: 1.5rem;
+    }
+  }
+  
   /* External links (Project Resources) */
   .external-links .social-links{ display:flex; gap:0.75rem; align-items:center; flex-wrap:wrap; margin:0.6rem 0 1rem 0 }
   .external-links .social-link{ display:inline-flex; align-items:center; gap:0.6rem; padding:0.45rem 0.7rem; border-radius:10px; color:var(--primary, #0b5fff); background:rgba(59,130,246,0.04); text-decoration:none; transition:transform .12s ease, box-shadow .12s ease, background .12s ease }
@@ -252,43 +339,115 @@
         <h2 class="section-title">Skills & Technologies</h2>
         
         <div class="skills-container">
-          <div class="skill-group">
-            <h3 class="skill-group-title">Programming & Development</h3>
-            <div class="skills-tags">
-              <span class="card-tag">Python</span>
-              <span class="card-tag">JavaScript</span>
-              <span class="card-tag">HTML/CSS</span>
-              <span class="card-tag">SQL</span>
-              <span class="card-tag">Git</span>
-              <span class="card-tag">Docker</span>
+          <div class="skill-category">
+            <h3 class="skill-category-title">
+              <i class="fas fa-code"></i> Programming & Development
+            </h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-js-square"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-html5"></i>
+                <span>HTML/CSS</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-database"></i>
+                <span>SQL</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-docker"></i>
+                <span>Docker</span>
+              </div>
             </div>
           </div>
           
-          <div class="skill-group">
-            <h3 class="skill-group-title">Machine Learning & AI</h3>
-            <div class="skills-tags">
-              <span class="card-tag">PyTorch</span>
-              <span class="card-tag">TensorFlow</span>
-              <span class="card-tag">Scikit-learn</span>
-              <span class="card-tag">HuggingFace</span>
-              <span class="card-tag">LangChain</span>
-              <span class="card-tag">LLMs</span>
-              <span class="card-tag">NLP</span>
-              <span class="card-tag">Computer Vision</span>
+          <div class="skill-category">
+            <h3 class="skill-category-title">
+              <i class="fas fa-brain"></i> Machine Learning & AI
+            </h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <i class="fas fa-fire"></i>
+                <span>PyTorch</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-chart-network"></i>
+                <span>TensorFlow</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Scikit-learn</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-robot"></i>
+                <span>HuggingFace</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-link"></i>
+                <span>LangChain</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-comments"></i>
+                <span>LLMs</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-language"></i>
+                <span>NLP</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-eye"></i>
+                <span>Computer Vision</span>
+              </div>
             </div>
           </div>
           
-          <div class="skill-group">
-            <h3 class="skill-group-title">Tools & Platforms</h3>
-            <div class="skills-tags">
-              <span class="card-tag">AWS</span>
-              <span class="card-tag">Google Cloud</span>
-              <span class="card-tag">FastAPI</span>
-              <span class="card-tag">Streamlit</span>
-              <span class="card-tag">Jupyter</span>
-              <span class="card-tag">MongoDB</span>
-              <span class="card-tag">PostgreSQL</span>
-              <span class="card-tag">Neo4j</span>
+          <div class="skill-category">
+            <h3 class="skill-category-title">
+              <i class="fas fa-tools"></i> Tools & Platforms
+            </h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <i class="fab fa-aws"></i>
+                <span>AWS</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-google"></i>
+                <span>Google Cloud</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-bolt"></i>
+                <span>FastAPI</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-stream"></i>
+                <span>Streamlit</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-book"></i>
+                <span>Jupyter</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-leaf"></i>
+                <span>MongoDB</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-elephant"></i>
+                <span>PostgreSQL</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-project-diagram"></i>
+                <span>Neo4j</span>
+              </div>
             </div>
           </div>
         </div>
