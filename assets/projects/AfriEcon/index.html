@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriEcon Human Evaluation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">AfriEcon Human Evaluation</h1>
+                <p class="subtitle">ACL Dataset Annotation Platform</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Status Card -->
+            <div class="status-card">
+                <div class="status-indicator">
+                    <div class="pulse-dot"></div>
+                    <span id="connectionStatus">Connecting to database...</span>
+                </div>
+            </div>
+
+            <!-- Data Entry Form -->
+            <section class="card">
+                <h2 class="card-title">Submit Evaluation Data</h2>
+                <form id="evaluationForm" class="form">
+                    <div class="form-group">
+                        <label for="evaluatorName">Evaluator Name</label>
+                        <input type="text" id="evaluatorName" name="evaluatorName" required
+                            placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="questionId">Question ID</label>
+                        <input type="text" id="questionId" name="questionId" required placeholder="e.g., Q001">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="response">Response Text</label>
+                        <textarea id="response" name="response" rows="4" required
+                            placeholder="Enter the response to evaluate"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rating">Quality Rating</label>
+                        <select id="rating" name="rating" required>
+                            <option value="">Select a rating</option>
+                            <option value="5">5 - Excellent</option>
+                            <option value="4">4 - Good</option>
+                            <option value="3">3 - Fair</option>
+                            <option value="2">2 - Poor</option>
+                            <option value="1">1 - Very Poor</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Comments (Optional)</label>
+                        <textarea id="comments" name="comments" rows="3"
+                            placeholder="Additional notes or observations"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                        <span class="btn-text">Submit Evaluation</span>
+                        <span class="btn-loader" style="display: none;">
+                            <span class="spinner"></span>
+                        </span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Data Display Section -->
+            <section class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Recent Evaluations</h2>
+                    <button class="btn btn-secondary" id="refreshBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2" />
+                        </svg>
+                        Refresh
+                    </button>
+                </div>
+                <div id="dataDisplay" class="data-display">
+                    <div class="loading">Loading evaluations...</div>
+                </div>
+            </section>
+
+            <!-- Statistics Section -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-value" id="totalEvaluations">0</div>
+                    <div class="stat-label">Total Evaluations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-value" id="avgRating">0.0</div>
+                    <div class="stat-label">Average Rating</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-value" id="totalEvaluators">0</div>
+                    <div class="stat-label">Evaluators</div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="toast"></div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

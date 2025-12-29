@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriEcon Human Evaluation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="evaluate-styles.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                </div>
+                <h1>AfriEcon</h1>
+            </div>
+
+            <div class="sidebar-content">
+                <div class="intro-box">
+                    <h3>Project Details</h3>
+                    <p>We are building a <strong>Benchmark Dataset for Africa Economic Analysis</strong> based on
+                        official <strong>World Bank country reports</strong>. Your assessments ensure the reliability of
+                        this research resource.</p>
+                </div>
+
+                <div class="evaluator-card">
+                    <div class="evaluator-header">
+                        <label for="evaluatorName">Expert Annotator</label>
+                        <button class="btn-text-link" id="syncBtn">Re-sync</button>
+                    </div>
+                    <div class="input-wrapper">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                        <select id="evaluatorName" class="elegant-select" required>
+                            <option value="">Select Role...</option>
+                            <option value="Annotator 1">Annotator 1</option>
+                            <option value="Annotator 2">Annotator 2</option>
+                            <option value="Annotator 3">Annotator 3</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Session Progress Mini -->
+                <div class="session-stats">
+                    <div class="stat-item">
+                        <span class="stat-value" id="sessionCount">0</span>
+                        <span class="stat-label">Reviewed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="remainingCount">--</span>
+                        <span class="stat-label">Items Left</span>
+                    </div>
+                </div>
+
+                <!-- Annotation Guidelines -->
+                <div class="help-box">
+                    <h4>Annotator Guidelines</h4>
+                    <ul class="rule-list">
+                        <li><strong>Self-Contained</strong>: The question must mention the country and year to be marked
+                            as "Excellent".</li>
+                        <li><strong>Grounding</strong>: Any numbers in the answer must exist exactly in the evidence.
+                        </li>
+                        <li><strong>No References</strong>: Avoid phrases like "Based on the text" or "According to the
+                            report".</li>
+                    </ul>
+                    <button class="btn-help"
+                        onclick="document.getElementById('instructionsModal').classList.add('show')">How to
+                        Score</button>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="connection-status" id="connectionStatus">
+                    <span class="status-dot"></span>
+                    <span id="statusText">Connecting...</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="workspace">
+            <!-- Header/Topbar -->
+            <header class="topbar">
+                <div class="progress-section">
+                    <div class="progress-info">
+                        <span class="progress-label">Annotation Progress</span>
+                        <span class="progress-percent" id="progressText">0%</span>
+                    </div>
+                    <div class="progress-track-wrapper">
+                        <div class="progress-track">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-grid">
+                <!-- Data Review Column -->
+                <section class="review-column">
+                    <div class="scroll-canvas">
+                        <!-- Question Info -->
+                        <div class="panel panel-question">
+                            <div class="panel-header">
+                                <span class="panel-tag">Current Question</span>
+                                <span class="id-badge" id="questionId">ITEM-ID</span>
+                            </div>
+                            <div class="panel-body">
+                                <h2 class="question-text" id="questionText">Loading research question...</h2>
+                            </div>
+                        </div>
+
+                        <!-- Answer Info -->
+                        <div class="panel panel-answer">
+                            <div class="panel-header">
+                                <span class="panel-tag success">Proposed Answer</span>
+                            </div>
+                            <div class="panel-body">
+                                <p class="answer-text" id="answerText">Fetching gold standard answer...</p>
+                            </div>
+                        </div>
+
+                        <!-- Evidence Info -->
+                        <div class="panel panel-evidence">
+                            <div class="panel-header">
+                                <span class="panel-tag warning">Factual Evidence</span>
+                                <a href="#" id="sourceUrl" class="action-link" target="_blank">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                        <polyline points="15 3 21 3 21 9" />
+                                        <line x1="10" y1="14" x2="21" y2="3" />
+                                    </svg>
+                                    Source Doc
+                                </a>
+                            </div>
+                            <div class="panel-body">
+                                <div class="evidence-display" id="evidenceText">
+                                    Analyzing source metadata...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Assessment Column -->
+                <section class="assessment-column">
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <h2>Annotation Form</h2>
+                            <p>Please review the details carefully before submitting.</p>
+                        </div>
+
+                        <div class="assessment-body">
+                            <!-- Criterion 1: Factuality -->
+                            <div class="form-group">
+                                <label class="group-label">1. Is it Factual?</label>
+                                <div class="radio-grid">
+                                    <label class="radio-card">
+                                        <input type="radio" name="factuality" value="yes" required>
+                                        <div class="card-content">
+                                            <div class="check-icon">✓</div>
+                                            <div class="card-text">
+                                                <strong>Grounded</strong>
+                                                <span>Supported by the text</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="radio-card">
+                                        <input type="radio" name="factuality" value="no">
+                                        <div class="card-content">
+                                            <div class="check-icon error">✗</div>
+                                            <div class="card-text">
+                                                <strong>Hallucination</strong>
+                                                <span>Not found in evidence</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Criterion 2: Quality -->
+                            <div class="form-group">
+                                <label class="group-label">2. Question Quality (1–5)</label>
+                                <div class="rating-strip-advanced">
+                                    <label class="q-score q-1">
+                                        <input type="radio" name="quality" value="1">
+                                        <span class="q-btn">1</span>
+                                        <span class="q-label">Discard</span>
+                                    </label>
+                                    <label class="q-score q-2">
+                                        <input type="radio" name="quality" value="2">
+                                        <span class="q-btn">2</span>
+                                        <span class="q-label">Poor</span>
+                                    </label>
+                                    <label class="q-score q-3">
+                                        <input type="radio" name="quality" value="3">
+                                        <span class="q-btn">3</span>
+                                        <span class="q-label">Average</span>
+                                    </label>
+                                    <label class="q-score q-4">
+                                        <input type="radio" name="quality" value="4">
+                                        <span class="q-btn">4</span>
+                                        <span class="q-label">Good</span>
+                                    </label>
+                                    <label class="q-score q-5">
+                                        <input type="radio" name="quality" value="5">
+                                        <span class="q-btn">5</span>
+                                        <span class="q-label">Excellent</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Criterion 3: Analysis + Tags -->
+                            <div class="form-group">
+                                <label class="group-label">3. Observations & Notes</label>
+                                <div class="quick-tags">
+                                    <button type="button" class="tag-chip" data-tag="[Missing Context]">+ No
+                                        Country/Year</button>
+                                    <button type="button" class="tag-chip" data-tag="[Incorrect Info]">+ Not in
+                                        Text</button>
+                                    <button type="button" class="tag-chip" data-tag="[Wordy]">+ Wordy</button>
+                                    <button type="button" class="tag-chip" data-tag="[Odd Topic]">+ Irrelevant</button>
+                                </div>
+                                <textarea id="commentBox" class="elegant-textarea"
+                                    placeholder="Add any specific comments here..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="assessment-footer">
+                            <button class="btn-skip" id="skipBtn">Skip</button>
+                            <button class="btn-submit" id="saveNextBtn" disabled>
+                                <span>Save & Continue</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polyline points="9 18 15 12 9 6" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Instructions Modal -->
+    <div id="instructionsModal" class="modal">
+        <div class="modal-content large-modal">
+            <header class="modal-header">
+                <h2>Annotation Quick Guide</h2>
+                <button class="close-modal"
+                    onclick="document.getElementById('instructionsModal').classList.remove('show')">&times;</button>
+            </header>
+            <div class="modal-body">
+                <div class="protocol-content">
+                    <section>
+                        <h3>Quality Scoring Scales</h3>
+                        <div class="score-grid">
+                            <div class="score-card s5">
+                                <div class="score-badge">5</div>
+                                <div class="score-info">
+                                    <strong>Excellent / Professional</strong>
+                                    <span>Mentions country & year explicitly. Fully self-contained and ready for
+                                        automated benchmarking.</span>
+                                </div>
+                            </div>
+                            <div class="score-card s4">
+                                <div class="score-badge">4</div>
+                                <div class="score-info">
+                                    <strong>High Quality</strong>
+                                    <span>Clear, accurate, and professional. May have extremely minor phrasing
+                                        simplicity.</span>
+                                </div>
+                            </div>
+                            <div class="score-card s3">
+                                <div class="score-badge">3</div>
+                                <div class="score-info">
+                                    <strong>Average / Acceptable</strong>
+                                    <span>Correct but uses vague references like "the document" or "this country"
+                                        without naming them.</span>
+                                </div>
+                            </div>
+                            <div class="score-card s2">
+                                <div class="score-badge">2</div>
+                                <div class="score-info">
+                                    <strong>Poor / Unprofessional</strong>
+                                    <span>Awkward phrasing, poor grammar, or difficult for a human reviewer to
+                                        understand
+                                        quickly.</span>
+                                </div>
+                            </div>
+                            <div class="score-card s1">
+                                <div class="score-badge">1</div>
+                                <div class="score-info">
+                                    <strong>Serious Error / Discard</strong>
+                                    <span>Nonsense text, code snippets, or completely broken logic. Must be
+                                        discarded.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3>Fact-Checking Guidelines</h3>
+                        <ul class="guide-list">
+                            <li>Check that every number in the answer appears in the evidence.</li>
+                            <li>Ensure the answer doesn't add external information not found in the text.</li>
+                            <li>Mark as <b>Hallucination</b> if any part of the answer contradicts the source.</li>
+                        </ul>
+                        <div class="warning-note">
+                            <div class="test-title">
+                                <span>💡</span>
+                                The Self-Contained Test
+                            </div>
+                            <p class="test-desc">If you read the question to someone who hasn't seen the report, would
+                                they know <b>exactly</b> which country and year it refers to? If not, the score must be
+                                <b>below 5</b>.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3>General Tips</h3>
+                        <ul class="guide-list">
+                            <li>Avoid questions that start with "Based on the text..." or "According to the report..." —
+                                these should be scored 3 or lower.</li>
+                            <li>Keep observations objective in the notes section.</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn-primary"
+                    onclick="document.getElementById('instructionsModal').classList.remove('show')">Got it</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Completion Modal -->
+    <div id="completionModal" class="modal">
+        <div class="modal-content">
+            <h2>🎉 Evaluation Complete!</h2>
+            <p>You've reviewed all available questions.</p>
+            <div class="stats-summary" id="statsSummary"></div>
+            <button class="btn btn-primary" onclick="location.reload()">Start Over</button>
+        </div>
+    </div>
+    </div>
+
+    <script type="module" src="evaluate.js"></script>
+</body>
+
+</html>
