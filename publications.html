@@ -1,299 +1,322 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3E1CTW564V"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'G-3E1CTW564V');
-      </script>
-    <title>Edward's Publications</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="assets/css/phd-compact.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
-    />
-    <style>
-      /* Modern Publications Page Styling */
-      
-      /* Research Interests Banner */
-      .publications-intro {
-        background: linear-gradient(135deg, rgba(37,99,235,0.05) 0%, rgba(14,165,233,0.05) 100%);
-        border-left: 4px solid #2563eb;
-        padding: 2rem;
-        border-radius: 16px;
-        margin-bottom: 2.5rem;
-        box-shadow: 0 2px 12px rgba(37,99,235,0.08);
-      }
-      .publications-intro p {
-        margin: 0;
-        color: #1e293b;
-        line-height: 1.8;
-        font-size: 1rem;
-      }
-      .publications-intro p:first-child {
-        margin-bottom: 1rem;
-      }
-      .publications-intro strong {
-        color: #2563eb;
-        font-weight: 700;
-      }
-      
-      /* Publication Cards */
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3E1CTW564V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-3E1CTW564V');
+  </script>
+  <title>Edward's Publications</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="assets/css/phd-compact.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+  <style>
+    /* Modern Publications Page Styling */
+
+    /* Research Interests Banner */
+    .publications-intro {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(14, 165, 233, 0.05) 100%);
+      border-left: 4px solid #2563eb;
+      padding: 2rem;
+      border-radius: 16px;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 2px 12px rgba(37, 99, 235, 0.08);
+    }
+
+    .publications-intro p {
+      margin: 0;
+      color: #1e293b;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .publications-intro p:first-child {
+      margin-bottom: 1rem;
+    }
+
+    .publications-intro strong {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    /* Publication Cards */
+    .pub-item-expandable {
+      background: white;
+      border-left: 4px solid rgba(37, 99, 235, 0.2);
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .pub-item-expandable:hover {
+      border-left-color: #2563eb;
+      box-shadow: 0 8px 30px rgba(37, 99, 235, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .pub-title-btn {
+      background: none;
+      border: none;
+      padding: 0;
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #0f172a;
+      cursor: pointer;
+      text-align: left;
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: color 0.2s ease;
+      line-height: 1.4;
+    }
+
+    .pub-title-btn:hover {
+      color: #2563eb;
+    }
+
+    .toggle-icon {
+      font-size: 1rem;
+      color: #2563eb;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+      margin-top: 0.2rem;
+      flex-shrink: 0;
+    }
+
+    .pub-title-btn[aria-expanded="true"] .toggle-icon {
+      transform: rotate(90deg);
+    }
+
+    .paper-link-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-left: 0.75rem;
+      color: #2563eb;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    .paper-link-icon:hover {
+      opacity: 1;
+      transform: scale(1.2);
+      color: #1d4ed8;
+    }
+
+    .pub-authors {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin-top: 0.75rem;
+      padding-left: 2.5rem;
+      line-height: 1.6;
+    }
+
+    .author-highlight {
+      font-weight: 700;
+      color: #2563eb;
+    }
+
+    .pub-venue {
+      font-size: 0.9rem;
+      color: #64748b;
+      font-style: italic;
+      margin-top: 0.5rem;
+      padding-left: 2.5rem;
+    }
+
+    .pub-venue a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      background: rgba(37, 99, 235, 0.08);
+    }
+
+    .pub-venue a:hover {
+      color: white;
+      background: #2563eb;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+    }
+
+    .abstract-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-in-out;
+      margin-top: 0;
+    }
+
+    .abstract-content.open {
+      max-height: 1200px;
+      margin-top: 1rem;
+    }
+
+    .abstract-text {
+      padding: 1.5rem;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-radius: 12px;
+      border-left: 3px solid rgba(37, 99, 235, 0.3);
+    }
+
+    .abstract-text p {
+      color: #475569;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .abstract-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* External Links Section */
+    .external-links {
+      margin: 3rem 0 2rem;
+    }
+
+    .external-link-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .external-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      background: white;
+      color: #2563eb;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .external-link:hover {
+      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
+      color: #1d4ed8;
+    }
+
+    .external-link i {
+      font-size: 1.5rem;
+      min-width: 24px;
+    }
+
+    /* Publications Note */
+    .publications-note {
+      margin-top: 2.5rem;
+      padding: 1.75rem;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.03) 0%, rgba(14, 165, 233, 0.03) 100%);
+      border-radius: 12px;
+      border: 1px solid rgba(37, 99, 235, 0.1);
+    }
+
+    .publications-note p {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+
+    .publications-note p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
       .pub-item-expandable {
-        background: white;
-        border-left: 4px solid rgba(37, 99, 235, 0.2);
-        padding: 1.75rem;
-        margin-bottom: 1.5rem;
-        border-radius: 16px;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-        transition: all 0.3s ease;
-        border: 1px solid rgba(0,0,0,0.04);
+        padding: 1.25rem;
       }
-      .pub-item-expandable:hover {
-        border-left-color: #2563eb;
-        box-shadow: 0 8px 30px rgba(37,99,235,0.15);
-        transform: translateY(-4px);
-      }
-      
+
       .pub-title-btn {
-        background: none;
-        border: none;
-        padding: 0;
-        font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        font-size: 1.15rem;
-        font-weight: 700;
-        color: #0f172a;
-        cursor: pointer;
-        text-align: left;
-        width: 100%;
-        display: flex;
-        align-items: flex-start;
-        gap: 1rem;
-        transition: color 0.2s ease;
-        line-height: 1.4;
-      }
-      .pub-title-btn:hover {
-        color: #2563eb;
-      }
-      
-      .toggle-icon {
         font-size: 1rem;
-        color: #2563eb;
-        font-weight: bold;
-        transition: transform 0.3s ease;
-        margin-top: 0.2rem;
-        flex-shrink: 0;
+        gap: 0.75rem;
       }
-      .pub-title-btn[aria-expanded="true"] .toggle-icon {
-        transform: rotate(90deg);
-      }
-      
-      .paper-link-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 1.5rem;
-        height: 1.5rem;
-        margin-left: 0.75rem;
-        color: #2563eb;
-        font-size: 0.95rem;
-        transition: all 0.2s ease;
-        opacity: 0.8;
-        cursor: pointer;
-      }
-      .paper-link-icon:hover {
-        opacity: 1;
-        transform: scale(1.2);
-        color: #1d4ed8;
-      }
-      
-      .pub-authors {
-        font-size: 0.95rem;
-        color: #64748b;
-        margin-top: 0.75rem;
-        padding-left: 2.5rem;
-        line-height: 1.6;
-      }
-      .author-highlight {
-        font-weight: 700;
-        color: #2563eb;
-      }
-      
+
+      .pub-authors,
       .pub-venue {
-        font-size: 0.9rem;
-        color: #64748b;
-        font-style: italic;
-        margin-top: 0.5rem;
-        padding-left: 2.5rem;
+        padding-left: 1.75rem;
       }
-      .pub-venue a {
-        color: #2563eb;
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.2s ease;
-        padding: 0.2rem 0.6rem;
-        border-radius: 6px;
-        background: rgba(37, 99, 235, 0.08);
-      }
-      .pub-venue a:hover {
-        color: white;
-        background: #2563eb;
-        box-shadow: 0 2px 8px rgba(37,99,235,0.25);
-      }
-      
-      .abstract-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease-in-out;
-        margin-top: 0;
-      }
-      .abstract-content.open {
-        max-height: 1200px;
-        margin-top: 1rem;
-      }
-      
-      .abstract-text {
-        padding: 1.5rem;
-        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-        border-radius: 12px;
-        border-left: 3px solid rgba(37, 99, 235, 0.3);
-      }
-      .abstract-text p {
-        color: #475569;
-        font-size: 0.95rem;
-        line-height: 1.8;
-        margin-bottom: 1rem;
-        text-align: justify;
-      }
-      .abstract-text p:last-child {
-        margin-bottom: 0;
-      }
-      
-      /* External Links Section */
-      .external-links {
-        margin: 3rem 0 2rem;
-      }
+
       .external-link-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 1rem;
-        margin-top: 1.5rem;
+        grid-template-columns: 1fr;
       }
-      .external-link {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        padding: 1.25rem 1.5rem;
-        background: white;
-        color: #2563eb;
-        border-radius: 12px;
-        text-decoration: none;
-        font-size: 0.95rem;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-        border: 1px solid rgba(0,0,0,0.04);
-      }
-      .external-link:hover {
-        background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-        transform: translateY(-4px);
-        box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
-        color: #1d4ed8;
-      }
-      .external-link i {
-        font-size: 1.5rem;
-        min-width: 24px;
-      }
-      
-      /* Publications Note */
-      .publications-note {
-        margin-top: 2.5rem;
-        padding: 1.75rem;
-        background: linear-gradient(135deg, rgba(37,99,235,0.03) 0%, rgba(14,165,233,0.03) 100%);
-        border-radius: 12px;
-        border: 1px solid rgba(37,99,235,0.1);
-      }
-      .publications-note p {
-        font-size: 0.9rem;
-        color: #64748b;
-        margin-bottom: 0.5rem;
-        line-height: 1.7;
-      }
-      .publications-note p:last-child {
-        margin-bottom: 0;
-      }
-      
-      @media (max-width: 768px) {
-        .pub-item-expandable {
-          padding: 1.25rem;
-        }
-        .pub-title-btn {
-          font-size: 1rem;
-          gap: 0.75rem;
-        }
-        .pub-authors, .pub-venue {
-          padding-left: 1.75rem;
-        }
-        .external-link-list {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
-  </head>
+    }
+  </style>
+</head>
 
-  <body class="fade-in">
-    <!-- Header -->
-    <header class="site-header">
-      <div class="container">
-        <div class="header-inner">
-          <h1 class="logo">
-            <a href="https://edwardajayi.github.io/">Edward Ajayi</a>
-          </h1>
-          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-            <i class="fas fa-bars"></i>
-          </button>
-          <ul class="navbar" id="navbar">
-            <li><a href="index.html">About</a></li>
-            <li><a href="publications.html" class="active">Research</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="assets/Edward_Ajayi_CV_latest.pdf" target="_blank">CV</a></li>
-          </ul>
+<body class="fade-in">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <h1 class="logo">
+          <a href="https://edwardajayi.github.io/">Edward Ajayi</a>
+        </h1>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="navbar" id="navbar">
+          <li><a href="index.html">About</a></li>
+          <li><a href="publications.html" class="active">Research</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="assets/Edward_Ajayi_CV_latest.pdf" target="_blank">CV</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Publications</h1>
+          <!-- <div class="hero-subtitle">Research Projects</div> -->
         </div>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <h1>Publications</h1>
-            <!-- <div class="hero-subtitle">Research Projects</div> -->
-          </div>
-        </div>
-      </div>
-    </section>
+  <section class="section">
+    <div class="container">
 
-    <section class="section">
-      <div class="container">
-      
       <div class="publications-intro">
-        <p><strong>Research Interests:</strong> <strong>Socially Aware AI</strong>, <strong>Multimodal AI</strong>, <strong>Humor Generation and Detection</strong>, <strong>AI for Mental Health</strong></p>
-        <p style="margin-top: 10px; font-style: italic;">I work as a research assistant under Prof. Prasenjit Mitra at the Spatial and Language Technologies Lab at CMU Africa, focusing on developing AI systems that understand human communication with social awareness and cultural nuance.</p>
+        <p><strong>Research Interests:</strong> <strong>Socially Aware AI</strong>, <strong>Multimodal AI</strong>,
+          <strong>Humor Generation and Detection</strong>, <strong>AI for Mental Health</strong></p>
+        <p style="margin-top: 10px; font-style: italic;">I work as a research assistant under Prof. Prasenjit Mitra at
+          the Spatial and Language Technologies Lab at CMU Africa, focusing on developing AI systems that understand
+          human communication with social awareness and cultural nuance.</p>
       </div>
 
       <!-- PUBLICATIONS WITH CLICKABLE ABSTRACTS -->
@@ -301,21 +324,74 @@
         <h2 class="category-title">Publications</h2>
 
         <div class="pub-item-expandable">
+          <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract0">
+            <span class="toggle-icon">▶</span>
+            <span>AfriEconQA: A Benchmark Dataset for African Economic Analysis based on World Bank Reports
+              <a href="assets/papers/AfriEconQA Paper.pdf" target="_blank" class="paper-link-icon"
+                onclick="event.stopPropagation();" title="View Paper">
+                <i class="fas fa-file-pdf"></i>
+              </a>
+            </span>
+          </button>
+          <div class="pub-authors"><span class="author-highlight">E. Ajayi</span></div>
+          <div class="pub-venue">Preprint, 2025 • <a href="assets/papers/AfriEconQA Paper.pdf" target="_blank">PDF</a>
+          </div>
+          <div id="abstract0" class="abstract-content">
+            <div class="abstract-text">
+              <p>We introduce AfriEconQA, a specialized benchmark dataset for African economic analysis grounded in a
+                comprehensive corpus of 236 World Bank reports. The task of AfriEconQA is to answer complex economic
+                queries that require high-precision numerical reasoning and temporal disambiguation from specialized
+                institutional documents. The dataset consists of 8,937 curated QA instances, rigorously filtered from a
+                pool of 10,018 synthetic questions to ensure high-quality evidence-answer alignment.</p>
+              <p>Each instance is composed of: (1) a question requiring reasoning over economic indicators, (2) the
+                corresponding evidence retrieved from the corpus, (3) a verified ground-truth answer, and (4) source
+                metadata (e.g., URL and publication date) to ensure temporal provenance. AfriEconQA is the first
+                benchmark focused specifically on African economic analysis, providing a unique challenge for
+                Information Retrieval (IR) systems as the data is largely absent from the pre-training corpora of
+                current Large Language Models (LLMs).</p>
+              <p>We operationalize this dataset through an 11-experiment matrix, benchmarking a zero-shot baseline
+                (GPT-5 Mini) against RAG configurations using GPT-4o and Qwen 32B across five distinct embedding and
+                ranking strategies. Our results demonstrate a severe "parametric knowledge gap," where zero-shot models
+                fail to answer over 90% of queries, and even state-of-the-art RAG pipelines struggle to achieve high
+                precision. This confirms AfriEconQA as a robust and challenging benchmark for the next generation of
+                domain-specific IR and RAG systems.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item-expandable">
           <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract1">
             <span class="toggle-icon">▶</span>
-            <span>A Machine Learning Approach for Detection of Mental Health Conditions and Cyberbullying from Social Media
-              <a href="https://arxiv.org/pdf/2511.20001" target="_blank" class="paper-link-icon" onclick="event.stopPropagation();" title="View paper on arXiv">
+            <span>A Machine Learning Approach for Detection of Mental Health Conditions and Cyberbullying from Social
+              Media
+              <a href="https://arxiv.org/pdf/2511.20001" target="_blank" class="paper-link-icon"
+                onclick="event.stopPropagation();" title="View paper on arXiv">
                 <i class="fas fa-external-link-alt"></i>
               </a>
             </span>
           </button>
-          <div class="pub-authors"><span class="author-highlight">E. Ajayi</span>, M. Kachweka, M. Deku, and E. Aiken</div>
-          <div class="pub-venue">AAAI AIHealth Bridge 2026 (Oral Presentation) • <a href="https://arxiv.org/pdf/2511.20001" target="_blank">arXiv</a></div>
+          <div class="pub-authors"><span class="author-highlight">E. Ajayi</span>, M. Kachweka, M. Deku, and E. Aiken
+          </div>
+          <div class="pub-venue">AAAI AIHealth Bridge 2026 (Oral Presentation) • <a
+              href="https://arxiv.org/pdf/2511.20001" target="_blank">arXiv</a></div>
           <div id="abstract1" class="abstract-content">
             <div class="abstract-text">
-              <p>Mental health challenges and cyberbullying are increasingly prevalent in digital spaces, necessitating scalable and interpretable detection systems. This paper introduces a unified multiclass classification framework for detecting ten distinct mental health and cyberbullying categories from social media data. We curate datasets from Twitter and Reddit, implementing a rigorous 'split-then-balance' pipeline to train on balanced data while evaluating on a realistic, held-out imbalanced test set.</p>
-              <p>We conduct a comprehensive evaluation comparing traditional lexical models, hybrid approaches, and several end-to-end fine-tuned transformers. Our results demonstrate that end-to-end fine-tuning is critical for performance, with the domain-adapted MentalBERT emerging as the top model, achieving an accuracy of 0.92 and a Macro F1 score of 0.76, surpassing both its generic counterpart and a zero-shot LLM baseline.</p>
-              <p>Grounded in a comprehensive ethical analysis, we frame the system as a human-in-the-loop screening aid, not a diagnostic tool. To support this, we introduce a hybrid SHAP-LLM explainability framework and present a prototype dashboard ("Social Media Screener") designed to integrate model predictions and their explanations into a practical workflow for moderators. Our work provides a robust baseline, highlighting future needs for multi-label, clinically-validated datasets at the critical intersection of online safety and computational mental health.</p>
+              <p>Mental health challenges and cyberbullying are increasingly prevalent in digital spaces, necessitating
+                scalable and interpretable detection systems. This paper introduces a unified multiclass classification
+                framework for detecting ten distinct mental health and cyberbullying categories from social media data.
+                We curate datasets from Twitter and Reddit, implementing a rigorous 'split-then-balance' pipeline to
+                train on balanced data while evaluating on a realistic, held-out imbalanced test set.</p>
+              <p>We conduct a comprehensive evaluation comparing traditional lexical models, hybrid approaches, and
+                several end-to-end fine-tuned transformers. Our results demonstrate that end-to-end fine-tuning is
+                critical for performance, with the domain-adapted MentalBERT emerging as the top model, achieving an
+                accuracy of 0.92 and a Macro F1 score of 0.76, surpassing both its generic counterpart and a zero-shot
+                LLM baseline.</p>
+              <p>Grounded in a comprehensive ethical analysis, we frame the system as a human-in-the-loop screening aid,
+                not a diagnostic tool. To support this, we introduce a hybrid SHAP-LLM explainability framework and
+                present a prototype dashboard ("Social Media Screener") designed to integrate model predictions and
+                their explanations into a practical workflow for moderators. Our work provides a robust baseline,
+                highlighting future needs for multi-label, clinically-validated datasets at the critical intersection of
+                online safety and computational mental health.</p>
             </div>
           </div>
         </div>
@@ -328,15 +404,34 @@
           <div class="pub-authors"><span class="author-highlight">E. Ajayi</span> and P. Mitra</div>
           <div class="pub-venue">
             Submitted to ACM
-            <a href="assets/papers/Automatic Humor Detection Survey.pdf" target="_blank" style="margin-left: 0.5rem; color: var(--secondary-color);" title="View Paper">
+            <a href="assets/papers/Automatic Humor Detection Survey.pdf" target="_blank"
+              style="margin-left: 0.5rem; color: var(--secondary-color);" title="View Paper">
               <i class="fas fa-file-pdf"></i>
             </a>
           </div>
           <div id="abstract2" class="abstract-content">
             <div class="abstract-text">
-              <p>Automatic humor detection, the task of computationally identifying humorous content, is increasingly critical as Large Language Models (LLMs) become integrated into human communication platforms like chatbots and virtual assistants. However, understanding humor poses significant challenges for AI due to its reliance on complex context, cultural nuances, linguistic ambiguity, and multimodal cues. Current research is fragmented across different humor types, languages, modalities, and evaluation benchmarks, particularly concerning the capabilities and limitations of modern LLMs.</p>
-              <p>This survey provides a comprehensive synthesis of the automatic humor detection field, tracing its evolution from foundational psychological and linguistic theories through classical machine learning, deep learning, and the recent transformer-based LLM paradigm. We organize and analyze computational methods, feature engineering techniques, benchmark datasets (text-only, multimodal, multilingual), and evaluation metrics. We critically examine LLM adaptation strategies, including fine-tuning, parameter-efficient methods (PEFT), prompt engineering, and multi-task learning, alongside developments in multimodal and cross-lingual humor understanding.</p>
-              <p>Our analysis reveals that while LLMs demonstrate improved performance in capturing surface humor patterns, significant gaps persist in deep pragmatic reasoning, cultural grounding, multimodal integration, and explainability compared to human cognition. We identify key open challenges, including data scarcity, evaluation inconsistencies, the humor-offensiveness boundary, and the need for more robust, culturally aware, and interpretable models. By consolidating the field's progress and pinpointing critical limitations, this survey aims to guide future interdisciplinary research towards developing more socially intelligent and nuanced AI systems capable of genuinely understanding human humor.</p>
+              <p>Automatic humor detection, the task of computationally identifying humorous content, is increasingly
+                critical as Large Language Models (LLMs) become integrated into human communication platforms like
+                chatbots and virtual assistants. However, understanding humor poses significant challenges for AI due to
+                its reliance on complex context, cultural nuances, linguistic ambiguity, and multimodal cues. Current
+                research is fragmented across different humor types, languages, modalities, and evaluation benchmarks,
+                particularly concerning the capabilities and limitations of modern LLMs.</p>
+              <p>This survey provides a comprehensive synthesis of the automatic humor detection field, tracing its
+                evolution from foundational psychological and linguistic theories through classical machine learning,
+                deep learning, and the recent transformer-based LLM paradigm. We organize and analyze computational
+                methods, feature engineering techniques, benchmark datasets (text-only, multimodal, multilingual), and
+                evaluation metrics. We critically examine LLM adaptation strategies, including fine-tuning,
+                parameter-efficient methods (PEFT), prompt engineering, and multi-task learning, alongside developments
+                in multimodal and cross-lingual humor understanding.</p>
+              <p>Our analysis reveals that while LLMs demonstrate improved performance in capturing surface humor
+                patterns, significant gaps persist in deep pragmatic reasoning, cultural grounding, multimodal
+                integration, and explainability compared to human cognition. We identify key open challenges, including
+                data scarcity, evaluation inconsistencies, the humor-offensiveness boundary, and the need for more
+                robust, culturally aware, and interpretable models. By consolidating the field's progress and
+                pinpointing critical limitations, this survey aims to guide future interdisciplinary research towards
+                developing more socially intelligent and nuanced AI systems capable of genuinely understanding human
+                humor.</p>
             </div>
           </div>
         </div>
@@ -346,18 +441,34 @@
             <span class="toggle-icon">▶</span>
             <span>Language Diversity: Evaluating AI Performance on African Languages</span>
           </button>
-          <div class="pub-authors"><span class="author-highlight">E. Ajayi</span>, B. Tadele, E. Umwari, M. Deku, P. Singadi, C. Edeh, and J. Udahemuka</div>
+          <div class="pub-authors"><span class="author-highlight">E. Ajayi</span>, B. Tadele, E. Umwari, M. Deku, P.
+            Singadi, C. Edeh, and J. Udahemuka</div>
           <div class="pub-venue">
             Preprint, 2025
-            <a href="assets/papers/Language_Diversity.pdf" target="_blank" style="margin-left: 0.5rem; color: var(--secondary-color);" title="View Paper">
+            <a href="assets/papers/Language_Diversity.pdf" target="_blank"
+              style="margin-left: 0.5rem; color: var(--secondary-color);" title="View Paper">
               <i class="fas fa-file-pdf"></i>
             </a>
           </div>
           <div id="abstract3" class="abstract-content">
             <div class="abstract-text">
-              <p>This study examines the digital representation of African languages and the challenges this presents for current language detection tools. We evaluate their performance on Yoruba, Kinyarwanda, and Amharic. While these languages are spoken by millions, their online usage on conversational platforms is often sparse, heavily influenced by English, and not representative of the authentic, monolingual conversations prevalent among native speakers. This lack of readily available authentic data online creates a challenge of scarcity of conversational data for training language models.</p>
-              <p>To investigate this, data was collected from subreddits and local news sources for each language. The analysis showed a stark contrast between the two sources. Reddit data was minimal and characterized by heavy code-switching. Conversely, local news media offered a robust source of clean, monolingual language data, which also prompted more user engagement in the local language on the news publishers' social media pages. Language detection models, including the specialized AfroLID and a general LLM, performed with near-perfect accuracy on the clean news data but struggled with the code-switched Reddit posts.</p>
-              <p>The study concludes that professionally curated news content is a more reliable and effective source for training context-rich AI models for African languages than data from conversational platforms. It also highlights the need for future models that can process clean and code-switched text to improve the detection accuracy for African languages.</p>
+              <p>This study examines the digital representation of African languages and the challenges this presents
+                for current language detection tools. We evaluate their performance on Yoruba, Kinyarwanda, and Amharic.
+                While these languages are spoken by millions, their online usage on conversational platforms is often
+                sparse, heavily influenced by English, and not representative of the authentic, monolingual
+                conversations prevalent among native speakers. This lack of readily available authentic data online
+                creates a challenge of scarcity of conversational data for training language models.</p>
+              <p>To investigate this, data was collected from subreddits and local news sources for each language. The
+                analysis showed a stark contrast between the two sources. Reddit data was minimal and characterized by
+                heavy code-switching. Conversely, local news media offered a robust source of clean, monolingual
+                language data, which also prompted more user engagement in the local language on the news publishers'
+                social media pages. Language detection models, including the specialized AfroLID and a general LLM,
+                performed with near-perfect accuracy on the clean news data but struggled with the code-switched Reddit
+                posts.</p>
+              <p>The study concludes that professionally curated news content is a more reliable and effective source
+                for training context-rich AI models for African languages than data from conversational platforms. It
+                also highlights the need for future models that can process clean and code-switched text to improve the
+                detection accuracy for African languages.</p>
             </div>
           </div>
         </div>
@@ -530,99 +641,101 @@
 
       <div class="publications-note">
         <p><small>* denotes equal contribution</small></p>
-        <p><small>This page will be updated as new publications and research outputs become available. 
-        For the most current information about ongoing research projects, please refer to my CV or contact me directly.</small></p>
+        <p><small>This page will be updated as new publications and research outputs become available.
+            For the most current information about ongoing research projects, please refer to my CV or contact me
+            directly.</small></p>
       </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-text">
-            <p><strong>Last Updated:</strong> August, 2025</p>
-            <p>
-              © Edward Ajayi. Portfolio design adapted from
-              <a href="https://orevaahia.github.io/" target="_blank">Oreva Ahia's page</a>
-              · &lt;/&gt; Powered by
-              <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and
-              <a href="https://github.com/heiswayi/thinkspace" target="_blank">Thinkspace</a>
-              · Hosted on
-              <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
-            </p>
-          </div>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">
+          <p><strong>Last Updated:</strong> August, 2025</p>
+          <p>
+            © Edward Ajayi. Portfolio design adapted from
+            <a href="https://orevaahia.github.io/" target="_blank">Oreva Ahia's page</a>
+            · &lt;/&gt; Powered by
+            <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and
+            <a href="https://github.com/heiswayi/thinkspace" target="_blank">Thinkspace</a>
+            · Hosted on
+            <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          </p>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!-- Back to top button -->
-    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
-      <i class="fas fa-arrow-up"></i>
-    </a>
+  <!-- Back to top button -->
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
 
-    <script>
-      // On page load
-      document.addEventListener('DOMContentLoaded', function() {
-        // Toggle abstract expansion
-        const toggleButtons = document.querySelectorAll('.pub-title-btn');
-        
-        toggleButtons.forEach(button => {
-          button.addEventListener('click', function() {
-            const expanded = this.getAttribute('aria-expanded') === 'true';
-            const targetId = this.getAttribute('aria-controls');
-            const targetContent = document.getElementById(targetId);
-            
-            // Toggle state
-            this.setAttribute('aria-expanded', !expanded);
-            targetContent.classList.toggle('open');
-          });
+  <script>
+    // On page load
+    document.addEventListener('DOMContentLoaded', function () {
+      // Toggle abstract expansion
+      const toggleButtons = document.querySelectorAll('.pub-title-btn');
+
+      toggleButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          const targetId = this.getAttribute('aria-controls');
+          const targetContent = document.getElementById(targetId);
+
+          // Toggle state
+          this.setAttribute('aria-expanded', !expanded);
+          targetContent.classList.toggle('open');
         });
-        
-        // Back to top button visibility
-        const backToTopButton = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', function() {
-          if (window.pageYOffset > 300) {
-            backToTopButton.classList.add('visible');
-          } else {
-            backToTopButton.classList.remove('visible');
-          }
-        });
-        
-        // Smooth header shadow on scroll
-        const header = document.querySelector('.site-header');
-        
-        window.addEventListener('scroll', function() {
-          if (window.pageYOffset > 50) {
-            header.style.boxShadow = 'var(--shadow-lg)';
-          } else {
-            header.style.boxShadow = 'var(--shadow-md)';
-          }
-        });
-        
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navbar = document.getElementById('navbar');
-        
-        if (mobileMenuBtn) {
-          mobileMenuBtn.addEventListener('click', function() {
-            navbar.classList.toggle('show');
-            const isExpanded = navbar.classList.contains('show');
-            mobileMenuBtn.setAttribute('aria-expanded', isExpanded.toString());
-            
-            // Change icon based on menu state
-            const icon = mobileMenuBtn.querySelector('i');
-            if (isExpanded) {
-              icon.classList.remove('fa-bars');
-              icon.classList.add('fa-times');
-            } else {
-              icon.classList.remove('fa-times');
-              icon.classList.add('fa-bars');
-            }
-          });
+      });
+
+      // Back to top button visibility
+      const backToTopButton = document.getElementById('backToTop');
+
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add('visible');
+        } else {
+          backToTopButton.classList.remove('visible');
         }
       });
-    </script>
-  </body>
+
+      // Smooth header shadow on scroll
+      const header = document.querySelector('.site-header');
+
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 50) {
+          header.style.boxShadow = 'var(--shadow-lg)';
+        } else {
+          header.style.boxShadow = 'var(--shadow-md)';
+        }
+      });
+
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const navbar = document.getElementById('navbar');
+
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function () {
+          navbar.classList.toggle('show');
+          const isExpanded = navbar.classList.contains('show');
+          mobileMenuBtn.setAttribute('aria-expanded', isExpanded.toString());
+
+          // Change icon based on menu state
+          const icon = mobileMenuBtn.querySelector('i');
+          if (isExpanded) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+          } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+
 </html>
