@@ -252,6 +252,39 @@
       margin-bottom: 0;
     }
 
+    /* Best Paper Award Badge */
+    .best-paper-award {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+      color: #78350f;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      margin-left: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      animation: awardGlow 2s ease-in-out infinite alternate;
+      vertical-align: middle;
+    }
+
+    .best-paper-award i {
+      font-size: 0.85rem;
+      color: #92400e;
+    }
+
+    @keyframes awardGlow {
+      0% {
+        box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      }
+      100% {
+        box-shadow: 0 4px 16px rgba(245, 158, 11, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+      }
+    }
+
     @media (max-width: 768px) {
       .pub-item-expandable {
         padding: 1.25rem;
@@ -269,6 +302,13 @@
 
       .external-link-list {
         grid-template-columns: 1fr;
+      }
+
+      .best-paper-award {
+        display: flex;
+        margin-left: 0;
+        margin-top: 0.5rem;
+        width: fit-content;
       }
     }
   </style>
@@ -369,6 +409,7 @@
                 onclick="event.stopPropagation();" title="View Paper">
                 <i class="fas fa-file-pdf"></i>
               </a>
+              <span class="best-paper-award"><i class="fas fa-trophy"></i> Best Paper Award</span>
             </span>
           </button>
           <div class="pub-authors"><span class="author-highlight">E. Ajayi</span>, M. Kachweka, M. Deku, and E. Aiken
