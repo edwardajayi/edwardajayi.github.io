@@ -365,6 +365,24 @@
         <h2 class="category-title">Publications</h2>
 
         <div class="pub-item-expandable">
+          <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract-humorgen">
+            <span class="toggle-icon">▶</span>
+            <span>HumorGen: Cognitive Synergy for LLM Humor Generation via Persona-Based Distillation
+              <a href="assets/papers/HumorGen_CSF.pdf" target="_blank" class="paper-link-icon" onclick="event.stopPropagation();" title="View Paper">
+                <i class="fas fa-file-pdf"></i>
+              </a>
+            </span>
+          </button>
+          <div class="pub-authors"><span class="author-highlight">E. Ajayi</span></div>
+          <div class="pub-venue">Submitted to EMNLP 2026 • <a href="assets/papers/HumorGen_CSF.pdf" target="_blank">PDF</a></div>
+          <div id="abstract-humorgen" class="abstract-content">
+            <div class="abstract-text">
+              <p><strong>Abstract:</strong> Humor generation poses a significant challenge for Large Language Models (LLMs), because their standard training objective—predicting the most likely next word—inherently conflicts with the surprise and incongruity needed for comedy. To bridge this gap, we introduce the <b>Cognitive Synergy Framework</b>, a theoretically grounded methodology for generating high-quality humor data inspired by psychological theories of humor. Utilizing a <i>Mixture-of-Thought (MoT)</i> approach, we deploy six cognitive personas (e.g., <i>The Absurdist</i>, <i>The Cynic</i>) to synthesize diverse comedic perspectives for a given prompt. This framework creates a theoretically grounded dataset, which we use to fine-tune a 7B-parameter student model. We compare <b>Direct Preference Optimization (DPO)</b> and a novel <b>Offline Group Relative Policy Optimization (O-GRPO)</b>; our 7B model significantly outperforms larger instruction-tuned baselines and achieves performance competitive with state-of-the-art proprietary models. We find that cognitive-driven data curation is far more critical than alignment algorithms or model scale for humor generation. Data, models, and code will be released upon publication.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item-expandable">
           <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract0">
             <span class="toggle-icon">▶</span>
             <span>AfriEconQA: A Benchmark Dataset for African Economic Analysis based on World Bank Reports
