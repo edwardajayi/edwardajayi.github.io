@@ -23,58 +23,92 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
   <style>
-    /* Modern Publications Page Styling */
+    /* ===== Publications Page — Premium Restyle ===== */
 
-    /* Research Interests Banner */
-    .publications-intro {
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(14, 165, 233, 0.05) 100%);
-      border-left: 4px solid #2563eb;
-      padding: 2rem;
-      border-radius: 16px;
-      margin-bottom: 2.5rem;
-      box-shadow: 0 2px 12px rgba(37, 99, 235, 0.08);
+    /* Section title */
+    .publication-category .category-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2rem;
+      padding-bottom: 0.5rem;
+    }
+    .publication-category .category-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #2563eb, #0ea5e9);
+      border-radius: 2px;
     }
 
+    /* Research interests banner */
+    .publications-intro {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.06) 0%, rgba(14, 165, 233, 0.04) 100%);
+      border-left: 4px solid #2563eb;
+      padding: 2rem;
+      border-radius: 20px;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.06);
+      transition: box-shadow 0.3s ease;
+    }
+    .publications-intro:hover {
+      box-shadow: 0 8px 32px rgba(37, 99, 235, 0.1);
+    }
     .publications-intro p {
       margin: 0;
       color: #1e293b;
       line-height: 1.8;
       font-size: 1rem;
     }
+    .publications-intro p:first-child { margin-bottom: 1rem; }
+    .publications-intro strong { color: #2563eb; font-weight: 700; }
 
-    .publications-intro p:first-child {
-      margin-bottom: 1rem;
-    }
-
-    .publications-intro strong {
-      color: #2563eb;
-      font-weight: 700;
-    }
-
-    /* Publication Cards */
+    /* Publication cards — elevated, staggered entrance */
     .pub-item-expandable {
-      background: white;
-      border-left: 4px solid rgba(37, 99, 235, 0.2);
-      padding: 1.75rem;
-      margin-bottom: 1.5rem;
-      border-radius: 16px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-      transition: all 0.3s ease;
-      border: 1px solid rgba(0, 0, 0, 0.04);
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-left: 4px solid rgba(37, 99, 235, 0.35);
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.25rem;
+      border-radius: 20px;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04), 0 1px 0 rgba(255,255,255,0.8) inset;
+      transition: transform 0.25s ease, box-shadow 0.3s ease, border-left-color 0.25s ease;
+      animation: pubCardEnter 0.5s ease backwards;
     }
-
+    .pub-item-expandable:nth-child(3) { animation-delay: 0.05s; }
+    .pub-item-expandable:nth-child(5) { animation-delay: 0.1s; }
+    .pub-item-expandable:nth-child(7) { animation-delay: 0.15s; }
+    .pub-item-expandable:nth-child(9) { animation-delay: 0.2s; }
+    .pub-item-expandable:nth-child(11) { animation-delay: 0.25s; }
+    @keyframes pubCardEnter {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
     .pub-item-expandable:hover {
       border-left-color: #2563eb;
-      box-shadow: 0 8px 30px rgba(37, 99, 235, 0.15);
-      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(37, 99, 235, 0.12), 0 1px 0 rgba(255,255,255,0.8) inset;
+      transform: translateY(-2px);
+    }
+    .pub-item-expandable.is-open {
+      border-left-color: #2563eb;
+      box-shadow: 0 12px 40px rgba(37, 99, 235, 0.14), 0 0 0 1px rgba(37, 99, 235, 0.08);
     }
 
+    /* Title row + toggle */
     .pub-title-btn {
       background: none;
       border: none;
       padding: 0;
       font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 1.15rem;
+      font-size: 1.12rem;
       font-weight: 700;
       color: #0f172a;
       cursor: pointer;
@@ -84,24 +118,37 @@
       align-items: flex-start;
       gap: 1rem;
       transition: color 0.2s ease;
-      line-height: 1.4;
+      line-height: 1.45;
+    }
+    .pub-title-btn:hover { color: #2563eb; }
+    .pub-title-btn:focus-visible {
+      outline: 2px solid #2563eb;
+      outline-offset: 4px;
+      border-radius: 8px;
     }
 
-    .pub-title-btn:hover {
-      color: #2563eb;
-    }
-
+    /* Chevron icon — smooth rotate */
     .toggle-icon {
-      font-size: 1rem;
-      color: #2563eb;
-      font-weight: bold;
-      transition: transform 0.3s ease;
-      margin-top: 0.2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      margin-top: 0.1rem;
       flex-shrink: 0;
+      color: #2563eb;
+      font-size: 0.75rem;
+      font-weight: bold;
+      background: rgba(37, 99, 235, 0.1);
+      border-radius: 8px;
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s ease;
     }
-
+    .pub-title-btn:hover .toggle-icon {
+      background: rgba(37, 99, 235, 0.18);
+    }
     .pub-title-btn[aria-expanded="true"] .toggle-icon {
       transform: rotate(90deg);
+      background: rgba(37, 99, 235, 0.2);
     }
 
     .paper-link-icon {
@@ -110,206 +157,181 @@
       justify-content: center;
       width: 1.5rem;
       height: 1.5rem;
-      margin-left: 0.75rem;
+      margin-left: 0.5rem;
       color: #2563eb;
-      font-size: 0.95rem;
-      transition: all 0.2s ease;
-      opacity: 0.8;
+      font-size: 0.9rem;
+      transition: transform 0.2s ease, color 0.2s ease;
+      opacity: 0.85;
       cursor: pointer;
     }
-
     .paper-link-icon:hover {
       opacity: 1;
-      transform: scale(1.2);
+      transform: scale(1.15);
       color: #1d4ed8;
     }
 
     .pub-authors {
       font-size: 0.95rem;
       color: #64748b;
-      margin-top: 0.75rem;
-      padding-left: 2.5rem;
+      margin-top: 0.65rem;
+      padding-left: 2.75rem;
       line-height: 1.6;
     }
-
-    .author-highlight {
-      font-weight: 700;
-      color: #2563eb;
-    }
+    .author-highlight { font-weight: 700; color: #2563eb; }
 
     .pub-venue {
       font-size: 0.9rem;
       color: #64748b;
       font-style: italic;
-      margin-top: 0.5rem;
-      padding-left: 2.5rem;
+      margin-top: 0.4rem;
+      padding-left: 2.75rem;
     }
-
     .pub-venue a {
       color: #2563eb;
       text-decoration: none;
       font-weight: 600;
       transition: all 0.2s ease;
-      padding: 0.2rem 0.6rem;
-      border-radius: 6px;
+      padding: 0.25rem 0.6rem;
+      border-radius: 8px;
       background: rgba(37, 99, 235, 0.08);
     }
-
     .pub-venue a:hover {
-      color: white;
+      color: #fff;
       background: #2563eb;
-      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
     }
 
+    /* Abstract — pop-up panel with label and smooth height */
     .abstract-content {
+      overflow: hidden;
+      margin-top: 0;
+      transition: margin-top 0.35s ease;
+    }
+    .abstract-content.open {
+      margin-top: 1.25rem;
+    }
+    .abstract-content .abstract-inner {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.4s ease-in-out;
-      margin-top: 0;
+      transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
-
-    .abstract-content.open {
-      max-height: 1200px;
-      margin-top: 1rem;
+    .abstract-content.open .abstract-inner {
+      max-height: 1400px;
     }
-
     .abstract-text {
-      padding: 1.5rem;
-      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-      border-radius: 12px;
-      border-left: 3px solid rgba(37, 99, 235, 0.3);
+      padding: 1.5rem 1.75rem;
+      background: linear-gradient(160deg, #f8fafc 0%, #f1f5f9 50%);
+      border-radius: 16px;
+      border: 1px solid rgba(37, 99, 235, 0.1);
+      border-left: 4px solid rgba(37, 99, 235, 0.5);
+      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.06);
+      position: relative;
     }
-
+    .abstract-text::before {
+      content: 'Abstract';
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #2563eb;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
     .abstract-text p {
       color: #475569;
       font-size: 0.95rem;
-      line-height: 1.8;
+      line-height: 1.85;
       margin-bottom: 1rem;
       text-align: justify;
     }
+    .abstract-text p:last-child { margin-bottom: 0; }
 
-    .abstract-text p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* External Links Section */
-    .external-links {
-      margin: 3rem 0 2rem;
-    }
-
+    /* External links */
+    .external-links { margin: 3rem 0 2rem; }
     .external-link-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1rem;
       margin-top: 1.5rem;
     }
-
     .external-link {
       display: flex;
       align-items: center;
       gap: 1rem;
       padding: 1.25rem 1.5rem;
-      background: white;
+      background: #fff;
       color: #2563eb;
-      border-radius: 12px;
+      border-radius: 14px;
       text-decoration: none;
       font-size: 0.95rem;
       font-weight: 600;
       transition: all 0.3s ease;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-      border: 1px solid rgba(0, 0, 0, 0.04);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.05);
     }
-
     .external-link:hover {
-      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2);
+      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(37, 99, 235, 0.18);
       color: #1d4ed8;
     }
+    .external-link i { font-size: 1.4rem; min-width: 24px; }
 
-    .external-link i {
-      font-size: 1.5rem;
-      min-width: 24px;
-    }
-
-    /* Publications Note */
+    /* Note */
     .publications-note {
       margin-top: 2.5rem;
       padding: 1.75rem;
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.03) 0%, rgba(14, 165, 233, 0.03) 100%);
-      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.04) 0%, rgba(14, 165, 233, 0.03) 100%);
+      border-radius: 16px;
       border: 1px solid rgba(37, 99, 235, 0.1);
     }
-
     .publications-note p {
       font-size: 0.9rem;
       color: #64748b;
       margin-bottom: 0.5rem;
       line-height: 1.7;
     }
+    .publications-note p:last-child { margin-bottom: 0; }
 
-    .publications-note p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Best Paper Award Badge */
+    /* Best paper badge */
     .best-paper-award {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
       background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
       color: #78350f;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 700;
       padding: 0.35rem 0.75rem;
       border-radius: 20px;
-      margin-left: 0.75rem;
+      margin-left: 0.6rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      box-shadow: 0 2px 10px rgba(245, 158, 11, 0.35), inset 0 1px 0 rgba(255,255,255,0.35);
       animation: awardGlow 2s ease-in-out infinite alternate;
       vertical-align: middle;
     }
-
-    .best-paper-award i {
-      font-size: 0.85rem;
-      color: #92400e;
-    }
-
+    .best-paper-award i { font-size: 0.8rem; color: #92400e; }
     @keyframes awardGlow {
-      0% {
-        box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-      }
-      100% {
-        box-shadow: 0 4px 16px rgba(245, 158, 11, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-      }
+      0% { box-shadow: 0 2px 10px rgba(245, 158, 11, 0.35), inset 0 1px 0 rgba(255,255,255,0.35); }
+      100% { box-shadow: 0 4px 18px rgba(245, 158, 11, 0.5), inset 0 1px 0 rgba(255,255,255,0.4); }
     }
 
     @media (max-width: 768px) {
-      .pub-item-expandable {
-        padding: 1.25rem;
-      }
-
-      .pub-title-btn {
-        font-size: 1rem;
-        gap: 0.75rem;
-      }
-
-      .pub-authors,
-      .pub-venue {
-        padding-left: 1.75rem;
-      }
-
-      .external-link-list {
-        grid-template-columns: 1fr;
-      }
-
+      .pub-item-expandable { padding: 1.25rem 1.5rem; }
+      .pub-title-btn { font-size: 1rem; gap: 0.75rem; }
+      .pub-authors, .pub-venue { padding-left: 1.75rem; }
+      .external-link-list { grid-template-columns: 1fr; }
       .best-paper-award {
         display: flex;
         margin-left: 0;
         margin-top: 0.5rem;
         width: fit-content;
       }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .pub-item-expandable { animation: none; }
+      .abstract-content .abstract-inner { transition-duration: 0.2s; }
     }
   </style>
 </head>
@@ -378,10 +400,12 @@
           <div class="pub-authors"><span class="author-highlight">E. Ajayi</span> and P. Mitra</div>
           <div class="pub-venue">Submitted to EMNLP 2026 • <a href="assets/papers/HumorGen_CSF.pdf" target="_blank">PDF</a></div>
           <div id="abstract0" class="abstract-content">
+            <div class="abstract-inner">
             <div class="abstract-text">
               <p>Humor generation poses a significant challenge for Large Language Models (LLMs), because their standard training objective—predicting the most likely next word—inherently conflicts with the surprise and incongruity needed for comedy. To bridge this gap, we introduce the Cognitive Synergy Framework, a theoretically grounded methodology for generating high-quality humor data inspired by psychological theories of humor.</p>
               <p>Utilizing a Mixture-of-Thought (MoT) approach, we deploy six cognitive personas (e.g., The Absurdist, The Cynic) to synthesize diverse comedic perspectives for a given prompt. This framework creates a theoretically grounded dataset, which we use to fine-tune a 7B parameter student model. We compare Direct Preference Optimization (DPO) and a novel Offline Group Relative Policy Optimization (O-GRPO); our 7B model significantly outperforms larger instruction-tuned baselines and achieves performance competitive with state-of-the-art proprietary models.</p>
               <p>We find that cognitive-driven data curation is far more critical than alignment algorithms or model scale for humor generation. Data, models, and code will be released upon publication.</p>
+            </div>
             </div>
           </div>
         </div>
@@ -412,6 +436,7 @@
               </a>
           </div>
           <div id="abstract1" class="abstract-content">
+            <div class="abstract-inner">
             <div class="abstract-text">
               <p>Mental health challenges and cyberbullying are increasingly prevalent in digital spaces, necessitating
                 scalable and interpretable detection systems. This paper introduces a unified multiclass classification
@@ -430,6 +455,7 @@
                 highlighting future needs for multi-label, clinically-validated datasets at the critical intersection of
                 online safety and computational mental health.</p>
             </div>
+            </div>
           </div>
         </div>
 
@@ -447,10 +473,12 @@
           <div class="pub-authors"><span class="author-highlight">E. Ajayi</span> and P. Bakare</div>
           <div class="pub-venue">Submitted to ACM SIGIR 2026 • <a href="assets/papers/AfriEconQA Paper.pdf" target="_blank">PDF</a></div>
           <div id="abstract2" class="abstract-content">
+            <div class="abstract-inner">
             <div class="abstract-text">
               <p>We introduce AfriEconQA, a specialized benchmark dataset for African economic analysis grounded in a comprehensive corpus of 236 World Bank reports. The task of AfriEconQA is to answer complex economic queries that require high-precision numerical reasoning and temporal disambiguation from specialized institutional documents. The dataset consists of 8,937 curated QA instances, rigorously filtered from a pool of 10,018 synthetic questions to ensure high-quality evidence-answer alignment.</p>
               <p>Each instance is composed of: (1) a question requiring reasoning over economic indicators, (2) the corresponding evidence retrieved from the corpus, (3) a verified ground-truth answer, and (4) source metadata (e.g., URL and publication date) to ensure temporal provenance. AfriEconQA is the first benchmark focused specifically on African economic analysis, providing a unique challenge for Information Retrieval (IR) systems as the data is largely absent from the pre-training corpora of current Large Language Models (LLMs).</p>
-              <p>We operationalize this dataset through an 11-experiment matrix, benchmarking a zero-shot baseline (GPT-5 Mini) against RAG configurations using GPT-4o and Qwen 32B across five distinct embedding and ranking strategies. Our results demonstrate a severe "parametric knowledge gap," where zero-shot models fail to answer over 90% of queries, and even state-of-the-art RAG pipelines struggle to achieve high precision. This confirms AfriEconQA as a robust and challenging benchmark for the next generation of domain-specific IR and RAG systems.</p>
+              <p>We operationalize this dataset through an 11-experiment matrix, benchmarking a zero-shot baseline (GPT-5 Mini) against RAG configurations using GPT-4o and Qwen 32B across five distinct embedding and ranking strategies. Our results demonstrate a severe "parametric knowledge gap," where zero-shot models fail to answer over 90% of queries, and even state-of-the-art RAG pipelines struggle to achieve high precision. This confirms AfriEconQA as a robust and challenging benchmark for the next generation of                 domain-specific IR and RAG systems.</p>
+            </div>
             </div>
           </div>
         </div>
@@ -474,6 +502,7 @@
             </a>
           </div>
           <div id="abstract3" class="abstract-content">
+            <div class="abstract-inner">
             <div class="abstract-text">
               <p>Automatic humor detection, the task of computationally identifying humorous content, is increasingly
                 critical as Large Language Models (LLMs) become integrated into human communication platforms like
@@ -496,6 +525,7 @@
                 pinpointing critical limitations, this survey aims to guide future interdisciplinary research towards
                 developing more socially intelligent and nuanced AI systems capable of genuinely understanding human
                 humor.</p>
+            </div>
             </div>
           </div>
         </div>
@@ -520,6 +550,7 @@
             </a>
           </div>
           <div id="abstract4" class="abstract-content">
+            <div class="abstract-inner">
             <div class="abstract-text">
               <p>This study examines the digital representation of African languages and the challenges this presents
                 for current language detection tools. We evaluate their performance on Yoruba, Kinyarwanda, and Amharic.
@@ -538,6 +569,7 @@
                 for training context-rich AI models for African languages than data from conversational platforms. It
                 also highlights the need for future models that can process clean and code-switched text to improve the
                 detection accuracy for African languages.</p>
+            </div>
             </div>
           </div>
         </div>
@@ -743,9 +775,8 @@
   </a>
 
   <script>
-    // On page load
     document.addEventListener('DOMContentLoaded', function () {
-      // Toggle abstract expansion
+      // Abstract toggle with smooth behavior and card highlight
       const toggleButtons = document.querySelectorAll('.pub-title-btn');
 
       toggleButtons.forEach(button => {
@@ -753,10 +784,16 @@
           const expanded = this.getAttribute('aria-expanded') === 'true';
           const targetId = this.getAttribute('aria-controls');
           const targetContent = document.getElementById(targetId);
+          const card = this.closest('.pub-item-expandable');
 
-          // Toggle state
           this.setAttribute('aria-expanded', !expanded);
           targetContent.classList.toggle('open');
+          if (card) card.classList.toggle('is-open', !expanded);
+
+          // Optional: smooth-scroll expanded abstract into view
+          if (!expanded && targetContent.offsetTop < window.scrollY + 100) {
+            targetContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
         });
       });
 
