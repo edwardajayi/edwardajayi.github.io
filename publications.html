@@ -364,80 +364,29 @@
       <div class="publication-category">
         <h2 class="category-title">Publications</h2>
 
-
+        <!-- 1. HumorGen -->
         <div class="pub-item-expandable">
           <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract0">
             <span class="toggle-icon">▶</span>
-            <span>AfriEconQA: A Benchmark Dataset for African Economic Analysis based on World Bank Reports
-              <a href="assets/papers/AfriEconQA Paper.pdf" target="_blank" class="paper-link-icon"
+            <span>HumorGen: Cognitive Synergy for Humor Generation in Large Language Models via Persona-Based Distillation
+              <a href="assets/papers/HumorGen_CSF.pdf" target="_blank" class="paper-link-icon"
                 onclick="event.stopPropagation();" title="View Paper">
                 <i class="fas fa-file-pdf"></i>
               </a>
             </span>
           </button>
-          <div class="pub-authors"><span class="author-highlight">E. Ajayi</span></div>
-          <div class="pub-venue">Submitted to SIGIR • <a href="assets/papers/AfriEconQA Paper.pdf" target="_blank">PDF</a>
-          </div>
+          <div class="pub-authors"><span class="author-highlight">E. Ajayi</span> and P. Mitra</div>
+          <div class="pub-venue">Submitted to EMNLP 2026 • <a href="assets/papers/HumorGen_CSF.pdf" target="_blank">PDF</a></div>
           <div id="abstract0" class="abstract-content">
             <div class="abstract-text">
-              <p>We introduce AfriEconQA, a specialized benchmark dataset for African economic analysis grounded in a
-                comprehensive corpus of 236 World Bank reports. The task of AfriEconQA is to answer complex economic
-                queries that require high-precision numerical reasoning and temporal disambiguation from specialized
-                institutional documents. The dataset consists of 8,937 curated QA instances, rigorously filtered from a
-                pool of 10,018 synthetic questions to ensure high-quality evidence-answer alignment.</p>
-              <p>Each instance is composed of: (1) a question requiring reasoning over economic indicators, (2) the
-                corresponding evidence retrieved from the corpus, (3) a verified ground-truth answer, and (4) source
-                metadata (e.g., URL and publication date) to ensure temporal provenance. AfriEconQA is the first
-                benchmark focused specifically on African economic analysis, providing a unique challenge for
-                Information Retrieval (IR) systems as the data is largely absent from the pre-training corpora of
-                current Large Language Models (LLMs).</p>
-              <p>We operationalize this dataset through an 11-experiment matrix, benchmarking a zero-shot baseline
-                (GPT-5 Mini) against RAG configurations using GPT-4o and Qwen 32B across five distinct embedding and
-                ranking strategies. Our results demonstrate a severe "parametric knowledge gap," where zero-shot models
-                fail to answer over 90% of queries, and even state-of-the-art RAG pipelines struggle to achieve high
-                precision. This confirms AfriEconQA as a robust and challenging benchmark for the next generation of
-                domain-specific IR and RAG systems.</p>
+              <p>Humor generation poses a significant challenge for Large Language Models (LLMs), because their standard training objective—predicting the most likely next word—inherently conflicts with the surprise and incongruity needed for comedy. To bridge this gap, we introduce the Cognitive Synergy Framework, a theoretically grounded methodology for generating high-quality humor data inspired by psychological theories of humor.</p>
+              <p>Utilizing a Mixture-of-Thought (MoT) approach, we deploy six cognitive personas (e.g., The Absurdist, The Cynic) to synthesize diverse comedic perspectives for a given prompt. This framework creates a theoretically grounded dataset, which we use to fine-tune a 7B parameter student model. We compare Direct Preference Optimization (DPO) and a novel Offline Group Relative Policy Optimization (O-GRPO); our 7B model significantly outperforms larger instruction-tuned baselines and achieves performance competitive with state-of-the-art proprietary models.</p>
+              <p>We find that cognitive-driven data curation is far more critical than alignment algorithms or model scale for humor generation. Data, models, and code will be released upon publication.</p>
             </div>
           </div>
         </div>
 
-
-        <div class="pub-item-expandable">
-          <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract0">
-            <span class="toggle-icon">▶</span>
-            <span>AfriEconQA: A Benchmark Dataset for African Economic Analysis based on World Bank Reports
-              <a href="assets/papers/AfriEconQA Paper.pdf" target="_blank" class="paper-link-icon"
-                onclick="event.stopPropagation();" title="View Paper">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-            </span>
-          </button>
-          <div class="pub-authors"><span class="author-highlight">E. Ajayi</span></div>
-          <div class="pub-venue">Submitted to ACM SIGIR 2026 • <a href="assets/papers/AfriEconQA Paper.pdf" target="_blank">PDF</a>
-          </div>
-          <div id="abstract0" class="abstract-content">
-            <div class="abstract-text">
-              <p>We introduce AfriEconQA, a specialized benchmark dataset for African economic analysis grounded in a
-                comprehensive corpus of 236 World Bank reports. The task of AfriEconQA is to answer complex economic
-                queries that require high-precision numerical reasoning and temporal disambiguation from specialized
-                institutional documents. The dataset consists of 8,937 curated QA instances, rigorously filtered from a
-                pool of 10,018 synthetic questions to ensure high-quality evidence-answer alignment.</p>
-              <p>Each instance is composed of: (1) a question requiring reasoning over economic indicators, (2) the
-                corresponding evidence retrieved from the corpus, (3) a verified ground-truth answer, and (4) source
-                metadata (e.g., URL and publication date) to ensure temporal provenance. AfriEconQA is the first
-                benchmark focused specifically on African economic analysis, providing a unique challenge for
-                Information Retrieval (IR) systems as the data is largely absent from the pre-training corpora of
-                current Large Language Models (LLMs).</p>
-              <p>We operationalize this dataset through an 11-experiment matrix, benchmarking a zero-shot baseline
-                (GPT-5 Mini) against RAG configurations using GPT-4o and Qwen 32B across five distinct embedding and
-                ranking strategies. Our results demonstrate a severe "parametric knowledge gap," where zero-shot models
-                fail to answer over 90% of queries, and even state-of-the-art RAG pipelines struggle to achieve high
-                precision. This confirms AfriEconQA as a robust and challenging benchmark for the next generation of
-                domain-specific IR and RAG systems.</p>
-            </div>
-          </div>
-        </div>
-
+        <!-- 2. Mental Health -->
         <div class="pub-item-expandable">
           <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract1">
             <span class="toggle-icon">▶</span>
@@ -484,8 +433,31 @@
           </div>
         </div>
 
+        <!-- 3. AfriEconQA -->
         <div class="pub-item-expandable">
           <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract2">
+            <span class="toggle-icon">▶</span>
+            <span>AfriEconQA: A Benchmark Dataset for African Economic Analysis based on World Bank Reports
+              <a href="assets/papers/AfriEconQA Paper.pdf" target="_blank" class="paper-link-icon"
+                onclick="event.stopPropagation();" title="View Paper">
+                <i class="fas fa-file-pdf"></i>
+              </a>
+            </span>
+          </button>
+          <div class="pub-authors"><span class="author-highlight">E. Ajayi</span> and P. Bakare</div>
+          <div class="pub-venue">Submitted to ACM SIGIR 2026 • <a href="assets/papers/AfriEconQA Paper.pdf" target="_blank">PDF</a></div>
+          <div id="abstract2" class="abstract-content">
+            <div class="abstract-text">
+              <p>We introduce AfriEconQA, a specialized benchmark dataset for African economic analysis grounded in a comprehensive corpus of 236 World Bank reports. The task of AfriEconQA is to answer complex economic queries that require high-precision numerical reasoning and temporal disambiguation from specialized institutional documents. The dataset consists of 8,937 curated QA instances, rigorously filtered from a pool of 10,018 synthetic questions to ensure high-quality evidence-answer alignment.</p>
+              <p>Each instance is composed of: (1) a question requiring reasoning over economic indicators, (2) the corresponding evidence retrieved from the corpus, (3) a verified ground-truth answer, and (4) source metadata (e.g., URL and publication date) to ensure temporal provenance. AfriEconQA is the first benchmark focused specifically on African economic analysis, providing a unique challenge for Information Retrieval (IR) systems as the data is largely absent from the pre-training corpora of current Large Language Models (LLMs).</p>
+              <p>We operationalize this dataset through an 11-experiment matrix, benchmarking a zero-shot baseline (GPT-5 Mini) against RAG configurations using GPT-4o and Qwen 32B across five distinct embedding and ranking strategies. Our results demonstrate a severe "parametric knowledge gap," where zero-shot models fail to answer over 90% of queries, and even state-of-the-art RAG pipelines struggle to achieve high precision. This confirms AfriEconQA as a robust and challenging benchmark for the next generation of domain-specific IR and RAG systems.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Automatic Humor Detection -->
+        <div class="pub-item-expandable">
+          <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract3">
             <span class="toggle-icon">▶</span>
             <span>Automatic Humor Detection: From Theoretical Foundations to LLMs</span>
           </button>
@@ -501,7 +473,7 @@
               <i class="ai ai-researchgate"></i>
             </a>
           </div>
-          <div id="abstract2" class="abstract-content">
+          <div id="abstract3" class="abstract-content">
             <div class="abstract-text">
               <p>Automatic humor detection, the task of computationally identifying humorous content, is increasingly
                 critical as Large Language Models (LLMs) become integrated into human communication platforms like
@@ -528,8 +500,9 @@
           </div>
         </div>
 
+        <!-- 5. Language Diversity -->
         <div class="pub-item-expandable">
-          <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract3">
+          <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract4">
             <span class="toggle-icon">▶</span>
             <span>Language Diversity: Evaluating AI Performance on African Languages</span>
           </button>
@@ -546,7 +519,7 @@
               <i class="ai ai-arxiv"></i>
             </a>
           </div>
-          <div id="abstract3" class="abstract-content">
+          <div id="abstract4" class="abstract-content">
             <div class="abstract-text">
               <p>This study examines the digital representation of African languages and the challenges this presents
                 for current language detection tools. We evaluate their performance on Yoruba, Kinyarwanda, and Amharic.
