@@ -21,7 +21,7 @@
   <link rel="stylesheet" type="text/css" href="assets/css/phd-compact.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
   <link rel="author" href="https://medium.com/@ojayedwards01" />
@@ -348,21 +348,25 @@
       letter-spacing: -0.01em;
     }
     .section-title {
-      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Fraunces', Georgia, serif;
       font-weight: 700;
       color: var(--idx-text);
       letter-spacing: -0.02em;
     }
-    .research-section .research-content p,
-    .pub-title-compact,
-    .project-item .project-title {
+    .research-section .research-content p {
       font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--idx-text);
+    }
+    .pub-title-compact,
+    .pub-title-link-compact,
+    .project-item .project-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
       color: var(--idx-text);
     }
     .pub-title-link-compact {
       color: var(--idx-accent);
       text-decoration: none;
-      font-weight: 600;
     }
     .pub-title-link-compact:hover {
       color: var(--idx-accent-hover);
@@ -389,7 +393,7 @@
     }
     .highlight-card::after { display: none; }
     .highlight-card h3 {
-      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Fraunces', Georgia, serif;
       font-weight: 700;
       color: var(--idx-text);
       font-size: 1.05rem;
