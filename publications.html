@@ -18,282 +18,203 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
   <style>
-    /* ===== Publications Page — Premium Restyle ===== */
-
-    /* Section title */
-    .publication-category .category-title {
-      position: relative;
-      display: inline-block;
-      margin-bottom: 2rem;
-      padding-bottom: 0.5rem;
-    }
-    .publication-category .category-title::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(90deg, #2563eb, #0ea5e9);
-      border-radius: 2px;
+    /* ===== Publications — fresh, approachable overhaul ===== */
+    :root {
+      --pub-accent: #2563eb;
+      --pub-accent-hover: #1d4ed8;
+      --pub-bg: #fafaf9;
+      --pub-card: #ffffff;
+      --pub-text: #292524;
+      --pub-muted: #78716c;
+      --pub-border: #e7e5e4;
     }
 
-    /* Research interests banner */
+    body .section { padding: 2rem 0; background: var(--pub-bg); }
+    .section .container { padding-top: 0; }
+
+    /* Hero — friendly and clear */
+    .hero .hero-text h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 700;
+      color: var(--pub-text);
+      letter-spacing: -0.02em;
+    }
+
+    /* Research intro — soft pill tags, no box */
     .publications-intro {
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.06) 0%, rgba(14, 165, 233, 0.04) 100%);
-      border-left: 4px solid #2563eb;
-      padding: 2rem;
-      border-radius: 20px;
-      margin-bottom: 2.5rem;
-      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.06);
-      transition: box-shadow 0.3s ease;
-    }
-    .publications-intro:hover {
-      box-shadow: 0 8px 32px rgba(37, 99, 235, 0.1);
+      background: transparent;
+      border: none;
+      padding: 0 0 2rem 0;
+      margin-bottom: 0;
+      box-shadow: none;
     }
     .publications-intro p {
       margin: 0;
-      color: #1e293b;
-      line-height: 1.8;
-      font-size: 1rem;
+      color: var(--pub-text);
+      line-height: 1.75;
+      font-size: 1.05rem;
+      font-family: 'DM Sans', -apple-system, sans-serif;
     }
-    .publications-intro p:first-child { margin-bottom: 1rem; }
-    .publications-intro strong { color: #2563eb; font-weight: 700; }
+    .publications-intro p:first-child { margin-bottom: 0.75rem; }
+    .publications-intro strong {
+      color: var(--pub-accent);
+      font-weight: 600;
+    }
+    .publications-intro p:first-child strong {
+      display: inline;
+    }
+    .publications-intro p:last-of-type {
+      color: var(--pub-muted);
+      font-size: 0.95rem;
+    }
 
-    /* Publication cards — elevated, staggered entrance */
-    .pub-item-expandable {
-      background: #fff;
-      border: 1px solid rgba(0, 0, 0, 0.06);
-      border-left: 4px solid rgba(37, 99, 235, 0.35);
-      padding: 1.75rem 2rem;
+    /* Section title — minimal */
+    .publication-category .category-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--pub-text);
       margin-bottom: 1.25rem;
-      border-radius: 20px;
-      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04), 0 1px 0 rgba(255,255,255,0.8) inset;
-      transition: transform 0.25s ease, box-shadow 0.3s ease, border-left-color 0.25s ease;
-      animation: pubCardEnter 0.5s ease backwards;
+      padding-bottom: 0;
+      letter-spacing: -0.02em;
     }
-    .pub-item-expandable:nth-child(3) { animation-delay: 0.05s; }
-    .pub-item-expandable:nth-child(5) { animation-delay: 0.1s; }
-    .pub-item-expandable:nth-child(7) { animation-delay: 0.15s; }
-    .pub-item-expandable:nth-child(9) { animation-delay: 0.2s; }
-    .pub-item-expandable:nth-child(11) { animation-delay: 0.25s; }
-    @keyframes pubCardEnter {
-      from {
-        opacity: 0;
-        transform: translateY(16px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .publication-category .category-title::after { display: none; }
+
+    /* Publication list — clean list, not cards */
+    .pub-item-expandable {
+      background: var(--pub-card);
+      border: 1px solid var(--pub-border);
+      border-left: none;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 0.75rem;
+      border-radius: 14px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+      animation: none;
     }
     .pub-item-expandable:hover {
-      border-left-color: #2563eb;
-      box-shadow: 0 12px 40px rgba(37, 99, 235, 0.12), 0 1px 0 rgba(255,255,255,0.8) inset;
-      transform: translateY(-2px);
-    }
-    .pub-item-expandable.is-open {
-      border-left-color: #2563eb;
-      box-shadow: 0 12px 40px rgba(37, 99, 235, 0.14), 0 0 0 1px rgba(37, 99, 235, 0.08);
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
+      border-color: rgba(37, 99, 235, 0.2);
     }
 
-    /* Title row + toggle */
-    .pub-title-btn {
-      background: none;
-      border: none;
-      padding: 0;
-      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 1.12rem;
-      font-weight: 700;
-      color: #0f172a;
-      cursor: pointer;
-      text-align: left;
-      width: 100%;
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      transition: color 0.2s ease;
+    .pub-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 600;
       line-height: 1.45;
+      margin: 0 0 0.4rem 0;
     }
-    .pub-title-btn:hover { color: #2563eb; }
-    .pub-title-btn:focus-visible {
-      outline: 2px solid #2563eb;
-      outline-offset: 4px;
-      border-radius: 8px;
+    .pub-title-link {
+      color: var(--pub-text);
+      text-decoration: none;
+      transition: color 0.2s ease;
+      display: inline-block;
     }
-
-    /* Chevron icon — smooth rotate */
-    .toggle-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      margin-top: 0.1rem;
-      flex-shrink: 0;
-      color: #2563eb;
-      font-size: 0.75rem;
-      font-weight: bold;
-      background: rgba(37, 99, 235, 0.1);
-      border-radius: 8px;
-      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s ease;
+    .pub-title-link:hover {
+      color: var(--pub-accent);
     }
-    .pub-title-btn:hover .toggle-icon {
-      background: rgba(37, 99, 235, 0.18);
+    .pub-title-link .title-external {
+      font-size: 0.6em;
+      margin-left: 0.3em;
+      opacity: 0.5;
+      vertical-align: middle;
+      color: var(--pub-accent);
     }
-    .pub-title-btn[aria-expanded="true"] .toggle-icon {
-      transform: rotate(90deg);
-      background: rgba(37, 99, 235, 0.2);
-    }
-
-    .paper-link-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 1.5rem;
-      height: 1.5rem;
-      margin-left: 0.5rem;
-      color: #2563eb;
-      font-size: 0.9rem;
-      transition: transform 0.2s ease, color 0.2s ease;
-      opacity: 0.85;
-      cursor: pointer;
-    }
-    .paper-link-icon:hover {
-      opacity: 1;
-      transform: scale(1.15);
-      color: #1d4ed8;
-    }
+    .pub-title-link:hover .title-external { opacity: 0.9; }
 
     .pub-authors {
-      font-size: 0.95rem;
-      color: #64748b;
-      margin-top: 0.65rem;
-      padding-left: 2.75rem;
-      line-height: 1.6;
-    }
-    .author-highlight { font-weight: 700; color: #2563eb; }
-
-    .pub-venue {
       font-size: 0.9rem;
-      color: #64748b;
-      font-style: italic;
-      margin-top: 0.4rem;
-      padding-left: 2.75rem;
-    }
-    .pub-venue a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.2s ease;
-      padding: 0.25rem 0.6rem;
-      border-radius: 8px;
-      background: rgba(37, 99, 235, 0.08);
-    }
-    .pub-venue a:hover {
-      color: #fff;
-      background: #2563eb;
-      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
-    }
-
-    /* Abstract — pop-up panel with label and smooth height */
-    .abstract-content {
-      overflow: hidden;
+      color: var(--pub-muted);
       margin-top: 0;
-      transition: margin-top 0.35s ease;
+      line-height: 1.5;
+      font-family: 'DM Sans', -apple-system, sans-serif;
     }
-    .abstract-content.open {
-      margin-top: 1.25rem;
-    }
-    .abstract-content .abstract-inner {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .abstract-content.open .abstract-inner {
-      max-height: 1400px;
-    }
-    .abstract-text {
-      padding: 1.5rem 1.75rem;
-      background: linear-gradient(160deg, #f8fafc 0%, #f1f5f9 50%);
-      border-radius: 16px;
-      border: 1px solid rgba(37, 99, 235, 0.1);
-      border-left: 4px solid rgba(37, 99, 235, 0.5);
-      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.06);
-      position: relative;
-    }
-    .abstract-text::before {
-      content: 'Abstract';
-      display: block;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      color: #2563eb;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-    }
-    .abstract-text p {
-      color: #475569;
-      font-size: 0.95rem;
-      line-height: 1.85;
-      margin-bottom: 1rem;
-      text-align: justify;
-    }
-    .abstract-text p:last-child { margin-bottom: 0; }
+    .author-highlight { font-weight: 600; color: var(--pub-accent); }
 
-    /* External links */
-    .external-links { margin: 3rem 0 2rem; }
-    .external-link-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    .external-link {
+    .pub-venue-row {
       display: flex;
       align-items: center;
-      gap: 1rem;
-      padding: 1.25rem 1.5rem;
-      background: #fff;
-      color: #2563eb;
-      border-radius: 14px;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.35rem;
+    }
+    .pub-venue-row .pub-venue { margin-top: 0; display: inline; font-size: 0.875rem; color: var(--pub-muted); font-style: italic; }
+    .pub-venue-row .pub-venue a {
+      margin-left: 0.35rem;
+      color: var(--pub-accent);
       text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-      border: 1px solid rgba(0, 0, 0, 0.05);
+      font-weight: 500;
+      font-style: normal;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      background: rgba(37, 99, 235, 0.08);
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .pub-venue-row .pub-venue a:hover {
+      background: var(--pub-accent);
+      color: #fff;
+    }
+
+    .paper-link-icon { display: none; }
+
+    /* External links — simple row */
+    .external-links { margin: 2.5rem 0 1.5rem; }
+    .external-links .category-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .external-link-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0;
+    }
+    .external-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--pub-card);
+      color: var(--pub-accent);
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: 1px solid var(--pub-border);
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     }
     .external-link:hover {
-      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 28px rgba(37, 99, 235, 0.18);
-      color: #1d4ed8;
+      background: rgba(37, 99, 235, 0.08);
+      border-color: rgba(37, 99, 235, 0.25);
+      color: var(--pub-accent-hover);
+      transform: none;
+      box-shadow: none;
     }
-    .external-link i { font-size: 1.4rem; min-width: 24px; }
+    .external-link i { font-size: 1.1rem; }
 
-    /* Note */
+    /* Note — subtle */
     .publications-note {
-      margin-top: 2.5rem;
-      padding: 1.75rem;
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.04) 0%, rgba(14, 165, 233, 0.03) 100%);
-      border-radius: 16px;
-      border: 1px solid rgba(37, 99, 235, 0.1);
+      margin-top: 2rem;
+      padding: 1rem 0;
+      background: transparent;
+      border: none;
+      border-top: 1px solid var(--pub-border);
+      border-radius: 0;
     }
     .publications-note p {
-      font-size: 0.9rem;
-      color: #64748b;
-      margin-bottom: 0.5rem;
-      line-height: 1.7;
+      font-size: 0.85rem;
+      color: var(--pub-muted);
+      margin-bottom: 0.35rem;
+      line-height: 1.6;
     }
-    .publications-note p:last-child { margin-bottom: 0; }
 
-    /* Best paper badge */
+    /* Best paper badge — keep as-is */
     .best-paper-award {
       display: inline-flex;
       align-items: center;
@@ -312,26 +233,19 @@
       vertical-align: middle;
     }
     .best-paper-award i { font-size: 0.8rem; color: #92400e; }
+    .pub-venue .best-paper-award { font-size: 0.65rem; padding: 0.2rem 0.5rem; margin-left: 0.5rem; }
+    .pub-venue .best-paper-award i { font-size: 0.6rem; }
     @keyframes awardGlow {
       0% { box-shadow: 0 2px 10px rgba(245, 158, 11, 0.35), inset 0 1px 0 rgba(255,255,255,0.35); }
       100% { box-shadow: 0 4px 18px rgba(245, 158, 11, 0.5), inset 0 1px 0 rgba(255,255,255,0.4); }
     }
 
     @media (max-width: 768px) {
-      .pub-item-expandable { padding: 1.25rem 1.5rem; }
-      .pub-title-btn { font-size: 1rem; gap: 0.75rem; }
-      .pub-authors, .pub-venue { padding-left: 1.75rem; }
-      .external-link-list { grid-template-columns: 1fr; }
-      .best-paper-award {
-        display: flex;
-        margin-left: 0;
-        margin-top: 0.5rem;
-        width: fit-content;
-      }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .pub-item-expandable { animation: none; }
-      .abstract-content .abstract-inner { transition-duration: 0.2s; }
+      .pub-item-expandable { padding: 1rem 1.25rem; }
+      .pub-venue-row { flex-direction: column; align-items: flex-start; }
+      .pub-title { font-size: 1rem; }
+      .external-link-list { flex-direction: column; }
+      .best-paper-award { display: flex; margin-left: 0; margin-top: 0.5rem; width: fit-content; }
     }
   </style>
 </head>
@@ -382,194 +296,73 @@
           human communication with social awareness and cultural nuance.</p>
       </div>
 
-      <!-- PUBLICATIONS WITH CLICKABLE ABSTRACTS -->
+      <!-- PUBLICATIONS -->
       <div class="publication-category">
         <h2 class="category-title">Publications</h2>
 
         <!-- 1. HumorGen -->
         <div class="pub-item-expandable">
-          <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract0">
-            <span class="toggle-icon">▶</span>
-            <span>HumorGen: Cognitive Synergy for Humor Generation in Large Language Models via Persona-Based Distillation
-              <a href="assets/papers/HumorGen_CSF.pdf" target="_blank" class="paper-link-icon"
-                onclick="event.stopPropagation();" title="View Paper">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-            </span>
-          </button>
+          <h3 class="pub-title">
+            <a href="assets/papers/HumorGen_CSF.pdf" target="_blank" rel="noopener noreferrer" class="pub-title-link" title="Open paper">HumorGen: Cognitive Synergy for Humor Generation in Large Language Models via Persona-Based Distillation<i class="fas fa-external-link-alt title-external" aria-hidden="true"></i></a>
+          </h3>
           <div class="pub-authors"><span class="author-highlight">E. Ajayi</span> and P. Mitra</div>
-          <div class="pub-venue">Submitted to EMNLP 2026 • <a href="assets/papers/HumorGen_CSF.pdf" target="_blank">PDF</a></div>
-          <div id="abstract0" class="abstract-content">
-            <div class="abstract-inner">
-            <div class="abstract-text">
-              <p>Humor generation poses a significant challenge for Large Language Models (LLMs), because their standard training objective—predicting the most likely next word—inherently conflicts with the surprise and incongruity needed for comedy. To bridge this gap, we introduce the Cognitive Synergy Framework, a theoretically grounded methodology for generating high-quality humor data inspired by psychological theories of humor.</p>
-              <p>Utilizing a Mixture-of-Thought (MoT) approach, we deploy six cognitive personas (e.g., The Absurdist, The Cynic) to synthesize diverse comedic perspectives for a given prompt. This framework creates a theoretically grounded dataset, which we use to fine-tune a 7B parameter student model. We compare Direct Preference Optimization (DPO) and a novel Offline Group Relative Policy Optimization (O-GRPO); our 7B model significantly outperforms larger instruction-tuned baselines and achieves performance competitive with state-of-the-art proprietary models.</p>
-              <p>We find that cognitive-driven data curation is far more critical than alignment algorithms or model scale for humor generation. Data, models, and code will be released upon publication.</p>
-            </div>
-            </div>
+          <div class="pub-venue-row">
+            <div class="pub-venue">Submitted to EMNLP 2026 • <a href="assets/papers/HumorGen_CSF.pdf" target="_blank">PDF</a></div>
           </div>
         </div>
 
         <!-- 2. Mental Health -->
         <div class="pub-item-expandable">
-          <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract1">
-            <span class="toggle-icon">▶</span>
-            <span>A Machine Learning Approach for Detection of Mental Health Conditions and Cyberbullying from Social
-              Media
-                <a href="https://proceedings.mlr.press/v317/ajayi26a.html" target="_blank" class="paper-link-icon" onclick="event.stopPropagation();" title="View at PMLR">
-                  <i class="ai ai-pmlr"></i>
-                </a>
-                <a href="https://arxiv.org/pdf/2511.20001" target="_blank" class="paper-link-icon" onclick="event.stopPropagation();" title="View on arXiv">
-                  <i class="ai ai-arxiv"></i>
-                </a>
-                <span class="best-paper-award"><i class="fas fa-trophy"></i> Best Paper Award</span>
-            </span>
-          </button>
-          <div class="pub-authors"><span class="author-highlight">E. Ajayi</span>, M. Kachweka, M. Deku, and E. Aiken
-          </div>
-          <div class="pub-venue">AAAI AIMedHealth Bridge 2026 (Oral Presentation)
-              <a href="https://proceedings.mlr.press/v317/ajayi26a.html" target="_blank" style="margin-left: 0.5rem; color: var(--secondary-color);" title="PMLR Proceedings">
-                <i class="ai ai-pmlr"></i> PMLR
-              </a>
-              <a href="https://arxiv.org/pdf/2511.20001" target="_blank" style="margin-left: 0.5rem; color: var(--secondary-color);" title="arXiv Preprint">
-                <i class="ai ai-arxiv"></i> arXiv
-              </a>
-          </div>
-          <div id="abstract1" class="abstract-content">
-            <div class="abstract-inner">
-            <div class="abstract-text">
-              <p>Mental health challenges and cyberbullying are increasingly prevalent in digital spaces, necessitating
-                scalable and interpretable detection systems. This paper introduces a unified multiclass classification
-                framework for detecting ten distinct mental health and cyberbullying categories from social media data.
-                We curate datasets from Twitter and Reddit, implementing a rigorous 'split-then-balance' pipeline to
-                train on balanced data while evaluating on a realistic, held-out imbalanced test set.</p>
-              <p>We conduct a comprehensive evaluation comparing traditional lexical models, hybrid approaches, and
-                several end-to-end fine-tuned transformers. Our results demonstrate that end-to-end fine-tuning is
-                critical for performance, with the domain-adapted MentalBERT emerging as the top model, achieving an
-                accuracy of 0.92 and a Macro F1 score of 0.76, surpassing both its generic counterpart and a zero-shot
-                LLM baseline.</p>
-              <p>Grounded in a comprehensive ethical analysis, we frame the system as a human-in-the-loop screening aid,
-                not a diagnostic tool. To support this, we introduce a hybrid SHAP-LLM explainability framework and
-                present a prototype dashboard ("Social Media Screener") designed to integrate model predictions and
-                their explanations into a practical workflow for moderators. Our work provides a robust baseline,
-                highlighting future needs for multi-label, clinically-validated datasets at the critical intersection of
-                online safety and computational mental health.</p>
-            </div>
+          <h3 class="pub-title">
+            <a href="https://proceedings.mlr.press/v317/ajayi26a.html" target="_blank" rel="noopener noreferrer" class="pub-title-link" title="Open paper">A Machine Learning Approach for Detection of Mental Health Conditions and Cyberbullying from Social Media<i class="fas fa-external-link-alt title-external" aria-hidden="true"></i></a>
+          </h3>
+          <div class="pub-authors"><span class="author-highlight">E. Ajayi</span>, M. Kachweka, M. Deku, and E. Aiken</div>
+          <div class="pub-venue-row">
+            <div class="pub-venue">AAAI AIMedHealth Bridge 2026 (Oral Presentation)
+              <span class="best-paper-award"><i class="fas fa-trophy"></i> Best Paper Award</span>
+              <a href="https://proceedings.mlr.press/v317/ajayi26a.html" target="_blank" class="pub-venue-link" title="PMLR Proceedings"><i class="ai ai-pmlr"></i> PMLR</a>
+              <a href="https://arxiv.org/pdf/2511.20001" target="_blank" class="pub-venue-link" title="arXiv Preprint"><i class="ai ai-arxiv"></i> arXiv</a>
             </div>
           </div>
         </div>
 
         <!-- 3. AfriEconQA -->
         <div class="pub-item-expandable">
-          <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract2">
-            <span class="toggle-icon">▶</span>
-            <span>AfriEconQA: A Benchmark Dataset for African Economic Analysis based on World Bank Reports
-              <a href="assets/papers/AfriEconQA Paper.pdf" target="_blank" class="paper-link-icon"
-                onclick="event.stopPropagation();" title="View Paper">
-                <i class="fas fa-file-pdf"></i>
-              </a>
-            </span>
-          </button>
+          <h3 class="pub-title">
+            <a href="assets/papers/AfriEconQA Paper.pdf" target="_blank" rel="noopener noreferrer" class="pub-title-link" title="Open paper">AfriEconQA: A Benchmark Dataset for African Economic Analysis based on World Bank Reports<i class="fas fa-external-link-alt title-external" aria-hidden="true"></i></a>
+          </h3>
           <div class="pub-authors"><span class="author-highlight">E. Ajayi</span> and P. Bakare</div>
-          <div class="pub-venue">Submitted to ACM SIGIR 2026 • <a href="assets/papers/AfriEconQA Paper.pdf" target="_blank">PDF</a></div>
-          <div id="abstract2" class="abstract-content">
-            <div class="abstract-inner">
-            <div class="abstract-text">
-              <p>We introduce AfriEconQA, a specialized benchmark dataset for African economic analysis grounded in a comprehensive corpus of 236 World Bank reports. The task of AfriEconQA is to answer complex economic queries that require high-precision numerical reasoning and temporal disambiguation from specialized institutional documents. The dataset consists of 8,937 curated QA instances, rigorously filtered from a pool of 10,018 synthetic questions to ensure high-quality evidence-answer alignment.</p>
-              <p>Each instance is composed of: (1) a question requiring reasoning over economic indicators, (2) the corresponding evidence retrieved from the corpus, (3) a verified ground-truth answer, and (4) source metadata (e.g., URL and publication date) to ensure temporal provenance. AfriEconQA is the first benchmark focused specifically on African economic analysis, providing a unique challenge for Information Retrieval (IR) systems as the data is largely absent from the pre-training corpora of current Large Language Models (LLMs).</p>
-              <p>We operationalize this dataset through an 11-experiment matrix, benchmarking a zero-shot baseline (GPT-5 Mini) against RAG configurations using GPT-4o and Qwen 32B across five distinct embedding and ranking strategies. Our results demonstrate a severe "parametric knowledge gap," where zero-shot models fail to answer over 90% of queries, and even state-of-the-art RAG pipelines struggle to achieve high precision. This confirms AfriEconQA as a robust and challenging benchmark for the next generation of                 domain-specific IR and RAG systems.</p>
-            </div>
-            </div>
+          <div class="pub-venue-row">
+            <div class="pub-venue">Submitted to ACM SIGIR 2026 • <a href="assets/papers/AfriEconQA Paper.pdf" target="_blank">PDF</a></div>
           </div>
         </div>
 
         <!-- 4. Automatic Humor Detection -->
         <div class="pub-item-expandable">
-          <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract3">
-            <span class="toggle-icon">▶</span>
-            <span>Automatic Humor Detection: From Theoretical Foundations to LLMs</span>
-          </button>
+          <h3 class="pub-title">
+            <a href="assets/papers/Automatic Humor Detection Survey.pdf" target="_blank" rel="noopener noreferrer" class="pub-title-link" title="Open paper">Automatic Humor Detection: From Theoretical Foundations to LLMs<i class="fas fa-external-link-alt title-external" aria-hidden="true"></i></a>
+          </h3>
           <div class="pub-authors"><span class="author-highlight">E. Ajayi</span> and P. Mitra</div>
-          <div class="pub-venue">
-            Submitted to ACM Computing Surveys
-            <a href="assets/papers/Automatic Humor Detection Survey.pdf" target="_blank"
-              style="margin-left: 0.5rem; color: var(--secondary-color);" title="View Paper">
-              <i class="fas fa-file-pdf"></i>
-            </a>
-            <a href="https://doi.org/10.13140/RG.2.2.24393.61288" target="_blank"
-              style="margin-left: 0.5rem; color: var(--secondary-color);" title="ResearchGate">
-              <i class="ai ai-researchgate"></i>
-            </a>
-          </div>
-          <div id="abstract3" class="abstract-content">
-            <div class="abstract-inner">
-            <div class="abstract-text">
-              <p>Automatic humor detection, the task of computationally identifying humorous content, is increasingly
-                critical as Large Language Models (LLMs) become integrated into human communication platforms like
-                chatbots and virtual assistants. However, understanding humor poses significant challenges for AI due to
-                its reliance on complex context, cultural nuances, linguistic ambiguity, and multimodal cues. Current
-                research is fragmented across different humor types, languages, modalities, and evaluation benchmarks,
-                particularly concerning the capabilities and limitations of modern LLMs.</p>
-              <p>This survey provides a comprehensive synthesis of the automatic humor detection field, tracing its
-                evolution from foundational psychological and linguistic theories through classical machine learning,
-                deep learning, and the recent transformer-based LLM paradigm. We organize and analyze computational
-                methods, feature engineering techniques, benchmark datasets (text-only, multimodal, multilingual), and
-                evaluation metrics. We critically examine LLM adaptation strategies, including fine-tuning,
-                parameter-efficient methods (PEFT), prompt engineering, and multi-task learning, alongside developments
-                in multimodal and cross-lingual humor understanding.</p>
-              <p>Our analysis reveals that while LLMs demonstrate improved performance in capturing surface humor
-                patterns, significant gaps persist in deep pragmatic reasoning, cultural grounding, multimodal
-                integration, and explainability compared to human cognition. We identify key open challenges, including
-                data scarcity, evaluation inconsistencies, the humor-offensiveness boundary, and the need for more
-                robust, culturally aware, and interpretable models. By consolidating the field's progress and
-                pinpointing critical limitations, this survey aims to guide future interdisciplinary research towards
-                developing more socially intelligent and nuanced AI systems capable of genuinely understanding human
-                humor.</p>
-            </div>
+          <div class="pub-venue-row">
+            <div class="pub-venue">
+              Submitted to ACM Computing Surveys
+              <a href="assets/papers/Automatic Humor Detection Survey.pdf" target="_blank" class="pub-venue-link" title="View Paper"><i class="fas fa-file-pdf"></i></a>
+              <a href="https://doi.org/10.13140/RG.2.2.24393.61288" target="_blank" class="pub-venue-link" title="ResearchGate"><i class="ai ai-researchgate"></i></a>
             </div>
           </div>
         </div>
 
         <!-- 5. Language Diversity -->
         <div class="pub-item-expandable">
-          <button class="pub-title-btn" aria-expanded="false" aria-controls="abstract4">
-            <span class="toggle-icon">▶</span>
-            <span>Language Diversity: Evaluating AI Performance on African Languages</span>
-          </button>
-          <div class="pub-authors"><span class="author-highlight">E. Ajayi</span>, B. Tadele, E. Umwari, M. Deku, P.
-            Singadi, C. Edeh, and J. Udahemuka</div>
-          <div class="pub-venue">
-            Submitted to Deep Learning Indaba 2026
-            <a href="assets/papers/Language_Diversity.pdf" target="_blank"
-              style="margin-left: 0.5rem; color: var(--secondary-color);" title="View Paper">
-              <i class="fas fa-file-pdf"></i>
-            </a>
-            <a href="https://www.arxiv.org/abs/2512.01557" target="_blank"
-              style="margin-left: 0.5rem; color: var(--secondary-color);" title="View on arXiv">
-              <i class="ai ai-arxiv"></i>
-            </a>
-          </div>
-          <div id="abstract4" class="abstract-content">
-            <div class="abstract-inner">
-            <div class="abstract-text">
-              <p>This study examines the digital representation of African languages and the challenges this presents
-                for current language detection tools. We evaluate their performance on Yoruba, Kinyarwanda, and Amharic.
-                While these languages are spoken by millions, their online usage on conversational platforms is often
-                sparse, heavily influenced by English, and not representative of the authentic, monolingual
-                conversations prevalent among native speakers. This lack of readily available authentic data online
-                creates a challenge of scarcity of conversational data for training language models.</p>
-              <p>To investigate this, data was collected from subreddits and local news sources for each language. The
-                analysis showed a stark contrast between the two sources. Reddit data was minimal and characterized by
-                heavy code-switching. Conversely, local news media offered a robust source of clean, monolingual
-                language data, which also prompted more user engagement in the local language on the news publishers'
-                social media pages. Language detection models, including the specialized AfroLID and a general LLM,
-                performed with near-perfect accuracy on the clean news data but struggled with the code-switched Reddit
-                posts.</p>
-              <p>The study concludes that professionally curated news content is a more reliable and effective source
-                for training context-rich AI models for African languages than data from conversational platforms. It
-                also highlights the need for future models that can process clean and code-switched text to improve the
-                detection accuracy for African languages.</p>
-            </div>
+          <h3 class="pub-title">
+            <a href="assets/papers/Language_Diversity.pdf" target="_blank" rel="noopener noreferrer" class="pub-title-link" title="Open paper">Language Diversity: Evaluating AI Performance on African Languages<i class="fas fa-external-link-alt title-external" aria-hidden="true"></i></a>
+          </h3>
+          <div class="pub-authors"><span class="author-highlight">E. Ajayi</span>, B. Tadele, E. Umwari, M. Deku, P. Singadi, C. Edeh, and J. Udahemuka</div>
+          <div class="pub-venue-row">
+            <div class="pub-venue">
+              Submitted to Deep Learning Indaba 2026
+              <a href="assets/papers/Language_Diversity.pdf" target="_blank" class="pub-venue-link" title="View Paper"><i class="fas fa-file-pdf"></i></a>
+              <a href="https://www.arxiv.org/abs/2512.01557" target="_blank" class="pub-venue-link" title="View on arXiv"><i class="ai ai-arxiv"></i></a>
             </div>
           </div>
         </div>
@@ -776,27 +569,6 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Abstract toggle with smooth behavior and card highlight
-      const toggleButtons = document.querySelectorAll('.pub-title-btn');
-
-      toggleButtons.forEach(button => {
-        button.addEventListener('click', function () {
-          const expanded = this.getAttribute('aria-expanded') === 'true';
-          const targetId = this.getAttribute('aria-controls');
-          const targetContent = document.getElementById(targetId);
-          const card = this.closest('.pub-item-expandable');
-
-          this.setAttribute('aria-expanded', !expanded);
-          targetContent.classList.toggle('open');
-          if (card) card.classList.toggle('is-open', !expanded);
-
-          // Optional: smooth-scroll expanded abstract into view
-          if (!expanded && targetContent.offsetTop < window.scrollY + 100) {
-            targetContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        });
-      });
-
       // Back to top button visibility
       const backToTopButton = document.getElementById('backToTop');
 
