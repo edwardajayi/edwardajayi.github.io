@@ -162,41 +162,43 @@
 
     .paper-link-icon { display: none; }
 
-    /* External links — simple row */
-    .external-links { margin: 2.5rem 0 1.5rem; }
+    /* External links — full-width grid */
+    .external-links { margin: 2.5rem 0 1.5rem; width: 100%; }
     .external-links .category-title {
       font-family: 'Fraunces', Georgia, serif;
       font-size: 1.2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
     }
     .external-link-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
       margin-top: 0;
+      width: 100%;
     }
     .external-link {
-      display: inline-flex;
+      display: flex;
       align-items: center;
+      justify-content: center;
       gap: 0.5rem;
-      padding: 0.5rem 1rem;
+      padding: 1rem 1.25rem;
       background: var(--pub-card);
       color: var(--pub-accent);
-      border-radius: 10px;
+      border-radius: 12px;
       text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
+      font-size: 0.95rem;
+      font-weight: 600;
       border: 1px solid var(--pub-border);
-      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
     .external-link:hover {
       background: rgba(37, 99, 235, 0.08);
-      border-color: rgba(37, 99, 235, 0.25);
+      border-color: rgba(37, 99, 235, 0.3);
       color: var(--pub-accent-hover);
-      transform: none;
-      box-shadow: none;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.1);
     }
-    .external-link i { font-size: 1.1rem; }
+    .external-link i { font-size: 1.25rem; }
 
     /* Note — subtle */
     .publications-note {
@@ -244,7 +246,7 @@
       .pub-item-expandable { padding: 1rem 1.25rem; }
       .pub-venue-row { flex-direction: column; align-items: flex-start; }
       .pub-title { font-size: 1rem; }
-      .external-link-list { flex-direction: column; }
+      .external-link-list { grid-template-columns: 1fr; }
       .best-paper-award { display: flex; margin-left: 0; margin-top: 0.5rem; width: fit-content; }
     }
   </style>
@@ -512,22 +514,16 @@
       <div class="external-links">
         <h2 class="category-title">External Profiles</h2>
         <div class="external-link-list">
-          <!-- <a href="#" target="_blank" class="external-link">
-            <i class="ai ai-google-scholar"></i> Google Scholar Profile
-          </a> -->
-          <!-- <a href="#" target="_blank" class="external-link">
-            <i class="fas fa-file-alt"></i> OpenReview Profile
-          </a> -->
-          <!-- <a href="#" target="_blank" class="external-link">
-            <i class="fas fa-archive"></i> arXiv Papers
-          </a> -->
-          <a href="https://github.com/edwardajayi" target="_blank" class="external-link">
-            <i class="fab fa-github"></i> GitHub Profile
+          <a href="https://scholar.google.com/citations?user=1TyN1RQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="external-link">
+            <i class="ai ai-google-scholar"></i> Google Scholar
           </a>
-          <a href="https://www.linkedin.com/in/edward-ajayi-a652b6203/" target="_blank" class="external-link">
-            <i class="fab fa-linkedin"></i> LinkedIn Profile
+          <a href="https://github.com/edwardajayi" target="_blank" rel="noopener noreferrer" class="external-link">
+            <i class="fab fa-github"></i> GitHub
           </a>
-          <a href="assets/Edward_Ajayi_CV_latest.pdf" target="_blank" class="external-link">
+          <a href="https://www.linkedin.com/in/edward-ajayi-a652b6203/" target="_blank" rel="noopener noreferrer" class="external-link">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="assets/Edward_Ajayi_CV_latest.pdf" target="_blank" rel="noopener noreferrer" class="external-link">
             <i class="fas fa-file-pdf"></i> Download CV
           </a>
         </div>
