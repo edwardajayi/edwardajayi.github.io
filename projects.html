@@ -150,6 +150,15 @@
       margin: 0;
       flex: 1;
     }
+    .project-description a {
+      color: var(--proj-accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .project-description a:hover {
+      color: var(--proj-accent-hover);
+      text-decoration: underline;
+    }
 
     .project-links {
       display: flex;
@@ -398,6 +407,27 @@
         <h2 class="section-title">Featured Projects</h2>
 
         <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-content">
+              <div class="title">HumorGen-7B</div>
+              <div class="project-meta">Qwen2.5-7B · LoRA · PEFT · Transformers · Hugging Face</div>
+              <div class="card-tags">
+                <span class="card-tag">Humor Generation</span>
+                <span class="card-tag">LLM</span>
+                <span class="card-tag">Hugging Face</span>
+              </div>
+              <p class="project-description">7B humor-generation model fine-tuned from Qwen2.5 with our Cognitive Synergy Framework (persona-based distillation), released on Hugging Face for PEFT-friendly loading. Method and benchmarks are in the <a href="assets/papers/HumorGen_CSF.pdf" target="_blank" rel="noopener noreferrer">HumorGen paper</a>.</p>
+              <div class="project-links">
+                <a href="https://huggingface.co/Jayi2424/HumorGen-7B" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <i class="fas fa-external-link-alt"></i> Hugging Face Model
+                </a>
+                <a href="assets/papers/HumorGen_CSF.pdf" target="_blank" rel="noopener noreferrer" class="project-link-btn secondary">
+                  <i class="fas fa-file-pdf"></i> HumorGen paper
+                </a>
+              </div>
+            </div>
+          </article>
+
           <article class="project-card">
             <div class="project-content">
               <div class="title">Multilabel ML System for Mental Health & Cyberbullying Detection</div>
