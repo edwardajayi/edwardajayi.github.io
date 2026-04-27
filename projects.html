@@ -102,6 +102,42 @@
       transform: none;
     }
 
+    .project-card--with-live .project-card-live-strip {
+      height: 160px;
+      overflow: hidden;
+      border-bottom: 1px solid var(--proj-border);
+      background: #e7e5e4;
+      position: relative;
+    }
+    .project-card-live-strip--hf {
+      background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 60%, #fed7aa 100%);
+    }
+    .project-card-live-strip--hf::before {
+      content: "Hugging Face \00B7 HumorGen-7B";
+      position: absolute;
+      top: 0.65rem;
+      left: 0.75rem;
+      z-index: 2;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #9a3412;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(154, 52, 18, 0.2);
+      border-radius: 999px;
+      padding: 0.2rem 0.55rem;
+    }
+    .project-card--with-live .project-card-live-strip iframe {
+      width: 100%;
+      height: 340px;
+      border: 0;
+      pointer-events: none;
+    }
+    .project-card-live-strip--hf iframe { opacity: 0.55; }
+    @media (prefers-reduced-motion: reduce) {
+      .project-card--with-live .project-card-live-strip { display: none; }
+    }
+
     .project-content {
       padding: 1.5rem;
       display: flex;
@@ -407,7 +443,17 @@
         <h2 class="section-title">Featured Projects</h2>
 
         <div class="projects-grid">
-          <article class="project-card">
+          <article class="project-card project-card--with-live project-card--humorgen-live">
+            <div class="project-card-live-strip project-card-live-strip--hf" aria-hidden="true">
+              <iframe
+                src="https://huggingface.co/Jayi2424/HumorGen-7B"
+                title="HumorGen-7B live preview"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                data-fallback-src="https://arxiv.org/html/2604.09629v1"
+                data-preview-type="humorgen"
+              ></iframe>
+            </div>
             <div class="project-content">
               <div class="title">HumorGen-7B</div>
               <div class="project-meta">Qwen2.5-7B · LoRA · PEFT · Transformers · Hugging Face</div>
@@ -416,7 +462,7 @@
                 <span class="card-tag">LLM</span>
                 <span class="card-tag">Hugging Face</span>
               </div>
-              <p class="project-description">7B humor-generation model fine-tuned from Qwen2.5 with our Cognitive Synergy Framework (persona-based distillation), released on Hugging Face for PEFT-friendly loading. Method and benchmarks are in the <a href="assets/papers/HumorGen_CSF.pdf" target="_blank" rel="noopener noreferrer">HumorGen paper</a>.</p>
+              <p class="project-description">HumorGen-7B is our deployed humor-generation model on Hugging Face, fine-tuned from Qwen2.5 with Cognitive Synergy persona-based distillation. Method and benchmarks are in the <a href="assets/papers/HumorGen_CSF.pdf" target="_blank" rel="noopener noreferrer">HumorGen paper</a>.</p>
               <div class="project-links">
                 <a href="https://huggingface.co/Jayi2424/HumorGen-7B" target="_blank" rel="noopener noreferrer" class="project-link-btn">
                   <i class="fas fa-external-link-alt"></i> Hugging Face Model
@@ -428,7 +474,34 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card project-card--with-live project-card--humorrank-live">
+            <div class="project-card-live-strip" aria-hidden="true">
+              <iframe src="https://humorrank-leaderboard.pages.dev/" title="HumorRank leaderboard live preview" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="project-content">
+              <div class="title">HumorRank</div>
+              <div class="project-meta">Cloudflare Pages · Web app · Leaderboard · 2026</div>
+              <div class="card-tags">
+                <span class="card-tag">Humor evaluation</span>
+                <span class="card-tag">LLM</span>
+                <span class="card-tag">Web app</span>
+              </div>
+              <p class="project-description">HumorRank is our live tournament-based leaderboard for evaluating humor generation across models, hosted at <a href="https://humorrank-leaderboard.pages.dev/" target="_blank" rel="noopener noreferrer">humorrank-leaderboard.pages.dev</a>. Write-up in the <a href="assets/papers/HumorRank.pdf" target="_blank" rel="noopener noreferrer">HumorRank paper</a>.</p>
+              <div class="project-links">
+                <a href="https://humorrank-leaderboard.pages.dev/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <i class="fas fa-external-link-alt"></i> Open HumorRank site
+                </a>
+                <a href="assets/papers/HumorRank.pdf" target="_blank" rel="noopener noreferrer" class="project-link-btn secondary">
+                  <i class="fas fa-file-pdf"></i> HumorRank paper
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card--with-live">
+            <div class="project-card-live-strip" aria-hidden="true">
+              <iframe src="https://proceedings.mlr.press/v317/ajayi26a.html" title="Mental health paper page preview" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
             <div class="project-content">
               <div class="title">Multilabel ML System for Mental Health & Cyberbullying Detection</div>
               <div class="project-meta">Python · Scikit-learn · Transformers · BERT · NLP</div>
@@ -449,7 +522,10 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card project-card--with-live">
+            <div class="project-card-live-strip" aria-hidden="true">
+              <iframe src="https://bus-tracker-web.onrender.com/login" title="AI workflow automation live preview" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
             <div class="project-content">
               <div class="title">AI Workflow & Bus Management System</div>
               <div class="project-meta">Python · FastAPI · JavaScript · LangChain · Google Sheets</div>
@@ -470,7 +546,10 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card project-card--with-live">
+            <div class="project-card-live-strip" aria-hidden="true">
+              <iframe src="assets/projects/AfriEcon/index.html" title="AfriEconQA project page preview" loading="lazy"></iframe>
+            </div>
             <div class="project-content">
               <div class="title">AfriEconQA: Benchmark QA Dataset for African Economics</div>
               <div class="project-meta">Python · RAG · LangChain · GPT-4o · Qwen · Evaluation Pipelines</div>
@@ -491,7 +570,10 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card project-card--with-live">
+            <div class="project-card-live-strip" aria-hidden="true">
+              <iframe src="https://researchclubcmuafrica.github.io" title="CMU Africa Research Club website preview" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
             <div class="project-content">
               <div class="title">CMU Africa Research Club Website</div>
               <div class="project-meta">HTML5 · CSS3 · JavaScript · Responsive Design</div>
@@ -733,6 +815,22 @@
   <script>
     // On page load
     document.addEventListener('DOMContentLoaded', function() {
+      // HumorGen preview fallback: Hugging Face -> arXiv
+      const humorgenPreview = document.querySelector('iframe[data-preview-type="humorgen"]');
+      if (humorgenPreview) {
+        const fallbackSrc = humorgenPreview.getAttribute('data-fallback-src');
+        let switchedToFallback = false;
+        const switchToFallback = function() {
+          if (switchedToFallback || !fallbackSrc) return;
+          switchedToFallback = true;
+          humorgenPreview.src = fallbackSrc;
+        };
+
+        // If HF embed errors or stalls, fallback to arXiv preview.
+        humorgenPreview.addEventListener('error', switchToFallback);
+        window.setTimeout(switchToFallback, 4500);
+      }
+
       // Back to top button visibility
       const backToTopButton = document.getElementById('backToTop');
       
