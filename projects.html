@@ -134,6 +134,27 @@
       pointer-events: none;
     }
     .project-card-live-strip--hf iframe { opacity: 0.55; }
+    .bus-preview-rotator {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    .bus-preview-rotator__image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      opacity: 0;
+      transform: scale(1.02);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+      display: block;
+    }
+    .bus-preview-rotator__image.is-visible {
+      opacity: 1;
+      transform: scale(1);
+    }
     @media (prefers-reduced-motion: reduce) {
       .project-card--with-live .project-card-live-strip { display: none; }
     }
@@ -524,7 +545,10 @@
 
           <article class="project-card project-card--with-live">
             <div class="project-card-live-strip" aria-hidden="true">
-              <iframe src="https://bus-tracker-web.onrender.com/login" title="AI workflow automation live preview" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div class="bus-preview-rotator" data-bus-image-rotator data-interval="2200" data-images="assets/projects/bus%20management/login-page.png|assets/projects/bus%20management/dashboard-approvals.png|assets/projects/bus%20management/chatbot-with-analysis.png|assets/projects/bus%20management/editable-email-drafter-sender.png|assets/projects/bus%20management/view-edit-record.png|assets/projects/bus%20management/dashbord-clicked.png|assets/projects/bus%20management/AI%20Suggestion.png|assets/projects/bus%20management/edwardddd.png">
+                <img class="bus-preview-rotator__image is-visible" src="assets/projects/bus%20management/login-page.png" alt="Bus management project login page preview" loading="lazy" />
+                <img class="bus-preview-rotator__image" src="assets/projects/bus%20management/dashboard-approvals.png" alt="" aria-hidden="true" loading="lazy" />
+              </div>
             </div>
             <div class="project-content">
               <div class="title">AI Workflow & Bus Management System</div>
@@ -815,6 +839,67 @@
   <script>
     // On page load
     document.addEventListener('DOMContentLoaded', function() {
+      const busPreviewRotators = document.querySelectorAll('[data-bus-image-rotator]');
+      busPreviewRotators.forEach(function (rotator) {
+        const imageSources = (rotator.getAttribute('data-images') || '')
+          .split('|')
+          .map(function (source) { return source.trim(); })
+          .filter(Boolean);
+        const intervalMs = Number(rotator.getAttribute('data-interval')) || 2200;
+        const images = rotator.querySelectorAll('.bus-preview-rotator__image');
+
+        if (imageSources.length < 2 || images.length < 2) {
+          return;
+        }
+
+        let currentIndex = 0;
+        let activeImage = images[0];
+        let incomingImage = images[1];
+        let timerId = null;
+
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const showNextImage = function () {
+          const nextIndex = (currentIndex + 1) % imageSources.length;
+          const nextSource = imageSources[nextIndex];
+
+          const onLoad = function () {
+            incomingImage.removeEventListener('load', onLoad);
+            incomingImage.classList.add('is-visible');
+            activeImage.classList.remove('is-visible');
+
+            const previousActive = activeImage;
+            activeImage = incomingImage;
+            incomingImage = previousActive;
+            currentIndex = nextIndex;
+          };
+
+          incomingImage.addEventListener('load', onLoad);
+          incomingImage.src = nextSource;
+        };
+
+        if (!activeImage.src) {
+          activeImage.src = imageSources[0];
+        }
+        if (!incomingImage.src) {
+          incomingImage.src = imageSources[1];
+        }
+
+        if (!reducedMotion) {
+          timerId = window.setInterval(showNextImage, intervalMs);
+          rotator.addEventListener('mouseenter', function () {
+            if (timerId !== null) {
+              window.clearInterval(timerId);
+              timerId = null;
+            }
+          });
+          rotator.addEventListener('mouseleave', function () {
+            if (timerId === null) {
+              timerId = window.setInterval(showNextImage, intervalMs);
+            }
+          });
+        }
+      });
+
       // HumorGen preview fallback: Hugging Face -> arXiv
       const humorgenPreview = document.querySelector('iframe[data-preview-type="humorgen"]');
       if (humorgenPreview) {
