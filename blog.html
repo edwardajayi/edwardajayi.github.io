@@ -1,122 +1,229 @@
 <!DOCTYPE html>
-<html>
-    <head>
-          <!-- Google tag (gtag.js) -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-3E1CTW564V"></script>
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3E1CTW564V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-            gtag('config', 'G-3E1CTW564V');
-          </script>
-        <title>Edward's Blog</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" type="text/css" href="assets/css/phd-compact.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
-        <link
-          rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
-        />
-      </head>
+    gtag('config', 'G-3E1CTW564V');
+  </script>
+  <title>Blog - Edward Ajayi</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="assets/css/phd-compact.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+  
+  <style>
+    /* Blog — match Publications/Projects design language */
+    :root {
+      --blog-accent: #2563eb;
+      --blog-accent-hover: #1d4ed8;
+      --blog-bg: #fafaf9;
+      --blog-card: #ffffff;
+      --blog-text: #292524;
+      --blog-muted: #78716c;
+      --blog-border: #e7e5e4;
+    }
 
-    <body class="fade-in">
-        <header class="site-header">
-          <div class="container">
-            <div class="header-inner">
-              <h1 class="logo">
-                <a href="https://edwardajayi.github.io/">Edward Ajayi</a>
-              </h1>
-              <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-              </button>
-              <ul class="navbar" id="navbar">
-                <li><a href="index.html">About</a></li>
-                <li><a href="publications.html">Research</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="assets/Edward_Ajayi_CV.pdf" target="_blank">CV</a></li>
-              </ul>
-            </div>
-          </div>
-        </header>
+    body .section { background: var(--blog-bg); padding: 2rem 0; }
 
-        <!-- Hero Section -->
-        <section class="hero">
-          <div class="container">
-            <div class="hero-content">
-              <div class="hero-text">
-                <h1>Blog & Writing</h1>
-              </div>
-            </div>
-          </div>
-        </section>
+    .hero .hero-text h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 700;
+      color: var(--blog-text);
+      letter-spacing: -0.02em;
+    }
+
+    .hero-intro {
+      background: transparent;
+      border: none;
+      padding: 0 0 1.5rem 0;
+      margin-bottom: 0;
+      box-shadow: none;
+    }
+    .hero-intro p {
+      margin: 0;
+      color: var(--blog-muted);
+      line-height: 1.7;
+      font-size: 1.05rem;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+    }
+
+    .blog-container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      background: var(--blog-card);
+      border-radius: 14px;
+      border: 1px solid var(--blog-border);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      text-align: center;
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    }
     
-        <section class="section">
-          <div class="container">
-            <div class="blog-container" style="text-align: center; padding: 3rem 0;">
-                <img src="assets/img/undraw_under_construction_46pa.png" alt="Under Construction" style="max-width: 400px; margin: 0 auto 2rem;">
-                <h2>This page is under construction</h2>
-                <p style="max-width: 600px; margin: 1.5rem auto; color: var(--text-color);">
-                  I occasionally write about my research journey, AI for social good, and academic experiences on Substack.
-                </p>
-                <div class="read-more-button">
-                    <a target="_blank" href="https://substack.com/@edwardajayi" class="btn-primary">Go to Substack</a>
-                </div>
-            </div>
-          </div>
-        </section>
+    .blog-container:hover {
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
+      border-color: rgba(37, 99, 235, 0.2);
+    }
 
-        <!-- Footer -->
-        <footer class="site-footer">
-          <div class="container">
-            <div class="footer-content">
-              <p><strong>Last Updated:</strong> June, 2026</p>
-              <p>© 2026 Edward Ajayi</p>
-            </div>
-          </div>
-        </footer>
+    .blog-container img {
+      max-width: 320px;
+      height: auto;
+      margin: 0 auto 2rem;
+      display: block;
+    }
 
-        <!-- Back to top button -->
-        <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
-          <i class="fas fa-arrow-up"></i>
-        </a>
+    .blog-container h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.75rem;
+      color: var(--blog-text);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
 
-        <script>
-          document.addEventListener('DOMContentLoaded', function() {
-            const backToTopButton = document.getElementById('backToTop');
-            window.addEventListener('scroll', function() {
-              if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('visible');
-              } else {
-                backToTopButton.classList.remove('visible');
-              }
-            });
-            
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const navbar = document.getElementById('navbar');
-            if (mobileMenuBtn) {
-              mobileMenuBtn.addEventListener('click', function() {
-                navbar.classList.toggle('show');
-                const isExpanded = navbar.classList.contains('show');
-                mobileMenuBtn.setAttribute('aria-expanded', isExpanded.toString());
-                const icon = mobileMenuBtn.querySelector('i');
-                if (isExpanded) {
-                  icon.classList.remove('fa-bars');
-                  icon.classList.add('fa-times');
-                } else {
-                  icon.classList.remove('fa-times');
-                  icon.classList.add('fa-bars');
-                }
-              });
-            }
-          });
-        </script>
-      </body>
+    .blog-container p {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      color: var(--blog-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--blog-accent);
+      color: #ffffff !important;
+      border-radius: 10px;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--blog-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
+    }
+  </style>
+</head>
+
+<body class="fade-in">
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <h1 class="logo">
+          <a href="index.html">Edward Ajayi</a>
+        </h1>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="navbar" id="navbar">
+          <li><a href="index.html">About</a></li>
+          <li><a href="publications.html">Research</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="assets/Edward_Ajayi_CV.pdf" target="_blank">CV</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Blog & Writing</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="hero-intro" style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">
+        <p>Thoughts, essays, and writing on artificial intelligence, research, and academia.</p>
+      </div>
+
+      <div class="blog-container">
+        <img src="assets/img/undraw_under_construction_46pa.png" alt="Under Construction">
+        <h2>This page is under construction</h2>
+        <p>
+          I occasionally write about my research journey, AI for social good, and academic experiences on Substack.
+        </p>
+        <div class="read-more-button">
+          <a target="_blank" href="https://substack.com/@edwardajayi" class="btn-primary">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display: inline-block; vertical-align: middle; margin-right: 4px;">
+              <path d="M22.539 8.242H1.46V5.406h21.078v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.078V0z"/>
+            </svg>
+            Go to Substack
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content" style="text-align:center;padding:2rem 0;">
+        <p style="color:#64748b;margin:0.5rem 0;">© 2026 Edward Ajayi. All rights reserved.</p>
+        <p style="color:#94a3b8;margin:0.5rem 0;font-size:0.9rem;"><strong>Last Updated:</strong> June, 2026</p>
+        <p style="margin:0.5rem 0;">
+          <a href="https://github.com/edwardajayi/edwardajayi.github.io" target="_blank" style="color:#64748b;text-decoration:none;margin:0 0.5rem;">Source Code</a> | 
+          <a href="https://pages.github.com/" target="_blank" style="color:#64748b;text-decoration:none;margin:0 0.5rem;">GitHub Pages</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const backToTopButton = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add('visible');
+        } else {
+          backToTopButton.classList.remove('visible');
+        }
+      });
+      
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const navbar = document.getElementById('navbar');
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function() {
+          navbar.classList.toggle('show');
+          const isExpanded = navbar.classList.contains('show');
+          mobileMenuBtn.setAttribute('aria-expanded', isExpanded.toString());
+          const icon = mobileMenuBtn.querySelector('i');
+          if (isExpanded) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+          } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          }
+        });
+      }
+    });
+  </script>
+</body>
 </html>
