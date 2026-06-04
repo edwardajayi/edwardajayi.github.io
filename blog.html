@@ -44,9 +44,12 @@
     .hero-intro {
       background: transparent;
       border: none;
-      padding: 0 0 1.5rem 0;
+      padding: 0 0 2rem 0;
       margin-bottom: 0;
       box-shadow: none;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
     }
     .hero-intro p {
       margin: 0;
@@ -56,45 +59,145 @@
       font-family: 'DM Sans', -apple-system, sans-serif;
     }
 
-    .blog-container {
-      max-width: 700px;
+    /* Layout grid */
+    .blog-layout {
+      max-width: 900px;
       margin: 0 auto;
-      padding: 3rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    /* Featured Post Card */
+    .featured-card {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
       background: var(--blog-card);
-      border-radius: 14px;
+      border-radius: 16px;
       border: 1px solid var(--blog-border);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-      text-align: center;
-      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      text-decoration: none;
+      color: inherit;
     }
     
-    .blog-container:hover {
-      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
-      border-color: rgba(37, 99, 235, 0.2);
+    .featured-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.08);
+      border-color: rgba(37, 99, 235, 0.25);
     }
 
-    .blog-container img {
-      max-width: 320px;
-      height: auto;
-      margin: 0 auto 2rem;
-      display: block;
+    .featured-image-container {
+      position: relative;
+      min-height: 300px;
+      background: #f1f0ee;
+      overflow: hidden;
     }
 
-    .blog-container h2 {
-      font-family: 'Fraunces', Georgia, serif;
-      font-size: 1.75rem;
-      color: var(--blog-text);
+    .featured-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .featured-card:hover .featured-image {
+      transform: scale(1.03);
+    }
+
+    .featured-content {
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.85rem;
+    }
+
+    .post-badge {
+      align-self: flex-start;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--blog-accent);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
       font-weight: 700;
-      margin-bottom: 1rem;
-      letter-spacing: -0.02em;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
-    .blog-container p {
+    .post-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--blog-text);
+      line-height: 1.35;
+      margin: 0;
+      letter-spacing: -0.01em;
+      transition: color 0.2s ease;
+    }
+
+    .featured-card:hover .post-title {
+      color: var(--blog-accent);
+    }
+
+    .post-excerpt {
       font-family: 'DM Sans', -apple-system, sans-serif;
       color: var(--blog-muted);
-      font-size: 1.05rem;
-      line-height: 1.7;
-      margin-bottom: 2rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .post-meta {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 0.825rem;
+      color: var(--blog-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .post-meta-bullet {
+      color: var(--blog-border);
+    }
+
+    /* Substack Call-To-Action Card */
+    .substack-cta {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.03) 0%, rgba(37, 99, 235, 0.06) 100%);
+      border: 1px dashed rgba(37, 99, 235, 0.3);
+      border-radius: 16px;
+      padding: 2.5rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .substack-cta h3 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.35rem;
+      color: var(--blog-text);
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .substack-cta p {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      color: var(--blog-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+      max-width: 440px;
     }
 
     .btn-primary {
@@ -107,15 +210,90 @@
       border-radius: 10px;
       font-family: 'DM Sans', -apple-system, sans-serif;
       font-weight: 600;
+      font-size: 0.95rem;
       text-decoration: none;
       transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
       box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+      border: none;
+      cursor: pointer;
     }
 
     .btn-primary:hover {
       background-color: var(--blog-accent-hover);
       transform: translateY(-2px);
       box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
+    }
+
+    /* Upcoming / Archive Section */
+    .archive-section {
+      margin-top: 1rem;
+    }
+
+    .archive-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--blog-text);
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+
+    .upcoming-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .upcoming-card {
+      background: var(--blog-card);
+      border: 1px solid var(--blog-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      opacity: 0.75;
+      position: relative;
+    }
+
+    .upcoming-status {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--blog-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .upcoming-card h4 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.1rem;
+      margin: 0;
+      color: var(--blog-text);
+      font-weight: 600;
+    }
+
+    .upcoming-card p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      color: var(--blog-muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .featured-card {
+        grid-template-columns: 1fr;
+      }
+      .featured-image-container {
+        min-height: 220px;
+      }
+      .featured-content {
+        padding: 1.75rem;
+      }
+      .upcoming-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -135,6 +313,7 @@
           <li><a href="publications.html">Research</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="news.html">News</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
           <li><a href="assets/Edward_Ajayi_CV.pdf" target="_blank">CV</a></li>
         </ul>
       </div>
@@ -146,7 +325,7 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
-          <h1>Blog & Writing</h1>
+          <h1>Blog &amp; Writing</h1>
         </div>
       </div>
     </div>
@@ -154,22 +333,59 @@
 
   <section class="section">
     <div class="container">
-      <div class="hero-intro" style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">
-        <p>Thoughts, essays, and writing on artificial intelligence, research, and academia.</p>
+      <div class="hero-intro">
+        <p>Articles, reflections, and essays on artificial intelligence, NLP, and my academic research experience.</p>
       </div>
 
-      <div class="blog-container">
-        <img src="assets/img/undraw_under_construction_46pa.png" alt="Under Construction">
-        <h2>This page is under construction</h2>
-        <p>
-          I occasionally write about my research journey, AI for social good, and academic experiences on Substack.
-        </p>
-        <div class="read-more-button">
+      <div class="blog-layout">
+        <!-- Featured Post Card linking to Substack Article -->
+        <a href="https://open.substack.com/pub/edwardajayi/p/evaluating-the-evaluator-what-humor?r=2e47h1&utm_campaign=post&utm_medium=web" target="_blank" rel="noopener noreferrer" class="featured-card">
+          <div class="featured-image-container">
+            <img src="assets/img/blog_cover_one.png" alt="Abstract AI and Natural Language illustration" class="featured-image" loading="lazy" />
+          </div>
+          <div class="featured-content">
+            <span class="post-badge">Article</span>
+            <h2 class="post-title">Evaluating the Evaluator: What Humor Taught Us About LLM Judges</h2>
+            <p class="post-excerpt">
+              How evaluating computational humor exposes critical limitations in using large language models as judges, drawing from insights built during the HumorRank project.
+            </p>
+            <div class="post-meta">
+              <span>June, 2026</span>
+              <span class="post-meta-bullet">&bull;</span>
+              <span>5 min read</span>
+              <span class="post-meta-bullet">&bull;</span>
+              <span style="color: var(--blog-accent); font-weight: 500;">Read on Substack &rarr;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Upcoming Posts Section
+        <div class="archive-section">
+          <h3 class="archive-title">Upcoming Writings</h3>
+          <div class="upcoming-grid">
+            <div class="upcoming-card">
+              <span class="upcoming-status">In Progress</span>
+              <h4>Computational Humor: Fine-Tuning &amp; Persona Distillation</h4>
+              <p>Exploring the methodologies behind HumorGen-7B, aligning LLMs to generate high-quality humor through cognitive synergy.</p>
+            </div>
+            <div class="upcoming-card">
+              <span class="upcoming-status">Planned</span>
+              <h4>Evaluating Social Awareness in Foundation Models</h4>
+              <p>Designing robust evaluation frameworks that measure nuance, context, and intent alignment in interactive agents.</p>
+            </div>
+          </div>
+        </div>
+        -->
+
+        <!-- Substack Newsletter Subscription Callout -->
+        <div class="substack-cta">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="var(--blog-accent)">
+            <path d="M22.539 8.242H1.46V5.406h21.078v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.078V0z"/>
+          </svg>
+          <h3>Subscribe on Substack</h3>
+          <p>Get notified when I publish new essays, research notes, and commentary directly in your inbox.</p>
           <a target="_blank" href="https://substack.com/@edwardajayi" class="btn-primary">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display: inline-block; vertical-align: middle; margin-right: 4px;">
-              <path d="M22.539 8.242H1.46V5.406h21.078v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.078V0z"/>
-            </svg>
-            Go to Substack
+            Subscribe Now
           </a>
         </div>
       </div>
@@ -180,7 +396,7 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content" style="text-align:center;padding:2rem 0;">
-        <p style="color:#64748b;margin:0.5rem 0;">© 2026 Edward Ajayi. All rights reserved.</p>
+        <p style="color:#64748b;margin:0.5rem 0;">&copy; 2026 Edward Ajayi. All rights reserved.</p>
         <p style="color:#94a3b8;margin:0.5rem 0;font-size:0.9rem;"><strong>Last Updated:</strong> June, 2026</p>
         <p style="margin:0.5rem 0;">
           <a href="https://github.com/edwardajayi/edwardajayi.github.io" target="_blank" style="color:#64748b;text-decoration:none;margin:0 0.5rem;">Source Code</a> | 
@@ -188,7 +404,7 @@
         </p>
       </div>
     </div>
-  </footer>
+  </footer >
 
   <!-- Back to top button -->
   <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
