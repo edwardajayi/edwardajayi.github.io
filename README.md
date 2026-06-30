@@ -76,7 +76,7 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 
 - 📌 **[Cross-Lingual Cognitive Synergy for Constrained Humor Generation in LLMs](https://edwardajayi.github.io/assets/papers/HumorGen-JOKER.pdf)**  
   **E. Ajayi**, P. Mitra  
-  *Submitted to CLEF 2026 JOKER Track*
+  *Accepted to CLEF 2026 JOKER Track*
 
 - 📌 **[Automatic Humor Detection: A Comprehensive Survey from Theoretical Foundations to Large Language Models](https://edwardajayi.github.io/assets/papers/Automatic%20Humor%20Detection%20Survey.pdf)**  
   **E. Ajayi**, P. Mitra  
