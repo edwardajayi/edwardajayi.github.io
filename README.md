@@ -136,14 +136,14 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 
 | Date | Achievement |
 |------|-------------|
+| 🔬 Jun 2026 | **NLP Research Associate** — Spatial & Language Technologies Lab, CMU |
+| 🌍 Jun 2026 | **Paper Accepted** — Deep Learning Indaba 2026 |
+| 🎓 May 2026 | **MSc in Engineering Artificial Intelligence** — Carnegie Mellon University |
+| 🎤 May 2026 | **Invited Talk** — CMU-Africa NLP Group: *Beyond the Transformer* |
+| 🥇 Apr 2026 | **People's Choice Award** — CMU-Africa Research Showcase 2026 |
+| 🤝 Apr 2026 | **Co-founded** — [CMU-Africa NLP Group](https://cmuafrica-nlpgroup.pages.dev/) |
 | 🏆 Jan 2026 | **Best Paper Award** — AAAI AI in Medicine and Healthcare Bridge 2026 |
 | 🎤 Jan 2026 | **Oral Presentation** — AAAI-26, Singapore Expo |
-| 🎓 May 2026 | **MSc in Engineering Artificial Intelligence** — Carnegie Mellon University |
-| 🥇 Apr 2026 | **People's Choice Award** — CMU-Africa Research Showcase 2026 |
-| 🎤 May 2026 | **Invited Talk** — CMU-Africa NLP Group: *Beyond the Transformer* |
-| 🌍 Jun 2026 | **Paper Accepted** — Deep Learning Indaba 2026 |
-| 🔬 Jun 2026 | **NLP Research Associate** — Spatial & Language Technologies Lab, CMU |
-| 🤝 Apr 2026 | **Co-founded** — [CMU-Africa NLP Group](https://cmuafrica-nlpgroup.pages.dev/) |
 | 🏛️ Nov 2024 | **Elected President** — CMU-Africa Research Club |
 | 🎓 Apr 2024 | **Mastercard Foundation Scholarship** — CMU Africa (Fully Funded) |
 
