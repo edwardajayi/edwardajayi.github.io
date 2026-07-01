@@ -90,12 +90,12 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 
 ## 🚀 Selected Projects
 
-### 🎭 [HumorGen-7B](https://huggingface.co/Jayi2424/HumorGen-7B) — Humor Generation Model
-[![Hugging Face](https://img.shields.io/badge/HuggingFace-Model-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/Jayi2424/HumorGen-7B)
-![Qwen2.5](https://img.shields.io/badge/Qwen2.5-LoRA-8B5CF6?style=flat-square)
-![PEFT](https://img.shields.io/badge/PEFT-Fine--tuned-10B981?style=flat-square)
+### 🎭 [HumorGen](https://humorgen.pages.dev/) — Open-Weight Computational Humor Generation
+[![Live Site](https://img.shields.io/badge/Live_Site-humorgen.pages.dev-2563EB?style=flat-square&logo=cloudflare&logoColor=white)](https://humorgen.pages.dev/)
+[![Hugging Face](https://img.shields.io/badge/HuggingFace-Model_Collection-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/collections/Jayi2424/humorgen)
+![Open Weights](https://img.shields.io/badge/14_models-Apache--2.0-10B981?style=flat-square)
 
-> A deployed 7B humor-generation model built with persona-based knowledge distillation. Released alongside the HumorGen paper with fully reproducible training code.
+> An open-weight ecosystem for computational humor. The Cognitive Synergy Framework runs six comedic personas in parallel and distills the funniest drafts into 14 LoRA adapters across English, French, and Spanish.
 
 ---
 
