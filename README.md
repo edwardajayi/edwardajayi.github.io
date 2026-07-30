@@ -83,7 +83,7 @@ More broadly, I am interested in developing **cognitively grounded approaches to
   *Submitted to ACM Computing Surveys*
 
 - 📌 **[AfriEconQA: A Benchmark Dataset for African Economic Analysis based on World Bank Reports](https://arxiv.org/abs/2601.15297)**  
-  **E. Ajayi**, P. Bakare  
+  **Edward Ajayi**, Mustapha Alaba & David Stephen  
   *Submitted to AAAI 2027*
 
 ---
