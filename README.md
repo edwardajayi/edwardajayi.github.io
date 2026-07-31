@@ -123,11 +123,11 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 
 ---
 
-### 🌍 [AfriEconQA](https://edwardajayi.github.io/assets/projects/AfriEcon/index.html) — African Economics Benchmark Dataset
-![Dataset](https://img.shields.io/badge/Dataset-8%2C937_QA_Pairs-10B981?style=flat-square)
-![RAG](https://img.shields.io/badge/RAG-64K%2B_Retrieval_Chunks-6366F1?style=flat-square)
+### 🌍 [AfriEconQA](https://afrieconqa.pages.dev/) — African Economics Benchmark Dataset
+![Dataset](https://img.shields.io/badge/Dataset-4%2C309_QA_Pairs-10B981?style=flat-square)
+![RAG](https://img.shields.io/badge/RAG-64%2C892_Retrieval_Chunks-6366F1?style=flat-square)
 
-> Specialized benchmark dataset built from 236 World Bank African Reports to close the "parametric knowledge gap" in AI economic analysis. Contains 8,937 curated QA pairs across 64K+ retrieval chunks.
+> Specialized benchmark dataset built from 220 World Bank African Reports to close the "parametric knowledge gap" in AI economic analysis. Contains 4,309 curated QA pairs across 64,892 retrieval chunks.
 
 ---
 
