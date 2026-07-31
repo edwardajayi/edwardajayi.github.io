@@ -66,7 +66,7 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 
 - 📌 **[HumorRank: A Tournament-Based Leaderboard for Evaluating Humor Generation in Large Language Models](https://arxiv.org/pdf/2604.19786)**  
   **E. Ajayi**, P. Mitra  
-  *Submitted to COLM 2026*  
+  *Submitted to AAAI 2027*  
   [![arXiv](https://img.shields.io/badge/arXiv-2604.19786-B31B1B?style=flat-square)](https://arxiv.org/pdf/2604.19786)
 
 - 📌 **[Language Diversity: Evaluating Language Usage and AI Performance on African Languages in Digital Spaces](https://www.arxiv.org/pdf/2512.01557)**  
@@ -74,9 +74,9 @@ More broadly, I am interested in developing **cognitively grounded approaches to
   *Accepted to Deep Learning Indaba 2026*  
   [![arXiv](https://img.shields.io/badge/arXiv-2512.01557-B31B1B?style=flat-square)](https://www.arxiv.org/pdf/2512.01557)
 
-- 📌 **[Cross-Lingual Cognitive Synergy for Constrained Humor Generation in LLMs](https://edwardajayi.github.io/assets/papers/HumorGen-JOKER.pdf)**  
+- 🏆 **[Cross-Lingual Cognitive Synergy for Constrained Humor Generation in LLMs](https://edwardajayi.github.io/assets/papers/HumorGen-JOKER.pdf)**  
   **E. Ajayi**, P. Mitra  
-  *Accepted to CLEF 2026 JOKER Track*
+  *Accepted to CLEF 2026 JOKER Track (Winner, Task 4)*
 
 - 📌 **[Automatic Humor Detection: A Comprehensive Survey from Theoretical Foundations to Large Language Models](https://edwardajayi.github.io/assets/papers/Automatic%20Humor%20Detection%20Survey.pdf)**  
   **E. Ajayi**, P. Mitra  
@@ -115,11 +115,19 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 
 ---
 
-### 🌍 [AfriEconQA](https://afrieconqa.pages.dev/) — African Economics Benchmark Dataset
-![Dataset](https://img.shields.io/badge/Dataset-4%2C309_QA_Pairs-10B981?style=flat-square)
-![RAG](https://img.shields.io/badge/RAG-64%2C892_Retrieval_Chunks-6366F1?style=flat-square)
+### 🌐 [CMU-Africa NLP Research Group](https://cmuafrica-nlpgroup.pages.dev/)
+![Web App](https://img.shields.io/badge/Web_App-Cloudflare-F38020?style=flat-square)
+![Community](https://img.shields.io/badge/Research-Community-4285F4?style=flat-square)
 
-> Specialized benchmark dataset built from 220 World Bank African Reports to close the "parametric knowledge gap" in AI economic analysis. Contains 4,309 curated QA pairs across 64,892 retrieval chunks.
+> Official portal for the CMU-Africa NLP Research Group — featuring a public research showcase, member dashboard, and collaboration system for researchers working on African language technologies and responsible AI.
+
+---
+
+### 🌍 [AfriEconQA](https://edwardajayi.github.io/assets/projects/AfriEcon/index.html) — African Economics Benchmark Dataset
+![Dataset](https://img.shields.io/badge/Dataset-8%2C937_QA_Pairs-10B981?style=flat-square)
+![RAG](https://img.shields.io/badge/RAG-64K%2B_Retrieval_Chunks-6366F1?style=flat-square)
+
+> Specialized benchmark dataset built from 236 World Bank African Reports to close the "parametric knowledge gap" in AI economic analysis. Contains 8,937 curated QA pairs across 64K+ retrieval chunks.
 
 ---
 
@@ -136,6 +144,7 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 
 | Date | Achievement |
 |------|-------------|
+| 🏆 Jul 2026 | **Winner** — CLEF 2026 JOKER Task 4: Humor Generation |
 | 🔬 Jun 2026 | **NLP Research Associate** — Spatial & Language Technologies Lab, CMU |
 | 🌍 Jun 2026 | **Paper Accepted** — Deep Learning Indaba 2026 |
 | 🎓 May 2026 | **MSc in Engineering Artificial Intelligence** — Carnegie Mellon University |
