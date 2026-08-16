@@ -55,8 +55,8 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 ### 2026
 
 - 🏆 **[A Machine Learning Approach for Detection of Mental Health Conditions and Cyberbullying from Social Media](https://proceedings.mlr.press/v317/ajayi26a.html)**  
-  **E. Ajayi**, M. Kachweka, M. Deku, E. Aiken  
-  *AAAI AI in Medicine and Healthcare Bridge 2026* — **Best Paper Award · Oral Presentation**  
+  **Edward Ajayi**, Martha Kachweka, Mawuli Deku, Emily Aiken  
+  *Proceedings of the Second AAAI Bridge Program on AI for Medicine and Healthcare, PMLR 317:15–26, 2026* — **Best Paper Award · Oral Presentation**  
   [![PMLR](https://img.shields.io/badge/PMLR-Proceedings-blue?style=flat-square)](https://proceedings.mlr.press/v317/ajayi26a.html) [![arXiv](https://img.shields.io/badge/arXiv-2511.20001-B31B1B?style=flat-square)](https://arxiv.org/pdf/2511.20001)
 
 - 📌 **[HumorGen: Cognitive Synergy for Humor Generation in Large Language Models via Persona-Based Distillation](https://arxiv.org/pdf/2604.09629)**  
