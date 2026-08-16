@@ -37,7 +37,7 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 <div align="center">
 
 | Area | Focus |
-|------|-------|
+| ------ | ------- |
 | 🎭 **Computational Humor** | Humor generation, detection, and cross-lingual humor in LLMs |
 | 📊 **LLM Evaluation** | Leaderboards, benchmarks, and tournament-based evaluation frameworks |
 | 🌍 **Multilingual NLP** | African languages, language diversity, and AI performance gaps |
@@ -82,7 +82,7 @@ More broadly, I am interested in developing **cognitively grounded approaches to
   **E. Ajayi**, P. Mitra  
   *Submitted to ACM Computing Surveys*
 
-- 📌 **[AfriEconQA: A Benchmark Dataset for African Economic Analysis based on World Bank Reports](https://arxiv.org/abs/2601.15297)**  
+- 📌 **[AfriEconQA: A Benchmark for Quantitative and Temporal Reasoning over World Bank Economic Reports](https://arxiv.org/abs/2601.15297)**  
   **Edward Ajayi**, Mustapha Alaba & David Stephen  
   *Submitted to AAAI 2027*
 
@@ -91,6 +91,7 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 ## 🚀 Selected Projects
 
 ### 🎭 [HumorGen](https://humorgen.pages.dev/) — Open-Weight Computational Humor Generation
+
 [![Live Site](https://img.shields.io/badge/Live_Site-humorgen.pages.dev-2563EB?style=flat-square&logo=cloudflare&logoColor=white)](https://humorgen.pages.dev/)
 [![Hugging Face](https://img.shields.io/badge/HuggingFace-Model_Collection-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/collections/Jayi2424/humorgen)
 ![Open Weights](https://img.shields.io/badge/14_models-Apache--2.0-10B981?style=flat-square)
@@ -100,6 +101,7 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 ---
 
 ### 📊 [HumorRank](https://humorrank-leaderboard.pages.dev/) — LLM Humor Generation Leaderboard
+
 [![Live App](https://img.shields.io/badge/Live_App-humorrank--leaderboard.pages.dev-2563EB?style=flat-square&logo=cloudflare&logoColor=white)](https://humorrank-leaderboard.pages.dev/)
 
 > A tournament-based leaderboard web application for ranking LLMs on humor generation tasks. Models compete head-to-head using automated and human-preference evaluation signals.
@@ -107,6 +109,7 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 ---
 
 ### 🧠 Mental Health & Cyberbullying Detection System
+
 [![Best Paper](https://img.shields.io/badge/AAAI--26-Best_Paper_Award-FFD700?style=flat-square)](https://proceedings.mlr.press/v317/ajayi26a.html)
 ![BERT](https://img.shields.io/badge/BERT-Transformers-F59E0B?style=flat-square)
 ![Oral](https://img.shields.io/badge/Oral-Presentation-EF4444?style=flat-square)
@@ -115,15 +118,8 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 
 ---
 
-### 🌐 [CMU-Africa NLP Research Group](https://cmuafrica-nlpgroup.pages.dev/)
-![Web App](https://img.shields.io/badge/Web_App-Cloudflare-F38020?style=flat-square)
-![Community](https://img.shields.io/badge/Research-Community-4285F4?style=flat-square)
+### 🌍 [AfriEconQA](https://afrieconqa.pages.dev/) — Quantitative & Temporal Reasoning over World Bank Reports
 
-> Official portal for the CMU-Africa NLP Research Group — featuring a public research showcase, member dashboard, and collaboration system for researchers working on African language technologies and responsible AI.
-
----
-
-### 🌍 [AfriEconQA](https://afrieconqa.pages.dev/) — African Economics Benchmark Dataset
 ![Dataset](https://img.shields.io/badge/Dataset-4%2C309_QA_Pairs-10B981?style=flat-square)
 ![RAG](https://img.shields.io/badge/RAG-64%2C892_Retrieval_Chunks-6366F1?style=flat-square)
 
@@ -132,6 +128,7 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 ---
 
 ### 🤖 AI Workflow Automation Agent — EdGE AI Labs (2025)
+
 ![LangChain](https://img.shields.io/badge/LangChain-Agent-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&logo=python&logoColor=white)
@@ -143,7 +140,7 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 ## 🏆 Highlights & Awards
 
 | Date | Achievement |
-|------|-------------|
+| ------ | ------------- |
 | 🏆 Jul 2026 | **Winner** — CLEF 2026 JOKER Task 4: Humor Generation |
 | 🔬 Jun 2026 | **NLP Research Associate** — Spatial & Language Technologies Lab, CMU |
 | 🌍 Jun 2026 | **Paper Accepted** — Deep Learning Indaba 2026 |
@@ -182,7 +179,7 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 I'm always open to research collaborations, PhD advising discussions, or interesting AI conversations.
 
 | Platform | Link |
-|----------|------|
+| ---------- | ------ |
 | 🌐 Website | [edwardajayi.github.io](https://edwardajayi.github.io) |
 | 📧 Email | [ojayedwards01@gmail.com](mailto:ojayedwards01@gmail.com) |
 | 💼 LinkedIn | [edward-ajayi-a652b6203](https://www.linkedin.com/in/edward-ajayi-a652b6203/) |
