@@ -74,7 +74,7 @@ More broadly, I am interested in developing **cognitively grounded approaches to
   *Accepted to Deep Learning Indaba 2026*  
   [![arXiv](https://img.shields.io/badge/arXiv-2512.01557-B31B1B?style=flat-square)](https://www.arxiv.org/pdf/2512.01557)
 
-- 🏆 **[Cross-Lingual Cognitive Synergy for Constrained Humor Generation in LLMs](https://edwardajayi.github.io/assets/papers/HumorGen-JOKER.pdf)**  
+- 🏆 **[Cross-Lingual Cognitive Synergy for Constrained Humor Generation in Large Language Models](https://edwardajayi.github.io/assets/papers/HumorGen-JOKER.pdf)**  
   **E. Ajayi**, P. Mitra  
   *Accepted to CLEF 2026 JOKER Track (Winner, Task 4)*
 
