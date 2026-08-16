@@ -78,13 +78,13 @@ More broadly, I am interested in developing **cognitively grounded approaches to
   **E. Ajayi**, P. Mitra  
   *Accepted to CLEF 2026 JOKER Track (Winner, Task 4)*
 
-- 📌 **[Automatic Humor Detection: A Comprehensive Survey from Theoretical Foundations to Large Language Models](https://edwardajayi.github.io/assets/papers/Automatic%20Humor%20Detection%20Survey.pdf)**  
-  **E. Ajayi**, P. Mitra  
-  *Submitted to ACM Computing Surveys*
-
 - 📌 **[AfriEconQA: A Benchmark for Quantitative and Temporal Reasoning over World Bank Economic Reports](https://arxiv.org/abs/2601.15297)**  
   **Edward Ajayi**, Mustapha Alaba & David Stephen  
   *Submitted to AAAI 2027*
+
+- 📌 **[Automatic Humor Detection: A Comprehensive Survey from Theoretical Foundations to Large Language Models](https://edwardajayi.github.io/assets/papers/Automatic%20Humor%20Detection%20Survey.pdf)**  
+  **E. Ajayi**, P. Mitra  
+  *Submitted to ACM Computing Surveys*
 
 ---
 
