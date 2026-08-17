@@ -76,7 +76,7 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 
 - 🏆 **[Cross-Lingual Cognitive Synergy for Constrained Humor Generation in Large Language Models](https://edwardajayi.github.io/assets/papers/HumorGen-JOKER.pdf)**  
   **E. Ajayi**, P. Mitra  
-  *Accepted to CLEF 2026 JOKER Track (Winner, Task 4)*
+  *CLEF 2026 Working Notes, CEUR-WS (to appear) · Conference and Labs of the Evaluation Forum · 21–24 Sep 2026* — Winner, JOKER Task 4
 
 - 📌 **[AfriEconQA: A Benchmark for Quantitative and Temporal Reasoning over World Bank Economic Reports](https://arxiv.org/abs/2601.15297)**  
   **Edward Ajayi**, Mustapha Alaba & David Stephen  
