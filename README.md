@@ -61,7 +61,7 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 
 - 📌 **[HumorGen: Cognitive Synergy for Humor Generation in Large Language Models via Persona-Based Distillation](https://arxiv.org/pdf/2604.09629)**  
   **E. Ajayi**, P. Mitra  
-  *Submitted to EMNLP 2026*  
+  *Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026, Main Conference, to appear)*  
   [![arXiv](https://img.shields.io/badge/arXiv-2604.09629-B31B1B?style=flat-square)](https://arxiv.org/pdf/2604.09629)
 
 - 📌 **[HumorRank: A Tournament-Based Leaderboard for Evaluating Humor Generation in Large Language Models](https://arxiv.org/pdf/2604.19786)**  
