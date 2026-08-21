@@ -71,7 +71,7 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 
 - 📌 **[Language Diversity: Evaluating Language Usage and AI Performance on African Languages in Digital Spaces](https://www.arxiv.org/pdf/2512.01557)**  
   **E. Ajayi**, B. Tadele, E. Umwari, M. Deku, P. Singadi, C. Edeh, J. Udahemuka  
-  *Accepted to Deep Learning Indaba 2026*  
+  *Deep Learning Indaba 2026 Research Track, Proceedings of Machine Learning Research (PMLR), to appear.*  
   [![arXiv](https://img.shields.io/badge/arXiv-2512.01557-B31B1B?style=flat-square)](https://www.arxiv.org/pdf/2512.01557)
 
 - 🏆 **[Cross-Lingual Cognitive Synergy for Constrained Humor Generation in Large Language Models](https://edwardajayi.github.io/assets/papers/HumorGen-JOKER.pdf)**  
