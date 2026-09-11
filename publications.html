@@ -18,9 +18,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
   <style>
     /* ===== Publications — fresh, approachable overhaul ===== */
@@ -45,175 +45,500 @@
       letter-spacing: -0.02em;
     }
 
-    /* Research intro — soft pill tags, no box */
-    .publications-intro {
-      background: transparent;
-      border: none;
-      padding: 0 0 2rem 0;
-      margin-bottom: 0;
-      box-shadow: none;
-    }
-    .publications-intro p {
-      margin: 0;
-      color: var(--pub-text);
-      line-height: 1.75;
-      font-size: 1.05rem;
-      font-family: 'DM Sans', -apple-system, sans-serif;
-    }
-    .publications-intro p:first-child { margin-bottom: 0.75rem; }
-    .publications-intro strong {
-      color: var(--pub-accent);
-      font-weight: 600;
-    }
-    .publications-intro p:first-child strong {
-      display: inline;
-    }
-    .publications-intro p:last-of-type {
-      color: var(--pub-muted);
-      font-size: 0.95rem;
-    }
-
-    /* Section title — minimal */
-    .publication-category .category-title {
-      font-family: 'Fraunces', Georgia, serif;
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--pub-text);
-      margin-bottom: 1.25rem;
-      padding-bottom: 0;
-      letter-spacing: -0.02em;
-    }
-    .publication-category .category-title::after { display: none; }
-
-    /* Publication list — clean list, not cards */
-    .pub-item-expandable {
+    /* Research Intro Card — modern academic banner */
+    .publications-intro-card {
       background: var(--pub-card);
       border: 1px solid var(--pub-border);
-      border-left: none;
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 0.75rem;
-      border-radius: 14px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-      transition: box-shadow 0.2s ease, border-color 0.2s ease;
-      animation: none;
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
     }
-    .pub-item-expandable:hover {
-      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
-      border-color: rgba(37, 99, 235, 0.2);
+    .intro-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.85rem;
+      flex-wrap: wrap;
+    }
+    .intro-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--pub-accent);
+      padding: 0.35rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+    }
+    .intro-affiliation {
+      font-size: 0.85rem;
+      color: var(--pub-muted);
+      font-family: 'DM Sans', -apple-system, sans-serif;
+    }
+    .intro-bio-text {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--pub-text);
+      margin: 0 0 0.85rem 0;
+    }
+    .intro-bio-text strong {
+      color: var(--pub-text);
+      font-weight: 600;
+    }
+    .research-pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .research-pill-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--pub-bg);
+      color: var(--pub-text);
+      border: 1px solid var(--pub-border);
+      padding: 0.4rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+    }
+    .research-pill-item i {
+      color: var(--pub-accent);
+      font-size: 0.8rem;
+    }
+    .research-pill-item:hover {
+      border-color: var(--pub-accent);
+      background: #ffffff;
+      transform: translateY(-1px);
     }
 
-    .pub-title {
+    /* Section title */
+    .category-title {
       font-family: 'Fraunces', Georgia, serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      line-height: 1.45;
-      margin: 0 0 0.4rem 0;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--pub-text);
+      margin-bottom: 1.35rem;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
     }
-    .pub-title-link {
+    .category-title::after { display: none; }
+    .category-count-badge {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--pub-accent);
+      background: rgba(37, 99, 235, 0.08);
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
+    }
+
+    /* ===== Modern Elevated Publication Cards ===== */
+    /* ===== Modern Elevated Publication Cards ===== */
+    .pub-card {
+      background: var(--pub-card);
+      border: 1px solid rgba(226, 232, 240, 0.85);
+      border-left: 3.5px solid #3b82f6;
+      border-radius: 12px;
+      padding: 1.15rem 1.45rem;
+      margin-bottom: 1.1rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 2px 6px rgba(15, 23, 42, 0.02);
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+    .pub-card:hover {
+      border-color: rgba(37, 99, 235, 0.3);
+      border-left-color: var(--pub-accent);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -4px rgba(37, 99, 235, 0.08), 0 4px 8px -2px rgba(0, 0, 0, 0.02);
+    }
+    .pub-card--award {
+      border-left-color: #f59e0b;
+    }
+    .pub-card--award:hover {
+      border-left-color: #d97706;
+      box-shadow: 0 10px 25px -4px rgba(245, 158, 11, 0.12), 0 4px 8px -2px rgba(0, 0, 0, 0.02);
+    }
+
+    .pub-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .best-paper-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: #fffbeb;
+      color: #92400e;
+      border: 1px solid #fde68a;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+    }
+    .best-paper-badge i { color: #d97706; font-size: 0.75rem; }
+
+    .oral-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+    }
+    .oral-badge i { color: #059669; font-size: 0.75rem; }
+
+    .pub-title {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 1.04rem;
+      font-weight: 600;
+      line-height: 1.42;
+      margin: 0 0 0.55rem 0;
+      letter-spacing: -0.01em;
+    }
+    .pub-title a {
       color: var(--pub-text);
       text-decoration: none;
       transition: color 0.2s ease;
-      display: inline-block;
     }
-    .pub-title-link:hover {
+    .pub-title a:hover {
       color: var(--pub-accent);
     }
-    .pub-title-link .title-external {
+    .pub-title .title-external {
       font-size: 0.6em;
-      margin-left: 0.3em;
-      opacity: 0.5;
+      margin-left: 0.35em;
+      opacity: 0.4;
       vertical-align: middle;
       color: var(--pub-accent);
     }
-    .pub-title-link:hover .title-external { opacity: 0.9; }
+    .pub-title a:hover .title-external { opacity: 0.9; }
 
     .pub-authors {
       font-size: 0.9rem;
-      color: var(--pub-muted);
-      margin-top: 0;
+      color: #64748b;
+      margin: 0 0 0.65rem 0;
       line-height: 1.5;
       font-family: 'DM Sans', -apple-system, sans-serif;
     }
-    .author-highlight { font-weight: 600; color: var(--pub-accent); }
+    .author-highlight {
+      font-weight: 600;
+      color: var(--pub-accent);
+      background: rgba(37, 99, 235, 0.08);
+      padding: 0.15rem 0.45rem;
+      border-radius: 6px;
+      display: inline-block;
+      line-height: 1.25;
+      vertical-align: baseline;
+    }
 
-    .pub-venue-row {
+    /* Styled Proceedings / Venue Row */
+    .pub-venue-detail {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.32rem 0.65rem;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      font-size: 0.83rem;
+      color: #334155;
+      line-height: 1.4;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      margin: 0 0 0.65rem 0;
+      max-width: 100%;
+    }
+    .pub-venue-detail i.venue-icon {
+      font-size: 0.8rem;
+      color: #3b82f6;
+      flex-shrink: 0;
+    }
+    .venue-name {
+      font-weight: 500;
+      color: #1e293b;
+    }
+    .venue-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.1rem 0.45rem;
+      border-radius: 9999px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .venue-tag--appear {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+    }
+    .venue-tag--review {
+      background: #f5f3ff;
+      color: #6d28d9;
+      border: 1px solid #ddd6fe;
+    }
+    .venue-tag--published {
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+    }
+
+    .pub-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      align-items: center;
+      margin-top: 0.45rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid rgba(241, 245, 249, 0.9);
+    }
+
+    .pub-action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.28rem 0.72rem;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      text-decoration: none;
+      background: #ffffff;
+      color: #475569;
+      border: 1px solid #e2e8f0;
+      transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .pub-action-btn:hover {
+      background: var(--pub-accent);
+      color: #ffffff;
+      border-color: var(--pub-accent);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+    }
+    .pub-action-btn i {
+      font-size: 0.75rem;
+    }
+    .pub-action-btn--highlight {
+      background: rgba(37, 99, 235, 0.06);
+      color: var(--pub-accent);
+      border-color: rgba(37, 99, 235, 0.25);
+    }
+
+    /* ===== External Profiles — Modern Grid ===== */
+    .profiles-section {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--pub-border);
+    }
+    .profiles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 0.85rem;
+      margin-top: 1.25rem;
+    }
+    .profile-card {
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.35rem;
-    }
-    .pub-venue-row .pub-venue { margin-top: 0; display: inline; font-size: 0.875rem; color: var(--pub-muted); font-style: italic; }
-    .pub-venue-row .pub-venue a {
-      margin-left: 0.35rem;
-      color: var(--pub-accent);
+      gap: 0.9rem;
+      padding: 0.9rem 1.1rem;
+      background: var(--pub-card);
+      border: 1px solid var(--pub-border);
+      border-radius: 12px;
       text-decoration: none;
-      font-weight: 500;
-      font-style: normal;
-      padding: 0.2rem 0.5rem;
-      border-radius: 6px;
-      background: rgba(37, 99, 235, 0.08);
-      transition: background 0.2s ease, color 0.2s ease;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+      position: relative;
     }
-    .pub-venue-row .pub-venue a:hover {
-      background: var(--pub-accent);
-      color: #fff;
+    .profile-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(37, 99, 235, 0.3);
+      box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.1);
     }
-
-    .paper-link-icon { display: none; }
-
-    /* External links — full-width grid */
-    .external-links { margin: 2.5rem 0 1.5rem; width: 100%; }
-    .external-links .category-title {
-      font-family: 'Fraunces', Georgia, serif;
-      font-size: 1.2rem;
-      margin-bottom: 1.25rem;
-    }
-    .external-link-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 1rem;
-      margin-top: 0;
-      width: 100%;
-    }
-    .external-link {
+    .profile-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
-      padding: 1rem 1.25rem;
-      background: var(--pub-card);
-      color: var(--pub-accent);
-      border-radius: 12px;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 600;
-      border: 1px solid var(--pub-border);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
     }
-    .external-link:hover {
-      background: rgba(37, 99, 235, 0.08);
-      border-color: rgba(37, 99, 235, 0.3);
-      color: var(--pub-accent-hover);
-      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.1);
+    .profile-card:hover .profile-icon {
+      transform: scale(1.08);
     }
-    .external-link i { font-size: 1.25rem; }
+    .profile-icon.scholar { background: #eff6ff; color: #1d4ed8; }
+    .profile-icon.github { background: #f1f5f9; color: #0f172a; }
+    .profile-icon.hf { background: #fefce8; color: #ca8a04; }
+    .profile-icon.linkedin { background: #f0f9ff; color: #0284c7; }
+    .profile-icon.twitter { background: #f8fafc; color: #0f172a; }
+    .profile-icon.cv { background: #fef2f2; color: #dc2626; }
 
-    /* Note — subtle */
-    .publications-note {
-      margin-top: 2rem;
-      padding: 1rem 0;
-      background: transparent;
-      border: none;
-      border-top: 1px solid var(--pub-border);
-      border-radius: 0;
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-width: 0;
     }
-    .publications-note p {
+    .profile-name {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--pub-text);
+      line-height: 1.25;
+    }
+    .profile-tag {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 0.76rem;
+      color: var(--pub-muted);
+      line-height: 1.3;
+      margin-top: 0.2rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .profile-arrow {
+      font-size: 0.72rem;
+      color: var(--pub-muted);
+      opacity: 0.4;
+      transition: all 0.2s ease;
+    }
+    .profile-card:hover .profile-arrow {
+      color: var(--pub-accent);
+      opacity: 1;
+      transform: translate(2px, -2px);
+    }
+
+    /* ===== Collaboration Card — Compact Row ===== */
+    .collab-card {
+      margin-top: 2rem;
+      background: var(--pub-card);
+      border: 1px solid var(--pub-border);
+      border-left: 4px solid var(--pub-accent);
+      border-radius: 14px;
+      padding: 1.15rem 1.45rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+    .collab-content-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+    .collab-text-wrap {
+      flex: 1;
+      min-width: 0;
+    }
+    .collab-title {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--pub-text);
+      margin: 0 0 0.3rem 0;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .collab-title i {
+      color: var(--pub-accent);
+      font-size: 0.95rem;
+    }
+    .collab-text {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 0.9rem;
+      color: var(--pub-muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+    .collab-text strong {
+      color: var(--pub-text);
+      font-weight: 600;
+    }
+    .collab-email-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--pub-accent);
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      text-decoration: none;
+      flex-shrink: 0;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+    }
+    .collab-email-btn:hover {
+      background: var(--pub-accent-hover);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+    }
+
+    /* Modern Footer */
+    .site-footer {
+      background: #ffffff;
+      border-top: 1px solid var(--pub-border);
+      padding: 1.75rem 0;
+      margin-top: 0;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-copy {
+      font-family: 'DM Sans', -apple-system, sans-serif;
       font-size: 0.85rem;
       color: var(--pub-muted);
-      margin-bottom: 0.35rem;
-      line-height: 1.6;
+      margin: 0;
+    }
+    .footer-copy strong {
+      color: var(--pub-text);
+    }
+    .footer-right {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 0.85rem;
+      color: var(--pub-muted);
+    }
+    .footer-right a {
+      color: var(--pub-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-right a:hover {
+      color: var(--pub-accent);
     }
 
     /* Best paper badge — keep as-is */
@@ -243,10 +568,15 @@
     }
 
     @media (max-width: 768px) {
-      .pub-item-expandable { padding: 1rem 1.25rem; }
-      .pub-venue-row { flex-direction: column; align-items: flex-start; }
-      .pub-title { font-size: 1rem; }
-      .external-link-list { grid-template-columns: 1fr; }
+      .publications-intro-card { padding: 1.25rem 1.25rem; }
+      .intro-header-row { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+      .pub-card { padding: 1.15rem 1.25rem; }
+      .pub-title { font-size: 0.96rem; }
+      .pub-card-header { flex-direction: column; align-items: flex-start; gap: 0.35rem; }
+      .profiles-grid { grid-template-columns: 1fr; }
+      .collab-header { flex-direction: column; gap: 0.85rem; }
+      .collab-card { padding: 1.25rem; }
+      .footer-inner { flex-direction: column; text-align: center; gap: 0.65rem; }
       .best-paper-award { display: flex; margin-left: 0; margin-top: 0.5rem; width: fit-content; }
     }
   </style>
@@ -275,27 +605,24 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <section class="section" style="padding-top: 2.25rem;">
     <div class="container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>Publications</h1>
-          <!-- <div class="hero-subtitle">Research Projects</div> -->
+
+      <!-- Research Overview Card -->
+      <div class="publications-intro-card">
+        <div class="intro-header-row">
+          <span class="intro-badge"><i class="fas fa-compass"></i> Research Focus</span>
+          <span class="intro-affiliation">Spatial & Language Technologies Lab · Carnegie Mellon University</span>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-
-      <div class="publications-intro">
-        <p><strong>Research Interests:</strong> <strong>Social Intelligence in AI</strong>, <strong>Multi-Agent Systems</strong>,
-          <strong>Computational Humor (Generation, Detection & Evaluation)</strong>, <strong>LLM Reasoning & Evaluation</strong>
+        <p class="intro-bio-text">
+          I work as an NLP Research Associate at the Spatial and Language Technologies Lab at Carnegie Mellon University, with research focused on:
         </p>
-        <p style="margin-top: 10px; font-style: italic;">I work as an NLP Research Associate at
-          the Spatial and Language Technologies Lab at Carnegie Mellon University, with research focused on Social Intelligence in AI, Multi-Agent Systems, Computational Humor, and LLM Reasoning.</p>
+        <div class="research-pill-list">
+          <span class="research-pill-item"><i class="fas fa-users"></i> Social Intelligence in AI</span>
+          <span class="research-pill-item"><i class="fas fa-robot"></i> Multi-Agent Systems</span>
+          <span class="research-pill-item"><i class="fas fa-laugh-squint"></i> Computational Humor</span>
+          <span class="research-pill-item"><i class="fas fa-brain"></i> LLM Reasoning & Evaluation</span>
+        </div>
       </div>
 
       <!-- PUBLICATIONS -->
@@ -303,280 +630,226 @@
         <h2 class="category-title">Publications</h2>
 
         <!-- 1. HumorGen -->
-        <div class="pub-item-expandable">
+        <article class="pub-card">
           <h3 class="pub-title">
-            <a href="https://arxiv.org/pdf/2604.09629" target="_blank" rel="noopener noreferrer" class="pub-title-link" title="Open paper">HumorGen: Cognitive Synergy for Humor Generation in Large Language Models via Persona-Based Distillation<i class="fas fa-external-link-alt title-external" aria-hidden="true"></i></a>
+            <a href="https://arxiv.org/pdf/2604.09629" target="_blank" rel="noopener noreferrer">HumorGen: Cognitive Synergy for Humor Generation in Large Language Models via Persona-Based Distillation<i class="fas fa-arrow-up-right-from-square title-external" aria-hidden="true"></i></a>
           </h3>
           <div class="pub-authors"><span class="author-highlight">E. Ajayi</span> and P. Mitra</div>
-          <div class="pub-venue-row">
-            <div class="pub-venue">Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026, Main Conference, to appear) • <a href="https://arxiv.org/pdf/2604.09629" target="_blank">PDF</a> • <a href="https://arxiv.org/abs/2604.09629" target="_blank">arXiv</a></div>
+          <div class="pub-venue-detail">
+            <i class="fas fa-book-open venue-icon"></i>
+            <span class="venue-name">Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026, Main Conference)</span>
+            <span class="venue-tag venue-tag--appear">To Appear</span>
           </div>
-        </div>
+          <div class="pub-actions">
+            <a href="https://arxiv.org/pdf/2604.09629" target="_blank" rel="noopener noreferrer" class="pub-action-btn"><i class="fas fa-file-pdf"></i> PDF</a>
+            <a href="https://arxiv.org/abs/2604.09629" target="_blank" rel="noopener noreferrer" class="pub-action-btn"><i class="ai ai-arxiv"></i> arXiv</a>
+            <a href="https://humorgen.pages.dev/" target="_blank" rel="noopener noreferrer" class="pub-action-btn pub-action-btn--highlight"><i class="fas fa-globe"></i> Project Site</a>
+            <a href="https://huggingface.co/collections/Jayi2424/humorgen" target="_blank" rel="noopener noreferrer" class="pub-action-btn"><i class="fas fa-database"></i> 14 Models</a>
+          </div>
+        </article>
 
         <!-- 2. HumorRank -->
-        <div class="pub-item-expandable">
+        <article class="pub-card">
           <h3 class="pub-title">
-            <a href="https://arxiv.org/pdf/2604.19786" target="_blank" rel="noopener noreferrer" class="pub-title-link" title="Open paper">HumorRank: A Tournament-Based Leaderboard for Evaluating Humor Generation in Large Language Models<i class="fas fa-external-link-alt title-external" aria-hidden="true"></i></a>
+            <a href="https://arxiv.org/pdf/2604.19786" target="_blank" rel="noopener noreferrer">HumorRank: A Tournament-Based Leaderboard for Evaluating Humor Generation in Large Language Models<i class="fas fa-arrow-up-right-from-square title-external" aria-hidden="true"></i></a>
           </h3>
           <div class="pub-authors"><span class="author-highlight">E. Ajayi</span> and P. Mitra</div>
-          <div class="pub-venue-row">
-            <div class="pub-venue">Submitted to AAAI 2027 • <a href="https://arxiv.org/pdf/2604.19786" target="_blank">PDF</a></div>
+          <div class="pub-venue-detail">
+            <i class="fas fa-paper-plane venue-icon"></i>
+            <span class="venue-name">The 41st AAAI Conference on Artificial Intelligence (AAAI 2027)</span>
+            <span class="venue-tag venue-tag--review">Under Review</span>
           </div>
-        </div>
+          <div class="pub-actions">
+            <a href="https://arxiv.org/pdf/2604.19786" target="_blank" rel="noopener noreferrer" class="pub-action-btn"><i class="fas fa-file-pdf"></i> PDF</a>
+            <a href="https://arxiv.org/abs/2604.19786" target="_blank" rel="noopener noreferrer" class="pub-action-btn"><i class="ai ai-arxiv"></i> arXiv</a>
+            <a href="https://humorrank-leaderboard.pages.dev/" target="_blank" rel="noopener noreferrer" class="pub-action-btn pub-action-btn--highlight"><i class="fas fa-trophy"></i> Live Leaderboard</a>
+          </div>
+        </article>
 
         <!-- 3. Mental Health -->
-        <div class="pub-item-expandable">
+        <article class="pub-card pub-card--award">
+          <div class="pub-card-header">
+            <span class="best-paper-badge"><i class="fas fa-trophy"></i> Best Paper Award</span>
+            <span class="oral-badge"><i class="fas fa-microphone"></i> Oral Presentation</span>
+          </div>
           <h3 class="pub-title">
-            <a href="https://proceedings.mlr.press/v317/ajayi26a.html" target="_blank" rel="noopener noreferrer" class="pub-title-link" title="Open paper">A Machine Learning Approach for Detection of Mental Health Conditions and Cyberbullying from Social Media<i class="fas fa-external-link-alt title-external" aria-hidden="true"></i></a>
+            <a href="https://proceedings.mlr.press/v317/ajayi26a.html" target="_blank" rel="noopener noreferrer">A Machine Learning Approach for Detection of Mental Health Conditions and Cyberbullying from Social Media<i class="fas fa-arrow-up-right-from-square title-external" aria-hidden="true"></i></a>
           </h3>
           <div class="pub-authors"><span class="author-highlight">Edward Ajayi</span>, Martha Kachweka, Mawuli Deku, and Emily Aiken</div>
-          <div class="pub-venue-row">
-            <div class="pub-venue">Proceedings of the Second AAAI Bridge Program on AI for Medicine and Healthcare, PMLR 317:15–26, 2026 (Oral Presentation)
-              <span class="best-paper-award"><i class="fas fa-trophy"></i> Best Paper Award</span>
-              <a href="https://proceedings.mlr.press/v317/ajayi26a.html" target="_blank" class="pub-venue-link" title="PMLR Proceedings"><i class="ai ai-pmlr"></i> PMLR</a>
-              <a href="https://arxiv.org/pdf/2511.20001" target="_blank" class="pub-venue-link" title="arXiv Preprint"><i class="ai ai-arxiv"></i> arXiv</a>
-            </div>
+          <div class="pub-venue-detail">
+            <i class="fas fa-book-open venue-icon"></i>
+            <span class="venue-name">Proceedings of the Second AAAI Bridge Program on AI for Medicine and Healthcare, PMLR 317:15–26, 2026</span>
+            <span class="venue-tag venue-tag--published">Published</span>
           </div>
-        </div>
+          <div class="pub-actions">
+            <a href="https://proceedings.mlr.press/v317/ajayi26a.html" target="_blank" rel="noopener noreferrer" class="pub-action-btn"><i class="ai ai-pmlr"></i> PMLR Proceedings</a>
+            <a href="https://arxiv.org/abs/2511.20001" target="_blank" rel="noopener noreferrer" class="pub-action-btn"><i class="ai ai-arxiv"></i> arXiv</a>
+          </div>
+        </article>
 
         <!-- 4. Language Diversity -->
-        <div class="pub-item-expandable">
+        <article class="pub-card">
           <h3 class="pub-title">
-            <a href="https://www.arxiv.org/pdf/2512.01557" target="_blank" rel="noopener noreferrer" class="pub-title-link" title="Open paper">Language Diversity: Evaluating Language Usage and AI Performance on African Languages in Digital Spaces<i class="fas fa-external-link-alt title-external" aria-hidden="true"></i></a>
+            <a href="https://www.arxiv.org/pdf/2512.01557" target="_blank" rel="noopener noreferrer">Language Diversity: Evaluating Language Usage and AI Performance on African Languages in Digital Spaces<i class="fas fa-arrow-up-right-from-square title-external" aria-hidden="true"></i></a>
           </h3>
           <div class="pub-authors"><span class="author-highlight">E. Ajayi</span>, B. Tadele, E. Umwari, M. Deku, P. Singadi, C. Edeh, and J. Udahemuka</div>
-          <div class="pub-venue-row">
-            <div class="pub-venue">Deep Learning Indaba 2026 Research Track, Proceedings of Machine Learning Research (PMLR), to appear. • 
-              <a href="assets/papers/Language_Diversity.pdf" target="_blank">PDF</a> • 
-              <a href="https://arxiv.org/pdf/2512.01557" target="_blank">arXiv</a>
-            </div>
+          <div class="pub-venue-detail">
+            <i class="fas fa-book-open venue-icon"></i>
+            <span class="venue-name">Deep Learning Indaba 2026 Research Track, Proceedings of Machine Learning Research (PMLR)</span>
+            <span class="venue-tag venue-tag--appear">To Appear</span>
           </div>
-        </div>
+          <div class="pub-actions">
+            <a href="assets/papers/Language_Diversity.pdf" target="_blank" rel="noopener noreferrer" class="pub-action-btn"><i class="fas fa-file-pdf"></i> PDF</a>
+            <a href="https://arxiv.org/pdf/2512.01557" target="_blank" rel="noopener noreferrer" class="pub-action-btn"><i class="ai ai-arxiv"></i> arXiv</a>
+          </div>
+        </article>
 
         <!-- 5. HumorGen-JOKER -->
-        <div class="pub-item-expandable">
+        <article class="pub-card pub-card--award">
+          <div class="pub-card-header">
+            <span class="best-paper-badge"><i class="fas fa-medal"></i> Winner, JOKER Task 4: Humor Generation</span>
+          </div>
           <h3 class="pub-title">
-            <a href="assets/papers/HumorGen-JOKER.pdf" target="_blank" rel="noopener noreferrer" class="pub-title-link" title="Open paper">Cross-Lingual Cognitive Synergy for Constrained Humor Generation in Large Language Models<i class="fas fa-external-link-alt title-external" aria-hidden="true"></i></a>
+            <a href="assets/papers/HumorGen-JOKER.pdf" target="_blank" rel="noopener noreferrer">Cross-Lingual Cognitive Synergy for Constrained Humor Generation in Large Language Models<i class="fas fa-arrow-up-right-from-square title-external" aria-hidden="true"></i></a>
           </h3>
           <div class="pub-authors"><span class="author-highlight">E. Ajayi</span> and P. Mitra</div>
-          <div class="pub-venue-row">
-            <div class="pub-venue">CLEF 2026 Working Notes, CEUR-WS (to appear) · Conference and Labs of the Evaluation Forum · 21–24 Sep 2026 • <a href="assets/papers/HumorGen-JOKER.pdf" target="_blank">PDF</a></div>
+          <div class="pub-venue-detail">
+            <i class="fas fa-book-open venue-icon"></i>
+            <span class="venue-name">Conference and Labs of the Evaluation Forum (CLEF 2026 Working Notes), CEUR Workshop Proceedings (CEUR-WS)</span>
+            <span class="venue-tag venue-tag--appear">To Appear</span>
           </div>
-        </div>
+          <div class="pub-actions">
+            <a href="assets/papers/HumorGen-JOKER.pdf" target="_blank" rel="noopener noreferrer" class="pub-action-btn"><i class="fas fa-file-pdf"></i> PDF</a>
+          </div>
+        </article>
 
         <!-- 6. AfriEconQA -->
-        <div class="pub-item-expandable">
+        <article class="pub-card">
           <h3 class="pub-title">
-            <a href="https://arxiv.org/abs/2601.15297" target="_blank" rel="noopener noreferrer" class="pub-title-link" title="Open paper">AfriEconQA: A Benchmark for Quantitative and Temporal Reasoning over World Bank Economic Reports<i class="fas fa-external-link-alt title-external" aria-hidden="true"></i></a>
+            <a href="https://arxiv.org/abs/2601.15297" target="_blank" rel="noopener noreferrer">AfriEconQA: A Benchmark for Quantitative and Temporal Reasoning over World Bank Economic Reports<i class="fas fa-arrow-up-right-from-square title-external" aria-hidden="true"></i></a>
           </h3>
           <div class="pub-authors"><span class="author-highlight">Edward Ajayi</span>, Mustapha Alaba & David Stephen</div>
-          <div class="pub-venue-row">
-            <div class="pub-venue">Submitted to AAAI 2027 • <a href="https://arxiv.org/abs/2601.15297" target="_blank">PDF</a></div>
+          <div class="pub-venue-detail">
+            <i class="fas fa-paper-plane venue-icon"></i>
+            <span class="venue-name">The 41st AAAI Conference on Artificial Intelligence (AAAI 2027)</span>
+            <span class="venue-tag venue-tag--review">Under Review</span>
           </div>
-        </div>
+          <div class="pub-actions">
+            <a href="https://arxiv.org/abs/2601.15297" target="_blank" rel="noopener noreferrer" class="pub-action-btn"><i class="fas fa-file-pdf"></i> PDF</a>
+            <a href="https://afrieconqa.pages.dev/" target="_blank" rel="noopener noreferrer" class="pub-action-btn pub-action-btn--highlight"><i class="fas fa-database"></i> Dataset Explorer</a>
+          </div>
+        </article>
 
         <!-- 7. Automatic Humor Detection -->
-        <div class="pub-item-expandable">
+        <article class="pub-card">
           <h3 class="pub-title">
-            <a href="assets/papers/Automatic Humor Detection Survey.pdf" target="_blank" rel="noopener noreferrer" class="pub-title-link" title="Open paper">Automatic Humor Detection: A Comprehensive Survey from Theoretical Foundations to Large Language Models<i class="fas fa-external-link-alt title-external" aria-hidden="true"></i></a>
+            <a href="assets/papers/Automatic Humor Detection Survey.pdf" target="_blank" rel="noopener noreferrer">Automatic Humor Detection: A Comprehensive Survey from Theoretical Foundations to Large Language Models<i class="fas fa-arrow-up-right-from-square title-external" aria-hidden="true"></i></a>
           </h3>
           <div class="pub-authors"><span class="author-highlight">E. Ajayi</span> and P. Mitra</div>
-          <div class="pub-venue-row">
-            <div class="pub-venue">
-              Submitted to ACM Computing Surveys
-              <a href="assets/papers/Automatic Humor Detection Survey.pdf" target="_blank" class="pub-venue-link" title="View Paper"><i class="fas fa-file-pdf"></i></a>
-              <a href="https://doi.org/10.13140/RG.2.2.24393.61288" target="_blank" class="pub-venue-link" title="ResearchGate"><i class="ai ai-researchgate"></i></a>
+          <div class="pub-venue-detail">
+            <i class="fas fa-scroll venue-icon"></i>
+            <span class="venue-name">ACM Computing Surveys (CSUR)</span>
+            <span class="venue-tag venue-tag--review">Under Review</span>
+          </div>
+          <div class="pub-actions">
+            <a href="assets/papers/Automatic Humor Detection Survey.pdf" target="_blank" rel="noopener noreferrer" class="pub-action-btn"><i class="fas fa-file-pdf"></i> PDF</a>
+            <a href="https://doi.org/10.13140/RG.2.2.24393.61288" target="_blank" rel="noopener noreferrer" class="pub-action-btn"><i class="ai ai-researchgate"></i> ResearchGate</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- External Profiles -->
+      <div class="profiles-section">
+        <h2 class="category-title">Profiles</h2>
+        <div class="profiles-grid">
+          <a href="https://scholar.google.com/citations?user=1TyN1RQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="profile-card">
+            <div class="profile-icon scholar"><i class="ai ai-google-scholar"></i></div>
+            <div class="profile-info">
+              <span class="profile-name">Google Scholar</span>
+              <span class="profile-tag">Citations & Metrics</span>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- WORK IN PROGRESS SECTION -->
-      <!-- <div class="publication-category">
-        <h2 class="category-title">Current Research</h2>
-        
-        <div class="publication-item">
-          <div class="pub-title">
-            Additional Research Projects
-          </div>
-          <div class="pub-authors"><span class="author-highlight">Edward Ajayi</span></div>
-          <div class="pub-venue">Carnegie Mellon University Africa, 2024-2025</div>
-          <div class="pub-description">
-            Ongoing research in agentic AI systems and LLM evaluation methodologies as part of Engineering Artificial Intelligence program. 
-            Work conducted at EdGE AI Labs on business automation through agentic AI. Additional publications forthcoming.
-          </div>
-        </div>
-      </div> -->
-
-      <!-- STEVEN'S ORIGINAL PUBLICATIONS - COMMENTED OUT FOR REFERENCE -->
-      <!--
-      <div class="publication-category">
-        <h2 class="category-title">ML Efficiency & Systems</h2>
-        
-        <div class="publication-item">
-          <div class="pub-title">
-            <a href="#" target="_blank">Training-Free Semantic Deferrals for Open-Ended LLM Cascades</a>
-          </div>
-          <div class="pub-authors">Duncan Soiffer, <span class="author-highlight">Steven Kolawole</span>, Virginia Smith</div>
-          <div class="pub-venue">ICML 2025 (ES-FOMO)</div>
-          <div class="pub-description">
-            Extends agreement-based cascading to open-ended generation tasks, enabling efficient routing 
-            for language model queries without requiring additional training data or model modifications.
-          </div>
-        </div>
-
-        <div class="publication-item">
-          <div class="pub-title">
-            <a href="#" target="_blank">Privacy Isn't Free: Benchmarking the Systems Cost of Privacy-Preserving ML</a>
-          </div>
-          <div class="pub-authors">Nnaemeka Obiefuna, Samuel Oyeneye, Similoluwa Odunaiya, Iremide Oyelaja, <span class="author-highlight">Steven Kolawole</span></div>
-          <div class="pub-venue">ICML 2025 (ES-FOMO)</div>
-          <div class="pub-description">
-            Comprehensive benchmarking study examining the computational/energy overhead of privacy-preserving techniques 
-            in ML; conducted with independent student researchers at ML Collective.
-          </div>
-        </div>
-
-        <div class="publication-item">
-          <div class="pub-title">
-            <a href="https://arxiv.org/pdf/2506.18728" target="_blank">PARALLELPROMPT: Extracting Parallelism from Large Language Model Queries</a>
-          </div>
-          <div class="pub-authors"><span class="author-highlight">Steven Kolawole</span>, Keshav Santhanam, Virginia Smith, Pratiksha Thaker</div>
-          <div class="pub-venue">NeurIPS 2024 (AFM)</div>
-          <div class="pub-description">
-            Introduces PARALLELPROMPT, a benchmark revealing that 10% of natural user queries contain latent parallelism. 
-            Demonstrates semantic decomposition methods achieving up to 5× speedups without hardware modifications.
-          </div>
-        </div>
-
-        <div class="publication-item">
-          <div class="pub-title">
-            <a href="https://arxiv.org/pdf/2407.02348" target="_blank">Agreement-Based Cascading for Efficient Inference</a>
-          </div>
-          <div class="pub-authors"><span class="author-highlight">Steven Kolawole</span>*, Don Dennis*, Ameet Talwalkar, Virginia Smith</div>
-          <div class="pub-venue">Under Review, 2025</div>
-          <div class="pub-description">
-            Develops a training-free cascading framework using ensemble agreement as a confidence signal for routing. 
-            Achieves 2-25× cost reductions while maintaining/improving accuracy over diverse tasks.
-          </div>
-        </div>
-
-        <div class="publication-item">
-          <div class="pub-title">
-            <a href="https://arxiv.org/pdf/2402.05406" target="_blank">Everybody Prune Now: Structured Pruning of LLMs with only Forward Passes</a>
-          </div>
-          <div class="pub-authors"><span class="author-highlight">Steven Kolawole</span>*, Lucio Dery*, Jean-François Kagy, Virginia Smith, Graham Neubig, Ameet Talwalkar</div>
-          <div class="pub-venue">Under Review, 2025</div>
-          <div class="pub-description">
-            Presents Bonsai, a forward-pass-only structured pruning method that outperforms gradient-based approaches 
-            while using 3× less memory, making model compression accessible on everyday hardware.
-          </div>
-        </div>
-      </div>
-
-      <div class="publication-category">
-        <h2 class="category-title">Resource-Constrained NLP</h2>
-
-        <div class="publication-item">
-          <div class="pub-title">
-            <a href="https://arxiv.org/pdf/2404.04759" target="_blank">What Happens When Small Is Made Smaller? Exploring the Impact of Compression on Small Data Pretrained Language Models</a>
-          </div>
-          <div class="pub-authors">Busayo Awobade*, Mardiyyah Oduwole*, <span class="author-highlight">Steven Kolawole</span>*</div>
-          <div class="pub-venue">ICLR 2024 (AfricaNLP)</div>
-          <div class="pub-description">
-            Investigates compression techniques on AfriBERTa, demonstrating that pruning, knowledge distillation, 
-            and quantization remain effective in the "low-resource double-bind" of small-data language models.
-          </div>
-        </div>
-
-        <div class="publication-item">
-          <div class="pub-title">
-            <a href="https://arxiv.org/pdf/2303.16985" target="_blank">Adapting to the Low-Resource Double-Bind: Investigating Low-Compute Methods on Low-Resource African Languages</a>
-          </div>
-          <div class="pub-authors">Colin Leong, ..., <span class="author-highlight">Steven Kolawole</span>, et al.</div>
-          <div class="pub-venue">ICLR 2023 (AfricaNLP)</div>
-          <div class="pub-description">
-            Explores efficient training methods for African language processing under computational constraints, 
-            addressing the challenge of limited data and limited compute resources simultaneously.
-          </div>
-        </div>
-      </div>
-
-      <div class="publication-category">
-        <h2 class="category-title">Applied ML & Social Good</h2>
-
-        <div class="publication-item">
-          <div class="pub-title">
-            <a href="https://arxiv.org/pdf/2305.19365" target="_blank">Vision Transformers for Mobile Applications: A Short Survey</a>
-          </div>
-          <div class="pub-authors">Nahid Alam*, <span class="author-highlight">Steven Kolawole</span>*, Simardeep Sethi*, Nishant Bansali, Karina Nguyen</div>
-          <div class="pub-venue">arXiv preprint, 2023</div>
-          <div class="pub-description">
-            Comprehensive survey examining how Vision Transformers can be optimized for mobile deployment, 
-            analyzing architecture modifications and efficiency techniques for resource-constrained environments.
-          </div>
-        </div>
-
-        <div class="publication-item">
-          <div class="pub-title">
-            <a href="https://www.ijcai.org/proceedings/2022/0855.pdf" target="_blank">Sign-to-Speech Model for Sign Language Understanding: A Case Study of Nigerian Sign Language</a>
-          </div>
-          <div class="pub-authors"><span class="author-highlight">Steven Kolawole</span>, Opeyemi Osakuade, Nayan Saxena, Babatunde Kazeem Olorisade</div>
-          <div class="pub-venue">IJCAI 2022 (AI for Social Good Track)</div>
-          <div class="pub-description">
-            Develops a sign-to-speech system for Nigerian Sign Language to bridge communication gaps. 
-            This work earned the national AI Champion award from the Nigeria Computer Society, demonstrating practical AI for social impact.
-          </div>
-        </div>
-      </div>
-      -->
-
-      <!-- External Links -->
-      <div class="external-links">
-        <h2 class="category-title">External Profiles</h2>
-        <div class="external-link-list">
-          <a href="https://scholar.google.com/citations?user=1TyN1RQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="external-link">
-            <i class="ai ai-google-scholar"></i> Google Scholar
+            <i class="fas fa-arrow-up-right-from-square profile-arrow"></i>
           </a>
-          <a href="https://github.com/edwardajayi" target="_blank" rel="noopener noreferrer" class="external-link">
-            <i class="fab fa-github"></i> GitHub
+
+          <a href="https://github.com/edwardajayi" target="_blank" rel="noopener noreferrer" class="profile-card">
+            <div class="profile-icon github"><i class="fab fa-github"></i></div>
+            <div class="profile-info">
+              <span class="profile-name">GitHub</span>
+              <span class="profile-tag">@edwardajayi · Code</span>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square profile-arrow"></i>
           </a>
-          <a href="https://www.linkedin.com/in/edward-ajayi-a652b6203/" target="_blank" rel="noopener noreferrer" class="external-link">
-            <i class="fab fa-linkedin"></i> LinkedIn
+
+          <a href="https://huggingface.co/Jayi2424" target="_blank" rel="noopener noreferrer" class="profile-card">
+            <div class="profile-icon hf"><i class="fas fa-cubes"></i></div>
+            <div class="profile-info">
+              <span class="profile-name">Hugging Face</span>
+              <span class="profile-tag">Models & Datasets</span>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square profile-arrow"></i>
           </a>
-          <a href="https://x.com/jayiEdwards" target="_blank" rel="noopener noreferrer" class="external-link">
-            <i class="fab fa-twitter"></i> X (Twitter)
+
+          <a href="https://www.linkedin.com/in/edward-ajayi-a652b6203/" target="_blank" rel="noopener noreferrer" class="profile-card">
+            <div class="profile-icon linkedin"><i class="fab fa-linkedin-in"></i></div>
+            <div class="profile-info">
+              <span class="profile-name">LinkedIn</span>
+              <span class="profile-tag">Edward Ajayi</span>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square profile-arrow"></i>
           </a>
-          <a href="assets/Edward_Ajayi_CV.pdf" target="_blank" rel="noopener noreferrer" class="external-link">
-            <i class="fas fa-file-pdf"></i> Download CV
+
+          <a href="https://x.com/jayiEdwards" target="_blank" rel="noopener noreferrer" class="profile-card">
+            <div class="profile-icon twitter"><i class="fab fa-x-twitter"></i></div>
+            <div class="profile-info">
+              <span class="profile-name">X (Twitter)</span>
+              <span class="profile-tag">@jayiEdwards</span>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square profile-arrow"></i>
+          </a>
+
+          <a href="assets/Edward_Ajayi_CV.pdf" target="_blank" rel="noopener noreferrer" class="profile-card">
+            <div class="profile-icon cv"><i class="fas fa-file-pdf"></i></div>
+            <div class="profile-info">
+              <span class="profile-name">CV</span>
+              <span class="profile-tag">Download PDF</span>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square profile-arrow"></i>
           </a>
         </div>
       </div>
 
-      <div class="publications-note">
-        <p><small>* denotes equal contribution</small></p>
-        <p><small>This page will be updated as new publications and research outputs become available.
-            For the most current information about ongoing research projects, please refer to my CV or contact me
-            directly.</small></p>
+      <!-- Collaboration & Contact -->
+      <div class="collab-card">
+        <div class="collab-content-row">
+          <div class="collab-text-wrap">
+            <h3 class="collab-title">
+              <i class="fas fa-comments"></i> Research Inquiries & Collaborations
+            </h3>
+            <p class="collab-text">
+              Working on <strong>Social Intelligence in AI</strong>, <strong>Multi-Agent Systems</strong>, or <strong>Computational Humor</strong>? I'm always open to discussing new ideas or exploring research collaborations.
+            </p>
+          </div>
+          <a href="mailto:ojayedwards01@gmail.com" class="collab-email-btn" title="Send Email: ojayedwards01@gmail.com" aria-label="Send Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
       </div>
+
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-text">
-          <p><strong>Last Updated:</strong> June, 2026</p>
-          <p>
-            © Edward Ajayi. Portfolio design adapted from
-            <a href="https://orevaahia.github.io/" target="_blank">Oreva Ahia's page</a>
-            · &lt;/&gt; Powered by
-            <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and
-            <a href="https://github.com/heiswayi/thinkspace" target="_blank">Thinkspace</a>
-            · Hosted on
-            <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
-          </p>
+      <div class="footer-inner">
+        <p class="footer-copy">
+          © 2026 <strong>Edward Ajayi</strong> · Spatial & Language Technologies Lab · Carnegie Mellon University
+        </p>
+        <div class="footer-right">
+          <a href="index.html">About</a> ·
+          <a href="publications.html">Research</a> ·
+          <a href="projects.html">Projects</a> ·
+          <a href="assets/Edward_Ajayi_CV.pdf" target="_blank">CV</a>
         </div>
       </div>
     </div>
