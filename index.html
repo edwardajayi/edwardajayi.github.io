@@ -86,11 +86,10 @@
 
           <div class="contact-info">
             <div class="contact-row">
-              <a href="mailto:ojayedwards01@gmail.com" class="contact-pill">
-                <i class="fas fa-envelope"></i>
-                <span>ojayedwards01@gmail.com</span>
-              </a>
               <div class="social-dock">
+                <a class="social-btn" href="mailto:ojayedwards01@gmail.com" aria-label="Email" title="Email: ojayedwards01@gmail.com">
+                  <i class="fas fa-envelope"></i>
+                </a>
                 <a class="social-btn" href="https://github.com/edwardajayi" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
                   <i class="fab fa-github"></i>
                 </a>
@@ -124,9 +123,6 @@
           <h2 class="about-card-title">
             <i class="fas fa-id-badge"></i> About
           </h2>
-          <span class="about-card-badge">
-            <span class="badge-pulse-dot"></span> Research Associate @ CMU
-          </span>
         </div>
         <div class="about-card-body">
           <p>
@@ -146,121 +142,225 @@
       <h2 class="section-title">Recent Publications</h2>
 
       <div class="publications-compact">
+        <!-- Paper 1: HumorGen -->
         <div class="pub-item-compact">
-          <div class="pub-title-compact">
-            <a href="https://arxiv.org/pdf/2604.09629" target="_blank" rel="noopener noreferrer"
-              class="pub-title-link-compact">HumorGen: Cognitive Synergy for Humor Generation in Large Language Models
-              via Persona-Based Distillation</a>
-            <a href="https://arxiv.org/pdf/2604.09629" target="_blank" rel="noopener noreferrer"
-              style="margin-left: 0.5rem; color: var(--secondary-color);" title="View Paper">
-              <i class="fas fa-file-pdf"></i>
+          <div class="pub-header-compact">
+            <div class="pub-venue-tags">
+              <span class="pub-chip-venue"><i class="fas fa-award"></i> EMNLP 2026</span>
+              <span class="pub-status-badge status-to-appear">To Appear</span>
+            </div>
+          </div>
+          <h3 class="pub-title-compact">
+            <a href="https://arxiv.org/pdf/2604.09629" target="_blank" rel="noopener noreferrer">
+              HumorGen: Cognitive Synergy for Humor Generation in Large Language Models via Persona-Based Distillation
+            </a>
+          </h3>
+          <div class="pub-authors-compact">
+            <span class="author-highlight">E. Ajayi</span> and P. Mitra
+          </div>
+          <div class="pub-venue-compact">
+            Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026, Main Conference)
+          </div>
+          <div class="pub-links-compact">
+            <a href="https://arxiv.org/pdf/2604.09629" target="_blank" rel="noopener noreferrer" class="pub-btn-pill">
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <a href="https://arxiv.org/abs/2604.09629" target="_blank" rel="noopener noreferrer" class="pub-btn-pill">
+              <i class="ai ai-arxiv"></i> arXiv
+            </a>
+            <a href="https://humorgen.pages.dev/" target="_blank" rel="noopener noreferrer" class="pub-btn-pill">
+              <i class="fas fa-globe"></i> Project Page
             </a>
           </div>
-          <div class="pub-authors-compact"><span class="author-me">E. Ajayi</span> and P. Mitra</div>
-          <div class="pub-venue-compact">Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026, Main Conference, to appear)</div>
         </div>
 
+        <!-- Paper 2: HumorRank -->
         <div class="pub-item-compact">
-          <div class="pub-title-compact">
-            <a href="https://arxiv.org/pdf/2604.19786" target="_blank" rel="noopener noreferrer"
-              class="pub-title-link-compact">HumorRank: A Tournament-Based Leaderboard for Evaluating Humor Generation
-              in Large Language Models</a>
-            <a href="https://arxiv.org/pdf/2604.19786" target="_blank" rel="noopener noreferrer"
-              style="margin-left: 0.5rem; color: var(--secondary-color);" title="View Paper">
-              <i class="fas fa-file-pdf"></i>
+          <div class="pub-header-compact">
+            <div class="pub-venue-tags">
+              <span class="pub-chip-venue"><i class="fas fa-paper-plane"></i> AAAI 2027</span>
+              <span class="pub-status-badge status-under-review">Under Review</span>
+            </div>
+          </div>
+          <h3 class="pub-title-compact">
+            <a href="https://arxiv.org/pdf/2604.19786" target="_blank" rel="noopener noreferrer">
+              HumorRank: A Tournament-Based Leaderboard for Evaluating Humor Generation in Large Language Models
+            </a>
+          </h3>
+          <div class="pub-authors-compact">
+            <span class="author-highlight">E. Ajayi</span> and P. Mitra
+          </div>
+          <div class="pub-venue-compact">
+            The 41st AAAI Conference on Artificial Intelligence (AAAI 2027)
+          </div>
+          <div class="pub-links-compact">
+            <a href="https://arxiv.org/pdf/2604.19786" target="_blank" rel="noopener noreferrer" class="pub-btn-pill">
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <a href="https://arxiv.org/abs/2604.19786" target="_blank" rel="noopener noreferrer" class="pub-btn-pill">
+              <i class="ai ai-arxiv"></i> arXiv
+            </a>
+            <a href="https://humorrank-leaderboard.pages.dev/" target="_blank" rel="noopener noreferrer" class="pub-btn-pill">
+              <i class="fas fa-trophy"></i> Leaderboard
             </a>
           </div>
-          <div class="pub-authors-compact"><span class="author-me">E. Ajayi</span> and P. Mitra</div>
-          <div class="pub-venue-compact">Submitted to AAAI 2027</div>
         </div>
 
-        <div class="pub-item-compact">
-          <div class="pub-title-compact">
-            <a href="https://proceedings.mlr.press/v317/ajayi26a.html" target="_blank" rel="noopener noreferrer"
-              class="pub-title-link-compact">A Machine Learning Approach for Detection of Mental Health Conditions and
-              Cyberbullying from Social Media</a>
-            <a href="https://proceedings.mlr.press/v317/ajayi26a.html" target="_blank" rel="noopener noreferrer"
-              style="margin-left: 0.5rem; color: var(--secondary-color);" title="View at PMLR">
+        <!-- Paper 3: Mental Health ML (Best Paper Award) -->
+        <div class="pub-item-compact pub-item-award">
+          <div class="pub-header-compact">
+            <div class="pub-venue-tags">
+              <span class="best-paper-award"><i class="fas fa-trophy"></i> Best Paper Award</span>
+              <span class="pub-chip-venue">AAAI 2026 AIMedHealth</span>
+              <span class="pub-status-badge status-published">Published</span>
+            </div>
+          </div>
+          <h3 class="pub-title-compact">
+            <a href="https://proceedings.mlr.press/v317/ajayi26a.html" target="_blank" rel="noopener noreferrer">
+              A Machine Learning Approach for Detection of Mental Health Conditions and Cyberbullying from Social Media
+            </a>
+          </h3>
+          <div class="pub-authors-compact">
+            <span class="author-highlight">Edward Ajayi</span>, Martha Kachweka, Mawuli Deku, and Emily Aiken
+          </div>
+          <div class="pub-venue-compact">
+            Proceedings of the Second AAAI Bridge Program on AI for Medicine and Healthcare, PMLR 317:15–26, 2026 (Oral)
+          </div>
+          <div class="pub-links-compact">
+            <a href="https://proceedings.mlr.press/v317/ajayi26a.html" target="_blank" rel="noopener noreferrer" class="pub-btn-pill">
               <i class="ai ai-pmlr"></i> PMLR
             </a>
-            <a href="https://arxiv.org/pdf/2511.20001" target="_blank" rel="noopener noreferrer"
-              style="margin-left: 0.5rem; color: var(--secondary-color);" title="View on arXiv">
-              <i class="ai ai-arxiv"></i>
+            <a href="https://arxiv.org/pdf/2511.20001" target="_blank" rel="noopener noreferrer" class="pub-btn-pill">
+              <i class="fas fa-file-pdf"></i> PDF
             </a>
-            <span class="best-paper-award"><i class="fas fa-trophy"></i> Best Paper Award</span>
+            <a href="https://arxiv.org/abs/2511.20001" target="_blank" rel="noopener noreferrer" class="pub-btn-pill">
+              <i class="ai ai-arxiv"></i> arXiv
+            </a>
           </div>
-          <div class="pub-authors-compact"><span class="author-me">Edward Ajayi</span>, Martha Kachweka, Mawuli Deku, and Emily Aiken
-          </div>
-          <div class="pub-venue-compact">Proceedings of the Second AAAI Bridge Program on AI for Medicine and Healthcare, PMLR 317:15–26, 2026 (Oral)</div>
         </div>
 
+        <!-- Paper 4: Language Diversity -->
         <div class="pub-item-compact">
-          <div class="pub-title-compact">
-            <a href="https://www.arxiv.org/pdf/2512.01557" target="_blank" rel="noopener noreferrer"
-              class="pub-title-link-compact">Language Diversity: Evaluating Language Usage and AI Performance on African
-              Languages in Digital Spaces</a>
-            <a href="assets/papers/Language_Diversity.pdf" target="_blank" rel="noopener noreferrer"
-              style="margin-left: 0.5rem; color: var(--secondary-color);" title="View Paper">
-              <i class="fas fa-file-pdf"></i>
+          <div class="pub-header-compact">
+            <div class="pub-venue-tags">
+              <span class="pub-chip-venue"><i class="fas fa-award"></i> DLI 2026</span>
+              <span class="pub-status-badge status-to-appear">To Appear</span>
+            </div>
+          </div>
+          <h3 class="pub-title-compact">
+            <a href="https://www.arxiv.org/abs/2512.01557" target="_blank" rel="noopener noreferrer">
+              Language Diversity: Evaluating Language Usage and AI Performance on African Languages in Digital Spaces
             </a>
-            <a href="https://www.arxiv.org/pdf/2512.01557" target="_blank" rel="noopener noreferrer"
-              style="margin-left: 0.5rem; color: var(--secondary-color);" title="View on arXiv">
-              <i class="ai ai-arxiv"></i>
+          </h3>
+          <div class="pub-authors-compact">
+            <span class="author-highlight">E. Ajayi</span>, B. Tadele, E. Umwari, M. Deku, P. Singadi, C. Edeh, and J. Udahemuka
+          </div>
+          <div class="pub-venue-compact">
+            Deep Learning Indaba 2026 Research Track, Proceedings of Machine Learning Research (PMLR)
+          </div>
+          <div class="pub-links-compact">
+            <a href="assets/papers/Language_Diversity.pdf" target="_blank" rel="noopener noreferrer" class="pub-btn-pill">
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <a href="https://www.arxiv.org/abs/2512.01557" target="_blank" rel="noopener noreferrer" class="pub-btn-pill">
+              <i class="ai ai-arxiv"></i> arXiv
             </a>
           </div>
-          <div class="pub-authors-compact"><span class="author-me">E. Ajayi</span>, B. Tadele, E. Umwari, M. Deku, P. Singadi, C. Edeh, and J. Udahemuka</div>
-          <div class="pub-venue-compact">Deep Learning Indaba 2026 Research Track, Proceedings of Machine Learning Research (PMLR), to appear.</div>
         </div>
 
+        <!-- Paper 5: HumorGen-JOKER -->
         <div class="pub-item-compact">
-          <div class="pub-title-compact">
-            <a href="assets/papers/HumorGen-JOKER.pdf" target="_blank" rel="noopener noreferrer"
-              class="pub-title-link-compact">Cross-Lingual Cognitive Synergy for Constrained Humor Generation in
-              Large Language Models</a>
-            <a href="assets/papers/HumorGen-JOKER.pdf" target="_blank" rel="noopener noreferrer"
-              style="margin-left: 0.5rem; color: var(--secondary-color);" title="View Paper">
-              <i class="fas fa-file-pdf"></i>
+          <div class="pub-header-compact">
+            <div class="pub-venue-tags">
+              <span class="pub-chip-venue"><i class="fas fa-award"></i> CLEF 2026</span>
+              <span class="pub-status-badge status-to-appear">To Appear</span>
+            </div>
+          </div>
+          <h3 class="pub-title-compact">
+            <a href="assets/papers/HumorGen-JOKER.pdf" target="_blank" rel="noopener noreferrer">
+              Cross-Lingual Cognitive Synergy for Constrained Humor Generation in Large Language Models
+            </a>
+          </h3>
+          <div class="pub-authors-compact">
+            <span class="author-highlight">E. Ajayi</span> and P. Mitra
+          </div>
+          <div class="pub-venue-compact">
+            CLEF 2026 Working Notes, CEUR-WS · Conference and Labs of the Evaluation Forum · 21–24 Sep 2026
+          </div>
+          <div class="pub-links-compact">
+            <a href="assets/papers/HumorGen-JOKER.pdf" target="_blank" rel="noopener noreferrer" class="pub-btn-pill">
+              <i class="fas fa-file-pdf"></i> PDF
             </a>
           </div>
-          <div class="pub-authors-compact"><span class="author-me">E. Ajayi</span> and P. Mitra</div>
-          <div class="pub-venue-compact">CLEF 2026 Working Notes, CEUR-WS (to appear) · Conference and Labs of the Evaluation Forum · 21–24 Sep 2026</div>
         </div>
 
+        <!-- Paper 6: AfriEconQA -->
         <div class="pub-item-compact">
-          <div class="pub-title-compact">
-            <a href="https://arxiv.org/abs/2601.15297" target="_blank" rel="noopener noreferrer"
-              class="pub-title-link-compact">AfriEconQA: A Benchmark for Quantitative and Temporal Reasoning over
-              World Bank Economic Reports</a>
-            <a href="https://arxiv.org/abs/2601.15297" target="_blank" rel="noopener noreferrer"
-              style="margin-left: 0.5rem; color: var(--secondary-color);" title="View Paper">
-              <i class="fas fa-file-pdf"></i>
+          <div class="pub-header-compact">
+            <div class="pub-venue-tags">
+              <span class="pub-chip-venue"><i class="fas fa-paper-plane"></i> AAAI 2027</span>
+              <span class="pub-status-badge status-under-review">Under Review</span>
+            </div>
+          </div>
+          <h3 class="pub-title-compact">
+            <a href="https://arxiv.org/abs/2601.15297" target="_blank" rel="noopener noreferrer">
+              AfriEconQA: A Benchmark for Quantitative and Temporal Reasoning over World Bank Economic Reports
+            </a>
+          </h3>
+          <div class="pub-authors-compact">
+            <span class="author-highlight">Edward Ajayi</span>, Mustapha Alaba &amp; David Stephen
+          </div>
+          <div class="pub-venue-compact">
+            The 41st AAAI Conference on Artificial Intelligence (AAAI 2027)
+          </div>
+          <div class="pub-links-compact">
+            <a href="https://arxiv.org/pdf/2601.15297" target="_blank" rel="noopener noreferrer" class="pub-btn-pill">
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <a href="https://arxiv.org/abs/2601.15297" target="_blank" rel="noopener noreferrer" class="pub-btn-pill">
+              <i class="ai ai-arxiv"></i> arXiv
+            </a>
+            <a href="https://afrieconqa.pages.dev/" target="_blank" rel="noopener noreferrer" class="pub-btn-pill">
+              <i class="fas fa-database"></i> Benchmark
             </a>
           </div>
-          <div class="pub-authors-compact"><span class="author-me">Edward Ajayi</span>, Mustapha Alaba & David Stephen</div>
-          <div class="pub-venue-compact">Submitted to AAAI 2027</div>
         </div>
 
+        <!-- Paper 7: Automatic Humor Detection Survey -->
         <div class="pub-item-compact">
-          <div class="pub-title-compact">
-            <a href="assets/papers/Automatic Humor Detection Survey.pdf" target="_blank" rel="noopener noreferrer"
-              class="pub-title-link-compact">Automatic Humor Detection: A Comprehensive Survey from Theoretical
-              Foundations to Large Language Models</a>
-            <a href="assets/papers/Automatic Humor Detection Survey.pdf" target="_blank" rel="noopener noreferrer"
-              style="margin-left: 0.5rem; color: var(--secondary-color);" title="View Paper">
-              <i class="fas fa-file-pdf"></i>
+          <div class="pub-header-compact">
+            <div class="pub-venue-tags">
+              <span class="pub-chip-venue"><i class="fas fa-paper-plane"></i> ACM CSUR</span>
+              <span class="pub-status-badge status-under-review">Under Review</span>
+            </div>
+          </div>
+          <h3 class="pub-title-compact">
+            <a href="assets/papers/Automatic Humor Detection Survey.pdf" target="_blank" rel="noopener noreferrer">
+              Automatic Humor Detection: A Comprehensive Survey from Theoretical Foundations to Large Language Models
             </a>
-            <a href="https://doi.org/10.13140/RG.2.2.24393.61288" target="_blank" rel="noopener noreferrer"
-              style="margin-left: 0.5rem; color: var(--secondary-color);" title="ResearchGate">
-              <i class="ai ai-researchgate"></i>
+          </h3>
+          <div class="pub-authors-compact">
+            <span class="author-highlight">E. Ajayi</span> and P. Mitra
+          </div>
+          <div class="pub-venue-compact">
+            Submitted to ACM Computing Surveys (CSUR)
+          </div>
+          <div class="pub-links-compact">
+            <a href="assets/papers/Automatic Humor Detection Survey.pdf" target="_blank" rel="noopener noreferrer" class="pub-btn-pill">
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <a href="https://doi.org/10.13140/RG.2.2.24393.61288" target="_blank" rel="noopener noreferrer" class="pub-btn-pill">
+              <i class="ai ai-researchgate"></i> ResearchGate
             </a>
           </div>
-          <div class="pub-authors-compact"><span class="author-me">E. Ajayi</span> and P. Mitra</div>
-          <div class="pub-venue-compact">Submitted to ACM Computing Surveys</div>
         </div>
       </div>
 
-      <div class="text-center mt-3">
-        <a href="publications.html" class="btn-link">View All Publications →</a>
+      <div class="section-footer-action">
+        <a href="publications.html" class="btn-view-all">
+          <span>View All Publications</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
     </div>
   </section>
@@ -271,120 +371,134 @@
       <h2 class="section-title">Selected Projects</h2>
 
       <div class="projects-compact">
-        <div class="project-item project-item--humorgen-preview project-item--with-preview"
-          style="display: block; color: inherit;">
+        <!-- Project 1: HumorGen -->
+        <div class="project-item project-item--humorgen-preview">
           <div class="project-live-thumb" aria-hidden="true">
             <iframe src="https://humorgen.pages.dev/" title="HumorGen project site preview" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-          <h3 class="project-title"><a href="https://humorgen.pages.dev/" target="_blank"
-              rel="noopener noreferrer" style="color: inherit; text-decoration: none;">HumorGen: Open-Weight
-              Computational Humor Generation</a></h3>
-          <p class="project-meta"><a href="https://humorgen.pages.dev/" target="_blank"
-              rel="noopener noreferrer" style="color: var(--secondary-color);">humorgen.pages.dev</a> · <a
-              href="https://huggingface.co/collections/Jayi2424/humorgen" target="_blank" rel="noopener noreferrer"
-              style="color: var(--secondary-color);">Hugging Face Model Collection</a> · 14 models · 2026
-          </p>
-          <p class="project-desc">HumorGen is our open-weight ecosystem for computational humor — six comedic personas,
-            14 LoRA adapters (EN · FR · ES), built with Cognitive Synergy distillation. Explore models and benchmarks
-            at <a href="https://humorgen.pages.dev/" target="_blank" rel="noopener noreferrer"
-              style="color: var(--secondary-color);">humorgen.pages.dev</a>, with details in the <a
-              href="https://arxiv.org/pdf/2604.09629" target="_blank" rel="noopener noreferrer"
-              style="color: var(--secondary-color);">HumorGen paper</a>.</p>
-          <div class="project-tags">
-            <span class="tag">Humor</span>
-            <span class="tag">LLM</span>
-            <span class="tag">Open Weights</span>
-            <span class="tag">Hugging Face</span>
+          <div class="project-body">
+            <h3 class="project-title">
+              <a href="https://humorgen.pages.dev/" target="_blank" rel="noopener noreferrer">HumorGen: Open-Weight Computational Humor Generation</a>
+            </h3>
+            <p class="project-meta">
+              <a href="https://humorgen.pages.dev/" target="_blank" rel="noopener noreferrer">humorgen.pages.dev</a> · <a
+                href="https://huggingface.co/collections/Jayi2424/humorgen" target="_blank" rel="noopener noreferrer">Hugging Face Collection</a> · 2026
+            </p>
+            <p class="project-desc">
+              Open-weight ecosystem for computational humor — six comedic personas, 14 LoRA adapters (EN · FR · ES), built with Cognitive Synergy distillation. Details in the <a href="https://arxiv.org/pdf/2604.09629" target="_blank" rel="noopener noreferrer">HumorGen paper</a>.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Humor</span>
+              <span class="tag">LLM</span>
+              <span class="tag">Open Weights</span>
+              <span class="tag">Hugging Face</span>
+            </div>
           </div>
         </div>
 
-        <div class="project-item project-item--humorrank-preview project-item--with-preview"
-          style="display: block; color: inherit;">
+        <!-- Project 2: HumorRank -->
+        <div class="project-item project-item--humorrank-preview">
           <div class="project-live-thumb" aria-hidden="true">
             <iframe src="https://humorrank-leaderboard.pages.dev/" title="HumorRank leaderboard preview"
               loading="lazy"></iframe>
           </div>
-          <h3 class="project-title"><a href="https://humorrank-leaderboard.pages.dev/" target="_blank"
-              rel="noopener noreferrer" style="color: inherit; text-decoration: none;">HumorRank: Humor Generation
-              Leaderboard for LLMs</a></h3>
-          <p class="project-meta"><a href="https://humorrank-leaderboard.pages.dev/" target="_blank"
-              rel="noopener noreferrer" style="color: var(--secondary-color);">Live leaderboard</a> · Web · 2026</p>
-          <p class="project-desc">HumorRank is our tournament-based leaderboard web app for evaluating humor generation
-            across LLMs. Explore the live site at <a href="https://humorrank-leaderboard.pages.dev/" target="_blank"
-              rel="noopener noreferrer" style="color: var(--secondary-color);">humorrank-leaderboard.pages.dev</a>, with
-            details in the <a href="https://arxiv.org/pdf/2604.19786" target="_blank" rel="noopener noreferrer"
-              style="color: var(--secondary-color);">HumorRank paper</a>.</p>
-          <div class="project-tags">
-            <span class="tag">Humor</span>
-            <span class="tag">Evaluation</span>
-            <span class="tag">LLM</span>
-            <span class="tag">Leaderboard</span>
+          <div class="project-body">
+            <h3 class="project-title">
+              <a href="https://humorrank-leaderboard.pages.dev/" target="_blank" rel="noopener noreferrer">HumorRank: Humor Generation Leaderboard for LLMs</a>
+            </h3>
+            <p class="project-meta">
+              <a href="https://humorrank-leaderboard.pages.dev/" target="_blank" rel="noopener noreferrer">Live leaderboard</a> · Web App · 2026
+            </p>
+            <p class="project-desc">
+              Tournament-based leaderboard web application for evaluating and benchmarking humor generation capabilities across modern LLMs. Details in the <a href="https://arxiv.org/pdf/2604.19786" target="_blank" rel="noopener noreferrer">HumorRank paper</a>.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Humor</span>
+              <span class="tag">Evaluation</span>
+              <span class="tag">LLM</span>
+              <span class="tag">Leaderboard</span>
+            </div>
           </div>
         </div>
 
-        <a href="https://arxiv.org/pdf/2511.20001" target="_blank" class="project-item project-item--with-preview"
-          style="display: block; text-decoration: none; color: inherit;">
+        <!-- Project 3: Mental Health & Cyberbullying ML -->
+        <div class="project-item">
           <div class="project-live-thumb" aria-hidden="true">
             <iframe src="https://proceedings.mlr.press/v317/ajayi26a.html" title="Mental health paper page preview"
               loading="lazy"></iframe>
           </div>
-          <h3 class="project-title">Multilabel ML System for Mental Health & Cyberbullying Detection</h3>
-          <p class="project-meta">PMLR 317:15–26 • AAAI AIMedHealth Bridge 2026 • Oral</p>
-          <p class="project-desc">Built a full ML pipeline for multilabel detection of mental health conditions and
-            cyberbullying using classical models and transformer-based embeddings. Published in Proceedings of the Second
-            AAAI Bridge Program on AI for Medicine and Healthcare, PMLR 317:15–26, 2026 — Oral presentation and Best Paper
-            Award.</p>
-          <div class="project-tags">
-            <span class="tag">Machine Learning</span>
-            <span class="tag">NLP</span>
-            <span class="tag">BERT</span>
-            <span class="tag">AAAI-26 AIMedHealth Oral</span>
+          <div class="project-body">
+            <h3 class="project-title">
+              <a href="https://arxiv.org/pdf/2511.20001" target="_blank" rel="noopener noreferrer">Multilabel ML System for Mental Health &amp; Cyberbullying Detection</a>
+            </h3>
+            <p class="project-meta">
+              PMLR 317:15–26 · AAAI AIMedHealth Bridge 2026 · Oral &amp; Best Paper
+            </p>
+            <p class="project-desc">
+              End-to-end ML pipeline for multilabel detection of mental health conditions and cyberbullying using classical models and transformer-based embeddings.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">NLP</span>
+              <span class="tag">BERT</span>
+              <span class="tag">AAAI-26 Oral</span>
+            </div>
           </div>
-        </a>
+        </div>
 
-        <div class="project-item project-item--with-preview"
-          style="display: block; color: inherit;">
+        <!-- Project 4: CMU-Africa NLP Research Group -->
+        <div class="project-item">
           <div class="project-live-thumb" aria-hidden="true">
             <iframe src="https://cmuafrica-nlpgroup.pages.dev/" title="CMU-Africa NLP Group website preview"
               loading="lazy"></iframe>
           </div>
-          <h3 class="project-title"><a href="https://cmuafrica-nlpgroup.pages.dev/" target="_blank"
-              rel="noopener noreferrer" style="color: inherit; text-decoration: none;">CMU-Africa NLP Research Group</a>
-          </h3>
-          <p class="project-meta"><a href="https://cmuafrica-nlpgroup.pages.dev/" target="_blank"
-              rel="noopener noreferrer" style="color: var(--secondary-color);">Live site</a> · Web App · 2026</p>
-          <p class="project-desc">Official portal for the CMU-Africa NLP Research Group — featuring a public research
-            showcase, member dashboard, and collaboration system for researchers working on African language technologies
-            and responsible AI.</p>
-          <div class="project-tags">
-            <span class="tag">NLP</span>
-            <span class="tag">Research Community</span>
-            <span class="tag">Web App</span>
-            <span class="tag">African Languages</span>
+          <div class="project-body">
+            <h3 class="project-title">
+              <a href="https://cmuafrica-nlpgroup.pages.dev/" target="_blank" rel="noopener noreferrer">CMU-Africa NLP Research Group Portal</a>
+            </h3>
+            <p class="project-meta">
+              <a href="https://cmuafrica-nlpgroup.pages.dev/" target="_blank" rel="noopener noreferrer">cmuafrica-nlpgroup.pages.dev</a> · Web App · 2026
+            </p>
+            <p class="project-desc">
+              Official portal for the CMU-Africa NLP Research Group — featuring a public research showcase, member dashboard, and collaboration system for African language technologies.
+            </p>
+            <div class="project-tags">
+              <span class="tag">NLP</span>
+              <span class="tag">Research Community</span>
+              <span class="tag">Web App</span>
+              <span class="tag">African Languages</span>
+            </div>
           </div>
         </div>
 
-        <a href="https://afrieconqa.pages.dev/" class="project-item project-item--with-preview"
-          style="display: block; text-decoration: none; color: inherit;">
+        <!-- Project 5: AfriEconQA -->
+        <div class="project-item">
           <div class="project-live-thumb" aria-hidden="true">
             <iframe src="https://afrieconqa.pages.dev/" title="AfriEconQA project page preview"
               loading="lazy"></iframe>
           </div>
-          <h3 class="project-title">AfriEconQA: A Benchmark for Quantitative and Temporal Reasoning over World Bank Economic Reports</h3>
-          <p class="project-meta">Research Project • 2026</p>
-          <p class="project-desc">Specialized benchmark dataset to close the "parametric knowledge gap" in AI economic
-            analysis. Built 4,309 curated QA pairs from 220 World Bank African Reports (64,892 retrieval chunks).</p>
-          <div class="project-tags">
-            <span class="tag">Dataset Engineering</span>
-            <span class="tag">LLM Evaluation</span>
-            <span class="tag">RAG</span>
-            <span class="tag">Benchmark</span>
+          <div class="project-body">
+            <h3 class="project-title">
+              <a href="https://afrieconqa.pages.dev/" target="_blank" rel="noopener noreferrer">AfriEconQA: Quantitative &amp; Temporal Reasoning Benchmark</a>
+            </h3>
+            <p class="project-meta">
+              <a href="https://afrieconqa.pages.dev/" target="_blank" rel="noopener noreferrer">afrieconqa.pages.dev</a> · Benchmark · 2026
+            </p>
+            <p class="project-desc">
+              Specialized benchmark closing the "parametric knowledge gap" in AI economic analysis. 4,309 curated QA pairs from 220 World Bank African Reports (64,892 retrieval chunks).
+            </p>
+            <div class="project-tags">
+              <span class="tag">Dataset Engineering</span>
+              <span class="tag">LLM Evaluation</span>
+              <span class="tag">RAG</span>
+              <span class="tag">Benchmark</span>
+            </div>
           </div>
-        </a>
+        </div>
 
-        <a href="assets/projects/bus-management-system.html" class="project-item project-item--with-preview"
-          style="display: block; text-decoration: none; color: inherit;">
+        <!-- Project 6: AI Workflow Automation Agent -->
+        <div class="project-item">
           <div class="project-live-thumb" aria-hidden="true">
             <div class="bus-preview-rotator" data-bus-image-rotator data-interval="2200"
               data-images="assets/projects/bus%20management/login-page.png|assets/projects/bus%20management/dashboard-approvals.png|assets/projects/bus%20management/chatbot-with-analysis.png|assets/projects/bus%20management/editable-email-drafter-sender.png|assets/projects/bus%20management/view-edit-record.png|assets/projects/bus%20management/dashbord-clicked.png|assets/projects/bus%20management/AI%20Suggestion.png|assets/projects/bus%20management/edwardddd.png">
@@ -394,21 +508,31 @@
                 alt="" aria-hidden="true" loading="lazy" />
             </div>
           </div>
-          <h3 class="project-title">AI Workflow Automation Agent</h3>
-          <p class="project-meta">EdGE AI Labs • Jul 2025</p>
-          <p class="project-desc">Autonomous agent for business process automation using Google Forms/Sheets, LangChain,
-            and FastAPI. Integrated email notifications and QA monitoring dashboard.</p>
-          <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">LangChain</span>
-            <span class="tag">FastAPI</span>
-            <span class="tag">RAG</span>
+          <div class="project-body">
+            <h3 class="project-title">
+              <a href="assets/projects/bus-management-system.html">AI Workflow Automation Agent</a>
+            </h3>
+            <p class="project-meta">
+              EdGE AI Labs · Jul 2025
+            </p>
+            <p class="project-desc">
+              Autonomous agent for business process automation using Google Forms/Sheets, LangChain, and FastAPI with integrated email notifications and QA monitoring dashboard.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">LangChain</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">RAG</span>
+            </div>
           </div>
-        </a>
+        </div>
       </div>
 
-      <div class="text-center mt-3">
-        <a href="projects.html" class="btn-link">View All Projects →</a>
+      <div class="section-footer-action">
+        <a href="projects.html" class="btn-view-all">
+          <span>View All Projects</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
     </div>
   </section>
@@ -776,34 +900,7 @@
       color: #2563eb;
     }
 
-    .about-card-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      font-family: 'DM Sans', -apple-system, sans-serif;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: #1e40af;
-      background: rgba(37, 99, 235, 0.07);
-      border: 1px solid rgba(37, 99, 235, 0.2);
-      padding: 0.2rem 0.65rem;
-      border-radius: 9999px;
-    }
 
-    .badge-pulse-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #2563eb;
-      box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.5);
-      animation: badgePulse 2s infinite;
-    }
-
-    @keyframes badgePulse {
-      0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.5); }
-      70% { box-shadow: 0 0 0 5px rgba(37, 99, 235, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
-    }
 
     .about-card-body p {
       font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -829,38 +926,168 @@
       letter-spacing: -0.02em;
     }
 
-    .pub-title-compact,
-    .pub-title-link-compact,
-    .project-item .project-title {
+    /* ===== Recent Publications — Compact & Elevated ===== */
+    .publications-compact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .pub-item-compact {
+      background: #ffffff;
+      border: 1px solid #e7e5e4;
+      border-left: 3.5px solid #2563eb;
+      border-radius: 12px;
+      padding: 1.15rem 1.4rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .pub-item-compact:hover {
+      border-color: rgba(37, 99, 235, 0.3);
+      border-left-color: #1d4ed8;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.07);
+      transform: translateY(-1px);
+    }
+
+    .pub-item-award {
+      border-left-color: #f59e0b;
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.03) 0%, #ffffff 100%);
+    }
+
+    .pub-item-award:hover {
+      border-left-color: #d97706;
+    }
+
+    .pub-header-compact {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.45rem;
+      flex-wrap: wrap;
+    }
+
+    .pub-venue-tags {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      flex-wrap: wrap;
+    }
+
+    .pub-chip-venue {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: #1e40af;
+      background: rgba(37, 99, 235, 0.07);
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      padding: 0.15rem 0.55rem;
+      border-radius: 6px;
+      letter-spacing: 0.02em;
+    }
+
+    .pub-chip-venue i {
+      font-size: 0.7rem;
+      margin-right: 0.2rem;
+    }
+
+    .pub-status-badge {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      padding: 0.15rem 0.5rem;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+
+    .status-to-appear {
+      background: rgba(16, 185, 129, 0.08);
+      color: #059669;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .status-under-review {
+      background: rgba(245, 158, 11, 0.08);
+      color: #b45309;
+      border: 1px solid rgba(245, 158, 11, 0.25);
+    }
+
+    .status-published {
+      background: rgba(37, 99, 235, 0.08);
+      color: #2563eb;
+      border: 1px solid rgba(37, 99, 235, 0.25);
+    }
+
+    .pub-title-compact {
       font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.05rem;
       font-weight: 600;
-      color: var(--idx-text);
+      line-height: 1.4;
+      margin: 0 0 0.45rem 0;
+      letter-spacing: -0.01em;
     }
 
-    .pub-title-link-compact {
-      color: var(--idx-accent);
+    .pub-title-compact a {
+      color: #0f172a;
       text-decoration: none;
+      transition: color 0.2s ease;
     }
 
-    .pub-title-link-compact:hover {
-      color: var(--idx-accent-hover);
-      text-decoration: underline;
+    .pub-title-compact a:hover {
+      color: #2563eb;
     }
 
-    .pub-venue-compact,
-    .pub-authors-compact,
-    .project-meta,
-    .project-desc {
-      color: var(--idx-muted);
+    .pub-authors-compact {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 0.88rem;
+      color: #64748b;
+      margin: 0 0 0.45rem 0;
+      line-height: 1.45;
     }
 
-    .btn-link {
-      color: var(--idx-accent);
+    .pub-venue-compact {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 0.82rem;
+      color: #64748b;
+      line-height: 1.45;
+      margin: 0 0 0.65rem 0;
+    }
+
+    .pub-links-compact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .pub-btn-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.22rem 0.65rem;
+      font-size: 0.76rem;
       font-weight: 600;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      color: #334155;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.15s ease;
     }
 
-    .btn-link:hover {
-      color: var(--idx-accent-hover);
+    .pub-btn-pill:hover {
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #2563eb;
+      transform: translateY(-1px);
+    }
+
+    .pub-btn-pill i,
+    .pub-btn-pill .ai {
+      font-size: 0.78rem;
     }
 
     .highlights-grid {
@@ -902,58 +1129,47 @@
       margin-bottom: 0.75rem;
     }
 
-    .pub-item-compact {
-      border-left: 3px solid rgba(37, 99, 235, 0.4);
-      background: rgba(37, 99, 235, 0.04);
-      border-radius: 0 8px 8px 0;
-    }
-
-    .pub-item-compact:hover {
-      border-left-color: var(--idx-accent);
-      background: rgba(37, 99, 235, 0.08);
+    /* ===== Selected Projects — Streamlined 2-Column Grid ===== */
+    .projects-compact {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
     }
 
     .project-item {
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, var(--idx-card) 100%);
-      border: 1px solid rgba(37, 99, 235, 0.25);
+      background: #ffffff;
+      border: 1px solid #e7e5e4;
       border-radius: 14px;
-      padding: 1.25rem 1.5rem;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(37, 99, 235, 0.06);
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
     }
 
     .project-item:hover {
-      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.12);
-      border-color: rgba(37, 99, 235, 0.45);
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, var(--idx-card) 100%);
-    }
-
-    .project-item .project-title {
-      color: var(--idx-accent);
-    }
-
-    .project-item:hover .project-title {
-      color: var(--idx-accent-hover);
-    }
-
-    .project-item--with-preview {
-      padding-top: 0;
-      overflow: hidden;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.09);
+      border-color: rgba(37, 99, 235, 0.32);
     }
 
     .project-live-thumb {
-      height: 120px;
-      margin: 0 -1.5rem 0.85rem -1.5rem;
+      height: 135px;
+      width: 100%;
       overflow: hidden;
-      border-radius: 14px 14px 0 0;
-      background: #e7e5e4;
+      background: #f1f5f9;
       position: relative;
+      border-bottom: 1px solid #f1f5f9;
+      flex-shrink: 0;
     }
 
     .project-live-thumb iframe {
       width: 100%;
-      height: 260px;
+      height: 270px;
       border: 0;
       pointer-events: none;
+      transform: scale(1);
     }
 
     .bus-preview-rotator {
@@ -980,13 +1196,134 @@
       transform: scale(1);
     }
 
+    .project-body {
+      padding: 1.15rem 1.35rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.35;
+      margin: 0 0 0.35rem 0;
+      letter-spacing: -0.01em;
+    }
+
+    .project-title a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .project-title a:hover {
+      color: #2563eb;
+    }
+
+    .project-meta {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #2563eb;
+      margin: 0 0 0.55rem 0;
+      line-height: 1.4;
+    }
+
+    .project-meta a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .project-meta a:hover {
+      text-decoration: underline;
+    }
+
+    .project-desc {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.55;
+      margin: 0 0 0.85rem 0;
+      flex: 1;
+    }
+
+    .project-desc a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .project-desc a:hover {
+      text-decoration: underline;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: auto;
+    }
+
+    .project-tags .tag {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #475569;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      padding: 0.18rem 0.55rem;
+      border-radius: 9999px;
+    }
+
+    .section-footer-action {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .btn-view-all {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      color: #1e40af;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-view-all:hover {
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #2563eb;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+    }
+
+    .btn-view-all i {
+      font-size: 0.75rem;
+      transition: transform 0.2s ease;
+    }
+
+    .btn-view-all:hover i {
+      transform: translateX(3px);
+    }
+
+    @media (max-width: 860px) {
+      .projects-compact {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .project-live-thumb {
         display: none;
-      }
-
-      .project-item--with-preview {
-        padding-top: 1.25rem;
       }
     }
 
