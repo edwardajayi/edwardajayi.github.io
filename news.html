@@ -1,410 +1,774 @@
 <!DOCTYPE html>
-<html>
-  <head>
-      <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3E1CTW564V"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3E1CTW564V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3E1CTW564V');
+  </script>
+  <title>News & Highlights - Edward Ajayi</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Recent highlights, paper acceptances, awards, talks, and milestones by Edward Ajayi"
+  />
+  <link rel="stylesheet" type="text/css" href="assets/css/phd-compact.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+  />
 
-        gtag('config', 'G-3E1CTW564V');
-      </script>
-    <title>Edward's Recent Highlights</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="assets/css/phd-compact.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
-    />
-    <style>
-      /* News — match Publications/Projects design language */
-      :root {
-        --news-accent: #2563eb;
-        --news-accent-hover: #1d4ed8;
-        --news-bg: #fafaf9;
-        --news-card: #ffffff;
-        --news-text: #292524;
-        --news-muted: #78716c;
-        --news-border: #e7e5e4;
-      }
+  <style>
+    /* ===== News & Highlights — Match Publications/Projects Design Language ===== */
+    :root {
+      --news-accent: #2563eb;
+      --news-accent-hover: #1d4ed8;
+      --news-bg: #fafaf9;
+      --news-card: #ffffff;
+      --news-text: #0f172a;
+      --news-muted: #64748b;
+      --news-border: #e2e8f0;
+    }
 
-      body .section { background: var(--news-bg); padding: 2rem 0; }
+    body .section {
+      background: var(--news-bg);
+      padding: 2.75rem 0 4.5rem 0;
+    }
 
-      .hero .hero-text h1 {
-        font-family: 'Fraunces', Georgia, serif;
-        font-weight: 700;
-        color: var(--news-text);
-        letter-spacing: -0.02em;
-      }
+    .section .container {
+      padding-top: 0;
+      max-width: 980px;
+      margin: 0 auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
 
-      .hero-intro {
-        background: transparent;
-        border: none;
-        padding: 0 0 1.5rem 0;
-        margin-bottom: 0;
-        box-shadow: none;
-      }
-      .hero-intro p {
-        margin: 0;
-        color: var(--news-muted);
-        line-height: 1.7;
-        font-size: 1.05rem;
-        font-family: 'DM Sans', -apple-system, sans-serif;
-      }
+    /* News Overview Card */
+    .news-intro-card {
+      background: #ffffff;
+      border: 1px solid #e7e5e4;
+      border-radius: 18px;
+      padding: 2rem 2.35rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 4px 16px rgba(15, 23, 42, 0.03);
+    }
 
-      .timeline-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        max-width: 900px;
+    .intro-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .intro-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--news-accent);
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+    }
+
+    .intro-affiliation {
+      font-size: 0.85rem;
+      color: var(--news-muted);
+      font-family: 'DM Sans', -apple-system, sans-serif;
+    }
+
+    .news-page-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--news-text);
+      letter-spacing: -0.025em;
+      margin: 0 0 0.75rem 0;
+    }
+
+    .intro-bio-text {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #334155;
+      margin: 0 0 1.25rem 0;
+      max-width: 54rem;
+    }
+
+    .news-filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .news-filter-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--news-bg);
+      color: var(--news-text);
+      border: 1px solid var(--news-border);
+      padding: 0.4rem 0.9rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      transition: all 0.18s ease;
+      cursor: default;
+    }
+
+    .news-filter-pill i {
+      color: var(--news-accent);
+      font-size: 0.78rem;
+    }
+
+    .news-filter-pill.active {
+      background: rgba(37, 99, 235, 0.08);
+      border-color: rgba(37, 99, 235, 0.3);
+      color: var(--news-accent);
+    }
+
+    /* Timeline Container */
+    .timeline-wrapper {
+      position: relative;
+    }
+
+    .timeline-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+    }
+
+    /* Modern Elevated Timeline Card */
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 1.5rem;
+      padding: 1.4rem 1.65rem;
+      background: var(--news-card);
+      border-radius: 16px;
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 2px 8px rgba(15, 23, 42, 0.02);
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      align-items: flex-start;
+    }
+
+    .timeline-item:hover {
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.08);
+      border-color: rgba(37, 99, 235, 0.32);
+      transform: translateY(-2px);
+    }
+
+    .timeline-date {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      padding-top: 0.15rem;
+    }
+
+    .date-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 0.78rem;
+      font-weight: 700;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      padding: 0.32rem 0.7rem;
+      border-radius: 8px;
+      letter-spacing: 0.02em;
+      border: 1px solid #e2e8f0;
+      text-align: center;
+    }
+
+    .timeline-content {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      color: #475569;
+      font-size: 0.93rem;
+      line-height: 1.65;
+    }
+
+    .timeline-content p {
+      margin: 0;
+      color: #475569;
+    }
+
+    .timeline-content strong {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .timeline-content a {
+      color: var(--news-accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.18s ease;
+    }
+
+    .timeline-content a:hover {
+      color: var(--news-accent-hover);
+      text-decoration: underline;
+    }
+
+    /* Category Tag in Timeline */
+    .timeline-tag-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.45rem;
+      flex-wrap: wrap;
+    }
+
+    .timeline-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.18rem 0.55rem;
+      border-radius: 6px;
+      letter-spacing: 0.02em;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+    }
+
+    .tag-paper {
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+    }
+
+    .tag-award {
+      background: #fffbeb;
+      color: #92400e;
+      border: 1px solid #fde68a;
+    }
+
+    .tag-talk {
+      background: #eff6ff;
+      color: #1e40af;
+      border: 1px solid #bfdbfe;
+    }
+
+    .tag-role {
+      background: #f5f3ff;
+      color: #5b21b6;
+      border: 1px solid #ddd6fe;
+    }
+
+    .tag-milestone {
+      background: #f8fafc;
+      color: #475569;
+      border: 1px solid #e2e8f0;
+    }
+
+    .timeline-actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .certificate-link,
+    .news-action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.42rem;
+      color: var(--news-accent);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.32rem 0.75rem;
+      background: rgba(37, 99, 235, 0.06);
+      border: 1px solid rgba(37, 99, 235, 0.18);
+      border-radius: 9999px;
+      transition: all 0.18s ease;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+    }
+
+    .certificate-link:hover,
+    .news-action-btn:hover {
+      background: var(--news-accent);
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 8px rgba(37, 99, 235, 0.2);
+    }
+
+    .certificate-link i,
+    .news-action-btn i {
+      font-size: 0.76rem;
+    }
+
+    /* Site Footer */
+    .site-footer {
+      background: #ffffff;
+      border-top: 1px solid var(--news-border);
+      padding: 1.75rem 0;
+      margin-top: 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-copy {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 0.85rem;
+      color: var(--news-muted);
+      margin: 0;
+    }
+
+    .footer-copy strong {
+      color: var(--news-text);
+    }
+
+    .footer-right {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 0.85rem;
+      color: var(--news-muted);
+    }
+
+    .footer-right a {
+      color: var(--news-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-right a:hover {
+      color: var(--news-accent);
+    }
+
+    @media (max-width: 640px) {
+      .news-intro-card {
+        padding: 1.35rem;
       }
       .timeline-item {
-        display: grid;
-        grid-template-columns: 110px 1fr;
-        gap: 1.25rem;
-        padding: 1.25rem 1.5rem;
-        margin-bottom: 0.75rem;
-        background: var(--news-card);
-        border-radius: 14px;
-        border: 1px solid var(--news-border);
-        box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-        transition: box-shadow 0.2s ease, border-color 0.2s ease;
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+        padding: 1.15rem 1.25rem;
       }
-      .timeline-item:hover {
-        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
-        border-color: rgba(37, 99, 235, 0.2);
-        transform: none;
+      .date-chip {
+        display: inline-block;
+        width: fit-content;
       }
-      .timeline-item:last-child { margin-bottom: 0; }
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.65rem;
+      }
+    }
+  </style>
+</head>
 
-      .timeline-date {
-        font-family: 'Fraunces', Georgia, serif;
-        font-weight: 700;
-        color: var(--news-accent);
-        font-size: 0.9rem;
-        line-height: 1.4;
-      }
-      .timeline-content {
-        font-family: 'DM Sans', -apple-system, sans-serif;
-        color: var(--news-muted);
-        font-size: 0.95rem;
-        line-height: 1.65;
-      }
-      .timeline-content p { margin: 0 0 0.5rem 0; color: var(--news-muted); }
-      .timeline-content p:last-child { margin-bottom: 0; }
-      .timeline-content strong { font-family: 'Fraunces', Georgia, serif; color: var(--news-text); font-weight: 600; }
-      .timeline-content a {
-        color: var(--news-accent);
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.2s ease;
-      }
-      .timeline-content a:hover { color: var(--news-accent-hover); }
-
-      .certificate-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45rem;
-        color: var(--news-accent);
-        text-decoration: none;
-        font-size: 0.875rem;
-        font-weight: 600;
-        margin-top: 0.5rem;
-        padding: 0.4rem 0.85rem;
-        background: rgba(37, 99, 235, 0.08);
-        border: 1px solid rgba(37, 99, 235, 0.2);
-        border-radius: 10px;
-        transition: background 0.2s ease, color 0.2s ease;
-      }
-      .certificate-link:hover {
-        background: var(--news-accent);
-        color: #fff;
-        transform: none;
-        box-shadow: none;
-      }
-      .certificate-link i { font-size: 0.95rem; }
-
-      @media (max-width: 640px) {
-        .timeline-item {
-          grid-template-columns: 1fr;
-          gap: 0.5rem;
-          padding: 1rem 1.25rem;
-        }
-        .timeline-date { font-size: 0.85rem; }
-      }
-    </style>
-  </head>
-
-  <body class="fade-in">
-    <header class="site-header">
-      <div class="container">
-        <div class="header-inner">
-          <h1 class="logo">
-            <a href="https://edwardajayi.github.io/">Edward Ajayi</a>
-          </h1>
-          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-            <i class="fas fa-bars"></i>
-          </button>
-          <ul class="navbar" id="navbar">
-            <li><a href="index.html">About</a></li>
-            <li><a href="publications.html">Research</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="news.html" class="active">News</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="assets/Edward_Ajayi_CV.pdf" target="_blank">CV</a></li>
-          </ul>
-        </div>
+<body class="fade-in">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <h1 class="logo">
+          <a href="https://edwardajayi.github.io/">Edward Ajayi</a>
+        </h1>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="navbar" id="navbar">
+          <li><a href="index.html">About</a></li>
+          <li><a href="publications.html">Research</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="news.html" class="active">News</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="assets/Edward_Ajayi_CV.pdf" target="_blank">CV</a></li>
+        </ul>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <h1>Recent Highlights</h1>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
+  <section class="section" style="padding-top: 2.5rem;">
+    <div class="container">
       
-      <div class="hero-intro">
-        <p>Recent happenings and updates from my academic and research journey.</p>
+      <!-- News Overview Card -->
+      <div class="news-intro-card">
+        <div class="intro-header-row">
+          <span class="intro-badge"><i class="fas fa-newspaper"></i> News &amp; Updates</span>
+        </div>
+        <h1 class="news-page-title">Recent Highlights &amp; News</h1>
+        <p class="intro-bio-text" style="margin-bottom: 0;">
+          Key milestones, paper acceptances, awards, talks, and updates from my research and academic journey.
+        </p>
       </div>
-      
-      <ul class="timeline-list">
-        <li class="timeline-item">
-          <div class="timeline-date">August 2026</div>
-          <div class="timeline-content">
-            <p>Our paper <strong><a href="https://arxiv.org/pdf/2604.09629" target="_blank" rel="noopener noreferrer">HumorGen: Cognitive Synergy for Humor Generation in Large Language Models via Persona-Based Distillation</a></strong> was accepted to <a href="https://2026.emnlp.org/" target="_blank" rel="noopener noreferrer">EMNLP 2026</a> (Main Conference)!</p>
-          </div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">July 2026</div>
-          <div class="timeline-content">
-            <p>Our submission won the <strong><a href="https://clef2026.clef-initiative.eu/" target="_blank" rel="noopener noreferrer">CLEF 2026 JOKER Task 4: Humor Generation</a></strong> across all 3 languages (English, French, and Spanish)!</p>
-          </div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">July 2026</div>
-          <div class="timeline-content">
-            <p>Our paper <strong><a href="assets/papers/HumorGen-JOKER.pdf" target="_blank" rel="noopener noreferrer">Cross-Lingual Cognitive Synergy for Constrained Humor Generation in Large Language Models</a></strong> was accepted to <a href="https://clef2026.clef-initiative.eu/" target="_blank" rel="noopener noreferrer">CLEF 2026 Working Notes</a> (CEUR-WS, to appear)!</p>
-          </div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">June 2026</div>
-          <div class="timeline-content">
-            <p>Our paper <strong><a href="https://www.arxiv.org/pdf/2512.01557" target="_blank">Language Diversity: Evaluating Language Usage and AI Performance on African Languages in Digital Spaces</a></strong> was accepted to the <a href="https://deeplearningindaba.com/2026/" target="_blank">Deep Learning Indaba 2026</a> Research Track, Proceedings of Machine Learning Research (PMLR), to appear!</p>
-          </div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">June 2026</div>
-          <div class="timeline-content">
-            <p>Started as an <strong>NLP Research Associate</strong> at the <a href="https://www.cs.cmu.edu/" target="_blank">Spatial and Language Technologies Lab</a>, Carnegie Mellon University.</p>
-          </div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">May 2026</div>
-          <div class="timeline-content">
-            <p>Gave a talk with the <a href="https://cmuafrica-nlpgroup.pages.dev/" target="_blank" rel="noopener noreferrer" style="color: #2563eb; font-weight: bold;">CMU-Africa NLP Group</a> on <strong>Beyond the Transformer: How Modern NLP Research Actually Uses Foundation Models</strong>.</p>
-          </div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">May 2026</div>
-          <div class="timeline-content">
-            <p>Graduated with a <strong>Master's degree in Engineering Artificial Intelligence</strong> from <a href="https://www.cmu.edu/" target="_blank">Carnegie Mellon University</a>.</p>
-          </div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">Apr 2026</div>
-          <div class="timeline-content">
-            <p>Co-founded and led the establishment of the <a href="https://cmuafrica-nlpgroup.pages.dev/" target="_blank" rel="noopener noreferrer">CMU-Africa NLP Group</a>, bringing together graduate researchers to advance NLP research.</p>
-          </div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">Apr 2026</div>
-          <div class="timeline-content">
-            <p>Our poster on <strong>Vision-Based Joint Embedding Architecture for Safe Indoor Navigation</strong> won the <strong>People's Choice Award</strong> at the <a href="https://researchclubcmuafrica.github.io/showcase.html" target="_blank" rel="noopener noreferrer">CMU-Africa Research Showcase 2026</a>.</p>
-          </div>
-        </li>
-        
-        <li class="timeline-item">
-          <div class="timeline-date">Mar 2026</div>
-          <div class="timeline-content">
-            <p>Our <strong>HumorGen</strong> open-weight humor ecosystem is live at <a href="https://humorgen.pages.dev/" target="_blank" rel="noopener noreferrer">humorgen.pages.dev</a>, with 14 models in the <a href="https://huggingface.co/collections/Jayi2424/humorgen" target="_blank" rel="noopener noreferrer">Hugging Face Model Collection</a>.</p>
-          </div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">Feb 2026</div>
-          <div class="timeline-content">
-            <p>Our paper <strong><a href="https://www.arxiv.org/pdf/2512.01557" target="_blank">Language Diversity: Evaluating Language Usage and AI Performance on African Languages in Digital Spaces</a></strong> was spotlighted by EqualyzAI. <a href="https://www.linkedin.com/posts/equalyzai_africanlanguages-ai4good-inclusivetech-activity-7425510034584821760-QruP?utm_source=share&utm_medium=member_desktop&rcm=ACoAADPV8W0Bt8Lb7Z-HSXnaPg4EbvVEoob13R0" target="_blank" style="margin-left:0.5rem; color:#0a66c2;" title="See LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
-          </div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">Feb 2026</div>
-          <div class="timeline-content">
-            <p>Gave a <strong>Research Talk</strong> as Guest Speaker at the <strong>04-632 Mobile Big Data Analytics and Management</strong> class at Carnegie Mellon University Africa. <a href="https://www.linkedin.com/feed/update/urn:li:activity:7430171400633503744/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADPV8W0Bt8Lb7Z-HSXnaPg4EbvVEoob13R0-" target="_blank" style="margin-left:0.5rem; color:#0a66c2;" title="See LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
-          </div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">Jan 2026</div>
-          <div class="timeline-content">
-            <p>Our paper <strong>"A Machine Learning Approach for Detection of Mental Health Conditions and Cyberbullying from Social Media"</strong> won the <strong>Best Paper Award</strong> at AAAI AI in Medicine and Healthcare Bridge Program. <a href="https://proceedings.mlr.press/v317/ajayi26a.html" target="_blank">See PMLR Proceedings</a>. <a href="https://www.linkedin.com/posts/edwardajayi24_aaai2026-cmuafrica-research-ugcPost-7426306371966525440-PgHk?utm_source=share&utm_medium=member_desktop&rcm=ACoAADPV8W0Bt8Lb7Z-HSXnaPg4EbvVEoob13R0" target="_blank" style="margin-left:0.5rem; color:#0a66c2;" title="See LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
-          </div>
-        </li>
-        
-        <li class="timeline-item">
-          <div class="timeline-date">Jan 2026</div>
-          <div class="timeline-content">
-            <p>Attended <strong><a href="https://aaai.org/conference/aaai/aaai-26/" target="_blank">The 40th Annual AAAI Conference on Artificial Intelligence</a></strong> at Singapore Expo for <strong>Oral Presentation</strong> of our <a href="https://proceedings.mlr.press/v317/ajayi26a.html" target="_blank">paper</a>.</p>
-          </div>
-        </li>
-        
-        <li class="timeline-item">
-          <div class="timeline-date">Nov 2025</div>
-          <div class="timeline-content">
-            <p>Attended the <strong><a href="https://credsverse.com/credentials/214004c4-aa9e-425b-abc1-c378b59a6439" target="_blank">Cohere Connect Conference</a></strong>.</p>
-          </div>
-        </li>
-        
-        <li class="timeline-item">
-          <div class="timeline-date">Nov 2025</div>
-          <div class="timeline-content">
-            <p>Our paper <strong>"A Machine Learning Approach for Detection of Mental Health Conditions and Cyberbullying from Social Media"</strong> (<a href="https://proceedings.mlr.press/v317/ajayi26a.html" target="_blank">PMLR</a>) accepted for <strong>Oral Presentation</strong> at <a href="https://aaai.org/conference/aaai/aaai-26/" target="_blank">AAAI AIHealth Bridge 2026</a>.</p>
-          </div>
-        </li>
-        
-        <li class="timeline-item">
-          <div class="timeline-date">Aug 2025</div>
-          <div class="timeline-content">
-            <p>Started as a <strong>Research Assistant</strong> at the <a href="https://www.cs.cmu.edu/" target="_blank">Spatial and Language Technologies Lab</a> at CMU Africa.</p>
-          </div>
-        </li>
-        
-        <li class="timeline-item">
-          <div class="timeline-date">Aug 2025</div>
-          <div class="timeline-content">
-            <p>Attended the <strong><a href="https://deeplearningindaba.com/2025/" target="_blank">Deep Learning Indaba 2025</a></strong>.</p>
-            <a href="https://drive.google.com/file/d/1AOPfdkysL9n3VaPaGJyzsIInd2OZRP9G/view?usp=sharing" target="_blank" class="certificate-link">
-              <i class="fas fa-certificate"></i> View Certificate
-            </a>
-          </div>
-        </li>
-        
-        <li class="timeline-item">
-          <div class="timeline-date">Jul 2025</div>
-          <div class="timeline-content">
-            <p>Attended the <a href="https://sites.google.com/cohere.com/coherelabs-community/community-programs/summer-school" target="_blank">Cohere ML Summer School</a>.</p>
-            <a href="assets/Cohere ML Summer School.pdf" target="_blank" class="certificate-link">
-              <i class="fas fa-certificate"></i> View Certificate
-            </a>
-          </div>
-        </li>
-        
-        <li class="timeline-item">
-          <div class="timeline-date">Jul 2025</div>
-          <div class="timeline-content">
-            <p>Attended the <a href="https://dighum.kcrc.rw/" target="_blank">Digital Humanities Summer School</a>.</p>
-          </div>
-        </li>
-        
-        <li class="timeline-item">
-          <div class="timeline-date">Apr 2025</div>
-          <div class="timeline-content">
-                         <p>Attended the <strong><a href="https://c4ir.rw/global-ai-summit-on-africa" target="_blank">Global AI Summit on Africa</a></strong>, engaging with leading AI researchers and practitioners across the continent.</p>
-          </div>
-        </li>
-        
-        <li class="timeline-item">
-          <div class="timeline-date">Jun 2025</div>
-          <div class="timeline-content">
-            <p>Started internship as <strong>Business Automation (Agentic AI) Intern</strong> at <a href="#" target="_blank">EdGE AI Labs</a> at CMU-Africa.</p>
-          </div>
-        </li>
 
-        <li class="timeline-item">
-          <div class="timeline-date">May 2025</div>
-          <div class="timeline-content">
-            <p>Participated in the <a href="https://www.flickr.com/photos/cmu-africa/albums/72177720326781082/" target="_blank">Student Research Showcase at CMU Africa</a>, highlighting my research work.</p>
-          </div>
-        </li>
-        
-        <li class="timeline-item">
-          <div class="timeline-date">May 2025</div>
-          <div class="timeline-content">
-            <p>Attended the <a href="assets/AIMS Optimization Cert.pdf" target="_blank">AIMS RIC Workshop on Optimization, Optimal and Predictive Control</a>.</p>
-            <a href="assets/AIMS Optimization Cert.pdf" target="_blank" class="certificate-link">
-              <i class="fas fa-certificate"></i> View Certificate
-            </a>
-          </div>
-        </li>
-        
-        <li class="timeline-item">
-          <div class="timeline-date">Jan 2025</div>
-          <div class="timeline-content">
-            <p>Kickstarted the <strong>Monthly Research Newsletter</strong> for the <a href="https://researchclubcmuafrica.github.io" target="_blank">CMU-Africa Research Club</a> as part of presidential initiatives.</p>
-          </div>
-        </li>
-        
-        <li class="timeline-item">
-          <div class="timeline-date">Nov 2024</div>
-          <div class="timeline-content">
-            <p>Elected as <strong>President of the <a href="https://researchclubcmuafrica.github.io" target="_blank">CMU-Africa Research Club</a></strong>, leading research initiatives and fostering academic collaboration among graduate students.</p>
-          </div>
-        </li>
-        
-        <li class="timeline-item">
-          <div class="timeline-date">Jul 2024</div>
-          <div class="timeline-content">
-            <p>Resumed Master's Program in <strong>Engineering Artificial Intelligence</strong> at <a href="https://www.africa.engineering.cmu.edu/" target="_blank">CMU-Africa</a>.</p>
-          </div>
-        </li>
-        
-        <li class="timeline-item">
-          <div class="timeline-date">Apr 2024</div>
-          <div class="timeline-content">
-            <p>Admitted to CMU-Africa with a fully funded <a href="https://mastercardfdn.org/" target="_blank"><strong>Mastercard Foundation Scholarship</strong></a> for Master's studies in Engineering Artificial Intelligence.</p>
-          </div>
-        </li>
-      </ul>
+      <!-- Timeline List -->
+      <div class="timeline-wrapper">
+        <ul class="timeline-list">
+          <!-- August 2026: EMNLP -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">Aug 2026</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-paper"><i class="fas fa-file-alt"></i> EMNLP 2026</span>
+                <span class="timeline-tag tag-milestone">Main Conference</span>
+              </div>
+              <p>Our paper <strong><a href="https://arxiv.org/pdf/2604.09629" target="_blank" rel="noopener noreferrer">HumorGen: Cognitive Synergy for Humor Generation in Large Language Models via Persona-Based Distillation</a></strong> was accepted to the Main Conference at <strong>EMNLP 2026</strong>!</p>
+              <div class="timeline-actions">
+                <a href="https://arxiv.org/pdf/2604.09629" target="_blank" rel="noopener noreferrer" class="news-action-btn">
+                  <i class="fas fa-file-pdf"></i> Read Paper
+                </a>
+                <a href="https://humorgen.pages.dev/" target="_blank" rel="noopener noreferrer" class="news-action-btn">
+                  <i class="fas fa-external-link-alt"></i> Project Site
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <!-- July 2026: CLEF Winner -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">Jul 2026</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-award"><i class="fas fa-trophy"></i> Competition Winner</span>
+                <span class="timeline-tag tag-milestone">CLEF 2026</span>
+              </div>
+              <p>Our submission won the <strong><a href="https://clef2026.clef-initiative.eu/" target="_blank" rel="noopener noreferrer">CLEF 2026 JOKER Task 4: Humor Generation</a></strong> across all 3 languages (English, French, and Spanish)!</p>
+            </div>
+          </li>
+
+          <!-- July 2026: CLEF Paper -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">Jul 2026</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-paper"><i class="fas fa-file-alt"></i> CLEF 2026</span>
+                <span class="timeline-tag tag-milestone">Working Notes</span>
+              </div>
+              <p>Our paper <strong><a href="assets/papers/HumorGen-JOKER.pdf" target="_blank" rel="noopener noreferrer">Cross-Lingual Cognitive Synergy for Constrained Humor Generation in Large Language Models</a></strong> was accepted to <strong>CLEF 2026 Working Notes</strong> (CEUR-WS, to appear)!</p>
+              <div class="timeline-actions">
+                <a href="assets/papers/HumorGen-JOKER.pdf" target="_blank" rel="noopener noreferrer" class="news-action-btn">
+                  <i class="fas fa-file-pdf"></i> Read Paper
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <!-- June 2026: DLI 2026 -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">Jun 2026</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-paper"><i class="fas fa-file-alt"></i> DLI 2026</span>
+                <span class="timeline-tag tag-milestone">PMLR</span>
+              </div>
+              <p>Our paper <strong><a href="https://www.arxiv.org/pdf/2512.01557" target="_blank" rel="noopener noreferrer">Language Diversity: Evaluating Language Usage and AI Performance on African Languages in Digital Spaces</a></strong> was accepted to the <a href="https://deeplearningindaba.com/2026/" target="_blank" rel="noopener noreferrer">Deep Learning Indaba 2026</a> Research Track, Proceedings of Machine Learning Research (PMLR)!</p>
+              <div class="timeline-actions">
+                <a href="https://www.arxiv.org/pdf/2512.01557" target="_blank" rel="noopener noreferrer" class="news-action-btn">
+                  <i class="fas fa-file-pdf"></i> arXiv
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <!-- June 2026: Research Associate at CMU -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">Jun 2026</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-role"><i class="fas fa-briefcase"></i> Research Role</span>
+                <span class="timeline-tag tag-milestone">Carnegie Mellon University</span>
+              </div>
+              <p>Started as an <strong>NLP Research Associate</strong> at the <a href="https://www.cs.cmu.edu/" target="_blank" rel="noopener noreferrer">Spatial and Language Technologies Lab</a> at Carnegie Mellon University.</p>
+            </div>
+          </li>
+
+          <!-- May 2026: Talk with CMU-Africa NLP -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">May 2026</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-talk"><i class="fas fa-microphone"></i> Invited Talk</span>
+              </div>
+              <p>Gave a talk with the <a href="https://cmuafrica-nlpgroup.pages.dev/" target="_blank" rel="noopener noreferrer">CMU-Africa NLP Group</a> on <strong>Beyond the Transformer: How Modern NLP Research Actually Uses Foundation Models</strong>.</p>
+              <div class="timeline-actions">
+                <a href="https://cmuafrica-nlpgroup.pages.dev/" target="_blank" rel="noopener noreferrer" class="news-action-btn">
+                  <i class="fas fa-external-link-alt"></i> NLP Group
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <!-- May 2026: Master's Graduation -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">May 2026</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-role"><i class="fas fa-graduation-cap"></i> Graduation</span>
+                <span class="timeline-tag tag-milestone">Carnegie Mellon University</span>
+              </div>
+              <p>Graduated with a <strong>Master of Science in Engineering Artificial Intelligence</strong> from <a href="https://www.cmu.edu/" target="_blank" rel="noopener noreferrer">Carnegie Mellon University</a>.</p>
+            </div>
+          </li>
+
+          <!-- April 2026: Co-founded CMU-Africa NLP -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">Apr 2026</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-milestone"><i class="fas fa-users"></i> Community Initiative</span>
+              </div>
+              <p>Co-founded and led the establishment of the <a href="https://cmuafrica-nlpgroup.pages.dev/" target="_blank" rel="noopener noreferrer">CMU-Africa NLP Group</a>, bringing together graduate researchers to advance multilingual NLP research.</p>
+            </div>
+          </li>
+
+          <!-- April 2026: People's Choice Award -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">Apr 2026</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-award"><i class="fas fa-award"></i> People's Choice Award</span>
+              </div>
+              <p>Our poster on <strong>Vision-Based Joint Embedding Architecture for Safe Indoor Navigation</strong> won the <strong>People's Choice Award</strong> at the <a href="https://researchclubcmuafrica.github.io/showcase.html" target="_blank" rel="noopener noreferrer">CMU-Africa Research Showcase 2026</a>.</p>
+            </div>
+          </li>
+
+          <!-- March 2026: HumorGen Launch -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">Mar 2026</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-paper"><i class="fas fa-rocket"></i> Open Release</span>
+              </div>
+              <p>Our <strong>HumorGen</strong> open-weight humor ecosystem went live at <a href="https://humorgen.pages.dev/" target="_blank" rel="noopener noreferrer">humorgen.pages.dev</a>, featuring 14 distilled models in the <a href="https://huggingface.co/collections/Jayi2424/humorgen" target="_blank" rel="noopener noreferrer">Hugging Face Model Collection</a>.</p>
+              <div class="timeline-actions">
+                <a href="https://humorgen.pages.dev/" target="_blank" rel="noopener noreferrer" class="news-action-btn">
+                  <i class="fas fa-external-link-alt"></i> Live Site
+                </a>
+                <a href="https://huggingface.co/collections/Jayi2424/humorgen" target="_blank" rel="noopener noreferrer" class="news-action-btn">
+                  <i class="fab fa-huggingface"></i> Models
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <!-- February 2026: EqualyzAI Spotlight -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">Feb 2026</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-milestone"><i class="fas fa-star"></i> Media Spotlight</span>
+              </div>
+              <p>Our paper <strong>Language Diversity: Evaluating Language Usage and AI Performance on African Languages in Digital Spaces</strong> was spotlighted by EqualyzAI.</p>
+              <div class="timeline-actions">
+                <a href="https://www.linkedin.com/posts/equalyzai_africanlanguages-ai4good-inclusivetech-activity-7425510034584821760-QruP" target="_blank" rel="noopener noreferrer" class="news-action-btn">
+                  <i class="fab fa-linkedin"></i> LinkedIn Spotlight
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <!-- February 2026: Mobile Big Data Analytics Talk -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">Feb 2026</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-talk"><i class="fas fa-chalkboard-teacher"></i> Guest Lecture</span>
+              </div>
+              <p>Delivered a <strong>Research Talk</strong> as Guest Speaker for the <strong>04-632 Mobile Big Data Analytics and Management</strong> course at Carnegie Mellon University Africa.</p>
+              <div class="timeline-actions">
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7430171400633503744/" target="_blank" rel="noopener noreferrer" class="news-action-btn">
+                  <i class="fab fa-linkedin"></i> View Post
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <!-- January 2026: Best Paper Award AAAI AIMedHealth -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">Jan 2026</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-award"><i class="fas fa-trophy"></i> Best Paper Award</span>
+                <span class="timeline-tag tag-paper">AAAI 2026</span>
+              </div>
+              <p>Our paper <strong>"A Machine Learning Approach for Detection of Mental Health Conditions and Cyberbullying from Social Media"</strong> won the <strong>Best Paper Award</strong> at the AAAI AIMedHealth 2026 Bridge Program.</p>
+              <div class="timeline-actions">
+                <a href="https://proceedings.mlr.press/v317/ajayi26a.html" target="_blank" rel="noopener noreferrer" class="news-action-btn">
+                  <i class="ai ai-pmlr"></i> PMLR Proceedings
+                </a>
+                <a href="https://www.linkedin.com/posts/edwardajayi24_aaai2026-cmuafrica-research-ugcPost-7426306371966525440-PgHk" target="_blank" rel="noopener noreferrer" class="news-action-btn">
+                  <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <!-- January 2026: AAAI-26 Oral Presentation -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">Jan 2026</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-talk"><i class="fas fa-microphone"></i> Oral Presentation</span>
+                <span class="timeline-tag tag-milestone">Singapore</span>
+              </div>
+              <p>Attended <strong><a href="https://aaai.org/conference/aaai/aaai-26/" target="_blank" rel="noopener noreferrer">The 40th Annual AAAI Conference on Artificial Intelligence (AAAI-26)</a></strong> at Singapore Expo for the <strong>Oral Presentation</strong> of our research paper.</p>
+            </div>
+          </li>
+
+          <!-- November 2025: Cohere Connect -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">Nov 2025</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-milestone"><i class="fas fa-network-wired"></i> Conference</span>
+              </div>
+              <p>Attended the <strong><a href="https://credsverse.com/credentials/214004c4-aa9e-425b-abc1-c378b59a6439" target="_blank" rel="noopener noreferrer">Cohere Connect Conference</a></strong>.</p>
+            </div>
+          </li>
+
+          <!-- August 2025: Research Assistant at CMU -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">Aug 2025</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-role"><i class="fas fa-flask"></i> Research Assistant</span>
+              </div>
+              <p>Started as a <strong>Research Assistant</strong> at the <a href="https://www.cs.cmu.edu/" target="_blank" rel="noopener noreferrer">Spatial and Language Technologies Lab</a> at CMU Africa.</p>
+            </div>
+          </li>
+
+          <!-- August 2025: Deep Learning Indaba -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">Aug 2025</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-milestone"><i class="fas fa-certificate"></i> Indaba 2025</span>
+              </div>
+              <p>Attended the <strong><a href="https://deeplearningindaba.com/2025/" target="_blank" rel="noopener noreferrer">Deep Learning Indaba 2025</a></strong>.</p>
+              <div class="timeline-actions">
+                <a href="https://drive.google.com/file/d/1AOPfdkysL9n3VaPaGJyzsIInd2OZRP9G/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="certificate-link">
+                  <i class="fas fa-certificate"></i> View Certificate
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <!-- July 2025: Cohere ML Summer School -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">Jul 2025</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-milestone"><i class="fas fa-graduation-cap"></i> Summer School</span>
+              </div>
+              <p>Attended the <a href="https://sites.google.com/cohere.com/coherelabs-community/community-programs/summer-school" target="_blank" rel="noopener noreferrer">Cohere ML Summer School</a>.</p>
+              <div class="timeline-actions">
+                <a href="assets/Cohere ML Summer School.pdf" target="_blank" rel="noopener noreferrer" class="certificate-link">
+                  <i class="fas fa-certificate"></i> View Certificate
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <!-- April 2024: Mastercard Foundation Scholarship -->
+          <li class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-chip">Apr 2024</span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-tag-row">
+                <span class="timeline-tag tag-award"><i class="fas fa-award"></i> Full Scholarship</span>
+              </div>
+              <p>Admitted to Carnegie Mellon University Africa with a fully funded <a href="https://mastercardfdn.org/" target="_blank" rel="noopener noreferrer"><strong>Mastercard Foundation Scholarship</strong></a> for Master's studies in Engineering Artificial Intelligence.</p>
+            </div>
+          </li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-content" style="text-align:center;padding:2rem 0;">
-          <p style="color:#64748b;margin:0.5rem 0;">© 2026 Edward Ajayi. All rights reserved.</p>
-          <p style="color:#94a3b8;margin:0.5rem 0;font-size:0.9rem;"><strong>Last Updated:</strong> June, 2026</p>
-          <p style="margin:0.5rem 0;">
-            <a href="https://github.com/edwardajayi/edwardajayi.github.io" target="_blank" style="color:#64748b;text-decoration:none;margin:0 0.5rem;">Source Code</a> | 
-            <a href="https://pages.github.com/" target="_blank" style="color:#64748b;text-decoration:none;margin:0 0.5rem;">GitHub Pages</a>
-            </p>
-          </div>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">
+          © 2026 <strong>Edward Ajayi</strong>
+        </p>
+        <div class="footer-right">
+          <a href="index.html">About</a> ·
+          <a href="publications.html">Research</a> ·
+          <a href="projects.html">Projects</a> ·
+          <a href="news.html">News</a> ·
+          <a href="blog.html">Blog</a> ·
+          <a href="assets/Edward_Ajayi_CV.pdf" target="_blank">CV</a>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!-- Back to top button -->
-    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
-      <i class="fas fa-arrow-up"></i>
-    </a>
+  <!-- Back to top button -->
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const backToTopButton = document.getElementById('backToTop');
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const backToTopButton = document.getElementById('backToTop');
+      if (backToTopButton) {
         window.addEventListener('scroll', function() {
           if (window.pageYOffset > 300) {
             backToTopButton.classList.add('visible');
@@ -412,15 +776,17 @@
             backToTopButton.classList.remove('visible');
           }
         });
-        
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navbar = document.getElementById('navbar');
-        if (mobileMenuBtn) {
-          mobileMenuBtn.addEventListener('click', function() {
-            navbar.classList.toggle('show');
-            const isExpanded = navbar.classList.contains('show');
-            mobileMenuBtn.setAttribute('aria-expanded', isExpanded.toString());
-            const icon = mobileMenuBtn.querySelector('i');
+      }
+      
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const navbar = document.getElementById('navbar');
+      if (mobileMenuBtn && navbar) {
+        mobileMenuBtn.addEventListener('click', function() {
+          navbar.classList.toggle('show');
+          const isExpanded = navbar.classList.contains('show');
+          mobileMenuBtn.setAttribute('aria-expanded', isExpanded.toString());
+          const icon = mobileMenuBtn.querySelector('i');
+          if (icon) {
             if (isExpanded) {
               icon.classList.remove('fa-bars');
               icon.classList.add('fa-times');
@@ -428,9 +794,10 @@
               icon.classList.remove('fa-times');
               icon.classList.add('fa-bars');
             }
-          });
-        }
-      });
-    </script>
-  </body>
+          }
+        });
+      }
+    });
+  </script>
+</body>
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3E1CTW564V"></script>
@@ -7,91 +8,169 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-3E1CTW564V');
   </script>
   <title>Blog - Edward Ajayi</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Essays and writings by Edward Ajayi on computational humor, LLM evaluation, AI safety, and academic research" />
   <link rel="stylesheet" type="text/css" href="assets/css/phd-compact.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
-  
+
   <style>
-    /* Blog — match Publications/Projects design language */
+    /* ===== Blog & Essays — Match Publications/Projects Design Language ===== */
     :root {
       --blog-accent: #2563eb;
       --blog-accent-hover: #1d4ed8;
       --blog-bg: #fafaf9;
       --blog-card: #ffffff;
-      --blog-text: #292524;
-      --blog-muted: #78716c;
-      --blog-border: #e7e5e4;
+      --blog-text: #0f172a;
+      --blog-muted: #64748b;
+      --blog-border: #e2e8f0;
     }
 
-    body .section { background: var(--blog-bg); padding: 2rem 0; }
-
-    .hero .hero-text h1 {
-      font-family: 'Fraunces', Georgia, serif;
-      font-weight: 700;
-      color: var(--blog-text);
-      letter-spacing: -0.02em;
+    body .section {
+      background: var(--blog-bg);
+      padding: 2.75rem 0 4.5rem 0;
     }
 
-    .hero-intro {
-      background: transparent;
-      border: none;
-      padding: 0 0 2rem 0;
-      margin-bottom: 0;
-      box-shadow: none;
-      text-align: center;
-      max-width: 600px;
+    .section .container {
+      padding-top: 0;
+      max-width: 980px;
       margin: 0 auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
-    .hero-intro p {
-      margin: 0;
-      color: var(--blog-muted);
-      line-height: 1.7;
-      font-size: 1.05rem;
+
+    /* Blog Overview Card */
+    .blog-intro-card {
+      background: #ffffff;
+      border: 1px solid #e7e5e4;
+      border-radius: 18px;
+      padding: 2rem 2.35rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 4px 16px rgba(15, 23, 42, 0.03);
+    }
+
+    .intro-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .intro-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--blog-accent);
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
       font-family: 'DM Sans', -apple-system, sans-serif;
     }
 
-    /* Layout grid */
-    .blog-layout {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
+    .intro-affiliation {
+      font-size: 0.85rem;
+      color: var(--blog-muted);
+      font-family: 'DM Sans', -apple-system, sans-serif;
     }
 
-    /* Featured Post Card */
+    .blog-page-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--blog-text);
+      letter-spacing: -0.025em;
+      margin: 0 0 0.75rem 0;
+    }
+
+    .intro-bio-text {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #334155;
+      margin: 0 0 1.25rem 0;
+      max-width: 56rem;
+    }
+
+    .blog-topics-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .blog-topic-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--blog-bg);
+      color: var(--blog-text);
+      border: 1px solid var(--blog-border);
+      padding: 0.4rem 0.9rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      transition: all 0.18s ease;
+      cursor: default;
+    }
+
+    .blog-topic-item i {
+      color: var(--blog-accent);
+      font-size: 0.78rem;
+    }
+
+    .blog-topic-item:hover {
+      border-color: var(--blog-accent);
+      background: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.08);
+    }
+
+    /* Blog Layout */
+    .blog-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 2.75rem;
+    }
+
+    /* Featured Article Card */
     .featured-card {
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
+      grid-template-columns: 1.15fr 1fr;
       background: var(--blog-card);
-      border-radius: 16px;
-      border: 1px solid var(--blog-border);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      border-radius: 18px;
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 4px 16px rgba(15, 23, 42, 0.03);
       overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
       text-decoration: none;
       color: inherit;
     }
-    
+
     .featured-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.08);
-      border-color: rgba(37, 99, 235, 0.25);
+      box-shadow: 0 14px 32px rgba(37, 99, 235, 0.1);
+      border-color: rgba(37, 99, 235, 0.35);
     }
 
     .featured-image-container {
       position: relative;
-      min-height: 300px;
-      background: #f1f0ee;
+      min-height: 290px;
+      background: #f1f5f9;
       overflow: hidden;
     }
 
@@ -101,7 +180,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: transform 0.4s ease;
     }
 
     .featured-card:hover .featured-image {
@@ -109,34 +188,35 @@
     }
 
     .featured-content {
-      padding: 2.25rem;
+      padding: 2.25rem 2.25rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 0.85rem;
+      gap: 0.9rem;
     }
 
     .post-badge {
       align-self: flex-start;
       background: rgba(37, 99, 235, 0.08);
       color: var(--blog-accent);
-      padding: 0.3rem 0.75rem;
-      border-radius: 999px;
-      font-size: 0.75rem;
+      padding: 0.28rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.74rem;
       font-weight: 700;
       font-family: 'DM Sans', -apple-system, sans-serif;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
+      border: 1px solid rgba(37, 99, 235, 0.16);
     }
 
     .post-title {
       font-family: 'Fraunces', Georgia, serif;
-      font-size: 1.5rem;
+      font-size: 1.45rem;
       font-weight: 700;
       color: var(--blog-text);
       line-height: 1.35;
       margin: 0;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.015em;
       transition: color 0.2s ease;
     }
 
@@ -147,163 +227,253 @@
     .post-excerpt {
       font-family: 'DM Sans', -apple-system, sans-serif;
       color: var(--blog-muted);
-      font-size: 0.95rem;
-      line-height: 1.6;
+      font-size: 0.92rem;
+      line-height: 1.65;
       margin: 0;
     }
 
     .post-meta {
       font-family: 'DM Sans', -apple-system, sans-serif;
-      font-size: 0.825rem;
+      font-size: 0.83rem;
       color: var(--blog-muted);
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
+      gap: 0.55rem;
+      margin-top: 0.4rem;
     }
 
     .post-meta-bullet {
       color: var(--blog-border);
     }
 
-    /* Substack Call-To-Action Card */
+    .read-more-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--blog-accent);
+      font-weight: 600;
+    }
+
+    /* Substack Call-To-Action Banner */
     .substack-cta {
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.03) 0%, rgba(37, 99, 235, 0.06) 100%);
-      border: 1px dashed rgba(37, 99, 235, 0.3);
-      border-radius: 16px;
-      padding: 2.5rem;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 2.75rem 2.25rem;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1rem;
-      max-width: 600px;
-      margin: 0 auto;
-      width: 100%;
-      box-sizing: border-box;
+      gap: 1.15rem;
+      color: #ffffff;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.15);
+    }
+
+    .substack-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .substack-cta h3 {
       font-family: 'Fraunces', Georgia, serif;
-      font-size: 1.35rem;
-      color: var(--blog-text);
+      font-size: 1.5rem;
+      color: #ffffff;
       margin: 0;
       font-weight: 700;
+      letter-spacing: -0.015em;
     }
 
     .substack-cta p {
       font-family: 'DM Sans', -apple-system, sans-serif;
-      color: var(--blog-muted);
+      color: #94a3b8;
       font-size: 0.95rem;
-      line-height: 1.6;
+      line-height: 1.65;
       margin: 0;
-      max-width: 440px;
+      max-width: 480px;
     }
 
-    .btn-primary {
+    .btn-substack {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      background-color: var(--blog-accent);
+      gap: 0.55rem;
+      padding: 0.65rem 1.45rem;
+      background: #ff6719;
+      /* Official Substack orange */
       color: #ffffff !important;
-      border-radius: 10px;
+      border-radius: 9999px;
       font-family: 'DM Sans', -apple-system, sans-serif;
-      font-weight: 600;
-      font-size: 0.95rem;
+      font-weight: 700;
+      font-size: 0.92rem;
       text-decoration: none;
-      transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px rgba(255, 103, 25, 0.35);
       border: none;
       cursor: pointer;
     }
 
-    .btn-primary:hover {
-      background-color: var(--blog-accent-hover);
+    .btn-substack:hover {
+      background: #e55a12;
       transform: translateY(-2px);
-      box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
+      box-shadow: 0 8px 22px rgba(255, 103, 25, 0.45);
     }
 
-    /* Upcoming / Archive Section */
+    /* Upcoming Writing Section */
     .archive-section {
-      margin-top: 1rem;
+      margin-top: 0.5rem;
     }
 
     .archive-title {
       font-family: 'Fraunces', Georgia, serif;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       font-weight: 700;
       color: var(--blog-text);
-      margin-bottom: 1.25rem;
-      text-align: center;
+      margin-bottom: 1.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .archive-title i {
+      color: var(--blog-accent);
+      font-size: 1.05rem;
     }
 
     .upcoming-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
+      gap: 1.35rem;
     }
 
     .upcoming-card {
       background: var(--blog-card);
-      border: 1px solid var(--blog-border);
-      border-radius: 12px;
-      padding: 1.5rem;
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      border-radius: 16px;
+      padding: 1.6rem 1.65rem;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
-      opacity: 0.75;
-      position: relative;
+      gap: 0.65rem;
+      transition: all 0.2s ease;
+    }
+
+    .upcoming-card:hover {
+      border-color: rgba(37, 99, 235, 0.3);
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.06);
+      transform: translateY(-2px);
     }
 
     .upcoming-status {
-      font-size: 0.7rem;
+      font-size: 0.72rem;
       font-weight: 700;
-      color: var(--blog-muted);
+      color: var(--blog-accent);
+      background: rgba(37, 99, 235, 0.08);
+      border: 1px solid rgba(37, 99, 235, 0.18);
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       font-family: 'DM Sans', sans-serif;
+      width: fit-content;
     }
 
     .upcoming-card h4 {
       font-family: 'Fraunces', Georgia, serif;
-      font-size: 1.1rem;
+      font-size: 1.12rem;
       margin: 0;
       color: var(--blog-text);
-      font-weight: 600;
+      font-weight: 700;
+      line-height: 1.38;
     }
 
     .upcoming-card p {
       font-family: 'DM Sans', sans-serif;
-      font-size: 0.875rem;
+      font-size: 0.88rem;
       color: var(--blog-muted);
       margin: 0;
-      line-height: 1.5;
+      line-height: 1.6;
+    }
+
+    /* Site Footer */
+    .site-footer {
+      background: #ffffff;
+      border-top: 1px solid var(--blog-border);
+      padding: 1.75rem 0;
+      margin-top: 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-copy {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 0.85rem;
+      color: var(--blog-muted);
+      margin: 0;
+    }
+
+    .footer-copy strong {
+      color: var(--blog-text);
+    }
+
+    .footer-right {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      font-size: 0.85rem;
+      color: var(--blog-muted);
+    }
+
+    .footer-right a {
+      color: var(--blog-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-right a:hover {
+      color: var(--blog-accent);
     }
 
     @media (max-width: 768px) {
       .featured-card {
         grid-template-columns: 1fr;
       }
+
       .featured-image-container {
         min-height: 220px;
       }
+
       .featured-content {
-        padding: 1.75rem;
+        padding: 1.65rem;
       }
+
       .upcoming-grid {
         grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.65rem;
       }
     }
   </style>
 </head>
 
 <body class="fade-in">
+  <!-- Header -->
   <header class="site-header">
     <div class="container">
       <div class="header-inner">
         <h1 class="logo">
-          <a href="index.html">Edward Ajayi</a>
+          <a href="https://edwardajayi.github.io/">Edward Ajayi</a>
         </h1>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
           <i class="fas fa-bars"></i>
@@ -320,72 +490,79 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <section class="section" style="padding-top: 2.5rem;">
     <div class="container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>Blog &amp; Writing</h1>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="hero-intro">
-        <p>Articles, reflections, and essays on artificial intelligence, NLP, and my academic research experience.</p>
+      <!-- Blog Overview Card -->
+      <div class="blog-intro-card">
+        <div class="intro-header-row">
+          <span class="intro-badge"><i class="fas fa-feather-alt"></i> Writing &amp; Reflections</span>
+        </div>
+        <h1 class="blog-page-title">Blog &amp; Essays</h1>
+        <p class="intro-bio-text" style="margin-bottom: 0;">
+          Articles, research reflections, and technical essays on computational humor, language model evaluation, and
+          modern NLP.
+        </p>
       </div>
 
       <div class="blog-layout">
         <!-- Featured Post Card linking to Substack Article -->
-        <a href="https://open.substack.com/pub/edwardajayi/p/evaluating-the-evaluator-what-humor?r=2e47h1&utm_campaign=post&utm_medium=web" target="_blank" rel="noopener noreferrer" class="featured-card">
+        <a href="https://open.substack.com/pub/edwardajayi/p/evaluating-the-evaluator-what-humor?r=2e47h1&utm_campaign=post&utm_medium=web"
+          target="_blank" rel="noopener noreferrer" class="featured-card">
           <div class="featured-image-container">
-            <img src="assets/img/blog_cover_one.png" alt="Abstract AI and Natural Language illustration" class="featured-image" loading="lazy" />
+            <img src="assets/img/blog_cover_one.png" alt="Abstract AI and Natural Language illustration"
+              class="featured-image" loading="lazy" />
           </div>
           <div class="featured-content">
-            <span class="post-badge">Article</span>
+            <span class="post-badge">Featured Essay</span>
             <h2 class="post-title">Evaluating the Evaluator: What Humor Taught Us About LLM Judges</h2>
             <p class="post-excerpt">
-              How evaluating computational humor exposes critical limitations in using large language models as judges, drawing from insights built during the HumorRank project.
+              How evaluating computational humor exposes critical limitations in using large language models as judges,
+              drawing from insights built during the HumorRank project.
             </p>
             <div class="post-meta">
               <span>June, 2026</span>
               <span class="post-meta-bullet">&bull;</span>
               <span>5 min read</span>
               <span class="post-meta-bullet">&bull;</span>
-              <span style="color: var(--blog-accent); font-weight: 500;">Read on Substack &rarr;</span>
+              <span class="read-more-link">Read on Substack &rarr;</span>
             </div>
           </div>
         </a>
 
-        <!-- Upcoming Posts Section
+        <!-- Upcoming Posts Section -->
         <div class="archive-section">
-          <h3 class="archive-title">Upcoming Writings</h3>
+          <h3 class="archive-title">
+            <i class="fas fa-pen-nib"></i> Upcoming &amp; In-Progress Writings
+          </h3>
           <div class="upcoming-grid">
             <div class="upcoming-card">
-              <span class="upcoming-status">In Progress</span>
+              <span class="upcoming-status">TBA</span>
               <h4>Computational Humor: Fine-Tuning &amp; Persona Distillation</h4>
-              <p>Exploring the methodologies behind HumorGen-7B, aligning LLMs to generate high-quality humor through cognitive synergy.</p>
+              <p>Exploring the methodologies behind HumorGen-7B: aligning LLMs to generate high-quality humor through
+                multi-agent cognitive synergy and LoRA distillation.</p>
             </div>
             <div class="upcoming-card">
-              <span class="upcoming-status">Planned</span>
+              <span class="upcoming-status">TBA</span>
               <h4>Evaluating Social Awareness in Foundation Models</h4>
-              <p>Designing robust evaluation frameworks that measure nuance, context, and intent alignment in interactive agents.</p>
+              <p>Designing robust evaluation frameworks that measure nuance, context sensitivity, and intent alignment
+                in interactive and conversational agents.</p>
             </div>
           </div>
         </div>
-        -->
 
         <!-- Substack Newsletter Subscription Callout -->
         <div class="substack-cta">
-          <svg viewBox="0 0 24 24" width="36" height="36" fill="var(--blog-accent)">
-            <path d="M22.539 8.242H1.46V5.406h21.078v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.078V0z"/>
-          </svg>
-          <h3>Subscribe on Substack</h3>
-          <p>Get notified when I publish new essays, research notes, and commentary directly in your inbox.</p>
-          <a target="_blank" href="https://substack.com/@edwardajayi" class="btn-primary">
-            Subscribe Now
+          <div class="substack-icon-wrap">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="#ff6719">
+              <path
+                d="M22.539 8.242H1.46V5.406h21.078v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.078V0z" />
+            </svg>
+          </div>
+          <h3>Subscribe to My Substack</h3>
+          <p>Get notified whenever I publish new essays, research notes, and commentary directly to your inbox.</p>
+          <a target="_blank" rel="noopener noreferrer" href="https://substack.com/@edwardajayi" class="btn-substack">
+            <i class="fas fa-envelope"></i> Subscribe on Substack
           </a>
         </div>
       </div>
@@ -395,16 +572,21 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-content" style="text-align:center;padding:2rem 0;">
-        <p style="color:#64748b;margin:0.5rem 0;">&copy; 2026 Edward Ajayi. All rights reserved.</p>
-        <p style="color:#94a3b8;margin:0.5rem 0;font-size:0.9rem;"><strong>Last Updated:</strong> June, 2026</p>
-        <p style="margin:0.5rem 0;">
-          <a href="https://github.com/edwardajayi/edwardajayi.github.io" target="_blank" style="color:#64748b;text-decoration:none;margin:0 0.5rem;">Source Code</a> | 
-          <a href="https://pages.github.com/" target="_blank" style="color:#64748b;text-decoration:none;margin:0 0.5rem;">GitHub Pages</a>
+      <div class="footer-inner">
+        <p class="footer-copy">
+          © 2026 <strong>Edward Ajayi</strong>
         </p>
+        <div class="footer-right">
+          <a href="index.html">About</a> ·
+          <a href="publications.html">Research</a> ·
+          <a href="projects.html">Projects</a> ·
+          <a href="news.html">News</a> ·
+          <a href="blog.html">Blog</a> ·
+          <a href="assets/Edward_Ajayi_CV.pdf" target="_blank">CV</a>
+        </div>
       </div>
     </div>
-  </footer >
+  </footer>
 
   <!-- Back to top button -->
   <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
@@ -412,34 +594,39 @@
   </a>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const backToTopButton = document.getElementById('backToTop');
-      window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-          backToTopButton.classList.add('visible');
-        } else {
-          backToTopButton.classList.remove('visible');
-        }
-      });
-      
+      if (backToTopButton) {
+        window.addEventListener('scroll', function () {
+          if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+          } else {
+            backToTopButton.classList.remove('visible');
+          }
+        });
+      }
+
       const mobileMenuBtn = document.getElementById('mobileMenuBtn');
       const navbar = document.getElementById('navbar');
-      if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', function() {
+      if (mobileMenuBtn && navbar) {
+        mobileMenuBtn.addEventListener('click', function () {
           navbar.classList.toggle('show');
           const isExpanded = navbar.classList.contains('show');
           mobileMenuBtn.setAttribute('aria-expanded', isExpanded.toString());
           const icon = mobileMenuBtn.querySelector('i');
-          if (isExpanded) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-          } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+          if (icon) {
+            if (isExpanded) {
+              icon.classList.remove('fa-bars');
+              icon.classList.add('fa-times');
+            } else {
+              icon.classList.remove('fa-times');
+              icon.classList.add('fa-bars');
+            }
           }
         });
       }
     });
   </script>
 </body>
+
 </html>
