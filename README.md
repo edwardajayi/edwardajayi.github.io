@@ -54,33 +54,38 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 
 ### 2026
 
-- 🏆 **[A Machine Learning Approach for Detection of Mental Health Conditions and Cyberbullying from Social Media](https://proceedings.mlr.press/v317/ajayi26a.html)**  
-  **Edward Ajayi**, Martha Kachweka, Mawuli Deku, Emily Aiken  
-  *Proceedings of the Second AAAI Bridge Program on AI for Medicine and Healthcare, PMLR 317:15–26, 2026* — **Best Paper Award · Oral Presentation**  
-  [![PMLR](https://img.shields.io/badge/PMLR-Proceedings-blue?style=flat-square)](https://proceedings.mlr.press/v317/ajayi26a.html) [![arXiv](https://img.shields.io/badge/arXiv-2511.20001-B31B1B?style=flat-square)](https://arxiv.org/pdf/2511.20001)
-
 - 📌 **[HumorGen: Cognitive Synergy for Humor Generation in Large Language Models via Persona-Based Distillation](https://arxiv.org/pdf/2604.09629)**  
   **E. Ajayi**, P. Mitra  
   *Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026, Main Conference, to appear)*  
   [![arXiv](https://img.shields.io/badge/arXiv-2604.09629-B31B1B?style=flat-square)](https://arxiv.org/pdf/2604.09629)
 
-- 📌 **[HumorRank: A Tournament-Based Leaderboard for Evaluating Humor Generation in Large Language Models](https://arxiv.org/pdf/2604.19786)**  
+- 🏆 **[Cross-Lingual Cognitive Synergy for Constrained Humor Generation in Large Language Models](https://edwardajayi.github.io/assets/papers/HumorGen-JOKER.pdf)**  
   **E. Ajayi**, P. Mitra  
-  *Submitted to AAAI 2027*  
-  [![arXiv](https://img.shields.io/badge/arXiv-2604.19786-B31B1B?style=flat-square)](https://arxiv.org/pdf/2604.19786)
+  *CLEF 2026 Working Notes, CEUR-WS (to appear) · Conference and Labs of the Evaluation Forum · 21–24 Sep 2026* — Winner, JOKER Task 4
+
+- 🏆 **[A Machine Learning Approach for Detection of Mental Health Conditions and Cyberbullying from Social Media](https://proceedings.mlr.press/v317/ajayi26a.html)**  
+  **Edward Ajayi**, Martha Kachweka, Mawuli Deku, Emily Aiken  
+  *Proceedings of the Second AAAI Bridge Program on AI for Medicine and Healthcare, PMLR 317:15–26, 2026* — **Best Paper Award · Oral Presentation**  
+  [![PMLR](https://img.shields.io/badge/PMLR-Proceedings-blue?style=flat-square)](https://proceedings.mlr.press/v317/ajayi26a.html) [![arXiv](https://img.shields.io/badge/arXiv-2511.20001-B31B1B?style=flat-square)](https://arxiv.org/pdf/2511.20001)
 
 - 📌 **[Language Diversity: Evaluating Language Usage and AI Performance on African Languages in Digital Spaces](https://www.arxiv.org/pdf/2512.01557)**  
   **E. Ajayi**, B. Tadele, E. Umwari, M. Deku, P. Singadi, C. Edeh, J. Udahemuka  
   *Deep Learning Indaba 2026 Research Track, IJCAI 2026 Proceedings, to appear.*  
   [![arXiv](https://img.shields.io/badge/arXiv-2512.01557-B31B1B?style=flat-square)](https://www.arxiv.org/pdf/2512.01557)
 
-- 🏆 **[Cross-Lingual Cognitive Synergy for Constrained Humor Generation in Large Language Models](https://edwardajayi.github.io/assets/papers/HumorGen-JOKER.pdf)**  
+- 📌 **[SIDE-Bench: Evaluating Social Interaction and Conversational-Partner Intent in Multi-Agent Environments](assets/papers/SIDEBench.pdf)**  
+  **E. Ajayi**  
+  *Under Review at ICLR 2027*  
+  [![PDF](https://img.shields.io/badge/PDF-SIDEBench-B31B1B?style=flat-square)](assets/papers/SIDEBench.pdf)
+
+- 📌 **[HumorRank: A Tournament-Based Leaderboard for Evaluating Humor Generation in Large Language Models](https://arxiv.org/pdf/2604.19786)**  
   **E. Ajayi**, P. Mitra  
-  *CLEF 2026 Working Notes, CEUR-WS (to appear) · Conference and Labs of the Evaluation Forum · 21–24 Sep 2026* — Winner, JOKER Task 4
+  *Under Review at ACL Rolling Review (ARR)*  
+  [![arXiv](https://img.shields.io/badge/arXiv-2604.19786-B31B1B?style=flat-square)](https://arxiv.org/pdf/2604.19786)
 
 - 📌 **[AfriEconQA: A Benchmark for Quantitative and Temporal Reasoning over World Bank Economic Reports](https://arxiv.org/abs/2601.15297)**  
   **Edward Ajayi**, Mustapha Alaba & David Stephen  
-  *Submitted to AAAI 2027*
+  *Under Review at ACL Rolling Review (ARR)*
 
 - 📌 **[Automatic Humor Detection: A Comprehensive Survey from Theoretical Foundations to Large Language Models](https://edwardajayi.github.io/assets/papers/Automatic%20Humor%20Detection%20Survey.pdf)**  
   **E. Ajayi**, P. Mitra  
