@@ -33,6 +33,22 @@ I hold an **MSc in Engineering Artificial Intelligence from Carnegie Mellon Univ
 
 ---
 
+## 🔬 Research Interests
+
+<div align="center">
+
+| Area | Focus |
+|------|-------|
+| 🤖 **Social Intelligence & Multi-Agent Systems** | Contextual interpretation, social interaction, multi-agent dynamics |
+| 🎭 **Computational Humor** | Humor generation, detection, and cross-lingual humor in LLMs |
+| 📊 **LLM Reasoning & Evaluation** | Leaderboards, benchmarks, tournament-based preference evaluation |
+| 🌍 **Multilingual NLP** | African languages, language diversity, AI performance gaps |
+| 🧠 **Multimodal ML & AI Safety** | Grounded reasoning, safe navigation, mental health condition detection |
+
+</div>
+
+---
+
 ## 🌐 Research, Publications & Interactive Demos
 
 > 📚 **Complete publications with preprints, PDF downloads, BibTeX citations, and live project demos are maintained on my website:**  
