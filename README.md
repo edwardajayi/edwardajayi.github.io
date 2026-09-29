@@ -10,6 +10,7 @@
 <br/>
 
 [![Website](https://img.shields.io/badge/Website-edwardajayi.github.io-2563EB?style=for-the-badge&logo=google-chrome&logoColor=white)](https://edwardajayi.github.io)
+[![Hugging Face](https://img.shields.io/badge/HuggingFace-Models-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/Jayi2424)
 [![Google Scholar](https://img.shields.io/badge/Google_Scholar-Profile-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=1TyN1RQAAAAJ&hl=en)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/edward-ajayi-a652b6203/)
 [![Twitter/X](https://img.shields.io/badge/X_(Twitter)-Follow-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/jayiEdwards)
@@ -22,140 +23,74 @@
 
 ## 👤 About Me
 
-I am a **Research Associate** at the [Spatial and Language Technologies Lab](https://www.cs.cmu.edu/), Carnegie Mellon University. I hold a **Master of Science in Engineering Artificial Intelligence from Carnegie Mellon University (CMU '26)**, completed as a **[Mastercard Foundation Scholar](https://mastercardfdn.org/)** — a fully funded, merit-based scholarship awarded to future African leaders in science and technology.
+I am a Research Associate at the **Spatial and Language Technologies Lab** at **Carnegie Mellon University**. My research focuses on **Social Intelligence in AI**, **Multi-Agent Systems**, **Computational Humor** (generation, detection, and evaluation), and **LLM Reasoning**. I investigate how structured representations and reasoning processes can be incorporated into neural language models to capture and manipulate meaning, particularly in settings that require contextual interpretation, nuanced semantic shifts, and multi-agent interaction. More broadly, I am interested in developing cognitively grounded approaches to machine intelligence that improve interpretability, generalization, and alignment with human reasoning.
 
-My research investigates how structured representations and reasoning processes can be incorporated into neural language models for **computational humor generation**, **LLM evaluation**, and **multimodal ML**. My work focuses on how models capture and manipulate meaning — particularly in settings that require compositionality, contextual interpretation, and nuanced semantic shifts.
+I build research frameworks and benchmarks for studying these problems in LLMs. I am the creator of **[HumorGen](https://humorgen.pages.dev/)**, a framework for cognitively grounded humor generation with **[1,000+ model downloads on Hugging Face](https://huggingface.co/collections/Jayi2424/humorgen)**, **[HumorRank](https://humorrank-leaderboard.pages.dev/)**, and **[SIDE-Bench](https://edwardajayi.github.io/assets/papers/SIDEBench.pdf)**, a benchmark for evaluating social interaction and conversational behavior in multi-agent systems. More broadly, I develop reusable methods for LLM evaluation, social intelligence, reasoning, and understanding language model behavior.
 
-More broadly, I am interested in developing **cognitively grounded approaches to machine intelligence** that improve interpretability, generalization, and alignment with human reasoning — building AI that thinks and collaborates more like humans.
+I hold an **MSc in Engineering Artificial Intelligence from Carnegie Mellon University (CMU '26)**, completed as a **[Mastercard Foundation Scholar](https://mastercardfdn.org/)** — a fully funded, merit-based scholarship awarded to future African leaders in science and technology.
 
 > 🎯 **Actively seeking PhD opportunities (Fall 2026)** in Language Modeling · LLM Evaluation · Human-Centered AI
 
 ---
 
-## 🔬 Research Interests
+## 🌐 Research, Publications & Interactive Demos
 
-<div align="center">
-
-| Area | Focus |
-| ------ | ------- |
-| 🎭 **Computational Humor** | Humor generation, detection, and cross-lingual humor in LLMs |
-| 📊 **LLM Evaluation** | Leaderboards, benchmarks, and tournament-based evaluation frameworks |
-| 🌍 **Multilingual NLP** | African languages, language diversity, and AI performance gaps |
-| 🧠 **Multimodal ML** | Vision-language models, safe navigation, grounded reasoning |
-| 🤖 **Socially Aware AI** | AI that communicates with social and cultural awareness |
-
-</div>
+> 📚 **Complete publications with preprints, PDF downloads, BibTeX citations, and live project demos are maintained on my website:**  
+> 🔗 **[Explore All Publications →](https://edwardajayi.github.io/publications.html)** &nbsp;•&nbsp; 🔗 **[Explore Interactive Projects →](https://edwardajayi.github.io/projects.html)**
 
 ---
 
-## 📄 Selected Publications
-
-> 🏆 = Award &nbsp;·&nbsp; 🎤 = Oral &nbsp;·&nbsp; 📌 = Preprint / Under Review
-
-### 2026
-
-- 📌 **[HumorGen: Cognitive Synergy for Humor Generation in Large Language Models via Persona-Based Distillation](https://arxiv.org/pdf/2604.09629)**  
-  **E. Ajayi**, P. Mitra  
-  *Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026, Main Conference, to appear)*  
-  [![arXiv](https://img.shields.io/badge/arXiv-2604.09629-B31B1B?style=flat-square)](https://arxiv.org/pdf/2604.09629)
-
-- 🏆 **[Cross-Lingual Cognitive Synergy for Constrained Humor Generation in Large Language Models](https://edwardajayi.github.io/assets/papers/HumorGen-JOKER.pdf)**  
-  **E. Ajayi**, P. Mitra  
-  *CLEF 2026 Working Notes, CEUR-WS (to appear) · Conference and Labs of the Evaluation Forum · 21–24 Sep 2026* — Winner, JOKER Task 4
-
-- 🏆 **[A Machine Learning Approach for Detection of Mental Health Conditions and Cyberbullying from Social Media](https://proceedings.mlr.press/v317/ajayi26a.html)**  
-  **Edward Ajayi**, Martha Kachweka, Mawuli Deku, Emily Aiken  
-  *Proceedings of the Second AAAI Bridge Program on AI for Medicine and Healthcare, PMLR 317:15–26, 2026* — **Best Paper Award · Oral Presentation**  
-  [![PMLR](https://img.shields.io/badge/PMLR-Proceedings-blue?style=flat-square)](https://proceedings.mlr.press/v317/ajayi26a.html) [![arXiv](https://img.shields.io/badge/arXiv-2511.20001-B31B1B?style=flat-square)](https://arxiv.org/pdf/2511.20001)
-
-- 📌 **[Language Diversity: Evaluating Language Usage and AI Performance on African Languages in Digital Spaces](https://www.arxiv.org/pdf/2512.01557)**  
-  **E. Ajayi**, B. Tadele, E. Umwari, M. Deku, P. Singadi, C. Edeh, J. Udahemuka  
-  *Deep Learning Indaba 2026 Research Track, IJCAI 2026 Proceedings, to appear.*  
-  [![arXiv](https://img.shields.io/badge/arXiv-2512.01557-B31B1B?style=flat-square)](https://www.arxiv.org/pdf/2512.01557)
-
-- 📌 **[SIDE-Bench: Evaluating Social Interaction and Conversational-Partner Intent in Multi-Agent Environments](assets/papers/SIDEBench.pdf)**  
-  **E. Ajayi**  
-  *Under Review at ICLR 2027*  
-  [![PDF](https://img.shields.io/badge/PDF-SIDEBench-B31B1B?style=flat-square)](assets/papers/SIDEBench.pdf)
-
-- 📌 **[HumorRank: A Tournament-Based Leaderboard for Evaluating Humor Generation in Large Language Models](https://arxiv.org/pdf/2604.19786)**  
-  **E. Ajayi**, P. Mitra  
-  *Under Review at ACL Rolling Review (ARR)*  
-  [![arXiv](https://img.shields.io/badge/arXiv-2604.19786-B31B1B?style=flat-square)](https://arxiv.org/pdf/2604.19786)
-
-- 📌 **[AfriEconQA: A Benchmark for Quantitative and Temporal Reasoning over World Bank Economic Reports](https://arxiv.org/abs/2601.15297)**  
-  **Edward Ajayi**, Mustapha Alaba & David Stephen  
-  *Under Review at ACL Rolling Review (ARR)*
-
-- 📌 **[Automatic Humor Detection: A Comprehensive Survey from Theoretical Foundations to Large Language Models](https://edwardajayi.github.io/assets/papers/Automatic%20Humor%20Detection%20Survey.pdf)**  
-  **E. Ajayi**, P. Mitra  
-  *Submitted to ACM Computing Surveys*
-
----
-
-## 🚀 Selected Projects
+## 🌟 Featured Research & Flagship Projects
 
 ### 🎭 [HumorGen](https://humorgen.pages.dev/) — Open-Weight Computational Humor Generation
-
 [![Live Site](https://img.shields.io/badge/Live_Site-humorgen.pages.dev-2563EB?style=flat-square&logo=cloudflare&logoColor=white)](https://humorgen.pages.dev/)
 [![Hugging Face](https://img.shields.io/badge/HuggingFace-Model_Collection-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/collections/Jayi2424/humorgen)
+[![Downloads](https://img.shields.io/badge/HF_Downloads-1%2C000%2B-blue?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/collections/Jayi2424/humorgen)
 ![Open Weights](https://img.shields.io/badge/14_models-Apache--2.0-10B981?style=flat-square)
+![EMNLP](https://img.shields.io/badge/EMNLP_2026-To_Appear-blue?style=flat-square)
 
-> An open-weight ecosystem for computational humor. The Cognitive Synergy Framework runs six comedic personas in parallel and distills the funniest drafts into 14 LoRA adapters across English, French, and Spanish.
+> Open-weight ecosystem for computational humor using Cognitive Synergy persona distillation across English, French, and Spanish. Surpassed **1,000+ model downloads on Hugging Face**. Full paper to appear at **EMNLP 2026 (Main Conference)**.
+
+---
+
+### 🤖 [SIDE-Bench](https://edwardajayi.github.io/assets/papers/SIDEBench.pdf) — Multi-Agent Social Interaction Benchmark
+[![Paper](https://img.shields.io/badge/Paper-SIDE--Bench_PDF-B31B1B?style=flat-square)](https://edwardajayi.github.io/assets/papers/SIDEBench.pdf)
+![ICLR](https://img.shields.io/badge/ICLR_2027-Under_Review-purple?style=flat-square)
+![Focus](https://img.shields.io/badge/Focus-Multi--Agent_Social_AI-2563EB?style=flat-square)
+
+> A benchmark for evaluating social interaction and conversational-partner intent in multi-agent environments, measuring how models navigate dynamic communication, tone shifts, and interpersonal alignment. Under review at **ICLR 2027**.
 
 ---
 
 ### 📊 [HumorRank](https://humorrank-leaderboard.pages.dev/) — LLM Humor Generation Leaderboard
-
 [![Live App](https://img.shields.io/badge/Live_App-humorrank--leaderboard.pages.dev-2563EB?style=flat-square&logo=cloudflare&logoColor=white)](https://humorrank-leaderboard.pages.dev/)
+[![arXiv](https://img.shields.io/badge/arXiv-2604.19786-B31B1B?style=flat-square)](https://arxiv.org/pdf/2604.19786)
 
-> A tournament-based leaderboard web application for ranking LLMs on humor generation tasks. Models compete head-to-head using automated and human-preference evaluation signals.
+> Tournament-based leaderboard web application for evaluating and benchmarking humor generation capabilities across modern LLMs using automated and human-preference signals. Submitted to **AAAI 2027**.
 
 ---
 
-### 🧠 Mental Health & Cyberbullying Detection System
-
+### 🧠 [Mental Health & Cyberbullying Detection](https://proceedings.mlr.press/v317/ajayi26a.html)
 [![Best Paper](https://img.shields.io/badge/AAAI--26-Best_Paper_Award-FFD700?style=flat-square)](https://proceedings.mlr.press/v317/ajayi26a.html)
-![BERT](https://img.shields.io/badge/BERT-Transformers-F59E0B?style=flat-square)
+[![PMLR](https://img.shields.io/badge/PMLR-Proceedings-blue?style=flat-square)](https://proceedings.mlr.press/v317/ajayi26a.html)
 ![Oral](https://img.shields.io/badge/Oral-Presentation-EF4444?style=flat-square)
 
-> Full ML pipeline for multilabel detection of mental health conditions and cyberbullying using classical models and transformer-based embeddings. Achieved Best Paper Award and Oral acceptance at AAAI-26 AIMedHealth.
-
----
-
-### 🌍 [AfriEconQA](https://afrieconqa.pages.dev/) — Quantitative & Temporal Reasoning over World Bank Reports
-
-![Dataset](https://img.shields.io/badge/Dataset-4%2C309_QA_Pairs-10B981?style=flat-square)
-![RAG](https://img.shields.io/badge/RAG-64%2C892_Retrieval_Chunks-6366F1?style=flat-square)
-
-> Specialized benchmark dataset built from 220 World Bank African Reports to close the "parametric knowledge gap" in AI economic analysis. Contains 4,309 curated QA pairs across 64,892 retrieval chunks.
-
----
-
-### 🤖 AI Workflow Automation Agent — EdGE AI Labs (2025)
-
-![LangChain](https://img.shields.io/badge/LangChain-Agent-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&logo=python&logoColor=white)
-
-> Autonomous agentic AI system for business process automation using Google Forms/Sheets, LangChain, and FastAPI. Integrated email notifications and a QA monitoring dashboard.
+> Full ML pipeline for multilabel detection of mental health conditions and cyberbullying using transformer-based embeddings. Received **Best Paper Award** and **Oral Presentation** at AAAI-26 AIMedHealth.
 
 ---
 
 ## 🏆 Highlights & Awards
 
 | Date | Achievement |
-| ------ | ------------- |
+|------|-------------|
 | 🏆 Jul 2026 | **Winner** — CLEF 2026 JOKER Task 4: Humor Generation |
 | 🔬 Jun 2026 | **NLP Research Associate** — Spatial & Language Technologies Lab, CMU |
 | 🌍 Jun 2026 | **Paper Accepted** — Deep Learning Indaba 2026 |
 | 🎓 May 2026 | **MSc in Engineering Artificial Intelligence** — Carnegie Mellon University |
-| 🎤 May 2026 | **Invited Talk** — CMU-Africa NLP Group: *Beyond the Transformer* |
 | 🥇 Apr 2026 | **People's Choice Award** — CMU-Africa Research Showcase 2026 |
 | 🤝 Apr 2026 | **Co-founded** — [CMU-Africa NLP Group](https://cmuafrica-nlpgroup.pages.dev/) |
 | 🏆 Jan 2026 | **Best Paper Award** — AAAI AI in Medicine and Healthcare Bridge 2026 |
 | 🎤 Jan 2026 | **Oral Presentation** — AAAI-26, Singapore Expo |
-| 🏛️ Nov 2024 | **Elected President** — CMU-Africa Research Club |
 | 🎓 Apr 2024 | **Mastercard Foundation Scholarship** — CMU Africa (Fully Funded) |
 
 ---
@@ -184,7 +119,7 @@ More broadly, I am interested in developing **cognitively grounded approaches to
 I'm always open to research collaborations, PhD advising discussions, or interesting AI conversations.
 
 | Platform | Link |
-| ---------- | ------ |
+|----------|------|
 | 🌐 Website | [edwardajayi.github.io](https://edwardajayi.github.io) |
 | 📧 Email | [ojayedwards01@gmail.com](mailto:ojayedwards01@gmail.com) |
 | 💼 LinkedIn | [edward-ajayi-a652b6203](https://www.linkedin.com/in/edward-ajayi-a652b6203/) |
@@ -197,10 +132,6 @@ I'm always open to research collaborations, PhD advising discussions, or interes
 <div align="center">
 
 *"Building AI that thinks and collaborates more like humans — across languages, cultures, and contexts."*
-
-<br/>
-
-⭐ **If my work is useful to you, consider starring a repo or citing a paper!**
 
 <br/>
 
