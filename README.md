@@ -68,7 +68,8 @@ I hold an **MSc in Engineering Artificial Intelligence from Carnegie Mellon Univ
 
 ---
 
-### 🤖 [SIDE-Bench](https://edwardajayi.github.io/assets/papers/SIDEBench.pdf) — Multi-Agent Social Interaction Benchmark
+### 🤖 [SIDE-Bench](https://sidebench.pages.dev/) — Multi-Agent Social Interaction Benchmark
+[![Live Site](https://img.shields.io/badge/Live_Site-sidebench.pages.dev-2563EB?style=flat-square&logo=cloudflare&logoColor=white)](https://sidebench.pages.dev/)
 [![Paper](https://img.shields.io/badge/Paper-SIDE--Bench_PDF-B31B1B?style=flat-square)](https://edwardajayi.github.io/assets/papers/SIDEBench.pdf)
 ![ICLR](https://img.shields.io/badge/ICLR_2027-Under_Review-purple?style=flat-square)
 ![Focus](https://img.shields.io/badge/Focus-Multi--Agent_Social_AI-2563EB?style=flat-square)
