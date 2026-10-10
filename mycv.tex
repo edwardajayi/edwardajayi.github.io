@@ -1,0 +1,469 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez (Adapted for Edward Ajayi)
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10.99pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+% \usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Edward Ajayi Resume},
+}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{0pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{p{0.85\textwidth}@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Edward Ajayi} \\ \vspace{1pt}
+    \small
+    \href{mailto:ojayedwards01@gmail.com}{\faEnvelope\ ojayedwards01@gmail.com} $|$
+    \href{https://github.com/edwardajayi}{\faGithub\ GitHub} $|$
+    \href{https://scholar.google.com/citations?user=1TyN1RQAAAAJ&hl=en&inst=3203679203499159833}{\faGraduationCap\ Google Scholar}
+    \\
+    \href{https://edwardajayi.github.io/}{\underline{https://edwardajayi.github.io/}}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Carnegie Mellon University}{}
+      {Master of Science in Engineering Artificial Intelligence}{Aug. 2024 -- May. 2026}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant Courses:} Natural Language Processing, Deep Learning, Question Answering with LLMs}
+        \resumeItem{\textbf{Specializations:} Data Science, Machine Learning, NLP}
+        \resumeItem{\textbf{GPA:} 3.73/4.0}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Ekiti State University}{}
+      {Bachelor of Science in Computer Science}{Oct. 2014 -- Nov. 2019}
+      \resumeItemListStart
+        \resumeItem{\textbf{Specializations:} Computer Science}
+        \resumeItem{\textbf{GPA:} 4.17/5.0}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------RESEARCH INTERESTS-----------
+% \section{Research Interests}
+% \small{
+% Human-Centered AI, AI Safety\& Alignment, Socially Intelligent AI, LLM Evaluation, Cognitive Modeling.}
+
+\section{Research Interests}
+\small{Human-Centered AI, Socially Intelligent AI, Multi-Agent Systems, LLM Reasoning \& Evaluation, AI Alignment, Cognitive Modeling.}
+\vspace{-8pt}
+
+\section{Selected Publications}
+
+\begin{enumerate}
+
+    \item \textbf{E. Ajayi} and P. Mitra. 
+    \textit{HumorGen: Cognitive Synergy for LLM Humor Generation via Persona-Based Distillation.} 
+    \textit{Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026, Main Conference), to appear.} 
+    \href{https://arxiv.org/abs/2604.09629}{[arXiv]}
+
+    \item \textbf{E. Ajayi}, J. Karangwa, B. Manyara, and P. Mitra. 
+    \textit{SIDE-Bench: Evaluating Social Interaction and Conversational-Partner Intent in Multi-Agent Environments.} 
+    Under Review at \textit{ICLR 2027}. 
+    \href{https://edwardajayi.github.io/assets/papers/SIDEBench.pdf}{[PDF]}
+
+    \item \textbf{E. Ajayi} and P. Mitra. 
+    \textit{HumorRank: An Automated Leaderboard for Evaluating Humor Generation in Large Language Models.} 
+    Under Review at \textit{ACL Rolling Review (ARR)}, 2026. 
+    \href{https://arxiv.org/pdf/2604.19786}{[arXiv]}
+
+    \item \textbf{E. Ajayi} and P. Mitra. 
+    \textit{Cross-Lingual Cognitive Synergy for Constrained Humor Generation in LLMs.} 
+    \textit{Working Notes of the Conference and Labs of the Evaluation Forum (CLEF 2026), CEUR-WS}. 
+    \textbf{Best of Lab, JOKER Lab}. 
+    \href{https://ceur-ws.org/Vol-4283/paper306.pdf}{[CEUR-WS]}
+
+    \item \textbf{E. Ajayi}, M. Kachweka, M. Deku, and E. Aiken. 
+    \textit{A Machine Learning Approach for Detection of Mental Health Conditions and Cyberbullying from Social Media.} 
+    \textit{Proceedings of Machine Learning Research (PMLR), AAAI-26 AI in Medicine and Healthcare Bridge}. 
+    \textbf{Best Paper Award}. 2026. 
+    \href{https://proceedings.mlr.press/v317/ajayi26a.html}{[PMLR]}
+
+    \item \textbf{E. Ajayi}, B. Tadele, E. Umwari, M. Deku, P. Singadi, C. Edeh, and J. Udahemuka. 
+    \textit{Language Diversity: Evaluating AI Performance on African Languages.} 
+    \textit{Deep Learning Indaba 2026 Research Track, IJCAI 2026 Proceedings, to appear.} 
+    \href{https://arxiv.org/pdf/2512.01557}{[arXiv]}
+
+%     \item \textbf{E. Ajayi} and P. Mitra. 
+%     \textit{Automatic Humor Detection: From Theoretical Foundations to Large Language Models.} 
+%     Under Review.
+%     2026. 
+% \href{https://edwardajayi.github.io/assets/papers/Automatic%20Humor%20Detection%20Survey.pdf}{[Manuscript]}
+
+    \item \textbf{E. Ajayi}, M. Alaba, D. Stephen, and P. Bakare. 
+    \textit{AfriEconQA: A Benchmark for Quantitative and Temporal Reasoning over World Bank Economic Reports.} 
+    Under Review at \textit{ACL Rolling Review (ARR)}, 2026. 
+    \href{https://arxiv.org/abs/2601.15297}{[arXiv]}
+
+\end{enumerate}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+\resumeSubheading
+  {Research Associate}{}
+  {Spatial and Language Technologies Lab, Carnegie Mellon University}{Jun. 2026 -- Sept. 2026}
+  \resumeItemListStart
+    \resumeItem{Building efficient multimodal humor generation models using LLMs and vision-language models (VLMs).}
+    \resumeItem{Developing evaluation benchmarks for Large Language Models on subjective generation tasks and alignment.}
+    \resumeItem{Conducting research on computational humor, multilingual NLP, and reasoning abilities of foundation models.}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Predoctoral Research Fellow}{}
+  {Human-Algorithm Interaction Lab, Oxford Saïd Business School, University of Oxford, UK}{Feb. 2026 -- May. 2026}
+  \resumeItemListStart
+    \resumeItem{Conduct research on Human-AI collaboration, decision-making, and AI adoption in service systems at the Human-Algorithm Interaction Lab.}
+  \resumeItemListEnd
+
+    \resumeSubheading
+      {Research Assistant}{}
+      {Spatial and Language Technologies Lab, Carnegie Mellon University}{Aug. 2025 -- May. 2026}
+      \resumeItemListStart
+        \resumeItem{Conducting research on NLP for automatic humour detection and generation, dataset preparation, model training, evaluation, and benchmarking.}
+        \resumeItem{Contributing to multilingual and low-resource language technologies focused on culturally grounded language models.}
+      \resumeItemListEnd
+
+    % \resumeSubheading
+    %   {Graduate Researcher}{}
+    %   {Carnegie Mellon University}{Jan. 2025 -- Present}
+    %   \resumeItemListStart
+    %     \resumeItem{Researched machine learning methods for detecting mental health conditions and cyberbullying from social media, resulting in a paper accepted at AAAI-26.}
+    %     \resumeItem{Conducting two ongoing research projects in Question Answering with Large Language Models, focusing on reasoning, evaluation, and robustness.}
+    %   \resumeItemListEnd
+    \resumeSubheading
+      {Research Intern - Business Automation}{}
+      {Carnegie Mellon University}{Jun. 2025 -- Aug. 2025}
+      \resumeItemListStart
+        \resumeItem{Built an agentic AI workflow framework using LangGraph and FastAPI to automate complex business workflows.}
+        \resumeItem{Researching and implementing AI safety protocols and robust LLM reasoning for ethical alignment and deployment.}
+        \resumeItem{Analyzing agent performance to establish benchmarks for human-in-the-loop oversight and develop explainability metrics to support transparent corporate accountability.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Client Service Officer}{}
+      {Stanbic IBTC Bank}{Dec. 2021 -- Jul. 2024}
+      \resumeItemListStart
+        \resumeItem{Leveraged data-driven insights to cross-sell over N400M in assets, enhancing client trust and digital adoption by 25\%.}
+        \resumeItem{Managed client relationships, identifying service gaps to improve operational efficiency.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, SQL, Bash} \\
+     \textbf{Generative AI \& LLMs}{: LangGraph, OpenAI Agents SDK, RAG, LLM Fine-Tuning, Prompt Engineering, DPO} \\
+     \textbf{Deep Learning \& ML}{: PyTorch, Hugging Face Transformers, Scikit-Learn, NumPy, Pandas, Matplotlib, Seaborn} \\
+     \textbf{Natural Language Processing}{: spaCy, NLTK, Sentiment Analysis, Text Processing} \\
+     \textbf{Data Engineering \& Ops}{: Docker, AWS, FastAPI, Neo4j, BeautifulSoup, Jupyter}
+    }}
+\end{itemize}
+
+%-----------PROJECTS-----------
+\section{Selected Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{HumorRank — LLM Evaluation \& Ranking Framework} $|$ \emph{Python, Evaluation} 
+\href{https://humorrank-leaderboard.pages.dev/}{\faGlobe\ Leaderboard} \quad
+\href{https://arxiv.org/pdf/2604.19786}{[Paper]}}{}
+\resumeItemListStart
+\resumeItem{Developed a scalable evaluation framework for ranking outputs from multiple LLMs on subjective generation tasks.}
+\resumeItem{Implemented pairwise comparison with probabilistic ranking using the Bradley-Terry model.}
+\resumeItem{Designed a candidate generation → evaluation → leaderboard workflow for scalable benchmarking.}
+\resumeItemListEnd
+
+% \resumeProjectHeading
+% {\textbf{HumorGen-7B — LLM-based Humor Generation Model} $|$ \emph{PyTorch, Transformers} 
+% \href{https://huggingface.co/Jayi2424/HumorGen-7B}{\faCube\ HuggingFace}}{}
+% \resumeItemListStart
+% \resumeItem{Developed HumorGen-7B, a fine-tuned 7B language model for controlled humor generation.}
+% \resumeItem{Implemented end-to-end alignment pipeline using supervised fine-tuning and Direct Preference Optimization (DPO).}
+% \resumeItem{Implemented Cognitive Synergy framework to induce diverse reasoning paths for humor generation.}
+% \resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{HumorGen — Open-Source LLM Humor Generation Suite} $|$ \emph{PyTorch}
+\href{https://humorgen.pages.dev/}{\faGlobe\ Website}\hspace{0.5em}
+\href{https://huggingface.co/collections/Jayi2424/humorgen}{\faCube\ Hugging Face}}{}
+\resumeItemListStart
+\resumeItem{Developed HumorGen, releasing 14 open-source language models for controllable humor generation.}
+\resumeItem{Implemented alignment pipelines using supervised fine-tuning and Direct Preference Optimization (DPO).}
+\resumeItem{Designed the Cognitive Synergy framework for diverse humor generation.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{MyTorch — Minimal Deep Learning Framework Built from Scratch} $|$ \emph{Python}}{}
+\resumeItemListStart
+\resumeItem{Implemented core tensor operations, automatic differentiation, activation layers, and SGD without deep learning libraries.}
+\resumeItem{Designed a PyTorch-style API enabling end-to-end model training while illustrating neural network internals.}
+\resumeItem{Built modular components for educational experimentation with deep learning systems.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Mental Health \& Cyberbullying Detection System (AAAI Oral)} $|$ \emph{Transformers} 
+\href{https://github.com/codes2425/mental_health_detect}{\faGithub\ GitHub} \quad
+\href{https://arxiv.org/pdf/2511.20001}{[arXiv]}}{}
+\resumeItemListStart
+\resumeItem{Built an end-to-end multi-label classification system for detecting mental health signals and cyberbullying from social media data.}
+\resumeItem{Combined classical ML methods with transformer embeddings for robust prediction on noisy datasets.}
+\resumeItem{Produced results leading to an Oral paper acceptance at AAAI-26 AIMedHealth.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{AI Workflow Automation Agent} $|$ \emph{Python, LangChain, FastAPI}}{}
+\resumeItemListStart
+\resumeItem{Built an autonomous agent to process submissions, route tasks, and trigger approval workflows.}
+\resumeItem{Integrated API orchestration, notifications, and real-time validation pipelines.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+%-----------TRAINING & CONFERENCES-----------
+\section{Training \& Conferences}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+  {Oral \& Poster Presentation, AAAI Conference on Artificial Intelligence}{Singapore}
+  {AAAI}{Jan. 2026}
+      \resumeItemListStart
+        \resumeItem{Presented my paper on ML for mental health and cyberbullying detection from social media, and engaged with academics and researchers at the conference.}
+       \resumeItemListEnd
+
+
+    % \resumeSubheading
+    %   {Participant, Deep Learning Indaba 2025}{Rwanda}
+    %   {Deep Learning Indaba}{Aug. 2025}
+    %   \resumeItemListStart
+    %     \resumeItem{Attended workshops on deep learning, AI for social good, and research collaboration across African universities.}
+    %   \resumeItemListEnd
+
+    \resumeSubheading
+      {Participant, Technical AI Safety Course}{Online}
+      {Bluedot Impact}{May 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Training in technical AI safety, focusing on alignment approaches, mechanistic interpretability, and catastrophic risk mitigation.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Participant, Digital Humanities Summer School}{Rwanda}
+      {DIGIHUM/CMU-Africa}{Jul. 2025}
+      \resumeItemListStart
+        \resumeItem{Engaged in computational methods for humanities research, including NLP applications.}
+      \resumeItemListEnd
+    % \resumeSubheading
+    %   {Participant, ML Summer School}{Online}
+    %   {Cohere}{Jul. 2025}
+    %   \resumeItemListStart
+    %     \resumeItem{Intensive sessions on machine learning, foundation models, multimodal learning, and AI agents.}
+    %   \resumeItemListEnd
+    % \resumeSubheading
+    %   {Learner, Natural Language Processing Specialization}{Online}
+    %   {Coursera, DeepLearning.AI}{May 2025}
+    %   \resumeItemListStart
+    %     \resumeItem{Completed 4-course specialization covering NLP, sequence models, attention, and transformers.}
+      % \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  
+% %-----------TRAINING & INTERNSHIPS-----------
+% \section{Training}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {Participant, Digital Humanities Summer School}{Rwanda}
+%       {DIGIHUM/CMU-Africa}{Jul. 2025}
+%       \resumeItemListStart
+%         \resumeItem{Engaged in workshops on computational methods for humanities research, including NLP applications.}
+%       \resumeItemListEnd
+%     \resumeSubheading
+%       {Participant, ML Summer School}{Online}
+%       {Cohere}{Jul. 2025}
+%       \resumeItemListStart
+%         \resumeItem{Attended intensive sessions on machine learning to teach about foundation models, retrieval, multimodal learning, and AI for social impact.}
+%       \resumeItemListEnd
+
+    
+%     \resumeSubheading
+%       {Learner, Natural Language Processing Specialization}{Online}
+%       {Coursera, DeepLearning.AI}{May 2025}
+%       \resumeItemListStart
+%         \resumeItem{Completed 4-course specialization covering NLP with classification, sequence models, attention, and transformers.}
+%       \resumeItemListEnd
+
+%     % \resumeSubheading
+%     %   {Learner, AI Agents Course}{Online}
+%     %   {Hugging Face}{Mar. 2025 -- May, 2025}
+%     %   \resumeItemListStart
+%     %     \resumeItem{Studied agent design and safety fundamentals to build robust AI systems.}
+%     %   \resumeItemListEnd
+
+%     % \resumeSubheading
+%     %   {Learner, AI Safety Atlas}{Online}
+%     %   {AI Safety Atlas}{Mar. 2025 -- May, 2025}
+%     %   \resumeItemListStart
+%     %     \resumeItem{Explored technical AI safety topics, including alignment and risk mitigation strategies.}
+%     %   \resumeItemListEnd
+
+%     % \resumeSubheading
+%     %   {Remote Data Science Intern}{Remote}
+%     %   {Ingressive For Good \& DataCamp}{Apr. 2023 -- Sep. 2023}
+%     %   \resumeItemListStart
+%     %     \resumeItem{Completed DataCamp Data Science Career Track, mastering data analysis and ML through 7 projects.}
+%     %   \resumeItemListEnd
+
+%   \resumeSubHeadingListEnd
+
+%-----------VOLUNTEERING/LEADERSHIP-----------
+\section{Volunteering/Leadership}
+  \resumeSubHeadingListStart
+
+  \resumeSubheading
+      {Founder \& Organizer, \href{https://cmuafrica-nlpgroup.pages.dev/}{CMU-Africa NLP Group}}{}
+      {Carnegie Mellon University Africa}{Apr. 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Managing the group activities and overseeing research projects focused on language technologies.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {President, CMU-Africa Research Club}{}
+      {Carnegie Mellon University}{Jan. 2025 -- Dec. 2025}
+      \resumeItemListStart
+        \resumeItem{Led 12 major events in 2025 supporting student research.}
+        \resumeItem{Launched website with research guides, conference updates, and collaboration hub.}
+        \resumeItem{Organized first Student Research Showcase with 20+ posters and workshops.}
+        % \resumeItem{Hosted three-part PhD Application Series, faculty sessions, and alumni panels supporting 40+ students.}
+        \resumeItem{Collaborated with ACM SIGCOMM and Upanzi Network for remote conference participation on campus.}
+        \resumeItem{Built an active research ecosystem that provided critical peer support, contributing to over 20 student acceptances to top-tier venues including NeurIPS and AAAI in 2025.}
+      \resumeItemListEnd
+    \resumeSubheading
+  {Reviewer, AAAI AIMedHealth Bridge 2026}{}
+  {AI for Medicine and Healthcare}{Nov. 2025 -- Nov 2025}
+  \resumeItemListStart
+    \resumeItem{Reviewed submissions in applied machine learning and AI for healthcare under the AAAI AIMedHealth Bridge 2026 program.}
+  \resumeItemListEnd
+
+    % \resumeSubheading
+    %   {IEEE Student Member, CMU-Africa}{}
+    %   {Institute of Electrical and Electronics Engineers}{Feb. 2025 -- Present}
+    %   \resumeItemListStart
+    %     \resumeItem{Collaborating with IEEE members to advance research initiatives among club members.}
+    %   \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  % % \resumeSubHeadingListEnd
+  %   \resumeSubheading
+  %     {IEEE Student Member}{CMU-Africa}
+  %     {Institute of Electrical and Electronics Engineers}{Feb. 2025 -- Present}
+  %     \resumeItemListStart
+  %       \resumeItem{Collaborating with IEEE members to push research initivatives among CMU Africa Research Club mambers.}
+  %     \resumeItemListEnd
+  % \resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+\resumeItemListStart
+  \resumeItem{Microsoft Certified Azure Data Scientist Associate \href{https://learn.microsoft.com/api/credentials/share/en-us/Jayi2424-0319/50F82A0C3E79E45D?sharingId=2D24E344E44D5AF0}{\textcolor{blue}{- \underline{View}}}}
+  % \resumeItem{Microsoft Certified Azure Data Fundamentals \href{https://learn.microsoft.com/api/credentials/share/en-us/Jayi2424-0319/25393DF29F72454?sharingId=2D24E344E44D5AF0}{\textcolor{blue}{- \underline{View}}}}
+  \resumeItem{DataCamp Python Data Associate \href{https://drive.google.com/file/d/1bmHIgwfX75_h9yMZeIMzcNej7qhwbF99/view}{\textcolor{blue}{- \underline{View}}}}
+\resumeItemListEnd
+
+%-----------HONORS AND AWARDS-----------
+\section{Honors and Awards}
+  \resumeItemListStart
+    \resumeItem{\textbf{Winner}, CLEF JOKER 2026 Task 4 — Best-performing humor generation system in English, Spanish, and French.}
+    \resumeItem{Mastercard Foundation Scholarship, Carnegie Mellon University Africa}
+    \resumeItem{Federal Scholarship Board Award for Undergraduates, Ekiti State University}
+  \resumeItemListEnd
+
+%-------------------------------------------
+\end{document}
