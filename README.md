@@ -62,9 +62,9 @@ I hold an **MSc in Engineering Artificial Intelligence from Carnegie Mellon Univ
 [![Hugging Face](https://img.shields.io/badge/HuggingFace-Model_Collection-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/collections/Jayi2424/humorgen)
 [![Downloads](https://img.shields.io/badge/HF_Downloads-1%2C000%2B-blue?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/collections/Jayi2424/humorgen)
 ![Open Weights](https://img.shields.io/badge/14_models-Apache--2.0-10B981?style=flat-square)
-![EMNLP](https://img.shields.io/badge/EMNLP_2026-To_Appear-blue?style=flat-square)
+[![Paper](https://img.shields.io/badge/Paper-ACL_Anthology-red?style=flat-square&logo=adobeacrobatreader&logoColor=white)](https://aclanthology.org/2026.emnlp-main.808.pdf)
 
-> Open-weight ecosystem for computational humor using Cognitive Synergy persona distillation across English, French, and Spanish. Surpassed **1,000+ model downloads on Hugging Face**. Full paper to appear at **EMNLP 2026 (Main Conference)**.
+> Open-weight ecosystem for computational humor using Cognitive Synergy persona distillation across English, French, and Spanish. Surpassed **1,000+ model downloads on Hugging Face**. Full paper published at **EMNLP 2026 (Main Conference)** ([Paper](https://aclanthology.org/2026.emnlp-main.808.pdf)).
 
 ---
 
