@@ -12,7 +12,7 @@
 [![Website](https://img.shields.io/badge/Website-edwardajayi.github.io-2563EB?style=for-the-badge&logo=google-chrome&logoColor=white)](https://edwardajayi.github.io)
 [![Hugging Face](https://img.shields.io/badge/HuggingFace-Models-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/Jayi2424)
 [![Google Scholar](https://img.shields.io/badge/Google_Scholar-Profile-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=1TyN1RQAAAAJ&hl=en)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/edward-ajayi-a652b6203/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/edwardajayi24/)
 [![Twitter/X](https://img.shields.io/badge/X_(Twitter)-Follow-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/jayiEdwards)
 [![Substack](https://img.shields.io/badge/Substack-Newsletter-FF6719?style=for-the-badge&logo=substack&logoColor=white)](https://substack.com/@edwardajayi)
 [![Email](https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ojayedwards01@gmail.com)
@@ -138,7 +138,7 @@ I'm always open to research collaborations, PhD advising discussions, or interes
 |----------|------|
 | 🌐 Website | [edwardajayi.github.io](https://edwardajayi.github.io) |
 | 📧 Email | [ojayedwards01@gmail.com](mailto:ojayedwards01@gmail.com) |
-| 💼 LinkedIn | [edward-ajayi-a652b6203](https://www.linkedin.com/in/edward-ajayi-a652b6203/) |
+| 💼 LinkedIn | [edwardajayi24](https://www.linkedin.com/in/edwardajayi24/) |
 | 🐦 X (Twitter) | [@jayiEdwards](https://x.com/jayiEdwards) |
 | 📝 Substack | [@edwardajayi](https://substack.com/@edwardajayi) |
 | 🎓 Google Scholar | [View Profile](https://scholar.google.com/citations?user=1TyN1RQAAAAJ&hl=en) |
