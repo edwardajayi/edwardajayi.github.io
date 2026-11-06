@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Environment & credentials
+.env
+.env.*
+*.key
+*.pem
+
+# Sensitive personal documents
+assets/Edward_Ajayi_Transcripts.pdf
+assets/SOP_Draft.pdf
+
+# Textbooks / third-party books
+assets/books/
